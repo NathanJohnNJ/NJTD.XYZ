@@ -1,0 +1,119 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+    --mainBG: #FFFFFF;
+    --secondaryBG: #FF6400;
+    --pauseBG: #9A582C;
+    --gameBG: #A7796A;
+    --titleCol: #3046CF;
+    --labelCol: #FF9154;
+    --infoCol: #FAA75D;
+    --bgOpp: #000000;
+}
+body{
+    background-color: var(--mainBG);
+}
+/********* NAVBAR *********/
+.navbarMain{
+    height: 30px;
+}
+.navbarLeft {
+    display: flex;
+    position: absolute;
+}
+.navbarLeft{
+    margin-left: 50px;
+}
+.page{
+    margin: 5px;
+    margin-top: 12px;
+    font-size: 25px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--infoCol)
+}
+.current{
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--bgOpp);
+}
+.page:hover, .current:hover{
+    text-decoration: underline dashed;
+    text-decoration-color: var(--labelCol);
+    color: var(--labelCol);    
+}
+
+/********* INTRO *********/
+.introText{
+    animation: fadein 5s;
+}
+.brought{
+    animation: fadein 5s;
+    margin-top: -35px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+}
+.njcodes{
+    animation: fadein 15s;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 900;
+    font-size: 52px;
+    margin-top: -20px;
+}
+@keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+/********* FOOTER *********/
+.footerDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--mainBG);
+    position:fixed;
+    bottom: 0;
+    z-index: 99;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15vh;
+    margin-top: auto;
+}
+.footer{
+    display: flex;
+    margin-bottom: -6vh;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: flex-end;
+}
+.footerImgDiv{
+    margin: 15px;
+}
+.footerLogo{
+    width:80px;
+    height: 80px;
+}
+.footerText{
+    font-size: 1.5vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight:700;
+    line-height: 2px;
+    margin-top: 20px;
+    color: var(--titlecol);
+}
+.github{
+    text-decoration: none;
+    color: var(--btntextcol);
+}
+.github:hover{
+    text-decoration: none;  
+    color: var(--labelCol);
+}

@@ -1,0 +1,56 @@
+.drumDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.drumkitDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calcDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.iframe{
+    scale: 0.6;
+    margin-top: -150px;
+}
+.previewWindow{
+    height: 100vh;
+    width: 100vw;
+}
+.smallCircle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.portImg:hover, .smallCircle:hover{
+    animation: pictureExpansion 1s;
+    animation-fill-mode: forwards;
+}
+.portImg{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.previewDiv{
+    width: 100vw;
+    height:800px;
+}
+.portfolioModal{
+    position:absolute;
+    margin: 10vw;
+}
+@keyframes pictureExpansion {
+    from {
+        border-radius: 50%;
+    }
+    to {
+        border-radius: 8%;
+    }
+  }

@@ -1,0 +1,12 @@
+.portfolioPage{
+    display: flex;
+    flex-direction: column;
+}
+.topRow, .htmlComps{
+    display: flex;
+    justify-content: space-evenly;
+}
+.topRow{
+    width: 50vw;
+    margin-left: 25vw;
+}
