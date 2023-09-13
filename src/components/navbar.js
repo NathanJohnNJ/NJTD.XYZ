@@ -5,13 +5,13 @@ const NavBar = (props) => {
     const showNav = props.showNav;
 
     return(
-        <div className="navbarMain">
+        <div className="mainNavbarMain">
             {showNav &&
-            <div className="navbarLeft">
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/">HOME</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj">ABOUT NJ</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact">CONTACT</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio">PORTFOLIO</NavLink>
+            <div className="mainNavbarLeft">
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/">HOME</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/nj">ABOUT NJ</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/contact">CONTACT</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/portfolio">PORTFOLIO</NavLink>
             </div>}
         </div>
     )

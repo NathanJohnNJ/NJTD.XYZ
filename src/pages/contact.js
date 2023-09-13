@@ -5,14 +5,6 @@ import { useState } from 'react';
 
 const Contact = () => {
 
-    const MailToHandler = (props) => {
-        return (
-            <div className="submitDiv">
-                <button className="submit" type="submit">SEND</button>
-            </div>
-        )
-    }
-
     const [body, setBody] = useState('');
     const [from, setFrom] = useState('');
     function mailToHandler(){

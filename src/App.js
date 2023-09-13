@@ -11,6 +11,7 @@ import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
 import Calculator from './pages/calculator';
+import CookiesPage from './pages/cookies';
 
 function App() {
   const [showNav, setShowNav] = useState(true);
@@ -34,6 +35,7 @@ function App() {
         <Route key="portfolio" path="portfolio" element={<Portfolio />} />
         <Route key="codeNation" path="codeNation" element={<CodeNation />} />
         <Route key="calculator" path="calculator" element={<Calculator setShowNav={setShowNav} setShowFooter={setShowFooter} />} />
+        <Route key="cookies" path="cookies" element={<CookiesPage setShowNav={setShowNav} setShowFooter={setShowFooter} />} />
       </Routes>
     
     </div>

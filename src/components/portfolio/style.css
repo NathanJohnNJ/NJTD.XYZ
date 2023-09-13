@@ -1,22 +1,27 @@
-.drumDiv{
+.mainDiv{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.drumkitDiv{
+.hoverDiv{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
-.calcDiv{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.projectNameDiv{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.iframe{
+.projectName{
+    color: white;
+}
+.modalIframe{
     scale: 0.6;
     margin-top: -150px;
 }
@@ -24,23 +29,14 @@
     height: 100vh;
     width: 100vw;
 }
-.smallCircle{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-}
-.portImg:hover, .smallCircle:hover{
-    animation: pictureExpansion 1s;
-    animation-fill-mode: forwards;
-}
 .portImg{
     height: 100px;
     width: 100px;
     border-radius: 50%;
 }
-.previewDiv{
-    width: 100vw;
-    height:800px;
+.portImg:hover{
+    animation: pictureExpansion 1s;
+    animation-fill-mode: forwards;
 }
 .portfolioModal{
     position:absolute;
@@ -49,8 +45,12 @@
 @keyframes pictureExpansion {
     from {
         border-radius: 50%;
+        height: 100px;
+        width: 100px;
     }
     to {
         border-radius: 8%;
+        height: 150px;
+        width: 150px;
     }
   }

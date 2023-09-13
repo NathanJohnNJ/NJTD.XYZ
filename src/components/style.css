@@ -17,17 +17,15 @@ body{
     background-color: var(--mainBG);
 }
 /********* NAVBAR *********/
-.navbarMain{
+.mainNavbarMain{
     height: 30px;
 }
-.navbarLeft {
+.mainNavbarLeft {
     display: flex;
     position: absolute;
-}
-.navbarLeft{
     margin-left: 50px;
 }
-.page{
+.mainPage{
     margin: 5px;
     margin-top: 12px;
     font-size: 25px;
@@ -36,7 +34,7 @@ body{
     text-decoration: none;
     color: var(--infoCol)
 }
-.current{
+.mainCurrent{
     margin: 10px;
     font-size: 30px;
     font-family: 'League Spartan', sans-serif;
@@ -44,7 +42,7 @@ body{
     text-decoration: none;
     color: var(--bgOpp);
 }
-.page:hover, .current:hover{
+.mainPage:hover, .mainCurrent:hover{
     text-decoration: underline dashed;
     text-decoration-color: var(--labelCol);
     color: var(--labelCol);    
@@ -72,9 +70,134 @@ body{
     from {opacity: 0}
     to {opacity: 1}
   }
+/********* GROUP *********/
+.titleSphere{
+    border-radius: 50%;
+    box-shadow: -4px -3px 8px inset black;
+    background-color: var(--secondaryBG);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+.module{
+    color: var(--mainBG);
+}
+.thing {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    left: 325px;
+    -webkit-animation: movingSphere 6s linear infinite; 
+    -moz-animation: movingSphere 6s linear infinite; 
+    -o-animation: movingSphere 6s linear infinite; 
+    animation: movingSphere 6s linear infinite; 
+  }
+  .thing:hover{
+    animation-play-state: paused;
+  }
+  .title2Sphere{
+    border-radius: 50%;
+    box-shadow: -4px -3px 8px inset black;
+    background-color: var(--secondaryBG);
+    width: 175px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22vh;
+    left: 60vw;
+}
+.thing2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 25vh;
+    left: 62vw;
+    -webkit-animation: movingSphere2 6s linear infinite; 
+    -moz-animation: movingSphere2 6s linear infinite; 
+    -o-animation: movingSphere2 6s linear infinite; 
+    animation: movingSphere2 6s linear infinite; 
+  }
+  .thing2:hover{
+    animation-play-state: paused;
+  }
+  .thing3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 25vh;
+    left: 62vw;
+    -webkit-animation: movingSphere3 6s linear infinite; 
+    -moz-animation: movingSphere3 6s linear infinite; 
+    -o-animation: movingSphere3 6s linear infinite; 
+    animation: movingSphere3 6s linear infinite; 
+  }
+  .thing3:hover{
+    animation-play-state: paused;
+  }
+  
+  @keyframes movingSphere {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-o-keyframes movingSphere {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-moz-keyframes movingSphere {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-webkit-keyframes movingSphere {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @keyframes movingSphere2 {
+    from { transform: rotate(180deg) translateX(175px) rotate(-180deg); }
+    to   { transform: rotate(-180deg) translateX(175px) rotate(180deg); }
+  }
+  @-o-keyframes movingSphere2 {
+    from { transform: rotate(180deg) translateX(175px) rotate(-180deg); }
+    to   { transform: rotate(-180deg) translateX(175px) rotate(180deg); }
+  }
+  @-moz-keyframes movingSphere2 {
+    from { transform: rotate(180deg) translateX(175px) rotate(-180deg); }
+    to   { transform: rotate(-180deg) translateX(175px) rotate(180deg); }
+  }
+  @-webkit-keyframes movingSphere2 {
+    from { transform: rotate(180deg) translateX(175px) rotate(-180deg); }
+    to   { transform: rotate(-180deg) translateX(175px) rotate(180deg); }
+  }
+  @keyframes movingSphere3 {
+    from { transform: rotate(0deg) translateX(175px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(175px) rotate(-360deg); }
+  }
+  @-o-keyframes movingSphere3 {
+    from { transform: rotate(0deg) translateX(175px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(175px) rotate(-360deg); }
+  }
+  @-moz-keyframes movingSphere3 {
+    from { transform: rotate(0deg) translateX(175px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(175px) rotate(-360deg); }
+  }
+  @-webkit-keyframes movingSphere3 {
+    from { transform: rotate(0deg) translateX(175px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(175px) rotate(-360deg); }
+  }
+
+
 
 /********* FOOTER *********/
-.footerDiv{
+.mainFooterDiv{
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -87,21 +210,22 @@ body{
     height: 15vh;
     margin-top: auto;
 }
-.footer{
+.mainFooter{
     display: flex;
     margin-bottom: -6vh;
     flex-direction: row;
     justify-content: center;
     justify-self: flex-end;
+    margin-top: auto;
 }
-.footerImgDiv{
+.mainFooterImgDiv{
     margin: 15px;
 }
-.footerLogo{
+.mainFooterLogo{
     width:80px;
     height: 80px;
 }
-.footerText{
+.mainFooterText{
     font-size: 1.5vh;
     font-family: 'Raleway', sans-serif;
     font-weight:700;
