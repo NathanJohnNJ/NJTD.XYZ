@@ -10,7 +10,6 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import Calculator from './pages/calculator';
 import CookiesPage from './pages/cookies';
 
 function App() {

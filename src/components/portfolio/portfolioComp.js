@@ -33,7 +33,7 @@ const PortfolioComponent = (props) => {
   }
   function linkSrc(){
     if (element==="calc"){
-      setSrc("http://localhost:3000/calculator")
+      setSrc("http://calc.njtd.xyz")
       setImgSrc(calc)
       setProjectName('React Calculator')
     } else if (element==="drumkit"){
