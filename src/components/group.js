@@ -47,13 +47,13 @@ const Group = (props) => {
         } else if(projects === 2){
             return(
                 <div className="group">
-                    <div className="title2Sphere" id="a">
+                    <div className="titleSphere" id="a">
                         <h1 className="module">{title}</h1>
                     </div>
                     <div className="thing2" id="b">
                         <PortfolioComponent element={project1}/>
                     </div>
-                    <div className="thing3" id="c">
+                    <div className="thing" id="c">
                         <PortfolioComponent element={project2}/>
                     </div>
                 </div>
