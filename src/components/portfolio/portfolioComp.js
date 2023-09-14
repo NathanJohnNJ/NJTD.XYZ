@@ -53,7 +53,7 @@ const PortfolioComponent = (props) => {
       setImgSrc(dragSite)
       setProjectName('Drag Race Website')
     } else if (element==="cookies"){
-      setSrc("http://localhost:3000/cookies")
+      setSrc("http://cookiesfront.njtd.xyz")
       setImgSrc(cookie)
       setProjectName('The Cookie Club')
     }

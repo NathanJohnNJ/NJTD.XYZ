@@ -1,12 +1,10 @@
 import './style.css';
 import logo from '../images/logo.jpg'
 
-const Footer = (props) => {
-    const showFooter = props.showFooter;
+const Footer = () => {
 
     return(
         <div className="mainFooterDiv">
-            {showFooter &&
             <footer className="mainFooter" id="footer">
                 <div className="mainFooterImgDiv">
                     <img src={logo} alt="Logo" className="mainFooterLogo"></img>
@@ -17,7 +15,7 @@ const Footer = (props) => {
                     <p className="portfolio" id="portfolio">You can also see what I'm currently up to on <a href="https://github.com/NathanJohnNJ" className="github">github</a></p>
                     <p className="thanks" id="thanks">Thanks for checking this out! See you again soon!</p>
                 </div>
-            </footer>} 
+            </footer>
         </div>
     )
 }
