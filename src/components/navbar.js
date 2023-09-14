@@ -1,18 +1,16 @@
 import './style.css';
 import { NavLink } from 'react-router-dom';
 
-const NavBar = (props) => {
-    const showNav = props.showNav;
+const NavBar = () => {
 
     return(
-        <div className="navbarMain">
-            {showNav &&
-            <div className="navbarLeft">
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/">HOME</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj">ABOUT NJ</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact">CONTACT</NavLink>
-                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio">PORTFOLIO</NavLink>
-            </div>}
+        <div className="mainNavbarMain">
+            <div className="mainNavbarLeft">
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/">HOME</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/nj">ABOUT NJ</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/contact">CONTACT</NavLink>
+                <NavLink className={({isActive}) => isActive ? "mainCurrent": "mainPage" }  to="/portfolio">PORTFOLIO</NavLink>
+            </div>
         </div>
     )
 }

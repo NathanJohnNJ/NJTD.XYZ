@@ -1,5 +1,4 @@
 import './App.css';
-import { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Contact from './pages/contact';  
@@ -10,21 +9,18 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import Calculator from './pages/calculator';
 
 function App() {
-  const [showNav, setShowNav] = useState(true);
-  const [showFooter, setShowFooter] = useState(true);
 
   return (
     <div className="Appp">
-        <NavBar showNav={showNav} />
+        <NavBar />
         <AnimatePresence mode="wait">
         <div className="mainContent">
           <Outlet />
         </div>
         </AnimatePresence>
-        <Footer showFooter={showFooter} />
+        <Footer />
      
       <Routes> 
         <Route key="home" index element={<Home />} />
@@ -33,7 +29,6 @@ function App() {
         <Route key="hmua" path="hmua" element={<HMUA />} />
         <Route key="portfolio" path="portfolio" element={<Portfolio />} />
         <Route key="codeNation" path="codeNation" element={<CodeNation />} />
-        <Route key="calculator" path="calculator" element={<Calculator setShowNav={setShowNav} setShowFooter={setShowFooter} />} />
       </Routes>
     
     </div>

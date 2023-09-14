@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import PortfolioComponent from '../components/portfolio/portfolioComp';
 import './style.css'
+import Group from '../components/group';
 
 const Portfolio = () => {
     
@@ -14,43 +15,77 @@ const Portfolio = () => {
             transition={{ duration: 3 }}
             >
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
-                <div className="topRow">
+                <Group group="python" />
+                <Group group="HTML" />
+                {/* <div className="topRow">
                     <div className="python">
-                        <h2>Python</h2>
-                        <PortfolioComponent element="pythonGame" />
+                        <h2 className="portTitles">Python</h2>
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="pythonGame" />
+                        </div>
                     </div>
                     <div className="html">
-                        <h2>HTML/CSS</h2>
+                        <h2 className="portTitles">HTML/CSS</h2>
                         <div className="htmlComps">
-                            <PortfolioComponent element="DragRaceSite" />
-                            <PortfolioComponent element="DloneProject" />
+                            <div className="slidingDiv">
+                                <PortfolioComponent element="dragSite" />
+                            </div>
+                            <div className="slidingDiv">
+                                <PortfolioComponent element="clone" />
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="javascript">
-                    <h2>JAVASCRIPT</h2>
-                    <PortfolioComponent element="drumkit" />
-                    <PortfolioComponent element="DiceGame" />
-                    <PortfolioComponent element="KeyCodeGenerator" />
+                    <h2 className="portTitles">JAVASCRIPT</h2>
+                    <div className="jsComps">
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="drumkit" />
+                        </div>
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="DiceGame" />
+                        </div>
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="KeyCodeGenerator" />
+                        </div>
+                    </div>
                 </div>
                 <div className="react">
-                    <h2>REACT</h2>
-                    <PortfolioComponent element="calc" />
-                    <PortfolioComponent element="Cats" />
-                    <PortfolioComponent element="CookieClub" />
+                    <h2 className="portTitles">REACT</h2>
+                    <div className="reactComps">
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="calc" />
+                        </div>
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="Cats" />
+                        </div>
+                        <div className="slidingDiv">
+                            <PortfolioComponent element="cookies" />
+                        </div>
+                    </div>
                 </div>
                 <div className="apis">
-                    <h2>APIs</h2>
-                    <PortfolioComponent element="DragQueens" />
-                    <PortfolioComponent element="RestAPI" />
-                    <PortfolioComponent element="FullStackAPI" />
+                    <h2 className="portTitles">APIs</h2>
+                    <div className="reactComps">
+                        <div className="slidingDiv">
+                        <PortfolioComponent element="DragQueens" />
+                        </div>
+                        <div className="slidingDiv">
+                        <PortfolioComponent element="RestAPI" />
+                        </div>
+                        <div className="slidingDiv">
+                        <PortfolioComponent element="FullStackAPI" />
+                        </div>
+                    </div>
                 </div>
-                
+                 */}
                 
                 {/* 
                 <div className="personal">
-                    <h2>PERSONAL</h2>
-                    include home automation examples, and iphone widgets?
+                    <h2 className="portTitles">PERSONAL</h2>
+                    <div className="reactComps">
+                        // include home automation examples, and iphone widgets?
+                    </div>
                 </div> */}
             </motion.div>
         </div>
