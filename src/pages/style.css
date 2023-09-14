@@ -1,15 +1,40 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+    --mainBG: #FFFFFF;
+    --secondaryBG: #FF6400;
+    --pauseBG: #9A582C;
+    --gameBG: #A7796A;
+    --titleCol: #3046CF;
+    --labelCol: #FF9154;
+    --infoCol: #FAA75D;
+    --bgOpp: #000000;
+}
 .portfolioPage{
     display: flex;
     flex-direction: column;
 }
-
+.html, .python{
+    position: relative;
+}
 .topRow, .htmlComps, .reactComps, .jsComps, .apiComps{
     display: flex;
     justify-content: space-evenly;
 }
+
 .topRow{
     width: 50vw;
-    margin-left: 25vw;
+   margin-top: -100px;
+}
+.python{
+    margin-left: -400px;
+}
+.html{
+    margin-top: 20px;
+    margin-left: 100px;
 }
 .slidingDiv{
     animation: slidingDivs 6s ease 0s infinite normal;
@@ -64,3 +89,25 @@
         margin-left: 5vw;
     }
   }
+  /********* ABOUT ME *********/
+.njTitle{
+    font-size: 40px;
+    font-family: 'League Spartan', sans-serif;
+}
+.aboutMe{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: light;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxContent{
+    font-size: 18px;
+    animation: fontGrow 5s linear;
+}
+@keyframes fontGrow {
+    from {font-size: 18px}
+    to {font-size: 22px}
+}
