@@ -1,5 +1,5 @@
 import './style.css';
-import PortfolioComponent from './portfolio/portfolioComp';
+import PortfolioComponent from './portfolioComp';
 
 
 const Group = (props) => {
@@ -36,10 +36,10 @@ const Group = (props) => {
         if(projects===1){
             return(
                 <div className="group">
-                    <div className="titleSphere" id="a">
+                    <div className="titleSphere">
                         <h1 className="module">{title}</h1>
                     </div>
-                    <div className="projectSphere thing" id="b">
+                    <div className="projectSphere1">
                         <PortfolioComponent element={project1}/>
                     </div>
                 </div>
@@ -47,13 +47,13 @@ const Group = (props) => {
         } else if(projects === 2){
             return(
                 <div className="group">
-                    <div className="titleSphere" id="a">
+                    <div className="titleSphere">
                         <h1 className="module">{title}</h1>
                     </div>
-                    <div className="thing2" id="b">
+                    <div className="projectSphere1">
                         <PortfolioComponent element={project1}/>
                     </div>
-                    <div className="thing" id="c">
+                    <div className="projectSphere2">
                         <PortfolioComponent element={project2}/>
                     </div>
                 </div>
@@ -61,16 +61,16 @@ const Group = (props) => {
         } else if(projects===3){
             return(
                 <div className="group">
-                    <div className="titleSphere thing" id="a">
+                    <div className="titleSphere">
                         <h1 className="module">{title}</h1>
                     </div>
-                    <div className="projectSphere thing" id="b">
+                    <div className="projectSphere1">
                         <PortfolioComponent element={project1}/>
                     </div>
-                    <div className="projectSphere thing" id="c">
+                    <div className="projectSphere2">
                         <PortfolioComponent element={project2}/>
                     </div>
-                    <div className="projectSphere thing" id="d">
+                    <div className="projectSphere3">
                         <PortfolioComponent element={project3}/>
                     </div>
                 </div>
