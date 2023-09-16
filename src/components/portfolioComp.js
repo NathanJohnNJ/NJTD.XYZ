@@ -1,7 +1,7 @@
 import './style.css';
 import calculator from './images/calc.png';
 import drumkit from './images/drumPreview.png';
-import alien from './images/alien.png';
+import alien from './images/alien.JPG';
 import clone from './images/clone.png';
 import dragSite from './images/dragSite.jpg';
 import cookie from './images/cookies.png';
