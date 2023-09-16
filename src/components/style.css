@@ -117,12 +117,14 @@ body{
 
 /********* NAVBAR *********/
 .mainNavbarMain{
-    height: 30px;
+    height: 50px;
+    background-color: var(--secondaryBG);
 }
 .mainNavbarLeft {
     display: flex;
     position: absolute;
     margin-left: 50px;
+    margin-top: 5px;
 }
 .mainPage{
     margin: 5px;
@@ -142,8 +144,6 @@ body{
     color: var(--accentCol);
 }
 .mainPage:hover, .mainCurrent:hover{
-    text-decoration: underline dashed;
-    text-decoration-color: var(--labelCol);
     color: var(--labelCol);    
 }
 
@@ -283,6 +283,7 @@ body{
     justify-content: center;
     justify-self: flex-end;
     margin-top: auto;
+    align-items: center;
 }
 .mainFooterImgDiv{
     margin: 15px;
@@ -290,13 +291,15 @@ body{
 .mainFooterLogo{
     width:80px;
     height: 80px;
+    margin-bottom: -10px;
 }
 .mainFooterText{
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-family: 'Raleway', sans-serif;
     font-weight:700;
     line-height: 2px;
     margin-top: 20px;
+    margin-bottom: 10px;
     color: var(--infoCol);
 }
 .github{

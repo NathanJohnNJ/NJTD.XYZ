@@ -35,22 +35,27 @@ const PortfolioComponent = (props) => {
       setSrc("http://calc.njtd.xyz")
       setImgSrc(calculator)
       setProjectName('React Calculator')
+
     } else if (element==="drumkit"){
       setSrc("http://drum.njtd.xyz/")
       setImgSrc(drumkit)
       setProjectName('Drum Kit')
+
     } else if (element==="alien"){
-      setSrc("http://drum.njtd.xyz/")
+      setSrc("https://replit.com/@NathanJohnNJ/Close-Encounters-of-a-Python-Kind")
       setImgSrc(alien)
       setProjectName('Python Text-Based Game')
+
     } else if (element==="clone"){
       setSrc("http://clone.njtd.xyz/")
       setImgSrc(clone)
       setProjectName('Website Clone')
+
     } else if (element==="dragSite"){
       setSrc("http://drag.njtd.xyz/")
       setImgSrc(dragSite)
       setProjectName('Drag Race Website')
+      
     } else if (element==="cookies"){
       setSrc("http://cookiesfront.njtd.xyz")
       setImgSrc(cookie)
