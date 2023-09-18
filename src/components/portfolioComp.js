@@ -1,17 +1,16 @@
 import './style.css';
-import calc from '../../images/calcPreview.png';
-import drumkit from '../../images/drumPreview.png';
-import alien from '../../images/alien.png';
-import clone from '../../images/clone.png';
-import dragSite from '../../images/dragSite.jpg';
-import cookie from '../../images/cookies.png';
+import calculator from './images/calc.png';
+import drumkit from './images/drumPreview.png';
+import alien from './images/alien.JPG';
+import clone from './images/clone.png';
+import dragSite from './images/dragSite.jpg';
+import cookie from './images/cookies.png';
 import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
 const PortfolioComponent = (props) => {
 
   const element = props.element;
-  // const mainDiv = `${element}Div`;
   const [shown, setShown] = useState(false);
   const [src, setSrc] = useState('');
   const [imgSrc, setImgSrc] = useState('');
@@ -34,24 +33,29 @@ const PortfolioComponent = (props) => {
   function linkSrc(){
     if (element==="calc"){
       setSrc("http://calc.njtd.xyz")
-      setImgSrc(calc)
+      setImgSrc(calculator)
       setProjectName('React Calculator')
+
     } else if (element==="drumkit"){
       setSrc("http://drum.njtd.xyz/")
       setImgSrc(drumkit)
       setProjectName('Drum Kit')
+
     } else if (element==="alien"){
-      setSrc("http://drum.njtd.xyz/")
+      setSrc("https://replit.com/@NathanJohnNJ/Close-Encounters-of-a-Python-Kind")
       setImgSrc(alien)
       setProjectName('Python Text-Based Game')
+
     } else if (element==="clone"){
-      setSrc("http://drum.njtd.xyz/")
+      setSrc("http://clone.njtd.xyz/")
       setImgSrc(clone)
       setProjectName('Website Clone')
+
     } else if (element==="dragSite"){
-      setSrc("http://drum.njtd.xyz/")
+      setSrc("http://drag.njtd.xyz/")
       setImgSrc(dragSite)
       setProjectName('Drag Race Website')
+      
     } else if (element==="cookies"){
       setSrc("http://cookiesfront.njtd.xyz")
       setImgSrc(cookie)

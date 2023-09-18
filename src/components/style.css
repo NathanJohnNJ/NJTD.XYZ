@@ -4,26 +4,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
-    --mainBG: #FFFFFF;
-    --secondaryBG: #FF6400;
-    --pauseBG: #9A582C;
-    --gameBG: #A7796A;
-    --titleCol: #3046CF;
-    --labelCol: #FF9154;
-    --infoCol: #FAA75D;
-    --bgOpp: #000000;
+  --mainBG: #D6D7DC;
+  --secondaryBG: #9B9CA1;
+  --accentCol: #CA9206;
+  --titleCol: #011039;
+  --labelCol: #EAB42C;
+  --infoCol: #0A0A0C;
 }
 body{
     background-color: var(--mainBG);
 }
+/********* COLOUR PICKER *********/
+.colourPicker{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+.set1, .set2{
+  border-style:solid;
+  border-color: white;
+  border-width:5px;
+  border-radius: 5%;
+}
+.col1{
+  background-color: #D6D7DC;
+  height: 10px;
+  width: 60px;
+}
+.col2{
+  background-color: #9B9CA1;
+  height: 10px;
+  width: 60px;
+}
+.col3{
+  background-color: #EAB42C;
+  height: 10px;
+  width: 60px;
+}
+.col4{
+  background-color: #CA9206;
+  height: 10px;
+  width: 60px;
+}
+.col5{
+  background-color: #011039;
+  height: 10px;
+  width: 60px;
+}
+.col6{
+  background-color: #0A0A0C;
+  height: 10px;
+  width: 60px;
+}
+
+.set1:hover .col1{
+  background-color: #0A0A0C;
+}
+.set1:hover .col2{
+  background-color: #011039;
+}
+.set1:hover .col3{
+  background-color: #CA9206;
+}
+.set1:hover .col4{
+  background-color: #EAB42C;
+}
+.set1:hover .col5{
+  background-color: #9B9CA1;
+}
+.set1:hover .col6{
+  background-color: #D6D7DC;
+}
+
+.set2 .col1{
+  background-color: #979588;
+}
+.set2 .col2{
+  background-color: #C5BFB2;
+}
+.set2 .col3{
+  background-color: #F4846E;
+}
+.set2 .col4{
+  background-color: #CF8680;
+}
+.set2 .col5{
+  background-color: #F6CBC8;
+}
+.set2 .col6{
+  background-color: #FCEAE4
+}
+
+.set2:hover .col1{
+  background-color: #FCEAE4;
+}
+.set2:hover .col2{
+  background-color: #F6CBC8;
+}
+.set2:hover .col3{
+  background-color: #CF8680;
+}
+.set2:hover .col4{
+  background-color: #F4846E;
+}
+.set2:hover .col5{
+  background-color: #C5BFB2;
+}
+.set2:hover .col6{
+  background-color: #979588;
+}
+
+
 /********* NAVBAR *********/
 .mainNavbarMain{
-    height: 30px;
+    height: 50px;
+    background-color: var(--secondaryBG);
 }
 .mainNavbarLeft {
     display: flex;
     position: absolute;
     margin-left: 50px;
+    margin-top: 5px;
 }
 .mainPage{
     margin: 5px;
@@ -40,11 +142,9 @@ body{
     font-family: 'League Spartan', sans-serif;
     font-weight: 800;
     text-decoration: none;
-    color: var(--bgOpp);
+    color: var(--accentCol);
 }
 .mainPage:hover, .mainCurrent:hover{
-    text-decoration: underline dashed;
-    text-decoration-color: var(--labelCol);
     color: var(--labelCol);    
 }
 
@@ -73,78 +173,76 @@ body{
 /********* GROUP *********/
 .titleSphere{
     border-radius: 50%;
-    box-shadow: -4px -3px 8px inset black;
-    background-color: var(--secondaryBG);
-    width: 150px;
-    height: 150px;
+    box-shadow: -4px -3px 8px inset black, -4px 3px 8px inset black, 4px -3px 8px inset black, 4px 3px 8px inset black;
+    background-color: var(--titleCol);
+    width: 125px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-justify: center;
     position: absolute;
     top: 35vh;
     left: 25vw;
 }
+.group:hover .portImg{
+    width:150px;
+    height:150px;
+}
 .module{
-    color: var(--mainBG);
+    color: var(--secondaryBG);
     background: none;
     position:absolute;
     z-index: 999;
+    align-self: center;
+    width: 100px;
+    white-space: wrap;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
-.thing {
+.projectSphere1 {
+    
+    position: absolute;
+    top: 42vh;
+    left: 27vw;
+    -webkit-animation: movingSphere 10s linear infinite; 
+    -moz-animation: movingSphere 10s linear infinite; 
+    -o-animation: movingSphere 10s linear infinite; 
+    animation: movingSphere 10s linear infinite; 
+  }
+  .projectSphere1:hover{
+    animation-play-state: paused;
+  }
+.projectSphere2 {
     width: 100px;
     height: 100px;
     position: absolute;
     top: 42vh;
     left: 27vw;
-    -webkit-animation: movingSphere 6s linear infinite; 
-    -moz-animation: movingSphere 6s linear infinite; 
-    -o-animation: movingSphere 6s linear infinite; 
-    animation: movingSphere 6s linear infinite; 
+    animation-direction: alternate;
+    -webkit-animation: movingSphere 10s linear -2s infinite; 
+    -moz-animation: movingSphere 10s linear -2s infinite; 
+    -o-animation: movingSphere 10s linear -2s infinite; 
+    animation: movingSphere 10s linear -2s infinite; 
   }
-  .thing:hover{
+  .projectSphere2:hover{
     animation-play-state: paused;
   }
-  .title2Sphere{
-    border-radius: 50%;
-    box-shadow: -4px -3px 8px inset black;
-    background-color: var(--secondaryBG);
-    width: 175px;
-    height: 175px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 22vh;
-    left: 60vw;
-}
-.thing2 {
+  .projectSphere3 {
     width: 100px;
     height: 100px;
     position: absolute;
     top: 42vh;
     left: 27vw;
-    -webkit-animation: movingSphere2 6s linear infinite; 
-    -moz-animation: movingSphere2 6s linear infinite; 
-    -o-animation: movingSphere2 6s linear infinite; 
-    animation: movingSphere2 6s linear infinite; 
+    -webkit-animation: movingSphere 10s linear -4s infinite; 
+    -moz-animation: movingSphere 10s linear -4s infinite; 
+    -o-animation: movingSphere 10s linear -4s infinite; 
+    animation: movingSphere 10s linear -4s infinite; 
   }
-  .thing2:hover{
-    animation-play-state: paused;
-  }
-  .thing3 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 25vh;
-    left: 25vw;
-    -webkit-animation: movingSphere3 6s linear infinite; 
-    -moz-animation: movingSphere3 6s linear infinite; 
-    -o-animation: movingSphere3 6s linear infinite; 
-    animation: movingSphere3 6s linear infinite; 
-  }
-  .thing3:hover{
+  .projectSphere3:hover{
     animation-play-state: paused;
   }
   
@@ -164,59 +262,29 @@ body{
     from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
   }
-  @keyframes movingSphere2 {
-    from { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
-    to   { transform: rotate(-180deg) translateX(160px) rotate(180deg); }
-  }
-  @-o-keyframes movingSphere2 {
-    from { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
-    to   { transform: rotate(-180deg) translateX(160px) rotate(180deg); }
-  }
-  @-moz-keyframes movingSphere2 {
-    from { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
-    to   { transform: rotate(-180deg) translateX(160px) rotate(180deg); }
-  }
-  @-webkit-keyframes movingSphere2 {
-    from { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
-    to   { transform: rotate(-180deg) translateX(160px) rotate(180deg); }
-  }
-  @keyframes movingSphere3 {
-    from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
-  }
-  @-o-keyframes movingSphere3 {
-    from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
-  }
-  @-moz-keyframes movingSphere3 {
-    from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
-  }
-  @-webkit-keyframes movingSphere3 {
-    from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
-  }
+  
 /********* FOOTER *********/
 .mainFooterDiv{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    background-color: var(--mainBG);
+    color: var(--infoCol);
     position:fixed;
     bottom: 0;
     z-index: 99;
     justify-content: flex-end;
     align-items: center;
-    height: 15vh;
+    height: 60px;
     margin-top: auto;
+
 }
 .mainFooter{
     display: flex;
-    margin-bottom: -6vh;
     flex-direction: row;
     justify-content: center;
     justify-self: flex-end;
     margin-top: auto;
+    align-items: center;
 }
 .mainFooterImgDiv{
     margin: 15px;
@@ -224,20 +292,84 @@ body{
 .mainFooterLogo{
     width:80px;
     height: 80px;
+    margin-bottom: -10px;
 }
 .mainFooterText{
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-family: 'Raleway', sans-serif;
     font-weight:700;
     line-height: 2px;
     margin-top: 20px;
-    color: var(--titlecol);
+    margin-bottom: 10px;
+    color: var(--infoCol);
 }
 .github{
     text-decoration: none;
-    color: var(--btntextcol);
+    color: var(--labelCol);
 }
 .github:hover{
     text-decoration: none;  
-    color: var(--labelCol);
+    color: var(--accentCol);
 }
+
+
+/************** PORTFOLIO COMPONENT ************/
+.mainDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hoverDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.projectNameDiv{
+    position:absolute;
+    background: none;
+    z-index:9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.projectName{
+    color: var(--secondaryBG);
+    font-size: 20px;
+}
+.modalIframe{
+    scale: 0.6;
+    margin-top: -150px;
+}
+.previewWindow{
+    height: 100vh;
+    width: 100vw;
+}
+.portImg{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.portImg:hover{
+    animation: pictureExpansion 1s;
+    animation-fill-mode: forwards;
+}
+.portfolioModal{
+    position:absolute;
+    margin: 10vw;
+}
+@keyframes pictureExpansion {
+    from {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    to {
+        border-radius: 8%;
+        height: 150px;
+        width: 150px;
+    }
+  }

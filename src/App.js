@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import Contact from './pages/contact';  
 import Home from './pages/home';
 import HMUA from './pages/hmua';
@@ -9,12 +10,17 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
+import ColourPicker from './components/colourPicker';
 
 function App() {
+  
+  const [colourScheme, setColourScheme] = useState({});
+  
 
   return (
     <div className="Appp">
         <NavBar />
+        <ColourPicker colourScheme={colourScheme} setColourScheme={setColourScheme} />
         <AnimatePresence mode="wait">
         <div className="mainContent">
           <Outlet />

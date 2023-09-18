@@ -4,91 +4,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
-    --mainBG: #FFFFFF;
-    --secondaryBG: #FF6400;
-    --pauseBG: #9A582C;
-    --gameBG: #A7796A;
-    --titleCol: #3046CF;
-    --labelCol: #FF9154;
-    --infoCol: #FAA75D;
-    --bgOpp: #000000;
+    --mainBG: #D6D7DC;
+    --secondaryBG: #9B9CA1;
+    --accentCol: #ca9206;
+    --titleCol: #011039;
+    --labelCol: #E4D094;
+    --infoCol: #0A0A0C;
+}
+/***********HOMEPAGE **********/
+.home{
+    background-color: white;
+}
+.portfolioTitle{
+    font-size: 60px;
+    font-family: 'League Spartan', sans-serif;
+    margin-top: -20px
 }
 .portfolioPage{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.html, .python{
-    position: relative;
+.portfolioPageHex{
+    margin-top: 200px;
 }
-.topRow, .htmlComps, .reactComps, .jsComps, .apiComps{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.topRow{
-    width: 50vw;
-   margin-top: -100px;
-}
-.python{
-    margin-left: -400px;
-}
-.html{
-    margin-top: 20px;
-    margin-left: 100px;
-}
-.slidingDiv{
-    animation: slidingDivs 6s ease 0s infinite normal;
-}
-.slidingDiv:hover{
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused;
-    animation-play-state:paused;
-}
-@keyframes slidingDivs {
-    0% {
-        margin-left: 5vw;
-    }
-    50% {
-        margin-left: 20vw;
-    }
-    100% {
-        margin-left: 5vw;
-    }
-  }
-  @-webkit-keyframes slidingDivs {
-    0% {
-        margin-left: 5vw;
-    }
-    50% {
-        margin-left: 20vw;
-    }
-    100% {
-        margin-left: 5vw;
-    }
-  }
-  @-moz-keyframes slidingDivs {
-    0% {
-        margin-left: 5vw;
-    }
-    50% {
-        margin-left: 20vw;
-    }
-    100% {
-        margin-left: 5vw;
-    }
-  }
-  @-o-keyframes slidingDivs {
-    0% {
-        margin-left: 5vw;
-    }
-    50% {
-        margin-left: 20vw;
-    }
-    100% {
-        margin-left: 5vw;
-    }
-  }
   /********* ABOUT ME *********/
 .njTitle{
     font-size: 40px;

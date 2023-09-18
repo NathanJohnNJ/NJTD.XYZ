@@ -1,5 +1,5 @@
 import './style.css';
-import logo from '../images/logo.jpg'
+import logo from '../images/logo.png'
 
 const Footer = () => {
 
