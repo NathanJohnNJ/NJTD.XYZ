@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import './style.css'
 import Group from '../components/group';
+import Hexagons from '../components/hexGroup';
 
 const Portfolio = () => {
     
@@ -14,35 +15,11 @@ const Portfolio = () => {
             transition={{ duration: 3 }}
             >
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
-                <div className="topRow">
-                    <div className="python">
-                        <Group group="python" />
-                    </div>
-                    <div className="html">
-                        <Group group="HTML" />
-                    </div>
-                </div>
-                <div className="secondRow">
-                    <div className="javascript">
-                        <Group group="javascript" />
-                    </div>
-                    <div className="react">
-                        <Group group="react" />
-                    </div>
-                </div>
-                <div className="thirdRow">
-                    <div className="apis">
-                        <Group group="api" />
-                    </div>
+                
+                <div className="portfolioPageHex">
+                    <Hexagons />   
                 </div>
                 
-                {/* 
-                <div className="personal">
-                    <h2 className="portTitles">PERSONAL</h2>
-                    <div className="reactComps">
-                        // include home automation examples, and iphone widgets?
-                    </div>
-                </div> */}
             </motion.div>
         </div>
     )
