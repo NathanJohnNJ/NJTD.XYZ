@@ -51,7 +51,6 @@
   .mainDiv > .child:nth-child(13){--_x:630px; --_y:300px}
   .mainDiv > .child:nth-child(14){--_x:630px; --_y:440px}
   .mainDiv > .child:nth-child(15){--_x:630px; --_y:580px}
-  
   .mainDiv > .child:nth-child(16){--_x:750px; --_y:230px}
   .mainDiv > .child:nth-child(17){--_x:750px; --_y:370px}
   .mainDiv > .child:nth-child(18){--_x:750px; --_y:510px}
@@ -61,22 +60,27 @@
   .mainDiv > .child:nth-child(22){--_x:990px; --_y:230px}
   .mainDiv > .child:nth-child(23){--_x:990px; --_y:370px}
   .mainDiv > .child:nth-child(24){--_x:990px; --_y:510px}
-  .mainDiv > .child:nth-child(25){--_x:1010px; --_y:300px}
-  .mainDiv > .child:nth-child(26){--_x:1010px; --_y:440px}
-  .mainDiv > .child:nth-child(27){--_x:1010px; --_y:580px}
-  .mainDiv > .child:nth-child(28){--_x:1130px; --_y:230px}
-  .mainDiv > .child:nth-child(29){--_x:1130px; --_y:370px}
-  .mainDiv > .child:nth-child(30){--_x:1130px; --_y:510px}
-  .mainDiv > .child:nth-child(31){--_x:1230px; --_y:300px}
-  .mainDiv > .child:nth-child(32){--_x:1230px; --_y:440px}
-  .mainDiv > .child:nth-child(33){--_x:1230px; --_y:580px}
-  .mainDiv > .child:nth-child(34){--_x:1350px; --_y:230px}
+  .mainDiv > .child:nth-child(25){--_x:1110px; --_y:300px}
+  .mainDiv > .child:nth-child(26){--_x:1110px; --_y:440px}
+  .mainDiv > .child:nth-child(27){--_x:1110px; --_y:580px}
+  .mainDiv > .child:nth-child(28){--_x:1230px; --_y:230px}
+  .mainDiv > .child:nth-child(29){--_x:1230px; --_y:370px}
+  .mainDiv > .child:nth-child(30){--_x:1230px; --_y:510px}
+  .mainDiv > .child:nth-child(31){--_x:1350px; --_y:300px}
+  .mainDiv > .child:nth-child(32){--_x:1350px; --_y:440px}
+  .mainDiv > .child:nth-child(33){--_x:1350px; --_y:580px}
+  .mainDiv > .child:nth-child(34){--_x:1470px; --_y:230px}
+  .mainDiv > .child:nth-child(35){--_x:1470px; --_y:370px}
+  .mainDiv > .child:nth-child(36){--_x:1470px; --_y:510px}
   
+  .child{
+    box-shadow: 3px 4px 4px black;
+    }
   .child:hover{
     font-weight: bolder;
     background-color: var(--accentCol);
-    color: var(--secondaryBG);
-    animation-play-state: paused;
+    color: var(--animation-play-state: paused;
+    border-radius: 5%
   }
   #unit:hover{
     font-weight: bolder;
