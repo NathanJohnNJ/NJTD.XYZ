@@ -7,7 +7,7 @@ import cats from './images/cats.jpg';
 import cookies from './images/cookies.png';
 import drumkit from './images/drumPreview.png';
 import keycode from './images/keycode.png';
-import dice from './images/dice.PNG';
+import die from './images/dice.png';
 import dragAPI from './images/dragAPI.png';
 import fullStack from './images/full.png';
 import rest from './images/rest.jpg';
@@ -240,7 +240,7 @@ const Hexagons = () => {
     const diceRevealer = () =>{
         const r = document.getElementById('dice');
         if(showDice){
-            r.innerHTML = `<img src=${dice} alt="Dice game" className="Img" height="140px"></img>`;
+            r.innerHTML = `<img src=${die} alt="Dice game" className="Img" height="140px"></img>`;
             r.style.setProperty('animation-play-state', 'paused');
         }
         else{
