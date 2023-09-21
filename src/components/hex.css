@@ -79,7 +79,8 @@
   .child:hover{
     font-weight: bolder;
     background-color: var(--accentCol);
-    color: var(--animation-play-state: paused;
+    color: var(--labelCol);
+    animation-play-state: paused;
     border-radius: 5%
   }
   #unit:hover{
