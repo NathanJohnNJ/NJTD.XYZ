@@ -1,5 +1,5 @@
 import './style.css';
-import logo from '../images/logo512.gif';
+import logo from '../images/logonew.gif';
 
 
 const Intro = () => {

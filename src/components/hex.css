@@ -36,42 +36,78 @@
     justify-content: center;
     position: absolute;
   }
-  .mainDiv > .child:nth-child(1){--_x:150px; --_y:300px}
-  .mainDiv > .child:nth-child(2){--_x:150px; --_y:440px}
-  .mainDiv > .child:nth-child(3){--_x:150px; --_y:580px}
-  .mainDiv > .child:nth-child(4){--_x:270px; --_y:230px}
-  .mainDiv > .child:nth-child(5){--_x:270px; --_y:370px}
-  .mainDiv > .child:nth-child(6){--_x:270px; --_y:510px}
-  .mainDiv > .child:nth-child(7){--_x:390px; --_y:300px}
-  .mainDiv > .child:nth-child(8){--_x:390px; --_y:440px}
-  .mainDiv > .child:nth-child(9){--_x:390px; --_y:580px}
-  .mainDiv > .child:nth-child(10){--_x:510px; --_y:230px}
-  .mainDiv > .child:nth-child(11){--_x:510px; --_y:370px}
-  .mainDiv > .child:nth-child(12){--_x:510px; --_y:510px}
-  .mainDiv > .child:nth-child(13){--_x:630px; --_y:300px}
-  .mainDiv > .child:nth-child(14){--_x:630px; --_y:440px}
-  .mainDiv > .child:nth-child(15){--_x:630px; --_y:580px}
-  .mainDiv > .child:nth-child(16){--_x:750px; --_y:230px}
-  .mainDiv > .child:nth-child(17){--_x:750px; --_y:370px}
-  .mainDiv > .child:nth-child(18){--_x:750px; --_y:510px}
-  .mainDiv > .child:nth-child(19){--_x:870px; --_y:300px}
-  .mainDiv > .child:nth-child(20){--_x:870px; --_y:440px}
-  .mainDiv > .child:nth-child(21){--_x:870px; --_y:580px}
-  .mainDiv > .child:nth-child(22){--_x:990px; --_y:230px}
-  .mainDiv > .child:nth-child(23){--_x:990px; --_y:370px}
-  .mainDiv > .child:nth-child(24){--_x:990px; --_y:510px}
-  .mainDiv > .child:nth-child(25){--_x:1110px; --_y:300px}
-  .mainDiv > .child:nth-child(26){--_x:1110px; --_y:440px}
-  .mainDiv > .child:nth-child(27){--_x:1110px; --_y:580px}
-  .mainDiv > .child:nth-child(28){--_x:1230px; --_y:230px}
-  .mainDiv > .child:nth-child(29){--_x:1230px; --_y:370px}
-  .mainDiv > .child:nth-child(30){--_x:1230px; --_y:510px}
-  .mainDiv > .child:nth-child(31){--_x:1350px; --_y:300px}
-  .mainDiv > .child:nth-child(32){--_x:1350px; --_y:440px}
-  .mainDiv > .child:nth-child(33){--_x:1350px; --_y:580px}
-  .mainDiv > .child:nth-child(34){--_x:1470px; --_y:230px}
-  .mainDiv > .child:nth-child(35){--_x:1470px; --_y:370px}
-  .mainDiv > .child:nth-child(36){--_x:1470px; --_y:510px}
+.element{
+  z-index: 9999;
+}
+.Img:hover{
+  clip-path:polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  border-radius: 50%;
+}
+ 
+  .mainDiv > .child:nth-child(1){--_x:30px; --_y:230px}
+  .mainDiv > .child:nth-child(2){--_x:30px; --_y:370px}
+  .mainDiv > .child:nth-child(3){--_x:30px; --_y:510px}
+  .mainDiv > .child:nth-child(4){--_x:30px; --_y:650px}
+
+  .mainDiv > .child:nth-child(5){--_x:150px; --_y:300px}
+  .mainDiv > .child:nth-child(6){--_x:150px; --_y:440px}
+  .mainDiv > .child:nth-child(7){--_x:150px; --_y:580px}
+  .mainDiv > .child:nth-child(8){--_x:150px; --_y:720px}
+
+  .mainDiv > .child:nth-child(9){--_x:270px; --_y:230px}
+  .mainDiv > .child:nth-child(10){--_x:270px; --_y:370px}
+  .mainDiv > .child:nth-child(11){--_x:270px; --_y:510px}
+  .mainDiv > .child:nth-child(12){--_x:270px; --_y:650px}
+
+  .mainDiv > .child:nth-child(13){--_x:390px; --_y:300px}
+  .mainDiv > .child:nth-child(14){--_x:390px; --_y:440px}
+  .mainDiv > .child:nth-child(15){--_x:390px; --_y:580px}
+  .mainDiv > .child:nth-child(16){--_x:390px; --_y:720px}
+
+  .mainDiv > .child:nth-child(17){--_x:510px; --_y:230px}
+  .mainDiv > .child:nth-child(18){--_x:510px; --_y:370px}
+  .mainDiv > .child:nth-child(19){--_x:510px; --_y:510px}
+  .mainDiv > .child:nth-child(20){--_x:510px; --_y:650px}
+
+  .mainDiv > .child:nth-child(21){--_x:630px; --_y:300px}
+  .mainDiv > .child:nth-child(22){--_x:630px; --_y:440px}
+  .mainDiv > .child:nth-child(23){--_x:630px; --_y:580px}
+  .mainDiv > .child:nth-child(24){--_x:630px; --_y:720px}
+
+  .mainDiv > .child:nth-child(25){--_x:750px; --_y:230px}
+  .mainDiv > .child:nth-child(26){--_x:750px; --_y:370px}
+  .mainDiv > .child:nth-child(27){--_x:750px; --_y:510px}
+  .mainDiv > .child:nth-child(28){--_x:750px; --_y:650px}
+
+  .mainDiv > .child:nth-child(29){--_x:870px; --_y:300px}
+  .mainDiv > .child:nth-child(30){--_x:870px; --_y:440px}
+  .mainDiv > .child:nth-child(31){--_x:870px; --_y:580px}
+  .mainDiv > .child:nth-child(32){--_x:870px; --_y:720px}
+
+  .mainDiv > .child:nth-child(33){--_x:990px; --_y:230px}
+  .mainDiv > .child:nth-child(34){--_x:990px; --_y:370px}
+  .mainDiv > .child:nth-child(35){--_x:990px; --_y:510px}
+  .mainDiv > .child:nth-child(36){--_x:990px; --_y:650px}
+
+  .mainDiv > .child:nth-child(37){--_x:1110px; --_y:300px}
+  .mainDiv > .child:nth-child(38){--_x:1110px; --_y:440px}
+  .mainDiv > .child:nth-child(39){--_x:1110px; --_y:580px}
+  .mainDiv > .child:nth-child(40){--_x:1110px; --_y:720px}
+
+  .mainDiv > .child:nth-child(41){--_x:1230px; --_y:230px}
+  .mainDiv > .child:nth-child(42){--_x:1230px; --_y:370px}
+  .mainDiv > .child:nth-child(43){--_x:1230px; --_y:510px}
+  .mainDiv > .child:nth-child(44){--_x:1230px; --_y:650px}
+
+  .mainDiv > .child:nth-child(45){--_x:1350px; --_y:300px}
+  .mainDiv > .child:nth-child(46){--_x:1350px; --_y:440px}
+  .mainDiv > .child:nth-child(47){--_x:1350px; --_y:580px}
+  .mainDiv > .child:nth-child(48){--_x:1350px; --_y:720px}
+
+  .mainDiv > .child:nth-child(49){--_x:1470px; --_y:230px}
+  .mainDiv > .child:nth-child(50){--_x:1470px; --_y:370px}
+  .mainDiv > .child:nth-child(51){--_x:1470px; --_y:510px}
+  .mainDiv > .child:nth-child(52){--_x:1470px; --_y:650px}
   
   .child{
     box-shadow: 3px 4px 4px black;
@@ -81,7 +117,8 @@
     background-color: var(--accentCol);
     color: var(--labelCol);
     animation-play-state: paused;
-    border-radius: 5%
+    border-radius: 5%;
+    z-index:999;
   }
   #unit:hover{
     font-weight: bolder;
