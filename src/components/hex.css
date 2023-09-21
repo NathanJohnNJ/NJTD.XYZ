@@ -10,6 +10,7 @@
   --titleCol: #011039;
   --labelCol: #EAB42C;
   --infoCol: #0A0A0C;
+  --circlesAni: circles 10s linear -4s infinite;
 }
 .mainDiv {
     --s: 150px; /* control the size */
@@ -25,41 +26,57 @@
     aspect-ratio: 1.15;
     object-fit: cover;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50% ,75% 100%, 25% 100%, 0 50%);
-    transform: translate(var(--_x,0), var(--_y,0));
+    /* transform: translate(var(--_x,0), var(--_y,0)); */
+    top: var(--_y);
+    left: var(--_x);
     background-color: var(--labelCol);
     color: var(--mainBG);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
   }
-  .mainDiv > .child:nth-child(1) { --_y: calc(-100% - var(--g));  --_x: calc(-281% - (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(2) { --_x: calc(-281% - (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(3) { --_y: calc(100% + var(--g));  --_x: calc(-281% - (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(4) { --_y: calc(-50% - .5*var(--g));  --_x: calc(-200% - (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(5) { --_y: calc(50% + .5*var(--g));  --_x: calc(-200% - (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(6) { --_y: calc(-100% - var(--g)); --_x: calc(-150% - (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(7) { --_x: calc(-150% - (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(8) { --_y: calc( 100% + var(--g)); --_x: calc(-150% - (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(9) { --_x: calc(-75% - .87*var(--g)); --_y: calc(-50% - .5*var(--g))}
-  .mainDiv > .child:nth-child(10) { --_x: calc(-75% - .87*var(--g)); --_y: calc( 50% + .5*var(--g));}
-  .mainDiv > .child:nth-child(11) { --_y: calc(-100% - var(--g)); }
-  /* .mainDiv > .child:nth-child(12) { } */
-  .mainDiv > .child:nth-child(13) { --_y: calc( 100% + var(--g)); }
-  .mainDiv > .child:nth-child(14) { --_x: calc( 75% + .87*var(--g));  --_y: calc(-50% - .5*var(--g));}
-  .mainDiv > .child:nth-child(15) { --_x: calc( 75% + .87*var(--g)); --_y: calc( 50% + .5*var(--g));}
-  .mainDiv > .child:nth-child(16) { --_y: calc(-100% - var(--g)); --_x: calc(150% + (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(17) { --_x: calc(150% + (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(18) { --_y: calc(100% + var(--g)); --_x: calc(150% + (var(--g)*1.8))}
-  .mainDiv > .child:nth-child(19) { --_y: calc(-50% - .5*var(--g));  --_x: calc(200% + (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(20) { --_y: calc(50% + .5*var(--g));  --_x: calc(200% + (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(21) { --_y: calc(-100% - var(--g));  --_x: calc(281% + (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(22) { --_x: calc(281% + (var(--g)*6.5))}
-  .mainDiv > .child:nth-child(23) { --_y: calc(100% + var(--g));  --_x: calc(281% + (var(--g)*6.5))}
-
+  .mainDiv > .child:nth-child(1){--_x:150px; --_y:300px}
+  .mainDiv > .child:nth-child(2){--_x:150px; --_y:440px}
+  .mainDiv > .child:nth-child(3){--_x:150px; --_y:580px}
+  .mainDiv > .child:nth-child(4){--_x:270px; --_y:230px}
+  .mainDiv > .child:nth-child(5){--_x:270px; --_y:370px}
+  .mainDiv > .child:nth-child(6){--_x:270px; --_y:510px}
+  .mainDiv > .child:nth-child(7){--_x:390px; --_y:300px}
+  .mainDiv > .child:nth-child(8){--_x:390px; --_y:440px}
+  .mainDiv > .child:nth-child(9){--_x:390px; --_y:580px}
+  .mainDiv > .child:nth-child(10){--_x:510px; --_y:230px}
+  .mainDiv > .child:nth-child(11){--_x:510px; --_y:370px}
+  .mainDiv > .child:nth-child(12){--_x:510px; --_y:510px}
+  .mainDiv > .child:nth-child(13){--_x:630px; --_y:300px}
+  .mainDiv > .child:nth-child(14){--_x:630px; --_y:440px}
+  .mainDiv > .child:nth-child(15){--_x:630px; --_y:580px}
+  
+  .mainDiv > .child:nth-child(16){--_x:750px; --_y:230px}
+  .mainDiv > .child:nth-child(17){--_x:750px; --_y:370px}
+  .mainDiv > .child:nth-child(18){--_x:750px; --_y:510px}
+  .mainDiv > .child:nth-child(19){--_x:870px; --_y:300px}
+  .mainDiv > .child:nth-child(20){--_x:870px; --_y:440px}
+  .mainDiv > .child:nth-child(21){--_x:870px; --_y:580px}
+  .mainDiv > .child:nth-child(22){--_x:990px; --_y:230px}
+  .mainDiv > .child:nth-child(23){--_x:990px; --_y:370px}
+  .mainDiv > .child:nth-child(24){--_x:990px; --_y:510px}
+  .mainDiv > .child:nth-child(25){--_x:1010px; --_y:300px}
+  .mainDiv > .child:nth-child(26){--_x:1010px; --_y:440px}
+  .mainDiv > .child:nth-child(27){--_x:1010px; --_y:580px}
+  .mainDiv > .child:nth-child(28){--_x:1130px; --_y:230px}
+  .mainDiv > .child:nth-child(29){--_x:1130px; --_y:370px}
+  .mainDiv > .child:nth-child(30){--_x:1130px; --_y:510px}
+  .mainDiv > .child:nth-child(31){--_x:1230px; --_y:300px}
+  .mainDiv > .child:nth-child(32){--_x:1230px; --_y:440px}
+  .mainDiv > .child:nth-child(33){--_x:1230px; --_y:580px}
+  .mainDiv > .child:nth-child(34){--_x:1350px; --_y:230px}
+  
   .child:hover{
     font-weight: bolder;
     background-color: var(--accentCol);
     color: var(--secondaryBG);
+    animation-play-state: paused;
   }
   #unit:hover{
     font-weight: bolder;
@@ -67,4 +84,19 @@
     color: var(--accentCol);
   }
   
-  
+  @keyframes circles {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-o-keyframes circles {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-moz-keyframes circles {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  @-webkit-keyframes circles {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }

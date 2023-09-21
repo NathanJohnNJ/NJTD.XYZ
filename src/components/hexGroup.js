@@ -32,6 +32,9 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
+        r.style.setProperty('top', '300px');
+        r.style.setProperty('left', '150px');
+        r.style.setProperty('animation', 'var(--circlesAni)')
         r.innerHTML = 'Python<br>Text-Based<br>Game';
         setShowAlien(true)
     }
@@ -50,11 +53,16 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
+        r.style.setProperty('top', '440px');
+        r.style.setProperty('left', '390px');
+        r.style.setProperty('animation', 'var(--circlesAni)')
         r.innerHTML = 'Website<br>Clone';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
-        s.innerHTML = 'Drag Race<br>Website';
+        s.style.setProperty('top', '440px');
+        s.style.setProperty('left', '390px');
+        s.style.setProperty('animation', 'var(--circlesAni)');      s.innerHTML = 'Drag Race<br>Website';
         setShowClone(true)
         setShowDrag(true)
     }
@@ -65,14 +73,23 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
+        r.style.setProperty('top', '370px');
+        r.style.setProperty('left', '510px');
+        r.style.setProperty('animation', 'var(--circlesAni)')
         r.innerHTML = 'The<br>Cookie<br>Club';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
+        s.style.setProperty('top', '370px');
+        s.style.setProperty('left', '510px');
+        s.style.setProperty('animation', 'var(--circlesAni)')
         s.innerHTML = 'React<br>Calculator';
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
+        t.style.setProperty('top', '370px');
+        t.style.setProperty('left', '510px');
+        t.style.setProperty('animation', 'var(--circlesAni)')
         t.innerHTML = 'Cats4Lyf';
         setShowCalculator(true)
         setShowCookies(true)
@@ -84,15 +101,24 @@ const Hexagons = () => {
         const t = document.getElementById('dice');
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
+        r.style.setProperty('top', '370px');
+        r.style.setProperty('left', '750px');
+        r.style.setProperty('animation', 'var(--circlesAni)')
         r.style.setProperty('color', 'var(--secondaryBG)');
         r.innerHTML = 'Drum Kit';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
+        s.style.setProperty('top', '370px');
+        s.style.setProperty('left', '750px');
+        s.style.setProperty('animation', 'var(--circlesAni)');
         s.innerHTML = 'Keycode<br>Generator';
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
+        t.style.setProperty('top', '370px');
+        t.style.setProperty('left', '750px');
+        t.style.setProperty('animation', 'var(--circlesAni)');
         t.innerHTML = 'Dice<br>Game';
         setShowDrum(true)
         setShowKeycode(true)
@@ -105,14 +131,23 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
+        r.style.setProperty('top', '230px');
+        r.style.setProperty('left', '990px');
+        r.style.setProperty('animation', 'var(--circlesAni)');
         r.innerHTML = 'Drag<br>Queen<br>API';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
+        s.style.setProperty('top', '230px');
+        s.style.setProperty('left', '990px');
+        s.style.setProperty('animation', 'var(--circlesAni)');
         s.innerHTML = 'Rest<br>API';
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
+        t.style.setProperty('top', '230px');
+        t.style.setProperty('left', '990px');
+        t.style.setProperty('animation', 'var(--circlesAni)');
         t.innerHTML = 'Full Stack';
         setShowDragAPI(true)
         setShowRest(true)
@@ -217,67 +252,44 @@ const Hexagons = () => {
             r.innerHTML = ''
         }
     }
-
-    function mouseOutFunc(element){
-        setTimeout(()=>{
-            const r = document.getElementById(`${element}`)
-            r.style.setProperty('background-color', 'var(--labelCol)');
-            r.style.setProperty('font-weight', 'normal');
-            r.style.setProperty('color', 'var(--mainBG)');
-            r.innerHTML = '';
-            if (element==="drag"){
-                setShowDrag(false);
-            } else if(element==="clone"){
-                setShowClone(false)
-            } else if(element==="alien"){
-                setShowAlien(false)
-            } else if(element==="cookies"){
-                setShowCookies(false)
-            } else if(element==="cats"){
-                setShowCats(false)
-            } else if(element==="calculator"){
-                setShowCalculator(false)
-            } else if(element==="drum"){
-                setShowDrum(false)
-            } else if(element==="keycode"){
-                setShowKeycode(false)
-            } else if(element==="dice"){
-                setShowDice(false)
-            } else if(element==="dragAPI"){
-                setShowDragAPI(false)
-            } else if(element==="rest"){
-                setShowRest(false)
-            } else if(element==="fullStack"){
-                setShowFull(false)
-            }
-    }, 3000)
-    }
     
     return (
         <div className="mainDiv">
             <div className="child pytho" id="unit" onMouseOver= {pythonRevealer}>PYTHON</div>
             <div className="child"></div>
             <div className="child"></div>
-            <div className="child" id="alien" onMouseOver={alienRevealer} onMouseOut={mouseOutFunc('alien')}></div>
-            <div className="child" id="drag" onMouseOver={dragRevealer} onMouseOut={mouseOutFunc('drag')}></div>
+            <div className="child" id="alien" onMouseOver={alienRevealer}></div>
+            <div className="child" id="drag" onMouseOver={dragRevealer}></div>
             <div className="child"></div>
             <div className="child"></div>
             <div className="child htmlcss" id="unit" onMouseOver={htmlRevealer}>HTML/CSS</div>
-            <div className="child" id="calculator" onMouseOver={calculatorRevealer} onMouseOut={mouseOutFunc('calculator')}></div>
-            <div className="child" id="clone" onMouseOver={cloneRevealer} onMouseOut={mouseOutFunc('clone')}></div>
+            <div className="child" id="calculator" onMouseOver={calculatorRevealer}></div>
+            <div className="child" id="clone" onMouseOver={cloneRevealer}></div>
             <div className="child"></div>
             <div className="child reactjs" id="unit" onMouseOver= {reactRevealer}>REACT JS</div>
-            <div className="child" id="cookies" onMouseOver={cookiesRevealer} onMouseOut={mouseOutFunc('cookies')}></div>
-            <div className="child" id="cats" onMouseOver={catsRevealer} onMouseOut={mouseOutFunc('cats')}></div>
-            <div className="child" id="keycode" onMouseOver={keycodeRevealer} onMouseOut={mouseOutFunc('keycode')}></div>
-            <div className="child" id="drum" onMouseOver={drumRevealer} onMouseOut={mouseOutFunc('drum')}></div>
-            <div className="child java" id="unit" onMouseOver= {javaRevealer}>JavaScript</div>
-            <div className="child" id="dice" onMouseOver={diceRevealer} onMouseOut={mouseOutFunc('dice')}></div>
+            <div className="child" id="cookies" onMouseOver={cookiesRevealer}></div>
+            <div className="child" id="cats" onMouseOver={catsRevealer}></div>
+            <div className="child" id="keycode" onMouseOver={keycodeRevealer}></div>
+            <div className="child" id="drum" onMouseOver={drumRevealer}></div>
+            <div className="child java" id="unit" onMouseOver= {javaRevealer}>JAVASCRIPT</div>
+            <div className="child" id="dice" onMouseOver={diceRevealer}></div>
             <div className="child"></div>
-            <div className="child" id="dragAPI" onMouseOver={dragAPIRevealer} onMouseOut={mouseOutFunc('dragAPI')}></div>
-            <div className="child" id="fullStack" onMouseOver={fullStackRevealer} onMouseOut={mouseOutFunc('fullStack')}></div>
+            <div className="child" id="dragAPI" onMouseOver={dragAPIRevealer}></div>
+            <div className="child" id="fullStack" onMouseOver={fullStackRevealer}></div>
             <div className="child api" id="unit" onMouseOver= {apiRevealer}>APIs</div>
-            <div className="child" id="rest" onMouseOver={restRevealer} onMouseOut={mouseOutFunc('rest')}></div>
+            <div className="child" id="rest" onMouseOver={restRevealer}></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
         </div>
     )
 }
