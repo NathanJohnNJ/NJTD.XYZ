@@ -11,22 +11,19 @@
   --labelCol: #EAB42C;
   --infoCol: #0A0A0C;
   --circlesAni: circles 10s linear -4s infinite;
+  --squaresAni: squares 3s linear 1;
 }
 .mainDiv {
-    --s: 150px; /* control the size */
-    --g: 10px;  /* control the gap */
     display: grid;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 20px;
   }
   .mainDiv > .child {
-    grid-area: 1/1;
-    width: var(--s);
+    width: 150px;
     aspect-ratio: 1.15;
     object-fit: cover;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50% ,75% 100%, 25% 100%, 0 50%);
-    /* transform: translate(var(--_x,0), var(--_y,0)); */
     top: var(--_y);
     left: var(--_x);
     background-color: var(--labelCol);
@@ -39,9 +36,25 @@
 .element{
   z-index: 9999;
 }
-.Img:hover{
-  clip-path:polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-  border-radius: 50%;
+.element:hover{
+  clip-path: none;
+  border-radius: 25%;
+}
+.child{
+  box-shadow: 2px -4px 43px 18.5px inset rgba(0, 0, 0, 0.35);
+  }
+.child:hover{
+  font-weight: bolder;
+  background-color: var(--accentCol);
+  color: var(--labelCol);
+  animation-play-state:paused;
+  z-index:999;
+  box-shadow: 2px -4px 43px 18.5px inset rgba(255, 255, 255, 0.3);
+}
+#unit:hover{
+  font-weight: bolder;
+  background-color: var(--titleCol);
+  color: var(--accentCol);
 }
  
   .mainDiv > .child:nth-child(1){--_x:30px; --_y:230px}
@@ -109,22 +122,7 @@
   .mainDiv > .child:nth-child(51){--_x:1470px; --_y:510px}
   .mainDiv > .child:nth-child(52){--_x:1470px; --_y:650px}
   
-  .child{
-    box-shadow: 3px 4px 4px black;
-    }
-  .child:hover{
-    font-weight: bolder;
-    background-color: var(--accentCol);
-    color: var(--labelCol);
-    animation-play-state: paused;
-    border-radius: 5%;
-    z-index:999;
-  }
-  #unit:hover{
-    font-weight: bolder;
-    background-color: var(--titleCol);
-    color: var(--accentCol);
-  }
+  
   
   @keyframes circles {
     from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
@@ -142,3 +140,4 @@
     from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
   }
+  
