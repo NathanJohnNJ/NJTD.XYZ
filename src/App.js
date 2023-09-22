@@ -18,7 +18,7 @@ function App() {
   
 
   return (
-    <div className="Appp">
+    <div className="App">
         <NavBar />
         <ColourPicker colourScheme={colourScheme} setColourScheme={setColourScheme} />
         <AnimatePresence mode="wait">

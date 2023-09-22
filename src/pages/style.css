@@ -13,7 +13,7 @@
 }
 /***********HOMEPAGE **********/
 .home{
-    background-color: white;
+    background-color: var(--mainBG);
 }
 .portfolioTitle{
     font-size: 60px;
@@ -25,14 +25,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--mainBG);
 }
 .portfolioPageHex{
     margin-top: 200px;
     width:100vw;
+    background-color: var(--mainBG);
 }
   /********* ABOUT ME *********/
 .njTitle{
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'League Spartan', sans-serif;
 }
 .aboutMe{
@@ -43,12 +45,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--mainBG);
 }
+
 .boxContent{
     font-size: 18px;
-    animation: fontGrow 5s linear;
+    animation: box 14s linear 1;
 }
 @keyframes fontGrow {
     from {font-size: 18px}
     to {font-size: 22px}
+}
+@keyframes box{
+    0% {border-top: 5px normal black}
+    25%{border-top: 5px normal black; border-right: 5px normal black}
+    50%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black}
+    100%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black ; border-left: 5px normal black }
 }
