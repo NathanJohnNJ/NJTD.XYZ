@@ -192,6 +192,8 @@ body{
 }
 
 /********* INTRO *********/
+.intro{
+  margin-top: 40px;
 .introText{
     margin-top: 115px;
     animation: fadein 5s;
