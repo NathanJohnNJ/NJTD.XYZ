@@ -193,6 +193,7 @@ body{
 
 /********* INTRO *********/
 .introText{
+    margin-top: 30px;
     animation: fadein 5s;
 }
 .brought{
