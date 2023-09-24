@@ -4,12 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
-  --mainBG: #D6D7DC;
-  --secondaryBG: #9B9CA1;
-  --accentCol: #CA9206;
-  --titleCol: #011039;
-  --labelCol: #EAB42C;
-  --infoCol: #0A0A0C;
+  --mainBG: #F7FFFF;
+  --secondaryBG: #E2EBF1;
+  --infoCol: #C8C9DD;
+  --accentCol: #042AC1;
+  --titleCol: #092271;
   --circlesAni: circles 10s linear -4s infinite;
   --squaresAni: squares 3s linear 1;
 }
@@ -18,6 +17,7 @@
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 15px;
   }
   .mainDiv > .child {
     width: 150px;
@@ -26,7 +26,7 @@
     clip-path: polygon(25% 0%, 75% 0%, 100% 50% ,75% 100%, 25% 100%, 0 50%);
     top: var(--_y);
     left: var(--_x);
-    background-color: var(--labelCol);
+    background-color: var(--infoCol);
     color: var(--mainBG);
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
 .child:hover{
   font-weight: bolder;
   background-color: var(--accentCol);
-  color: var(--labelCol);
+  color: var(--infoCol);
   animation-play-state:paused;
   z-index:999;
   box-shadow: 2px -4px 43px 18.5px inset rgba(255, 255, 255, 0.3);
