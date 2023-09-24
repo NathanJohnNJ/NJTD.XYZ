@@ -3,13 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /********* COLOUR VARIABLES *********/
-:root{
+/* :root{
   --mainBG: #D6D7DC;
   --secondaryBG: #9B9CA1;
   --labelCol: #EAB42C;
   --accentCol: #CA9206;
   --titleCol: #011039;
   --infoCol: #0A0A0C;
+} */
+:root{
+  --mainBG: #F7FFFF;
+  --secondaryBG: #E2EBF1;
+  --infoCol: #C8C9DD;
+  --accentCol: #042AC1;
+  --titleCol: #092271;
 }
 body{
     background-color: var(--mainBG);
@@ -18,10 +25,10 @@ body{
 .colourPicker{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-evenly; 
   
 }
-.set1, .set2, .set3{
+.set1, .set2, .set3, .set4{
   border-style:solid;
   border-color: white;
   border-width:5px;
@@ -29,136 +36,149 @@ body{
 }
 .col1{
   /* mainBG */
-  background-color: #D6D7DC; 
+  background-color: #F7FFFF; 
   height: 10px;
   width: 60px;
 }
 .col2{
   /* secondaryBG */
-  background-color: #9B9CA1;
+  background-color: #E2EBF1;
   height: 10px;
   width: 60px;
 }
 .col3{
-  /* labelCol */
-  background-color: #EAB42C;
+  /* infoCol */
+  background-color: #C8C9DD;
   height: 10px;
   width: 60px;
 }
 .col4{
   /* accentCol */
-  background-color: #CA9206;
+  background-color: #042AC1;
   height: 10px;
   width: 60px;
 }
 .col5{
   /* titleCol */
-  background-color: #011039;
-  height: 10px;
-  width: 60px;
-}
-.col6{
-  /* infoCol */
-  background-color: #0A0A0C;
+  background-color: #092271;
   height: 10px;
   width: 60px;
 }
 
 .set1:hover .col1{
-  background-color: #0A0A0C;
+  background-color: #092271;
 }
 .set1:hover .col2{
-  background-color: #011039;
+  background-color: #042AC1;
 }
 .set1:hover .col3{
-  background-color: #CA9206;
+  background-color: #CBC9DD;
 }
 .set1:hover .col4{
-  background-color: #EAB42C;
+  background-color: #E2EBF1;
 }
 .set1:hover .col5{
-  background-color: #9B9CA1;
-}
-.set1:hover .col6{
-  background-color: #D6D7DC;
+  background-color: #F7FFFF;
 }
 
 .set2 .col1{
-  background-color: #979588;
+  background-color: #F3FEEA;
 }
 .set2 .col2{
-  background-color: #C5BFB2;
+  background-color: #CAE1C7;
 }
 .set2 .col3{
-  background-color: #F4846E;
+  background-color: #8EB68A;
 }
 .set2 .col4{
-  background-color: #CF8680;
+  background-color: #2E8831;
 }
 .set2 .col5{
-  background-color: #F6CBC8;
-}
-.set2 .col6{
-  background-color: #FCEAE4
+  background-color: #19671D;
 }
 
 .set2:hover .col1{
-  background-color: #FCEAE4;
+  background-color: #19671D;
 }
 .set2:hover .col2{
-  background-color: #F6CBC8;
+  background-color: #2E8831;
 }
 .set2:hover .col3{
-  background-color: #CF8680;
+  background-color: #8EB68A;
 }
 .set2:hover .col4{
-  background-color: #F4846E;
+  background-color: #CAE1C7;
 }
 .set2:hover .col5{
-  background-color: #C5BFB2;
+  background-color: #F3FEEA;
 }
-.set2:hover .col6{
-  background-color: #979588;
-}
+
 
 .set3 .col1{
-  background-color: #000000;
+  background-color: #FFF0EF;
 }
 .set3 .col2{
-  background-color: #313131;
+  background-color: #FFDDD5;
 }
 .set3 .col3{
-  background-color: #616161;
+  background-color: #C3806E;
 }
 .set3 .col4{
-  background-color: #F2F2F2;
+  background-color: #AB260C;
 }
 .set3 .col5{
-  background-color: #929292;
-}
-.set3 .col6{
-  background-color: #FFFFFF
+  background-color: #8A130C;
 }
 
+
 .set3:hover .col1{
-  background-color: #FFFFFF;
+  background-color: #8A130C;
 }
 .set3:hover .col2{
-  background-color: #929292;
+  background-color: #AB260C;
 }
 .set3:hover .col3{
-  background-color: #F2F2F2;
+  background-color: #C3806E;
 }
 .set3:hover .col4{
-  background-color: #616161;
+  background-color: #FFDDD5;
 }
 .set3:hover .col5{
+  background-color: #FFF0EF;
+}
+
+.set4 .col1{
+  background-color: #F2F2F2;
+}
+.set4 .col2{
+  background-color: #929292;
+}
+.set4 .col3{
+  background-color: #616161;
+}
+.set4 .col4{
   background-color: #313131;
 }
-.set3:hover .col6{
+.set4 .col5{
   background-color: #000000;
 }
 
+
+.set4:hover .col1{
+  background-color: #000000;
+}
+.set4:hover .col2{
+  background-color: #313131;
+}
+.set4:hover .col3{
+  background-color: #616161;
+}
+.set4:hover .col4{
+  background-color: #929292;
+}
+.set4:hover .col5{
+  background-color: #F2F2F2;
+}
 /********* NAVBAR *********/
 .mainNavbarMain{
     height: 50px;
@@ -188,7 +208,7 @@ body{
     color: var(--accentCol);
 }
 .mainPage:hover, .mainCurrent:hover{
-    color: var(--labelCol);    
+    color: var(--infoCol);    
 }
 
 /********* INTRO *********/
@@ -260,7 +280,7 @@ body{
 }
 .github{
     text-decoration: none;
-    color: var(--labelCol);
+    color: var(--infoCol);
 }
 .github:hover{
     text-decoration: none;  

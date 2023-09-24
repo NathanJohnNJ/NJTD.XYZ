@@ -4,13 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
-    --mainBG: #D6D7DC;
-    --secondaryBG: #9B9CA1;
-    --accentCol: #ca9206;
-    --titleCol: #011039;
-    --labelCol: #E4D094;
-    --infoCol: #0A0A0C;
-}
+    --mainBG: #F7FFFF;
+    --secondaryBG: #E2EBF1;
+    --infoCol: #C8C9DD;
+    --accentCol: #042AC1;
+    --titleCol: #092271;
+  }
 /***********HOMEPAGE **********/
 .home{
     background-color: var(--mainBG);
@@ -18,7 +17,7 @@
 .portfolioTitle{
     font-size: 60px;
     font-family: 'League Spartan', sans-serif;
-    margin-top: -20px;
+    
 }
 .portfolioPage{
     display: flex;
