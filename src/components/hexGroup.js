@@ -33,8 +33,8 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
-        r.style.setProperty('top', '230px');
-        r.style.setProperty('left', '30px');
+        r.style.setProperty('top', '23%');
+        r.style.setProperty('left', '1.8%');
         r.style.setProperty('animation', 'var(--circlesAni)');
         r.style.setProperty('animation-direction', 'reverse');
         r.innerHTML = 'Python<br>Text-Based<br>Game';
@@ -47,15 +47,15 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
-        r.style.setProperty('top', '650px');
-        r.style.setProperty('left', '990px');
+        r.style.setProperty('top', '83%');
+        r.style.setProperty('left', '59.69%');
         r.style.setProperty('animation', 'var(--circlesAni)')
         r.innerHTML = 'Website<br>Clone';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
-        s.style.setProperty('top', '650px');
-        s.style.setProperty('left', '990px');
+        s.style.setProperty('top', '83%');
+        s.style.setProperty('left', '59.69%');
         s.style.setProperty('animation', 'var(--circlesAni)');   
         s.style.setProperty('animation-delay', '-2s');   
         s.innerHTML = 'Drag Race<br>Website';
@@ -69,16 +69,16 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
-        r.style.setProperty('top', '510px');
-        r.style.setProperty('left', '270px');
+        r.style.setProperty('top', '53%');
+        r.style.setProperty('left', '16.16%');
         r.style.setProperty('animation', 'var(--circlesAni)');
         r.classList.add('element');
         r.innerHTML = 'The<br>Cookie<br>Club';
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
-        s.style.setProperty('top', '510px');
-        s.style.setProperty('left', '270px');
+        s.style.setProperty('top', '53%');
+        s.style.setProperty('left', '16.16%');
         s.style.setProperty('animation', 'var(--circlesAni)')
         s.style.setProperty('animation-delay', '-2s'); 
         s.innerHTML = 'React<br>Calculator';
@@ -86,8 +86,8 @@ const Hexagons = () => {
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
-        t.style.setProperty('top', '510px');
-        t.style.setProperty('left', '270px');
+        t.style.setProperty('top', '53%');
+        t.style.setProperty('left', '16.16%');
         t.style.setProperty('animation', 'var(--circlesAni)')
         t.style.setProperty('animation-delay', '-4s'); 
         t.style.setProperty('animation-direction', 'reverse'); 
@@ -103,8 +103,8 @@ const Hexagons = () => {
         const t = document.getElementById('dice');
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
-        r.style.setProperty('top', '300px');
-        r.style.setProperty('left', '630px');
+        r.style.setProperty('top', '45.5%');
+        r.style.setProperty('left', '37.9%');
         r.style.setProperty('animation', 'var(--circlesAni)')
         r.style.setProperty('color', 'var(--secondaryBG)');
         r.innerHTML = 'Drum Kit';
@@ -112,8 +112,8 @@ const Hexagons = () => {
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
-        s.style.setProperty('top', '300px');
-        s.style.setProperty('left', '630px');
+        s.style.setProperty('top', '45.5%');
+        s.style.setProperty('left', '37.9%');
         s.style.setProperty('animation', 'var(--circlesAni)');
         s.style.setProperty('animation-delay', '-2s'); 
         s.innerHTML = 'Keycode<br>Generator';
@@ -121,8 +121,8 @@ const Hexagons = () => {
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
-        t.style.setProperty('top', '300px');
-        t.style.setProperty('left', '630px');
+        t.style.setProperty('top', '45.5%');
+        t.style.setProperty('left', '37.9%');
         t.style.setProperty('animation', 'var(--circlesAni)');
         t.style.setProperty('animation-delay', '-4s'); 
         t.style.setProperty('animation-direction', 'reverse'); 
@@ -139,16 +139,16 @@ const Hexagons = () => {
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
-        r.style.setProperty('top', '440px');
-        r.style.setProperty('left', '1350px');
+        r.style.setProperty('top', '45.5%');
+        r.style.setProperty('left', '81.73%');
         r.style.setProperty('animation', 'var(--circlesAni)');
         r.innerHTML = 'Drag<br>Queen<br>API';
         r.classList.add('element');
         s.style.setProperty('background-color', 'var(--titleCol)');
         s.style.setProperty('font-weight', 'bolder');
         s.style.setProperty('color', 'var(--secondaryBG)');
-        s.style.setProperty('top', '440px');
-        s.style.setProperty('left', '1350px');
+        s.style.setProperty('top', '45.5%');
+        s.style.setProperty('left', '81.73%');
         s.style.setProperty('animation', 'var(--circlesAni)');
         s.style.setProperty('animation-delay', '-2s'); 
         s.innerHTML = 'Rest<br>API';
@@ -156,8 +156,8 @@ const Hexagons = () => {
         t.style.setProperty('background-color', 'var(--titleCol)');
         t.style.setProperty('font-weight', 'bolder');
         t.style.setProperty('color', 'var(--secondaryBG)');
-        t.style.setProperty('top', '440px');
-        t.style.setProperty('left', '1350px');
+        t.style.setProperty('top', '45.5%');
+        t.style.setProperty('left', '81.73%');
         t.style.setProperty('animation', 'var(--circlesAni)');
         t.style.setProperty('animation-delay', '-4s'); 
         t.style.setProperty('animation-direction', 'reverse'); 
@@ -173,8 +173,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${alien})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
-            
+            r.style.setProperty('color', 'var(--titleCol)');  
         }
         else{
             r.innerHTML = ''
@@ -186,7 +185,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${cats})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -198,7 +197,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${cookies})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -246,7 +245,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${dragAPI})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -258,7 +257,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${drumkit})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -270,7 +269,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${keycode})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -282,7 +281,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${die})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -294,7 +293,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${fullStack})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -306,7 +305,7 @@ const Hexagons = () => {
             r.style.setProperty('background-image', `url(${rest})`)
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
-            r.style.setProperty('color', 'var(--titleCol)')
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
@@ -317,6 +316,7 @@ const Hexagons = () => {
     }
 
     return (
+        <div classNAme="hexWrapper">
         <div className="mainDiv">
             {/* 1 */}
             <div className="child pytho" id="unit" onMouseOver= {pythonRevealer}>PYTHON</div>
@@ -377,6 +377,7 @@ const Hexagons = () => {
             {/* 51 */}
             <div className="child"></div>
             <div className="child"></div>
+        </div>
         </div>
     )
 }

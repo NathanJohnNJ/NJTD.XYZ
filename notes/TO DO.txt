@@ -1,0 +1,10 @@
+- Make a page for /portfolio with a portfolio picker on
+- Get slideshow buttons working on hmua page and look at styling
+- Add custom colour schemes to colourPicker and reconsider light/dark icon
+- Reorganise components and pages and update links
+- Finish cats website
+- Check API visuals
+- Finish about page
+- Update contact page
+- Finish sorting existing sizes to update them to be adaptable
+- Add Media Queries
