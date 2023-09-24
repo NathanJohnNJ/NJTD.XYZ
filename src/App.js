@@ -26,17 +26,18 @@ function App() {
           <Outlet />
         </div>
         </AnimatePresence>
-        <Footer />
+        
      
       <Routes> 
         <Route key="home" index element={<Home />} />
         <Route key="nj" path="nj" element={<Nj />} />
         <Route key="contact" path="contact" element={<Contact />} />
-        <Route key="hmua" path="hmua" element={<HMUA />} />
+        <Route key="hmua" path="portfolio/hmua" element={<HMUA />} />
+        <Route key="developer" path="portfolio/developer" element={<Portfolio />} />
         <Route key="portfolio" path="portfolio" element={<Portfolio />} />
         <Route key="codeNation" path="codeNation" element={<CodeNation />} />
       </Routes>
-    
+      <Footer />
     </div>
   );
 }

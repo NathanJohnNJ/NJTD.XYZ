@@ -54,9 +54,9 @@ const Nj = () => {
                 <div className="aboutTop">
                 <div className="aboutTopLeft">
                    Hi! I'm 
-                    <span className="boxContent">
+                    <div className="boxContent">
                         Nathan.
-                    </span>
+                    </div>
                 </div>
                 <div className="aboutTopMiddle">
                         And I hate to be put in a box...

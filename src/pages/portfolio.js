@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import './style.css'
-import Group from '../components/group';
 import Hexagons from '../components/hexGroup';
+
 
 const Portfolio = () => {
     
@@ -15,7 +15,6 @@ const Portfolio = () => {
             transition={{ duration: 3 }}
             >
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
-                
                 <div className="portfolioPageHex">
                     <Hexagons />   
                 </div>

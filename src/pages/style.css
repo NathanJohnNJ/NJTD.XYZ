@@ -14,21 +14,22 @@
 .home{
     background-color: var(--mainBG);
 }
+/***********PORTFOLIO PAGE **********/
 .portfolioTitle{
-    font-size: 60px;
+    font-size: 4.5vw;
     font-family: 'League Spartan', sans-serif;
-    
+    color: var(--titleCol);
+    margin-bottom: 10%;
+    position: absolute;
+   right:0;
+   left:0;
 }
 .portfolioPage{
     display: flex;
     flex-direction: column;
+    text-align:center;
     justify-content: center;
     align-items: center;
-    background-color: var(--mainBG);
-}
-.portfolioPageHex{
-    margin-top: 200px;
-    width:100vw;
     background-color: var(--mainBG);
 }
   /********* ABOUT ME *********/
@@ -48,6 +49,8 @@
 }
 
 .boxContent{
+    height: 20px;
+    width: 60px;
     font-size: 18px;
     animation: box 14s linear 1;
 }
@@ -56,13 +59,16 @@
     to {font-size: 22px}
 }
 @keyframes box{
-    0% {border-top: 5px normal black}
-    25%{border-top: 5px normal black; border-right: 5px normal black}
-    50%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black}
-    100%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black ; border-left: 5px normal black }
+    0% {border-top: 5px dashed black}
+    25%{border-top: 5px dashed black; border-right: 5px dashed black}
+    50%{border-top: 5px dashed black; border-right: 5px dashed black;  border-bottom: 5px dashed black}
+    100%{border-top: 5px dashed black; border-right: 5px dashed black;  border-bottom: 5px dashed black ; border-left: 5px dashed black }
 }
 
   /*************** HMUA ****************/
+  .hmuaPage{
+    height: 100vh;
+  }
   .hmuaContent, .hmuaImages{
     display: flex;
     flex-direction: column;
@@ -74,8 +80,6 @@
     overflow: auto;
     white-space: nowrap;
     padding: 8px;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
   
 div.scroll-container img {
@@ -97,9 +101,4 @@ div.scroll-container img {
     z-index: 999;
     height: 100px;
     width:100px;
-}
-.next{
-
-}
-.prev{
 }
