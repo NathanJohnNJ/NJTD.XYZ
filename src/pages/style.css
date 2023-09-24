@@ -61,3 +61,45 @@
     50%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black}
     100%{border-top: 5px normal black; border-right: 5px normal black;  border-bottom: 5px normal black ; border-left: 5px normal black }
 }
+
+  /*************** HMUA ****************/
+  .hmuaContent, .hmuaImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div.scroll-container {
+    background-color: #aaaaa0;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 8px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+  
+div.scroll-container img {
+    padding: 5px;
+    max-height: 500px;
+}
+  .slide{
+    max-width: 100%;
+    min-height: 100%;
+}
+.vogue{
+    margin-bottom: 3vh;                                                                                                                                     
+}
+.iconCredits{
+    font-size: 4px;
+}
+.arrow{
+    
+    z-index: 999;
+    height: 100px;
+    width:100px;
+}
+.next{
+
+}
+.prev{
+}
