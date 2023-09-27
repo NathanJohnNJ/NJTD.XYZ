@@ -10,7 +10,7 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import ColourPicker from './components/colourPicker';
+import ColourPicker from './components/colourBar/colourPicker';
 
 function App() {
   
