@@ -12,8 +12,13 @@ import other from './hmuaPortfolio/other.jpg';
 import chez1 from './hmuaPortfolio/chez1.jpg';
 import mamzy from './hmuaPortfolio/mamzy.jpg';
 import boys from './hmuaPortfolio/boys.jpg';
-import prev from './hmuaPortfolio/prev.png';
-import next from './hmuaPortfolio/next.png';
+import chez2 from './hmuaPortfolio/chez2.jpg';
+import sport from './hmuaPortfolio/sport.jpg';
+import sport2 from './hmuaPortfolio/sport2.jpg';
+import water from './hmuaPortfolio/water1.jpg';
+import water2 from './hmuaPortfolio/water2.jpg';
+import water3 from './hmuaPortfolio/water3.jpg';
+
 
 const HMUA = () => {
 
@@ -42,28 +47,28 @@ const HMUA = () => {
                     <p className="smallSelection">This is just a small selection of my portfolio. To see my full portfolio, please visit my <a className="instagram" href="https://instagram.com/nathanjohnnj" target="_blank" rel="noreferrer">Instagram</a>.</p>
                 </div>
                 <div className="hmuaImages">
-                    
                     <div className="scroll-container">
                         <img id="slides" className="slide" src={feroce} alt="Feroce online magazine feature"/>
                         <img id="slides" className="slide" src={print1} alt="Magazine feature"/>
+                        <img id="slides" className="slide" src={water3} alt="Photoshoot"/>
+                        <img id="slides" className="slide" src={sport} alt="Photoshoot"/>
+                        <img id="slides" className="slide" src={sport2} alt="Photoshoot"/>
                         <img id="slides" className="slide" src={print2} alt="Magazine feature"/>
                         <img id="slides" className="slide vogue" src={vogue} alt="Vogue Italia feature"/>
                         <img id="slides" className="slide" src={wedding1} alt="Bridal hair and makeup"/>
                         <img id="slides" className="slide" src={wedding2} alt="Bridal hair and makeup"/>
                         <img id="slides" className="slide" src={rocks} alt="Marbella shoot"/>
+                        <img id="slides" className="slide" src={water2} alt="Photoshoot"/>
+                        <img id="slides" className="slide" src={chez2} alt="Photoshoot"/>
                         <img id="slides" className="slide" src={tree2} alt="Marbella shoot"/>
                         <img id="slides" className="slide" src={other} alt="Photoshoot"/>
                         <img id="slides" className="slide" src={chez1} alt="Photoshoot"/>
                         <img id="slides" className="slide" src={mamzy} alt="Marella shoot"/>
+                        <img id="slides" className="slide" src={water} alt="Photoshoot"/>
                         <img id="slides" className="slide" src={boys} alt="Photoshoot"/>
                     </div>
-                    <div className="arrowsDiv">
-                          <img src={prev} className="prev arrow" alt="Previous" onClick={prevClick}/>
-                        <img src={next} className="next arrow" alt="Next" onClick={nextClick}/>
-                    </div>                                          
                 </div>
             </div>
-            <div className="iconCredits"><p><a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Handicon - Flaticon</a></p></div>
             </motion.div>
         </div>
     )

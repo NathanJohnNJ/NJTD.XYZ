@@ -24,4 +24,5 @@ yarn-error.log*
 src/back-end/.env
 .env
 src/.env
-oldCode.js
+notes/
+src/pages/hmuaPortfolio

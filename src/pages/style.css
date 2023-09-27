@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+/* font-family: 'Geologica', sans-serif;
+font-weight: 750;
+font-variation-settings: 'wght' 750;
+font-variation-settings: 'CRSV' 0.5;
+font-variation-settings:  'SHRP' 100; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
     --mainBG: #F7FFFF;
@@ -21,8 +28,8 @@
     color: var(--titleCol);
     margin-bottom: 10%;
     position: absolute;
-   right:0;
-   left:0;
+    right:0;
+    left:0;
 }
 .portfolioPage{
     display: flex;
@@ -33,41 +40,103 @@
     background-color: var(--mainBG);
 }
   /********* ABOUT ME *********/
+  .njCodes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 .njTitle{
     font-size: 50px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 750;
+    font-variation-settings: 'wght' 750;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
 }
 .aboutMe{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: light;
+    font-family: 'Poppins', sans-serif;
+    font-weight:300;
+    font-size: 17px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--mainBG);
 }
-
-.boxContent{
-    height: 20px;
-    width: 60px;
-    font-size: 18px;
-    animation: box 14s linear 1;
+.aboutTop{
+    display: flex;
+    flex-direction: column;
+    width:80vw;
 }
+.aboutTopLeft{
+    align-self: flex-start;
+    width: 10vw;   
+    margin-left: 20vw;
+}
+.boxContent{
+    height: 25px;
+    width: 90px;
+    padding:5px;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    animation: box 20s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    margin-left: 130px;
+}
+.aboutTopMiddle{
+    display:flex;
+    align-self: center;
+}
+.aboutTopRight{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.thanks{
+    margin-top: -1vh;
+    animation: fontGrow 4s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 25s;
+}
+.aboutBottom{
+    width: 75vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @keyframes fontGrow {
-    from {font-size: 18px}
-    to {font-size: 22px}
+    from {font-size: 17px; font-weight:300}
+    to {font-size: 25px; font-weight:700}
 }
 @keyframes box{
-    0% {border-top: 5px dashed black}
-    25%{border-top: 5px dashed black; border-right: 5px dashed black}
-    50%{border-top: 5px dashed black; border-right: 5px dashed black;  border-bottom: 5px dashed black}
-    100%{border-top: 5px dashed black; border-right: 5px dashed black;  border-bottom: 5px dashed black ; border-left: 5px dashed black }
+    0% {border: none}
+    30%{border-top: 5px solid black}
+    32%{border-top: 5px solid black; border-right: 5px solid black}
+    34%{border-top: 5px solid black; border-right: 5px solid black;  border-bottom: 5px solid black} 
+    36%{border: 5px solid black}
+    80%{border: 5px solid rgb(240, 106, 128)}
+    85%{border: 5px dashed rgb(240, 106, 128)}
+    100%{border: 5px dashed rgb(240, 106, 128)}
 }
 
   /*************** HMUA ****************/
   .hmuaPage{
     height: 100vh;
+    background-color: var(--mainBG);
+    font-family: 'Raleway', sans-serif;
+  }
+  .hmuaTitle{
+    font-size: 50px;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--titleCol);
   }
   .hmuaContent, .hmuaImages{
     display: flex;
@@ -76,19 +145,19 @@
     align-items: center;
   }
   div.scroll-container {
-    background-color: #aaaaa0;
+    background-color: var(--infoCol);
     overflow: auto;
     white-space: nowrap;
-    padding: 8px;
-}
-  
-div.scroll-container img {
-    padding: 5px;
-    max-height: 500px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width:95vw;
+    border: 8px solid var(--infoCol)
 }
   .slide{
     max-width: 100%;
     min-height: 100%;
+    padding: 5px;
+    max-height: 500px;
 }
 .vogue{
     margin-bottom: 3vh;                                                                                                                                     
