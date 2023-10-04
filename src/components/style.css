@@ -32,7 +32,7 @@ body{
 .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker{
   border-style:solid;
   border-color: var(--borderCol);
-  border-width:5px;
+  border-width:3px;
   border-radius: 5%;
 }
 .col1{
@@ -268,21 +268,37 @@ body{
     position: absolute;
     width: 100vw;
     padding-left: 50px;
-    
 }
 .firstNav{
   display:flex;
   flex-direction: row;
   padding-top: 1.5vh;
-
+  justify-content: space-evenly;
+}
+.navLeft, .navRight{
+  display: flex;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.logoStill{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top:0;
+  left: 45%;
+  z-index: 9999;
+  opacity:0;
+  animation: logoFadeIn 2s;
+  animation-delay: 28s;
+  animation-fill-mode: forwards;
 }
 .portfolioOptions{
   width: fit-content;
-  margin-left: 25.5vw;
+  margin-left: 68vw;
   background-color: var(--secondaryBG);
   margin-top:-10px;
 }
-.Page{
+.page{
     margin: 15px;
     margin-top: 12px;
     font-size: 2.3vw;
@@ -291,7 +307,7 @@ body{
     text-decoration: none;
     color: var(--infoCol)
 }
-.Current{
+.current{
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 5px;  
@@ -301,37 +317,60 @@ body{
     text-decoration: none;
     color: var(--accentCol);
 }
-.mainPage:hover, .mainCurrent:hover{
-    color: var(--infoCol);    
+.page:hover, .current:hover{
+    color: var(--accentCol);    
 }
 
 /********* INTRO *********/
-.intro{
-  margin-top: 40px;
+.logoImg{
+  margin-top: 4.5vh;
+  scale:1;
+  animation: shrinkRelocate 6s;
+  animation-delay: 25s;
+  animation-fill-mode: forwards;
 }
+
 .introText{
-    margin-top: 115px;
-    animation: fadein 5s;
+    margin-top: 9vh;
+    animation: fadeout 3s;
+    animation-delay: 28s;
+    animation-fill-mode: forwards;
 }
 .brought{
-    animation: fadein 5s;
-    margin-top: -35px;
+    animation: fadein 10s;
+    margin-top: -6.5vh;
     font-family: 'League Spartan', sans-serif;
     font-weight: 900;
-    font-size: 45px;
+    font-size: 6vw;
 }
 .njcodes{
-    animation: fadein 15s;
+    animation: fadein 5s;
+    animation-delay: 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
     font-family: 'League Spartan', sans-serif;
     font-weight: 900;
-    font-size: 52px;
-    margin-top: -20px;
+    font-size: 7vw;
+    margin-top: -3vh;
 }
 @keyframes fadein {
     from {opacity: 0}
     to {opacity: 1}
   }
-
+  @keyframes logoFadeIn{
+    0% { opacity:0 }
+    75% { opacity:0 }
+    100% { opacity:1 }
+  }
+@keyframes shrinkRelocate{
+  0% { scale:1; margin-top: 4.5vh; }
+  95% { scale:0.15; margin-top: -39vh; }
+  100% { scale:0.01; margin-top: -39vh; }
+}
+@keyframes fadeout {
+  from {opacity: 1}
+  to {opacity: 0}
+}
   
 /********* FOOTER *********/
 .mainFooterDiv{
@@ -346,7 +385,7 @@ body{
     align-items: center;
     height: 80px;
     margin-top: auto;
-
+    background-color: var(--mainBG);
 }
 .mainFooter{
     display: flex;

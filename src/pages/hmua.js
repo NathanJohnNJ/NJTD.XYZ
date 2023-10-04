@@ -20,16 +20,7 @@ import water2 from './hmuaPortfolio/water2.jpg';
 import water3 from './hmuaPortfolio/water3.jpg';
 
 
-const HMUA = () => {
-
-    function prevClick(){
-        const leftEvent = new KeyboardEvent('keydown', {'keyCode': 37, 'which': 37});
-        document.dispatchEvent(leftEvent);
-    }
-    function nextClick(){
-        const rightEvent = new KeyboardEvent('keydown', {'keyCode': 39, 'which': 39});
-        document.dispatchEvent(rightEvent);
-    }                  
+const HMUA = () => {               
 
     return (
         <div className="hmuaPage">

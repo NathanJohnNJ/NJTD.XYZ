@@ -47,9 +47,9 @@ font-variation-settings:  'SHRP' 100; */
     align-items: center;
   }
 .njTitle{
-    font-size: 50px;
+    font-size: 5.5vw;
     font-family: 'Geologica', sans-serif;
-    font-weight: 750;
+    font-weight: 425;
     font-variation-settings: 'wght' 750;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
@@ -58,7 +58,7 @@ font-variation-settings:  'SHRP' 100; */
 .aboutMe{
     font-family: 'Poppins', sans-serif;
     font-weight:300;
-    font-size: 17px;
+    font-size: 2vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -73,21 +73,33 @@ font-variation-settings:  'SHRP' 100; */
 .aboutTopLeft{
     align-self: flex-start;
     width: 10vw;   
-    margin-left: 20vw;
+    margin-left: 16vw;
 }
 .boxContent{
-    height: 25px;
-    width: 90px;
-    padding:5px;
-    font-size: 20px;
+    background: none;
+    width: 14vw;
+    height:6vh;
+    padding:1.5vw;
+    font-size: 2.5vw;
     font-weight: bold;
     align-self: center;
     justify-self: center;
-    animation: box 20s;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-    margin-left: 130px;
+    animation: box 20s, fontGrow 10s;
+    animation-delay: 5s, 5s;
+    animation-fill-mode: forwards, forwards;
+    margin-left: 13vw;
 }
+.active-animation{
+    /* top, bot, left, right */
+    padding:1.5vw;
+    font-size: 3.5vw;
+    background-image: linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128)50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 2vw 0.5vh, 2vw 0.5vh, 0.5vh 2vw, 0.5vh 2vw;
+    background-position: left top, right bottom, left bottom, right top;
+    animation: border-dance 1s infinite linear;
+}
+
 .aboutTopMiddle{
     display:flex;
     align-self: center;
@@ -100,7 +112,7 @@ font-variation-settings:  'SHRP' 100; */
 }
 .thanks{
     margin-top: -1vh;
-    animation: fontGrow 4s linear;
+    animation: fontGrow 2s linear;
     animation-fill-mode: forwards;
     animation-delay: 25s;
 }
@@ -110,23 +122,43 @@ font-variation-settings:  'SHRP' 100; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity:0;
+    animation: bottomFadeIn 3s;
+    animation-delay: 26s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fontGrow {
-    from {font-size: 17px; font-weight:300}
-    to {font-size: 25px; font-weight:700}
+    from {font-size: 1.5vw; font-weight:300}
+    to {font-size: 3.5vw; font-weight:700}
 }
 @keyframes box{
     0% {border: none}
-    30%{border-top: 5px solid black}
-    32%{border-top: 5px solid black; border-right: 5px solid black}
-    34%{border-top: 5px solid black; border-right: 5px solid black;  border-bottom: 5px solid black} 
-    36%{border: 5px solid black}
-    80%{border: 5px solid rgb(240, 106, 128)}
-    85%{border: 5px dashed rgb(240, 106, 128)}
-    100%{border: 5px dashed rgb(240, 106, 128)}
+    30%{border-top: 0.5vh solid black}
+    32%{border-top: 0.5vh solid black; border-right: 0.5vh solid black}
+    34%{border-top: 0.5vh solid black; border-right: 0.5vh solid black;  border-bottom: 0.5vh solid black} 
+    36%{border-top: 0.5vh solid black; border-right: 0.5vh solid black;  border-bottom: 0.5vh solid black; border-left: 0.5vh solid black;}
+    80%{border-top: 0.5vh solid rgb(240, 106, 128); border-right: 0.5vh solid rgb(240, 106, 128);  border-bottom: 0.5vh solid rgb(240, 106, 128); border-left: 0.5vh solid rgb(240, 106, 128);}
+    82%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
+    85%{border-top: 0.5vh solid rgb(240, 106, 128); border-right: 0.5vh solid rgb(240, 106, 128);  border-bottom: 0.5vh solid rgb(240, 106, 128); border-left: 0.5vh solid rgb(240, 106, 128);}
+    88%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
+    95%{border-top: 0.5vh dashed rgb(240, 106, 128); border-right: 0.5vh dashed rgb(240, 106, 128);  border-bottom: 0.5vh dashed rgb(240, 106, 128); border-left: 0.5vh dashed rgb(240, 106, 128);}
+    98%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
+    99.99999% { background: none;}
+    100% {
+        background-image: linear-gradient(135deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128)50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128) 50%, silver 50%);
+        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+        background-size: 2vw 0.5vh, 2vw 0.5vh, 0.5vh 2vw, 0.5vh 2vw;
+        }
 }
-
+@keyframes bottomFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes border-dance {
+    0% { background-position: left top, right bottom, left bottom, right top; }
+    100% { background-position: left 2vw top, right 2vw bottom , left bottom 2vw , right top 2vw; }
+}
   /*************** HMUA ****************/
   .hmuaPage{
     height: 100vh;
@@ -134,7 +166,7 @@ font-variation-settings:  'SHRP' 100; */
     font-family: 'Raleway', sans-serif;
   }
   .hmuaTitle{
-    font-size: 50px;
+    font-size: 4.8vw;
     font-family: 'League Spartan', sans-serif;
     color: var(--titleCol);
   }
@@ -148,26 +180,17 @@ font-variation-settings:  'SHRP' 100; */
     background-color: var(--infoCol);
     overflow: auto;
     white-space: nowrap;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
     width:95vw;
-    border: 8px solid var(--infoCol)
+    border: 0.6vw solid var(--infoCol);
 }
   .slide{
     max-width: 100%;
     min-height: 100%;
-    padding: 5px;
-    max-height: 500px;
+    padding: 0.5vh;
+    max-height: 65vh;
 }
 .vogue{
     margin-bottom: 3vh;                                                                                                                                     
-}
-.iconCredits{
-    font-size: 4px;
-}
-.arrow{
-    
-    z-index: 999;
-    height: 100px;
-    width:100px;
 }
