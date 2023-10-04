@@ -1,7 +1,6 @@
 import './style.css';
 import logo from '../images/finalLogo.gif';
 
-
 const Intro = () => {
 
 
