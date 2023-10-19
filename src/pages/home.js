@@ -1,5 +1,4 @@
 import Intro from '../components/intro';
-import Matrix from '../components/matrix'
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -14,7 +13,6 @@ const Home = () => {
             transition={{ duration: 3 }}
             >
             <div className="content">
-                <Matrix />
                 <Intro />
             
             </div>
