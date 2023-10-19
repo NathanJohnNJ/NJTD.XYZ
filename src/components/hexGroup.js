@@ -3,7 +3,7 @@ import alien from './images/alien.JPG';
 import clone from './images/clone.png';
 import dragSite from './images/dragSite.jpg';
 import calculator from './images/calc.png';
-import cats from './images/cats.jpg';
+import cats from './images/cats.png';
 import cookies from './images/cookies.png';
 import drumkit from './images/drumPreview.png';
 import keycode from './images/keycode.png';
@@ -12,6 +12,7 @@ import dragAPI from './images/dragAPI.png';
 import fullStack from './images/full.png';
 import rest from './images/rest.jpg';
 import cameraPage from '../pages/camera';
+import matrix from './images/matrix.png';
 import { useState } from 'react';
 
 const Hexagons = () => {
@@ -28,6 +29,7 @@ const Hexagons = () => {
     const [showFull, setShowFull] = useState(false);
     const [showRest, setShowRest] = useState(false);
     const [showCamera, setShowCamera] = useState(false);
+    const [showMatrix, setShowMatrix] = useState(false);
 
     const raspiRevealer = () =>{
         const r = document.getElementById('camera');
@@ -116,6 +118,7 @@ const Hexagons = () => {
         const r = document.getElementById('drum');
         const s = document.getElementById('keycode');
         const t = document.getElementById('dice');
+        const u = document.getElementById('matrix');
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('top', '45.5%');
@@ -143,9 +146,20 @@ const Hexagons = () => {
         t.style.setProperty('animation-direction', 'reverse'); 
         t.innerHTML = 'Dice<br>Game';
         t.classList.add('element');
+        u.style.setProperty('background-color', 'var(--titleCol)');
+        u.style.setProperty('font-weight', 'bolder');
+        u.style.setProperty('color', 'var(--secondaryBG)');
+        u.style.setProperty('top', '45.5%');
+        u.style.setProperty('left', '37.9%');
+        u.style.setProperty('animation', 'var(--circlesAni)');
+        u.style.setProperty('animation-delay', '-6s'); 
+        u.style.setProperty('animation-direction', 'reverse'); 
+        u.innerHTML = 'Matrix';
+        u.classList.add('element');
         setShowDrum(true)
         setShowKeycode(true)
         setShowDice(true)
+        setShowMatrix(true)
     }
     const apiRevealer = () =>{
         const r = document.getElementById('dragAPI');
@@ -313,6 +327,18 @@ const Hexagons = () => {
             r.innerHTML = ''
         }
     }
+    const matrixRevealer = () =>{
+        const r = document.getElementById('matrix');
+        if(showMatrix){
+            r.style.setProperty('background-image', `url(${matrix})`)
+            r.style.setProperty('background-size', 'contain');
+            r.style.setProperty('animation-play-state', 'paused');
+            r.style.setProperty('color', 'var(--titleCol)');
+        }
+        else{
+            r.innerHTML = ''
+        }
+    }
     const fullStackRevealer = () =>{
         const r = document.getElementById('fullStack');
         if(showFull){
@@ -340,6 +366,14 @@ const Hexagons = () => {
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
     }
+    const resetClickMe = () =>{
+        const r = document.getElementById('reset')
+        r.innerHTML = 'CLICK ME!'
+    }
+    const resetReset = () =>{
+        const r = document.getElementById('reset')
+        r.innerHTML = 'RESET'
+    }
 
     return (
         <div classNAme="hexWrapper">
@@ -364,7 +398,7 @@ const Hexagons = () => {
             <div className="child" id="cats" onMouseOver={catsRevealer}  onClick={() => openInNewTab("https://cats.njtd.xyz")}></div>
             <div className="child"></div>
             <div className="child" id="dice" onMouseOver={diceRevealer} onClick={() => openInNewTab("https://dice.njtd.xyz")}></div>
-            <div className="child"></div>
+            <div className="child" id="matrix" onMouseOver={matrixRevealer} onClick={() => openInNewTab("https://matrix.njtd.xyz")}></div>
             <div className="child"></div>
             <div className="child"></div>
             {/* 21 */}
@@ -398,7 +432,7 @@ const Hexagons = () => {
             <div className="child api" id="unit" onMouseOver= {apiRevealer}>APIs</div>
             <div className="child" id="fullStack" onMouseOver={fullStackRevealer} ></div>
             <div className="child"></div>
-            <div className="child" onClick={() => {window.location.reload(false)}}>RESET</div>
+            <div className="child" id="reset" onMouseOver={resetClickMe} onMouseOut={resetReset} onClick={() => {window.location.reload(false)}}>RESET</div>
             <div className="child" id="rest" onMouseOver={restRevealer} ></div>
             {/* 51 */}
             <div className="child"></div>
