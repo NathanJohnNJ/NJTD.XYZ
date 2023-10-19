@@ -11,6 +11,7 @@ import die from './images/dice.png';
 import dragAPI from './images/dragAPI.png';
 import fullStack from './images/full.png';
 import rest from './images/rest.jpg';
+import cameraPage from '../pages/camera';
 import { useState } from 'react';
 
 const Hexagons = () => {
@@ -26,6 +27,20 @@ const Hexagons = () => {
     const [showDragAPI, setShowDragAPI] = useState(false);
     const [showFull, setShowFull] = useState(false);
     const [showRest, setShowRest] = useState(false);
+    const [showCamera, setShowCamera] = useState(false);
+
+    const raspiRevealer = () =>{
+        const r = document.getElementById('camera');
+        r.style.setProperty('background-color', 'var(--titleCol)');
+        r.style.setProperty('font-weight', 'bolder');
+        r.style.setProperty('color', 'var(--secondaryBG)');
+        r.style.setProperty('top', '60.5%');
+        r.style.setProperty('left', '52.47%');
+        r.style.setProperty('animation', 'var(--circlesAni)');
+        r.style.setProperty('animation-direction', 'reverse');
+        r.innerHTML = 'Bedroom<br>Camera';
+        setShowCamera(true);
+    }
     
 
     const pythonRevealer = () =>{
@@ -166,6 +181,17 @@ const Hexagons = () => {
         setShowDragAPI(true)
         setShowRest(true)
         setShowFull(true)
+    }
+    const cameraRevealer = () => {
+        const r = document.getElementById('camera');
+        if(showCamera){
+            r.style.setProperty('background-image', `url(${alien})`)
+            r.style.setProperty('background-size', 'contain');
+            r.style.setProperty('animation-play-state', 'paused');
+            r.style.setProperty('color', 'var(--titleCol)');  
+        } else{
+            r.innerHTML = ''
+        }
     }
     const alienRevealer = () =>{
         const r = document.getElementById('alien');
@@ -350,8 +376,8 @@ const Hexagons = () => {
             <div className="child"></div>
             <div className="child"></div>
             <div className="child"></div>
-            <div className="child"></div>
-            <div className="child"></div>
+            <div className="child" id="camera" onMouseOver={cameraRevealer} onClick={() => openInNewTab({cameraPage})}></div>
+            <div className="child" id="unit" onMouseOver={raspiRevealer}>RASPBERRY<br></br>PI</div>
             {/* 31 */}
             <div className="child" id="drag" onMouseOver={dragRevealer}  onClick={() => openInNewTab("https://drag.njtd.xyz")}></div>
             <div className="child"></div>
