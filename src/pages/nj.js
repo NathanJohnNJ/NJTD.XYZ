@@ -10,7 +10,7 @@ const Nj = () => {
   setTimeout(() => {startBorderAni()}, 25000)
 
     return (
-        <div className="njcodes">
+        <div className="aboutPage">
               <h1 className="njTitle">ABOUT NJ</h1>
               <div className="aboutMe">
                 <div className="aboutTop">

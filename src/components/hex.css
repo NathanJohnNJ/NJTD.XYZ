@@ -57,72 +57,96 @@
   background-color: var(--titleCol);
   color: var(--accentCol);
 }
- 
-  .mainDiv > .child:nth-child(1){--_x:1.8%; --_y:23%}
-  .mainDiv > .child:nth-child(2){--_x:1.8%; --_y:38%}
+ /* 1 */
+  /*.mainDiv > .child:nth-child(1){--_x:1.8%; --_y:23%}*/  /* PYTHON */
+ /* .mainDiv > .child:nth-child(2){--_x:1.8%; --_y:38%}*/  /*Alien */
   .mainDiv > .child:nth-child(3){--_x:1.8%; --_y:53%}
   .mainDiv > .child:nth-child(4){--_x:1.8%; --_y:68%}
-
   .mainDiv > .child:nth-child(5){--_x:9%; --_y:30.5%}
   .mainDiv > .child:nth-child(6){--_x:9%; --_y:45.5%}
-  .mainDiv > .child:nth-child(7){--_x:9%; --_y:60.5%}
+ /* .mainDiv > .child:nth-child(7){--_x:9%; --_y:60.5%}  /* CALC */
   .mainDiv > .child:nth-child(8){--_x:9%; --_y:75.5%}
-
   .mainDiv > .child:nth-child(9){--_x:16.16%; --_y:23%}
-  .mainDiv > .child:nth-child(10){--_x:16.16%; --_y:38%}
-  .mainDiv > .child:nth-child(11){--_x:16.16%; --_y:53%}
+ /* .mainDiv > .child:nth-child(10){--_x:16.16%; --_y:38%}  /* COOKIES */
+ /* 11 */
+ /* .mainDiv > .child:nth-child(11){--_x:16.16%; --_y:53%}  /* REACT */
   .mainDiv > .child:nth-child(12){--_x:16.16%; --_y:68%}
-
   .mainDiv > .child:nth-child(13){--_x:23.4%; --_y:30.5%}
   .mainDiv > .child:nth-child(14){--_x:23.4%; --_y:45.5%}
-  .mainDiv > .child:nth-child(15){--_x:23.4%; --_y:60.5%}
+ /* .mainDiv > .child:nth-child(15){--_x:23.4%; --_y:60.5%}  /* CATS */
   .mainDiv > .child:nth-child(16){--_x:23.4%; --_y:75.5%}
-
-  .mainDiv > .child:nth-child(17){--_x:30.6%; --_y:38%}
-  .mainDiv > .child:nth-child(18){--_x:30.6%; --_y:53%}
+ /* .mainDiv > .child:nth-child(17){--_x:30.6%; --_y:38%}  /* DICE */
+ /* .mainDiv > .child:nth-child(18){--_x:30.6%; --_y:53%}  /* MATRIX */
   .mainDiv > .child:nth-child(19){--_x:30.6%; --_y:68%}
   .mainDiv > .child:nth-child(20){--_x:30.6%; --_y:83%}
-
-  .mainDiv > .child:nth-child(21){--_x:37.9%; --_y:45.5%}
-  .mainDiv > .child:nth-child(22){--_x:37.9%; --_y:60.5%}
+ /* 21 */
+ /* .mainDiv > .child:nth-child(21){--_x:37.9%; --_y:45.5%}  /* JAVA */
+ /* .mainDiv > .child:nth-child(22){--_x:37.9%; --_y:60.5%}  /* KEYCODE */
   .mainDiv > .child:nth-child(23){--_x:37.9%; --_y:75.5%}
   .mainDiv > .child:nth-child(24){--_x:37.9%; --_y:90.5%}
-
-  .mainDiv > .child:nth-child(25){--_x:45.2%; --_y:38%}
+ /* .mainDiv > .child:nth-child(25){--_x:45.2%; --_y:38%}  /* DRUM */
   .mainDiv > .child:nth-child(26){--_x:45.2%; --_y:53%}
   .mainDiv > .child:nth-child(27){--_x:45.2%; --_y:68%}
   .mainDiv > .child:nth-child(28){--_x:45.2%; --_y:83%}
-
-  .mainDiv > .child:nth-child(29){--_x:52.47%; --_y:45.5%}
-  .mainDiv > .child:nth-child(30){--_x:52.47%; --_y:60.5%}
-  .mainDiv > .child:nth-child(31){--_x:52.47%; --_y:75.5%}
+ /* .mainDiv > .child:nth-child(29){--_x:52.47%; --_y:45.5%}  /* CAMERA */
+ /* .mainDiv > .child:nth-child(30){--_x:52.47%; --_y:60.5%}  /* RASPI */
+ /* 31 */
+  /*.mainDiv > .child:nth-child(31){--_x:52.47%; --_y:75.5%}  /* DRAG */
   .mainDiv > .child:nth-child(32){--_x:52.47%; --_y:90.5%}
-
   .mainDiv > .child:nth-child(33){--_x:59.69%; --_y:38%}
   .mainDiv > .child:nth-child(34){--_x:59.69%; --_y:53%}
   .mainDiv > .child:nth-child(35){--_x:59.69%; --_y:68%}
-  .mainDiv > .child:nth-child(36){--_x:59.69%; --_y:83%}
-
-  .mainDiv > .child:nth-child(37){--_x:67%; --_y:30.5%}
+ /* .mainDiv > .child:nth-child(36){--_x:59.69%; --_y:83%}  /* HTML */
+  .mainDiv > .child:nth-child(37){--_x:67%; --_y:30.5%}  
   .mainDiv > .child:nth-child(38){--_x:67%; --_y:45.5%}
-  .mainDiv > .child:nth-child(39){--_x:67%; --_y:60.5%}
-  .mainDiv > .child:nth-child(40){--_x:67%; --_y:75.5%}
-
+  /*.mainDiv > .child:nth-child(39){--_x:67%; --_y:60.5%}  /* CLONE */
+  .mainDiv > .child:nth-child(40){--_x:67%; --_y:75.5%}  
+ /* 41 */
   .mainDiv > .child:nth-child(41){--_x:74.3%; --_y:23%}
-  .mainDiv > .child:nth-child(42){--_x:74.3%; --_y:38%}
+ /* .mainDiv > .child:nth-child(42){--_x:74.3%; --_y:38%} /* DRAGAPI */
   .mainDiv > .child:nth-child(43){--_x:74.3%; --_y:53%}
   .mainDiv > .child:nth-child(44){--_x:74.3%; --_y:68%}
-
   .mainDiv > .child:nth-child(45){--_x:81.73%; --_y:30.5%}
-  .mainDiv > .child:nth-child(46){--_x:81.73%; --_y:45.5%}
-  .mainDiv > .child:nth-child(47){--_x:81.73%; --_y:60.5%}
+ /* .mainDiv > .child:nth-child(46){--_x:81.73%; --_y:45.5%} /* APIS */
+ /* .mainDiv > .child:nth-child(47){--_x:81.73%; --_y:60.5%}/* FULLSTACK */
   .mainDiv > .child:nth-child(48){--_x:81.73%; --_y:75.5%}
-
-  .mainDiv > .child:nth-child(49){--_x:89%; --_y:23%}
-  .mainDiv > .child:nth-child(50){--_x:89%; --_y:38%}
+ /* .mainDiv > .child:nth-child(49){--_x:89%; --_y:23%} /* RESET */
+ /* .mainDiv > .child:nth-child(50){--_x:89%; --_y:38%} /* REST */
+  /* 51 */
   .mainDiv > .child:nth-child(51){--_x:89%; --_y:53%}
   .mainDiv > .child:nth-child(52){--_x:89%; --_y:68%}
-  
+  .mainDiv > .child:nth-child(53){--_x:1.8%; --_y:83%}
+  .mainDiv > .child:nth-child(54){--_x:9%; --_y:90.5%}  
+  .mainDiv > .child:nth-child(55){--_x:16.16%; --_y:83%}
+  .mainDiv > .child:nth-child(56){--_x:23.4%; --_y:90.5%}
+  .mainDiv > .child:nth-child(57){--_x:67%; --_y:90.5%}
+  .mainDiv > .child:nth-child(58){--_x:74.3%; --_y:83%}
+  .mainDiv > .child:nth-child(59){--_x:81.73%; --_y:90.5%}
+  .mainDiv > .child:nth-child(60){--_x:89%; --_y:83%}
+  /* 61 */
+  .mainDiv > .child:nth-child(61){--_x:37.9%; --_y:30.5%}
+  .mainDiv > .child:nth-child(62){--_x:52.47%; --_y:30.5%}
+
+  #python{--_x:1.8%; --_y:23%}
+  #alien{--_x:1.8%; --_y:38%}
+  #drag{--_x:52.47%; --_y:75.5%}
+  #clone{--_x:67%; --_y:60.5%}
+  #html{--_x: 59.69%; --_y:83%}
+  #matrix{--_x:30.6%; --_y:53%}
+  #javascript{--_x:37.9%; --_y:45.5%}
+  #dice{--_x:30.6%; --_y:38%}
+  #keycode{--_x:37.9%; --_y:60.5%}
+  #drum{--_x:45.2%; --_y:38%}
+  #react{--_x:16.16%; --_y:53%}
+  #cookies{--_x:16.16%; --_y:38%}
+  #calculator{--_x:9%; --_y:60.5%}
+  #cats{--_x:23.4%; --_y:60.5%}
+  #dragAPI{--_x:74.3%; --_y:38%}
+  #api{--_x:81.73%; --_y:45.5%}
+  #fullStack{--_x:81.73%; --_y:60.5%}
+  #rest{--_x:89%; --_y:38%}
+  #reset{--_x:89%; --_y:23%}
+
   @keyframes circles {
     from { transform: rotate(0deg) translateX(9vw) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(9vw) rotate(-360deg); }

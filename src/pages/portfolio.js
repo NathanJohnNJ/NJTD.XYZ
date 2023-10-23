@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './style.css'
-import Hexagons from '../components/hexGroup';
+import Hexagons from '../components/hex/full';
 
 
 const Portfolio = () => {

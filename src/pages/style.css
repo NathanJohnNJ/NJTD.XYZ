@@ -20,6 +20,9 @@ font-variation-settings:  'SHRP' 100; */
 /***********HOMEPAGE **********/
 .home{
     background-color: var(--mainBG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /***********PORTFOLIO PAGE **********/
 .portfolioTitle{
@@ -30,6 +33,7 @@ font-variation-settings:  'SHRP' 100; */
     position: absolute;
     right:0;
     left:0;
+    top: 15%;
 }
 .portfolioPage{
     display: flex;
@@ -38,19 +42,19 @@ font-variation-settings:  'SHRP' 100; */
     justify-content: center;
     align-items: center;
     background-color: var(--mainBG);
+    height: 100vw;
 }
   /********* ABOUT ME *********/
-  .njCodes{
+  .aboutPage{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 .njTitle{
-    font-size: 5.5vw;
+    font-size: 4.5vw;
     font-family: 'Geologica', sans-serif;
-    font-weight: 425;
-    font-variation-settings: 'wght' 750;
+    font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
@@ -73,21 +77,22 @@ font-variation-settings:  'SHRP' 100; */
 .aboutTopLeft{
     align-self: flex-start;
     width: 10vw;   
-    margin-left: 16vw;
+    margin-left: 20vw;
 }
 .boxContent{
     background: none;
     width: 14vw;
     height:6vh;
     padding:1.5vw;
-    font-size: 2.5vw;
-    font-weight: bold;
+    font-size: 1.5vw;
+    font-weight: 300;
     align-self: center;
     justify-self: center;
     animation: box 20s, fontGrow 10s;
-    animation-delay: 5s, 5s;
+    animation-delay: 3s, 3s;
     animation-fill-mode: forwards, forwards;
-    margin-left: 13vw;
+    margin-left: 5vw;
+    text-align:center;
 }
 .active-animation{
     /* top, bot, left, right */
@@ -124,8 +129,9 @@ font-variation-settings:  'SHRP' 100; */
     align-items: center;
     opacity:0;
     animation: bottomFadeIn 3s;
-    animation-delay: 26s;
+    animation-delay: 20s;
     animation-fill-mode: forwards;
+    margin-bottom: 10vh;
 }
 
 @keyframes fontGrow {
@@ -159,6 +165,98 @@ font-variation-settings:  'SHRP' 100; */
     0% { background-position: left top, right bottom, left bottom, right top; }
     100% { background-position: left 2vw top, right 2vw bottom , left bottom 2vw , right top 2vw; }
 }
+
+  /*************** CONTACT ****************/
+  .contactPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--mainBG);
+    font-family: 'Raleway', sans-serif;
+  }
+.contactTitle{
+    font-size: 4.5vw;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
+    margin-top: -25vh;
+}
+.please{
+    display: flex;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+.contactForm{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactField{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: double; 
+    border-width: 10px;
+    border-radius: 20%;
+    border-color: var(--titleCol);
+    background-color: var(--secondaryBG);
+    width: 35vw;
+    height: 35vh;
+}   
+.contactLegend{
+    font-size: 1.7vw;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 450;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--infoCol);
+    background-color:var(--titleCol);
+    border-radius: 40%;
+    padding:8px;
+    margin: 5px;
+}
+
+.contactName, .contactText{
+    font-family: 'Poppins', sans-serif;
+    font-weight:300;
+    font-size: 2vh;
+    color:var(--infoCol);
+    display: flex;
+    font-size: 1.2vw;
+    background-color: var(--mainBG);
+    width: 98%;
+}
+.contactName{
+   margin-bottom:5px;
+}
+.contactText{
+    border: none;
+    padding-bottom: 18vh;
+}
+.contactSubmit{
+    background-color: var(--accentCol);
+    color:var(--secondaryBG);
+    border-radius: 45%;
+    border: none;
+    box-shadow: 2px 2px 2px 2px var(--titleCol);
+    font-weight:800;
+    font-size: 2.5vh;
+    margin: 5px;
+    width: 10vw;
+}
+.contactSubmit:hover{
+    background-color: var(--secondaryBG);
+    color:var(--accentCol);
+    border: none;
+    box-shadow: 2px 2px 2px 2px inset var(--titleCol);
+}
+
   /*************** HMUA ****************/
   .hmuaPage{
     height: 100vh;
@@ -166,8 +264,11 @@ font-variation-settings:  'SHRP' 100; */
     font-family: 'Raleway', sans-serif;
   }
   .hmuaTitle{
-    font-size: 4.8vw;
-    font-family: 'League Spartan', sans-serif;
+    font-size: 4.5vw;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
   }
   .hmuaContent, .hmuaImages{
