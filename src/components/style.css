@@ -27,7 +27,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; 
-  margin-top: 1%;
+  margin-top: -1%;
 }
 .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker{
   border-style:solid;
@@ -263,7 +263,7 @@ body{
 .Navbar{
     display: flex;
     flex-direction: column;
-    height: 7vh;
+    height: 8vh;
     background-color: var(--secondaryBG);
     position: absolute;
     width: 100vw;
@@ -283,13 +283,13 @@ body{
 .logoStill{
   width: 55px;
   height: 55px;
-  position: absolute;
-  top:0;
-  left: 45%;
-  z-index: 9999;
+  display: flex;
+  align-self: center;
+  margin-left: -13px;
+  margin-top: -7px;
   opacity:0;
-  animation: logoFadeIn 2s;
-  animation-delay: 28s;
+  animation: logoFadeIn 4s;
+  animation-delay: 12s;
   animation-fill-mode: forwards;
 }
 .portfolioOptions{
@@ -322,36 +322,60 @@ body{
 }
 
 /********* INTRO *********/
+.logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.introAnimation{
+  margin-top: -40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
 .logoImg{
-  margin-top: 4.5vh;
-  scale:1;
-  animation: shrinkRelocate 6s;
-  animation-delay: 25s;
+  margin-top: -20vh;
+  display:flex;
+  align-self: center;
+  justify-self: center;
+  scale:0.5;
+  animation: shrinkRelocate 6s, fadeout 4s;
+  animation-delay: 8s, 15s;
   animation-fill-mode: forwards;
 }
-
 .introText{
-    margin-top: 9vh;
-    animation: fadeout 3s;
-    animation-delay: 28s;
+    margin-top: -15vh;
+    animation: fadeout 4s;
+    animation-delay: 14s;
     animation-fill-mode: forwards;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: relocate 5s;
+    animation-delay: 8s;
 }
 .brought{
     animation: fadein 10s;
     margin-top: -6.5vh;
     font-family: 'League Spartan', sans-serif;
     font-weight: 900;
-    font-size: 6vw;
+    font-size: 4vw;
+    display:flex;
 }
 .njcodes{
+    display: flex;
     animation: fadein 5s;
     animation-delay: 5s;
     opacity: 0;
     animation-fill-mode: forwards;
     font-family: 'League Spartan', sans-serif;
     font-weight: 900;
-    font-size: 7vw;
-    margin-top: -3vh;
+    font-size: 5.5vw;
+    margin-top: -5vh;
 }
 @keyframes fadein {
     from {opacity: 0}
@@ -363,9 +387,12 @@ body{
     100% { opacity:1 }
   }
 @keyframes shrinkRelocate{
-  0% { scale:1; margin-top: 4.5vh; }
-  95% { scale:0.15; margin-top: -39vh; }
-  100% { scale:0.01; margin-top: -39vh; }
+  0% {  transform: translateY(0) scale(0.5); }
+  100% {  transform: translateY(-100vh)  scale(0.1); }
+}
+@keyframes relocate{
+  0% {  transform: translateY(0); }
+  100% {  transform: translateY(-65vh); }
 }
 @keyframes fadeout {
   from {opacity: 1}
@@ -383,9 +410,9 @@ body{
     z-index: 99;
     justify-content: flex-end;
     align-items: center;
-    height: 80px;
-    margin-top: auto;
-    background-color: var(--mainBG);
+    height: 100px;
+    margin-top: 100vh;
+    background-color: var(--secondaryBG);
 }
 .mainFooter{
     display: flex;
@@ -400,7 +427,7 @@ body{
 .mainFooterLogo{
     width:80px;
     height: 80px;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
 }
 .mainFooterText{
     font-size: 1.5vh;

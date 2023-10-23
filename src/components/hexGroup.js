@@ -437,6 +437,17 @@ const Hexagons = () => {
             {/* 51 */}
             <div className="child"></div>
             <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            <div className="child"></div>
+            {/* 61 */}
+            <div className="child"></div>
+            <div className="child"></div>
         </div>
         </div>
     )
