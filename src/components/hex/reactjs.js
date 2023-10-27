@@ -91,7 +91,7 @@ const ReactJS = () => {
     return (
         <div classNAme="hexWrapper">
         <div className="child" id="calculator" onMouseOver={calculatorRevealer}  onClick={() => openInNewTab("https://calc.njtd.xyz")}></div>
-        <div className="child" id="cookies" onMouseOver={cookiesRevealer} onClick={() => openInNewTab("https://cookiefront.njtd.xyz")}></div>
+        <div className="child" id="cookies" onMouseOver={cookiesRevealer} onClick={() => openInNewTab("https://cookieclub.njtd.xyz")}></div>
         <div className="child" id="react" onMouseOver= {reactRevealer}>REACT JS</div>
         <div className="child" id="cats" onMouseOver={catsRevealer}  onClick={() => openInNewTab("https://cats.njtd.xyz")}></div>
         </div>
