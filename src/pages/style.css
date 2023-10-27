@@ -80,6 +80,7 @@ font-variation-settings:  'SHRP' 100; */
     margin-left: 20vw;
 }
 .boxContent{
+    display: flex;
     background: none;
     width: 14vw;
     height:6vh;
@@ -89,13 +90,14 @@ font-variation-settings:  'SHRP' 100; */
     align-self: center;
     justify-self: center;
     animation: box 20s, fontGrow 10s;
-    animation-delay: 3s, 3s;
+    /* animation-delay: 3s; */
     animation-fill-mode: forwards, forwards;
     margin-left: 5vw;
     text-align:center;
 }
 .active-animation{
     /* top, bot, left, right */
+    display:none;
     padding:1.5vw;
     font-size: 3.5vw;
     background-image: linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128)50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(45deg, rgb(240, 106, 128) 50%, silver 50%);
@@ -103,6 +105,14 @@ font-variation-settings:  'SHRP' 100; */
     background-size: 2vw 0.5vh, 2vw 0.5vh, 0.5vh 2vw, 0.5vh 2vw;
     background-position: left top, right bottom, left bottom, right top;
     animation: border-dance 1s infinite linear;
+    width: 14vw;
+    height:6.5vh;
+    padding:1.5vw;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+    margin-left: 5vw;
+    text-align:center;
 }
 
 .aboutTopMiddle{
@@ -131,7 +141,7 @@ font-variation-settings:  'SHRP' 100; */
     animation: bottomFadeIn 3s;
     animation-delay: 20s;
     animation-fill-mode: forwards;
-    margin-bottom: 10vh;
+    margin-bottom: 12vh;
 }
 
 @keyframes fontGrow {
@@ -144,12 +154,11 @@ font-variation-settings:  'SHRP' 100; */
     32%{border-top: 0.5vh solid black; border-right: 0.5vh solid black}
     34%{border-top: 0.5vh solid black; border-right: 0.5vh solid black;  border-bottom: 0.5vh solid black} 
     36%{border-top: 0.5vh solid black; border-right: 0.5vh solid black;  border-bottom: 0.5vh solid black; border-left: 0.5vh solid black;}
-    80%{border-top: 0.5vh solid rgb(240, 106, 128); border-right: 0.5vh solid rgb(240, 106, 128);  border-bottom: 0.5vh solid rgb(240, 106, 128); border-left: 0.5vh solid rgb(240, 106, 128);}
-    82%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
-    85%{border-top: 0.5vh solid rgb(240, 106, 128); border-right: 0.5vh solid rgb(240, 106, 128);  border-bottom: 0.5vh solid rgb(240, 106, 128); border-left: 0.5vh solid rgb(240, 106, 128);}
-    88%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
-    95%{border-top: 0.5vh dashed rgb(240, 106, 128); border-right: 0.5vh dashed rgb(240, 106, 128);  border-bottom: 0.5vh dashed rgb(240, 106, 128); border-left: 0.5vh dashed rgb(240, 106, 128);}
-    98%{border-top: 0.5vh dashed silver; border-right: 0.5vh dashed silver;  border-bottom: 0.5vh dashed silver; border-left: 0.5vh dashed silver;}
+    80%{border: 0.5vh solid rgb(240, 106, 128);}
+    82%{border: 0.5vh dashed silver;}
+    85%{border: 0.5vh solid rgb(240, 106, 128);}
+    88%{border: 0.5vh dashed silver;}
+    98%{border: 0.5vh dashed silver;}
     99.99999% { background: none;}
     100% {
         background-image: linear-gradient(135deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128)50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128) 50%, silver 50%), linear-gradient(-45deg, rgb(240, 106, 128) 50%, silver 50%);

@@ -20,7 +20,6 @@
     font-size: 2vh;
   }
   .child {
-    /* width: 150px; */
     width: 9%;
     aspect-ratio: 1.15;
     object-fit: cover;
@@ -33,6 +32,9 @@
     align-items: center;
     justify-content: center;
     position: absolute;
+    min-height: 65px;
+    min-width:65px;
+    box-shadow: 2px -4px 43px 18.5px inset rgba(0, 0, 0, 0.35);
   }
 .element{
   z-index: 9999;
@@ -41,9 +43,6 @@
   clip-path: none;
   border-radius: 25%;
 }
-.child{
-  box-shadow: 2px -4px 43px 18.5px inset rgba(0, 0, 0, 0.35);
-  }
 .child:hover{
   font-weight: bolder;
   background-color: var(--accentCol);
@@ -126,6 +125,7 @@
   /* 61 */
   .mainDiv > .child:nth-child(61){--_x:37.9%; --_y:30.5%}
   .mainDiv > .child:nth-child(62){--_x:52.47%; --_y:30.5%}
+  .mainDiv > .child:nth-child(63){--_x:52.47%; --_y:90.5%}
 
   #python{--_x:1.8%; --_y:23%}
   #alien{--_x:1.8%; --_y:38%}
