@@ -12,7 +12,7 @@ const Reset = () => {
 
     return (
         <div classNAme="hexWrapper">
-            <div className="child" id="reset" onMouseOver={resetClickMe} onMouseOut={resetReset} onClick={() => {window.open('http://localhost:3000/portfolio', "_self")}}>RESET</div>
+            <div className="child" id="reset" onMouseOver={resetClickMe} onMouseOut={resetReset} onClick={() => {window.open('https://www.njtd.xyz/portfolio', "_self")}}>RESET</div>
         </div>
     )
 }
