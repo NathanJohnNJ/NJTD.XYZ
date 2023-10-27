@@ -4,7 +4,7 @@ import Blank from './blank';
 import HTML from './html';
 import Javascript from './javascript';
 import Python from './python';
-import Raspi from './raspi';
+// import Raspi from './raspi';
 import ReactJS from './reactjs';
 import Reset from './reset';
 
@@ -17,7 +17,7 @@ const Hexagons = () => {
             <HTML />
             <Javascript />
             <Python />
-            <Raspi />
+            {/* <Raspi /> */}
             <ReactJS />
             <Reset />
         </div>

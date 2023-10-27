@@ -3,11 +3,13 @@ import './style.css';
 const Nj = () => {
 
   function startBorderAni(){
-    const r = document.getElementById('boxContent');
-    r.classList.add('active-animation')
+    const r = document.getElementById('boxContent')
+    r.style.setProperty('display', 'none');
+    const s = document.getElementById('secondBox')
+    s.style.setProperty('display', 'flex');
   }
 
-  setTimeout(() => {startBorderAni()}, 25000)
+  setTimeout(() => {startBorderAni()}, 20000)
 
     return (
         <div className="aboutPage">
@@ -17,6 +19,9 @@ const Nj = () => {
                   <div className="aboutTopLeft">
                     Hi! I'm 
                     <div className="boxContent" id="boxContent">
+                      Nathan.
+                    </div>
+                    <div className="active-animation" id="secondBox">
                       Nathan.
                     </div>
                   </div>
