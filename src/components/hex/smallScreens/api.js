@@ -1,7 +1,7 @@
-import './hex.css';
-import dragAPI from '../images/dragAPI.png';
-import fullStack from '../images/full.png';
-import rest from '../images/rest.jpg';
+import './style.css';
+import dragAPI from '../../images/dragAPI.png';
+import fullStack from '../../images/full.png';
+import rest from '../../images/rest.jpg';
 import { useState } from 'react';
 
 const API = () => {

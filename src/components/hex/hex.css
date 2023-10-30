@@ -17,7 +17,7 @@
     display: grid;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 1.35vw;
   }
   .child {
     width: 9%;
@@ -87,8 +87,8 @@
   .mainDiv > .child:nth-child(26){--_x:45.2%; --_y:53%}
   .mainDiv > .child:nth-child(27){--_x:45.2%; --_y:68%}
   .mainDiv > .child:nth-child(28){--_x:45.2%; --_y:83%}
-  .mainDiv > .child:nth-child(29){--_x:9%; --_y:30.5%}   /* CAMERA */
-  .mainDiv > .child:nth-child(30){--_x:9%; --_y:30.5%}  /* RASPI */
+  .mainDiv > .child:nth-child(29){--_x:52.47%; --_y:60.5%}   /* CAMERA */
+  .mainDiv > .child:nth-child(30){--_x:52.47%; --_y:45.5%}  /* RASPI */
  /* 31 */
   .mainDiv > .child:nth-child(31){--_x:9%; --_y:30.5%}  /* DRAG */
   .mainDiv > .child:nth-child(32){--_x:9%; --_y:30.5%} 

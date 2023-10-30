@@ -1,4 +1,5 @@
 import './style.css';
+import { motion } from 'framer-motion';
 
 const Nj = () => {
 
@@ -13,6 +14,13 @@ const Nj = () => {
 
     return (
         <div className="aboutPage">
+          <motion.div
+            className="container text-center  bg-black"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 3 }}
+            >
               <h1 className="njTitle">ABOUT NJ</h1>
               <div className="aboutMe">
                 <div className="aboutTop">
@@ -42,7 +50,9 @@ const Nj = () => {
                   <p>My intention with this web app, is for you to enjoy my portfolio, and its platform, as much as I have enjoyed putting it together. However, I'm afraid despite my creative past, I'm a lot more clued up with the back-end side of things, so forgive me if some of the images/colour schemes aren't as bob on as they could be. But I'm always open to a suggestion or a nod in the right direction!</p>
                 </div>
               </div>
+            </motion.div>
         </div>
-    );
+      );
     }
+
 export default Nj;

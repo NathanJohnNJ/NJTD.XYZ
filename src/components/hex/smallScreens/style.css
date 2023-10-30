@@ -1,0 +1,111 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+    --mainBG: #F7FFFF;
+    --secondaryBG: #E2EBF1;
+    --infoCol: #C8C9DD;
+    --accentCol: #042AC1;
+    --titleCol: #092271;
+  }
+
+/********* MODAL *********/
+.pMBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    height: 18vw;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin: 15px;
+    background-color: var(--infoCol);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: var(--accentCol);
+}
+.btnText{
+    margin-top: -12px;
+}
+.pMBtn:hover .btnText{
+    animation: counterSpin 2.5s infinite linear;
+}
+.pMBtn:hover{
+    background-color: var(--accentCol);
+    color: var(--infoCol);
+    font-weight: 900;
+    animation: spin 2.5s infinite linear;
+}
+.smallPortDiv{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.htmlDiv{
+    display:flex;
+    position:absolute;
+    left: 10%;
+    top:48%;
+}
+.javaDiv{
+    display: flex;
+    position:absolute;
+    right: 10%;
+    top:48%;
+}
+.apiDiv{
+    display: flex;
+    position:absolute;
+    top:70%;
+}
+.pythonDiv{
+    display: flex;
+    position:absolute;
+    top: 25%;
+    left:22%;
+}
+.reactDiv{
+    display:flex;
+    position: absolute;
+    top: 25%;
+    right:22%;
+}
+.portfolioModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondaryBG);
+}
+
+
+/********* HTML *********/
+
+
+/********* JAVASCRIPT *********/
+
+
+/********* PYTHON *********/
+
+
+/********* REACT *********/
+
+
+/********* API *********/
+
+
+/********* MASTER COMPONENT *********/
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+@keyframes counterSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }

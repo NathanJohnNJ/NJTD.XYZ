@@ -10,7 +10,6 @@ font-variation-settings: 'CRSV' 0.5;
 font-variation-settings:  'SHRP' 100; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /********* COLOUR VARIABLES *********/
-
 :root{
   --mainBG: #F7FFFF;
   --secondaryBG: #E2EBF1;
@@ -456,12 +455,12 @@ body{
     align-items: center;
 }
 .mainFooterImgDiv{
-    margin: 15px;
+    margin: 20px;
 }
 .mainFooterLogo{
     width:80px;
     height: 80px;
-    margin-bottom: -5px;
+    margin-bottom: -20px;
 }
 .mainFooterText{
     font-size: 1.5vw;

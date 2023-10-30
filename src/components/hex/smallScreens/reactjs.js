@@ -1,7 +1,7 @@
-import './hex.css';
-import calculator from '../images/calc.png';
-import cats from '../images/cats.png';
-import cookies from '../images/cookies.png';
+import './style.css';
+import calculator from '../../images/calc.png';
+import cats from '../../images/cats.png';
+import cookies from '../../images/cookies.png';
 import { useState } from 'react';
 
 const ReactJS = () => {
