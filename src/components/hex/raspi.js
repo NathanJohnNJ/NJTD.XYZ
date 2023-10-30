@@ -35,7 +35,7 @@ const Raspi = () => {
     }
 
     return (
-        <div classNAme="hexWrapper">
+        <div className="hexWrapper">
             <div className="child" id="camera" onMouseOver={cameraRevealer} onClick={() => openInNewTab({cameraPage})}></div>
             <div className="child" id="raspi" onMouseOver={raspiRevealer}>RASPBERRY<br></br>PI</div>
         </div>

@@ -1,5 +1,5 @@
-import './hex.css';
-import alien from '../images/alien.JPG';
+import './style.css';
+import alien from '../../images/alien.JPG';
 import { useState } from 'react';
 
 const Python = () => {

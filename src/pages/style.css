@@ -33,7 +33,7 @@ font-variation-settings:  'SHRP' 100; */
     position: absolute;
     right:0;
     left:0;
-    top: 15%;
+    top: 18%;
 }
 .portfolioPage{
     display: flex;
@@ -58,6 +58,7 @@ font-variation-settings:  'SHRP' 100; */
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
+   
 }
 .aboutMe{
     font-family: 'Poppins', sans-serif;
@@ -186,13 +187,16 @@ font-variation-settings:  'SHRP' 100; */
     font-family: 'Raleway', sans-serif;
   }
 .contactTitle{
-    font-size: 4.5vw;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
-    margin-top: -25vh;
+    font-size: 4.5vw;
+    position: absolute;
+    right:0;
+    left:0;
+    top: 18%;
 }
 .please{
     display: flex;
@@ -305,40 +309,4 @@ font-variation-settings:  'SHRP' 100; */
     margin-bottom: 3vh;                                                                                                                                     
 }
 
-  /********* CAMERA PAGE *********/
-
-.cameraPage{
-    background-color: var(--mainBG); 
-    position:relative; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    margin: 50px; 
-    text-align: center; 
-    text-justify:center
-}
-.cameraTitle{
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    width:100vw;
-}
-.cameraTitleText{
-    font-family: 'Geologica', sans-serif; 
-    font-size:10vh; 
-    color: var(--titleCol); 
-    font-weight: 750; 
-    font-variation-settings: 'wght' 750; 
-    font-variation-settings: 'CRSV' 0.5; 
-    font-variation-settings:  'SHRP' 100; 
-    margin: 4vw;
-}
-.stream{
-    display: flex; 
-    justify-self: 
-    center; align-self: 
-    center; width: 80vw; 
-    height: calc(80vw/1.6); 
-    border: 10px solid var(--infoCol); 
-    border-radius:6%}
+ 

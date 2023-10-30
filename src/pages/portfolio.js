@@ -1,9 +1,40 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import './style.css'
 import Hexagons from '../components/hex/full';
+import SmallPort from '../components/hex/smallScreens/smallPort';
 
 
 const Portfolio = () => {
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    
+    function getCurrentDimension(){
+        return {
+              width: window.innerWidth,
+              height: window.innerHeight
+        }
+    }
+    
+    useEffect(() => {
+        const updateDimension = () => {
+          setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+        return(() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+      }, [screenSize])
+
+      function displayDecider(){
+      if(screenSize.width <= 768){
+        return(
+        <SmallPort />)
+      }else {
+        return(
+        <Hexagons />)
+      }
+    }
+    // console.log(screenSize.width);
     
     return (
         <div className="portfolioPage">
@@ -16,7 +47,8 @@ const Portfolio = () => {
             >
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
                 <div className="portfolioPageHex">
-                    <Hexagons />   
+                    {/* <Hexagons />    */}
+                    {displayDecider()}
                 </div>
                 
             </motion.div>

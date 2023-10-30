@@ -3,7 +3,7 @@ import './hex.css';
 const Blank = () => {
  
     return (
-        <div classNAme="hexWrapper">
+        <div className="hexWrapper">
         <div className="mainDiv">
             {/* 1 */}
             <div className="child" id="hexagon"></div>
