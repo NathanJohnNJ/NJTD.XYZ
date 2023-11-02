@@ -433,7 +433,7 @@ body{
 }
   
 /********* FOOTER *********/
-.mainFooterDiv{
+.footerDiv{
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -447,22 +447,22 @@ body{
     margin-top: 100vh;
     background-color: var(--secondaryBG);
 }
-.mainFooter{
+.footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
     justify-self: flex-end;
     align-items: center;
 }
-.mainFooterImgDiv{
+.footerImgDiv{
     margin: 20px;
 }
-.mainFooterLogo{
+.footerLogo{
     width:80px;
     height: 80px;
     margin-bottom: -20px;
 }
-.mainFooterText{
+.footerText{
     font-size: 1.5vw;
     font-family: 'Raleway', sans-serif;
     font-weight:700;
@@ -481,8 +481,8 @@ body{
 }
 
 @media screen and (max-width: 600px){
-  .mainFooterText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
-  .mainFooterLogo{ width: 65px; height: 65px; }
+  .footerText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
+  .footerLogo{ width: 65px; height: 65px; }
 }
 @media screen and (max-width: 480px){
   .logoImg{ width: 500px; height:500px; margin-top:0; }
