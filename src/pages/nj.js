@@ -1,5 +1,8 @@
 import './style.css';
 import { motion } from 'framer-motion';
+import meImg from '../images/me.jpg';
+import meWed from '../images/meWed2.png';
+import logo from '../images/njtdesign512.gif'
 
 const Nj = () => {
 
@@ -15,7 +18,7 @@ const Nj = () => {
     return (
         <div className="aboutPage">
           <motion.div
-            className="container text-center  bg-black"
+            className="aboutContainer text-center  bg-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -36,7 +39,14 @@ const Nj = () => {
                   <div className="aboutTopMiddle">
                       And I hate to be put in a box.
                   </div>
+                  <div className="firstImgDiv">
+                    <img src={meImg} alt="NJ" className="meImg"></img>
+                    <img src={meWed} alt="NJ at Connors wedding" className="wedImg"></img>
+                  </div>
                   <div className="aboutTopRight">
+                    <div className="secondImgDiv">
+                      <img src={logo} alt="Alternative logo" className="njtdLogo"></img>
+                    </div>
                     <p>
                       But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?
                     </p>

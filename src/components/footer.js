@@ -13,12 +13,12 @@ const Footer = (props) => {
     <p className="playing" id="playing">Thank you for visiting NJTD</p>
     `
     return(
-        <div className="mainFooterDiv">
-            <footer className="mainFooter" id="footer">
-                <div className="mainFooterImgDiv">
-                    <img src={logo} alt="Logo" className="mainFooterLogo"></img>
+        <div className="footerDiv">
+            <footer className="footer" id="footer">
+                <div className="footerImgDiv">
+                    <img src={logo} alt="Logo" className="footerLogo"></img>
                 </div>
-                <div className="mainFooterText">
+                <div className="footerText">
                     {/* {
                         (props.page==="camera")?
                             {cameraTop}
