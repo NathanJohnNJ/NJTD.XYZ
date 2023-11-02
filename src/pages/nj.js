@@ -2,10 +2,15 @@ import './style.css';
 import { motion } from 'framer-motion';
 import meImg from '../images/me.jpg';
 import meWed from '../images/meWed2.png';
-import logo from '../images/njtdesign512.gif'
+import logo from '../images/njtdesign512.gif';
+// import stillLogo from '../images/njtdesign1000.png';
+// need to wait 15 seconds and then replace gif with png on page
+import { useEffect } from 'react';
 
-const Nj = () => {
-
+const Nj = (props) => {
+  useEffect(() => {
+      props.setPage("notHome");
+  });
   function startBorderAni(){
     const r = document.getElementById('boxContent')
     r.style.setProperty('display', 'none');
