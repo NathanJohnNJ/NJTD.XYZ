@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import Contact from './pages/contact';  
 import Home from './pages/home';
 import HMUA from './pages/hmua';
@@ -8,14 +9,17 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
+import MiniLogo from './components/miniLogo';
 import ColourPicker from './components/colourBar/colourPicker';
 import PickerList from './components/colourBar/colourList';
 
 function App() {
+  const [page, setPage] = useState("home");
 
   return (
     <div className="App">
         <NavBar />
+        <MiniLogo page={page}/>
         <PickerList />
         <ColourPicker />
         <AnimatePresence mode="wait">
@@ -25,12 +29,13 @@ function App() {
         </AnimatePresence>
           
       <Routes> 
-        <Route key="home" index element={<Home />} />
-        <Route key="nj" path="nj" element={<Nj />} />
-        <Route key="contact" path="contact" element={<Contact />} />
-        <Route key="hmua" path="portfolio/hmua" element={<HMUA />} />
-        <Route key="developer" path="portfolio/developer" element={<Portfolio />} />
-        <Route key="portfolio" path="portfolio" element={<Portfolio />} />
+        <Route key="home" index element={<Home setPage={setPage}/>} />
+        <Route key="nj" path="nj" element={<Nj setPage={setPage}/>} />
+        <Route key="contact" path="contact" element={<Contact setPage={setPage}/>} />
+        <Route key="hmua" path="portfolio/hmua" element={<HMUA setPage={setPage}/>} />
+        <Route key="developer" path="portfolio/developer" element={<Portfolio setPage={setPage}/>} />
+        <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
+        <Route key="portfolio" path="codes" element={<Portfolio setPage={setPage}/>} />
       </Routes>
       <Footer />
     </div>

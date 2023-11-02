@@ -74,6 +74,7 @@ font-variation-settings:  'SHRP' 100; */
     align-items: center;
     background-color: var(--mainBG);
     position:relative;
+    color: var(--infoCol)
 }
 .aboutTop{
     display: flex;

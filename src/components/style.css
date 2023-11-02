@@ -309,17 +309,32 @@ body{
   margin-left: 3vw;
   margin-right: 3vw;
 }
+.miniLogoDiv{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top:1%;
+  height:100px;
+  width:100px;
+  left:50%;
+  right:50%;
+}
 .logoStill{
-  width: 55px;
-  height: 55px;
-  display: flex;
+  width: 80px;
+  height: 80px;
+  
   align-self: center;
   margin-left: -13px;
   margin-top: -7px;
-  opacity:0;
-  animation: logoFadeIn 4s;
+  opacity:1;
+  /* animation: logoFadeIn 4s;
   animation-delay: 12s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+}
+.miniLogoLink{
+  display:flex;
 }
 .portfolioOptions{
   width: fit-content;

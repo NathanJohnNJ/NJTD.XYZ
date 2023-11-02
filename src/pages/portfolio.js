@@ -5,7 +5,10 @@ import Hexagons from '../components/hex/full';
 import SmallPort from '../components/hex/smallScreens/smallPort';
 
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+  useEffect(() => {
+      props.setPage("notHome");
+  });
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
     
     function getCurrentDimension(){

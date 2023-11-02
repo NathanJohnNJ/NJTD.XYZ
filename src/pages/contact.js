@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
-const Contact = () => {
+const Contact = (props) => {
+    useEffect(() => {
+        props.setPage("notHome");
+    });
 
     const [body, setBody] = useState('');
     const [from, setFrom] = useState('');
