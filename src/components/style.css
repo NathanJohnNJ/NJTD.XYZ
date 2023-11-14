@@ -24,17 +24,19 @@ body{
 
 /********* NAVBAR *********/
 .NavbarMain{
-    height: 12.5vh;
-    width:100vw;
-    position: absolute;
+  height: 8vw;
+  width:100%;
+  max-width:1200px;
+  position: absolute;
 }
 .Navbar{
-    display: flex;
-    flex-direction: column;
-    height: 11vh;
-    background-color: var(--secondaryBG);
-    width: 100vw;
-    position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 6vw;
+  min-height:60px;
+  background-color: var(--secondaryBG);
+  width: 100%;
+  position: absolute;
 }
 .firstNav{
   display:flex;
@@ -83,8 +85,10 @@ body{
   /* width:100vw; */
 }
 .logoStill{
-  width: 95px;
-  height: 95px;
+  width: 6vw;
+  height: 6vw;
+  min-height:48px;
+  min-width:48px;
   align-self: center;
   opacity:1;
 }
@@ -161,7 +165,7 @@ body{
 }
 
 /******** RAINBOW *********/
-.rainbow_{
+.rainbow{
   display: flex;
   width: 14vw;
   height:6vh;
@@ -201,7 +205,8 @@ body{
 .footerDiv{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    max-width: 1200px;
     color: var(--infoCol);
     position:fixed;
     bottom: 0;
