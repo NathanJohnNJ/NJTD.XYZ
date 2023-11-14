@@ -2,12 +2,13 @@ import './style.css';
 import { motion } from 'framer-motion';
 import meImg from '../images/me.jpg';
 import meWed from '../images/meWed2.png';
-import logo from '../images/njtdesign512.gif';
-// import stillLogo from '../images/njtdesign1000.png';
-// need to wait 15 seconds and then replace gif with png on page
-import { useEffect } from 'react';
+import logo from '../images/NJTDesign.gif';
+import stillLogo from '../images/NJTDesign.png';
+import Rainbow from '../components/rainbowComponent/rainbow';
+import { useEffect, useState } from 'react';
 
 const Nj = (props) => {
+  const [imageSrc, setImageSrc] = useState(logo)
   useEffect(() => {
       props.setPage("notHome");
   });
@@ -18,7 +19,11 @@ const Nj = (props) => {
     s.style.setProperty('display', 'flex');
   }
 
-  setTimeout(() => {startBorderAni()}, 20000)
+  function timeOut(){
+      startBorderAni();
+      setImageSrc(stillLogo)
+  }
+  setTimeout(() => {timeOut()}, 18000)
 
     return (
         <div className="aboutPage">
@@ -50,7 +55,7 @@ const Nj = (props) => {
                   </div>
                   <div className="aboutTopRight">
                     <div className="secondImgDiv">
-                      <img src={logo} alt="Alternative logo" className="njtdLogo"></img>
+                      <img src={imageSrc} alt="Alternative logo" className="njtdLogo"></img>
                     </div>
                     <p>
                       But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?

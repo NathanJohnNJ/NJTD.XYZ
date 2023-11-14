@@ -62,7 +62,7 @@ font-variation-settings:  'SHRP' 100; */
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
-   
+    margin-top: 20vh;
 }
 .aboutMe{
     font-family: 'Poppins', sans-serif;

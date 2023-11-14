@@ -1,4 +1,4 @@
-import '../style.css';
+import './colours.css';
 import { useState } from 'react';
 
 const ColourPicker = () => {
