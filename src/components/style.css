@@ -21,282 +21,20 @@ font-variation-settings:  'SHRP' 100; */
 body{
     background-color: var(--mainBG);
 }
-/********* COLOUR PICKER *********/
-.colourPicker{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly; 
-  margin-top: -1%;
-}
-.cPList{
-  display:none;
-}
-.colourList{
-  display: hidden;
-  flex-direction: column;
-}
-.pickerBtn{
-  display:flex;
-  background-image: url('./images/miniPicker.png');
-  background-size: contain;
-  border-style:solid;
-  border-color: var(--borderCol);
-  border-width:3px;
-  border-radius:5%;
-  width:50px;
-  height:50px;
-}
-.listModal{
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  background-color: var(--secondaryBG);
-}
-.pickerList{
-  margin:20px;
-  width:56px;
-}
 
-.blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker, .listBtn{
-  border-style:solid;
-  border-color: var(--borderCol);
-  border-width:3px;
-  border-radius: 5%;
-  margin-bottom:10px;
-}
-.col1{
-  /* mainBG */
-  background-color: #F7FFFF;                            
-  height: 10px;
-  width: 50px;
-}
-.col2{
-  /* secondaryBG */
-  background-color: #E2EBF1;
-  height: 10px;
-  width: 50px;
-}
-.col3{
-  /* infoCol */
-  background-color: #C8C9DD;
-  height: 10px;
-  width: 50px;
-}
-.col4{
-  /* accentCol */
-  background-color: #042AC1;
-  height: 10px;
-  width: 50px;
-}
-.col5{
-  /* titleCol */
-  background-color: #092271;
-  height: 10px;
-  width: 50px;
-}
-
-.blueSet:hover .col1{
-  background-color: #092271;
-}
-.blueSet:hover .col2{
-  background-color: #042AC1;
-}
-.blueSet:hover .col3{
-  background-color: #CBC9DD;
-}
-.blueSet:hover .col4{
-  background-color: #E2EBF1;
-}
-.blueSet:hover .col5{
-  background-color: #F7FFFF;
-}
-
-.greenSet .col1{
-  background-color: #F3FEEA;
-}
-.greenSet .col2{
-  background-color: #CAE1C7;
-}
-.greenSet .col3{
-  background-color: #8EB68A;
-}
-.greenSet .col4{
-  background-color: #2E8831;
-}
-.greenSet .col5{
-  background-color: #19671D;
-}
-
-.greenSet:hover .col1{
-  background-color: #19671D;
-}
-.greenSet:hover .col2{
-  background-color: #2E8831;
-}
-.greenSet:hover .col3{
-  background-color: #8EB68A;
-}
-.greenSet:hover .col4{
-  background-color: #CAE1C7;
-}
-.greenSet:hover .col5{
-  background-color: #F3FEEA;
-}
-
-
-.redSet .col1{
-  background-color: #FFF0EF;
-}
-.redSet .col2{
-  background-color: #FFDDD5;
-}
-.redSet .col3{
-  background-color: #C3806E;
-}
-.redSet .col4{
-  background-color: #AB260C;
-}
-.redSet .col5{
-  background-color: #8A130C;
-}
-
-
-.redSet:hover .col1{
-  background-color: #8A130C;
-}
-.redSet:hover .col2{
-  background-color: #AB260C;
-}
-.redSet:hover .col3{
-  background-color: #C3806E;
-}
-.redSet:hover .col4{
-  background-color: #FFDDD5;
-}
-.redSet:hover .col5{
-  background-color: #FFF0EF;
-}
-
-.orangeSet .col1{
-  background-color: #FFEFD1;
-}
-.orangeSet .col2{
-  background-color: #EFD3AC;
-}
-.orangeSet .col3{
-  background-color: #D5A677;
-}
-.orangeSet .col4{
-  background-color: #DB7B1D;
-}
-.orangeSet .col5{
-  background-color: #DB5816;
-}
-
-
-.orangeSet:hover .col1{
-  background-color: #DB5816;
-}
-.orangeSet:hover .col2{
-  background-color: #DB7B1D;
-}
-.orangeSet:hover .col3{
-  background-color: #D5A677;
-}
-.orangeSet:hover .col4{
-  background-color: #EFD3AC;
-}
-.orangeSet:hover .col5{
-  background-color: #FFEFD1;
-}
-
-.greySet .col1{
-  background-color: #F2F2F2;
-}
-.greySet .col2{
-  background-color: #929292;
-}
-.greySet .col3{
-  background-color: #616161;
-}
-.greySet .col4{
-  background-color: #313131;
-}
-.greySet .col5{
-  background-color: #000000;
-}
-
-
-.greySet:hover .col1{
-  background-color: #000000;
-}
-.greySet:hover .col2{
-  background-color: #313131;
-}
-.greySet:hover .col3{
-  background-color: #616161;
-}
-.greySet:hover .col4{
-  background-color: #929292;
-}
-.greySet:hover .col5{
-  background-color: #F2F2F2;
-}
-
-.darkLight{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:50px;
-}
-.dark{
-  background-color: var(--accentCol);
-  width:25px;
-  height: 50px;
-}
-.light{
-  background-color: var(--secondaryBG);
-  width:25px;
-  height: 50px;
-}
-.darkLight:hover .dark{
-  background-color: var(--secondaryBG);
-}
-.darkLight:hover .light{
-  background-color: var(--accentCol);
-}
-
-/********* OWN COLOURS *********/
-.pickerModal{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.miniColPicker{
-  height:47px;
-  width:50px;
-}
-.modalOpener{
-  display: flex;
-  flex-direction: row;
-}
-.button, .colorDiv{
-  width: 150px;
-  height: 400px;
-}
 /********* NAVBAR *********/
 .NavbarMain{
-    height: 12vh;
+    height: 12.5vh;
+    width:100vw;
+    position: absolute;
 }
 .Navbar{
     display: flex;
     flex-direction: column;
-    height: 8vh;
+    height: 11vh;
     background-color: var(--secondaryBG);
-    position: absolute;
     width: 100vw;
-    padding-left: 50px;
+    position: absolute;
 }
 .firstNav{
   display:flex;
@@ -309,71 +47,69 @@ body{
   margin-left: 3vw;
   margin-right: 3vw;
 }
+.page{
+  margin: 15px;
+  margin-top: 14px;
+  font-size: 2.3vw;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--infoCol)
+}
+.current{
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 8px;  
+  font-size: 3vw;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--accentCol);
+}
+.page:hover, .current:hover{
+  color: var(--accentCol);    
+}
+
+/********* SMALL LOGO IN NAVBAR *********/
 .miniLogoDiv{
   position:absolute;
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  top:1%;
+  top:0;
+  margin-top: -10px;
   height:100px;
-  width:100px;
-  left:50%;
-  right:50%;
+  /* width:100vw; */
 }
 .logoStill{
-  width: 80px;
-  height: 80px;
-  
+  width: 95px;
+  height: 95px;
   align-self: center;
-  margin-left: -13px;
-  margin-top: -7px;
   opacity:1;
-  /* animation: logoFadeIn 4s;
-  animation-delay: 12s;
-  animation-fill-mode: forwards; */
 }
 .miniLogoLink{
   display:flex;
 }
+
+/********* PORTFOLIO *********/
 .portfolioOptions{
   width: fit-content;
   margin-left: 68vw;
   background-color: var(--secondaryBG);
   margin-top:-10px;
 }
-.page{
-    margin: 15px;
-    margin-top: 12px;
-    font-size: 2.3vw;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--infoCol)
-}
-.current{
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 5px;  
-    font-size: 3vw;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--accentCol);
-}
-.page:hover, .current:hover{
-    color: var(--accentCol);    
-}
+
 
 /********* INTRO *********/
-.logo{
+.intro{
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.introAnimation{
-  margin-top: -40vh;
+.logoAnimation{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,7 +117,9 @@ body{
   position:relative;
 }
 .logoImg{
-  margin-top: -20vh;
+  margin-top: 20vh;
+  width: 800px;
+  height: 800px;
   display:flex;
   align-self: center;
   justify-self: center;
@@ -421,6 +159,18 @@ body{
     font-size: 5.5vw;
     margin-top: -5vh;
 }
+
+/******** RAINBOW *********/
+.rainbow_{
+  display: flex;
+  width: 14vw;
+  height:6vh;
+  padding:1.5vw;
+  font-size: 1.5vw;
+  font-weight: 300;
+  align-self: center;
+  justify-self: center;
+}
 @keyframes fadein {
     from {opacity: 0}
     to {opacity: 1}
@@ -432,7 +182,7 @@ body{
   }
 @keyframes shrinkRelocate{
   0% {  transform: translateY(0) scale(0.5); }
-  100% {  transform: translateY(-50vh)  scale(0.1); }
+  100% {  transform: translateY(-48vh)  scale(0.1); }
 }
 @keyframes counterShrink{
   0% { transform: translateY(0) }

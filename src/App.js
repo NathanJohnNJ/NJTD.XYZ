@@ -9,19 +9,14 @@ import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import MiniLogo from './components/miniLogo';
-import ColourPicker from './components/colourBar/colourPicker';
-import PickerList from './components/colourBar/colourList';
 
 function App() {
   const [page, setPage] = useState("home");
 
   return (
     <div className="App">
-        <NavBar />
-        <MiniLogo page={page}/>
-        <PickerList />
-        <ColourPicker />
+        <NavBar page={page}/>
+
         <AnimatePresence mode="wait">
         <div className="mainContent">
           <Outlet />

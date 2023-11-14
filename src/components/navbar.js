@@ -1,8 +1,11 @@
 import './style.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import ColourPicker from './colourBar/colourPicker';
+import PickerList from './colourBar/colourList'
+import MiniLogo from './miniLogo';
 
-const NavBar = () => {
+const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
     function onClickHandler(){
         setShowOptions(false)
@@ -27,6 +30,7 @@ const NavBar = () => {
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} onClick={onHomeHandler}>HOME</NavLink>
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
                     </div>
+                    <MiniLogo page={props.page}/>
                     <div className="navRight">
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CONTACT</NavLink>
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} onClick={onClickHandler}>PORTFOLIO</NavLink>
@@ -43,6 +47,8 @@ const NavBar = () => {
                     <></>
                     }
                 </div>
+                <PickerList />
+                <ColourPicker />
             </div>
         </div>
     )

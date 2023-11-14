@@ -4,14 +4,6 @@ import logo from '../images/logo.gif';
 const Intro = () => {
     const num = Math.random()
     const gif = `${logo}?a=${num}`
-    // function onHomeHandler(){
-    //     const r = document.getElementById("logoStill");
-    //     r.style.setProperty('opacity', '0');
-    //     r.style.setProperty('animation', 'logoFadeIn 4s');
-    //     r.style.setProperty('animation-delay', '12s');
-    //     r.style.setProperty('animation-fill-mode', 'forwards');
-    // }
-    // onHomeHandler();
 
     return(
         <div className="intro">

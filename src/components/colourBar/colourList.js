@@ -1,4 +1,4 @@
-import '../style.css';
+import './colours.css';
 import Modal from 'react-modal';
 import { useState } from 'react';
 

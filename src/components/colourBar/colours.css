@@ -1,0 +1,289 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+/* font-family: 'Geologica', sans-serif;
+font-weight: 750;
+font-variation-settings: 'wght' 750;
+font-variation-settings: 'CRSV' 0.5;
+font-variation-settings:  'SHRP' 100; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+  --mainBG: #F7FFFF;
+  --secondaryBG: #E2EBF1;
+  --infoCol: #C8C9DD;
+  --accentCol: #042AC1;
+  --titleCol: #092271;
+  --borderCol: #000000;
+}
+body{
+    background-color: var(--mainBG);
+}
+
+/********* COLOUR PICKER *********/
+.colourPicker{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    margin-top: 1.5%;
+    z-index: 9999;
+  }
+  .cPList{
+    display:none;
+  }
+  .colourList{
+    display: hidden;
+    flex-direction: column;
+  }
+  .pickerBtn{
+    display:flex;
+    background-image: url('../images/miniPicker.png');
+    background-size: contain;
+    border-style:solid;
+    border-color: var(--borderCol);
+    border-width:3px;
+    border-radius:5%;
+    width:50px;
+    height:50px;
+  }
+  .listModal{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: var(--secondaryBG);
+  }
+  .pickerList{
+    margin:20px;
+    width:56px;
+  }
+  
+  .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker, .listBtn{
+    border-style:solid;
+    border-color: var(--borderCol);
+    border-width:3px;
+    border-radius: 5%;
+    margin-bottom:10px;
+  }
+  .col1{
+    /* mainBG */
+    background-color: #F7FFFF;                            
+    height: 10px;
+    width: 50px;
+  }
+  .col2{
+    /* secondaryBG */
+    background-color: #E2EBF1;
+    height: 10px;
+    width: 50px;
+  }
+  .col3{
+    /* infoCol */
+    background-color: #C8C9DD;
+    height: 10px;
+    width: 50px;
+  }
+  .col4{
+    /* accentCol */
+    background-color: #042AC1;
+    height: 10px;
+    width: 50px;
+  }
+  .col5{
+    /* titleCol */
+    background-color: #092271;
+    height: 10px;
+    width: 50px;
+  }
+  
+  .blueSet:hover .col1{
+    background-color: #092271;
+  }
+  .blueSet:hover .col2{
+    background-color: #042AC1;
+  }
+  .blueSet:hover .col3{
+    background-color: #CBC9DD;
+  }
+  .blueSet:hover .col4{
+    background-color: #E2EBF1;
+  }
+  .blueSet:hover .col5{
+    background-color: #F7FFFF;
+  }
+  
+  .greenSet .col1{
+    background-color: #F3FEEA;
+  }
+  .greenSet .col2{
+    background-color: #CAE1C7;
+  }
+  .greenSet .col3{
+    background-color: #8EB68A;
+  }
+  .greenSet .col4{
+    background-color: #2E8831;
+  }
+  .greenSet .col5{
+    background-color: #19671D;
+  }
+  
+  .greenSet:hover .col1{
+    background-color: #19671D;
+  }
+  .greenSet:hover .col2{
+    background-color: #2E8831;
+  }
+  .greenSet:hover .col3{
+    background-color: #8EB68A;
+  }
+  .greenSet:hover .col4{
+    background-color: #CAE1C7;
+  }
+  .greenSet:hover .col5{
+    background-color: #F3FEEA;
+  }
+  
+  
+  .redSet .col1{
+    background-color: #FFF0EF;
+  }
+  .redSet .col2{
+    background-color: #FFDDD5;
+  }
+  .redSet .col3{
+    background-color: #C3806E;
+  }
+  .redSet .col4{
+    background-color: #AB260C;
+  }
+  .redSet .col5{
+    background-color: #8A130C;
+  }
+  
+  
+  .redSet:hover .col1{
+    background-color: #8A130C;
+  }
+  .redSet:hover .col2{
+    background-color: #AB260C;
+  }
+  .redSet:hover .col3{
+    background-color: #C3806E;
+  }
+  .redSet:hover .col4{
+    background-color: #FFDDD5;
+  }
+  .redSet:hover .col5{
+    background-color: #FFF0EF;
+  }
+  
+  .orangeSet .col1{
+    background-color: #FFEFD1;
+  }
+  .orangeSet .col2{
+    background-color: #EFD3AC;
+  }
+  .orangeSet .col3{
+    background-color: #D5A677;
+  }
+  .orangeSet .col4{
+    background-color: #DB7B1D;
+  }
+  .orangeSet .col5{
+    background-color: #DB5816;
+  }
+  
+  
+  .orangeSet:hover .col1{
+    background-color: #DB5816;
+  }
+  .orangeSet:hover .col2{
+    background-color: #DB7B1D;
+  }
+  .orangeSet:hover .col3{
+    background-color: #D5A677;
+  }
+  .orangeSet:hover .col4{
+    background-color: #EFD3AC;
+  }
+  .orangeSet:hover .col5{
+    background-color: #FFEFD1;
+  }
+  
+  .greySet .col1{
+    background-color: #F2F2F2;
+  }
+  .greySet .col2{
+    background-color: #929292;
+  }
+  .greySet .col3{
+    background-color: #616161;
+  }
+  .greySet .col4{
+    background-color: #313131;
+  }
+  .greySet .col5{
+    background-color: #000000;
+  }
+  
+  
+  .greySet:hover .col1{
+    background-color: #000000;
+  }
+  .greySet:hover .col2{
+    background-color: #313131;
+  }
+  .greySet:hover .col3{
+    background-color: #616161;
+  }
+  .greySet:hover .col4{
+    background-color: #929292;
+  }
+  .greySet:hover .col5{
+    background-color: #F2F2F2;
+  }
+  
+  .darkLight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50px;
+  }
+  .dark{
+    background-color: var(--accentCol);
+    width:25px;
+    height: 50px;
+  }
+  .light{
+    background-color: var(--secondaryBG);
+    width:25px;
+    height: 50px;
+  }
+  .darkLight:hover .dark{
+    background-color: var(--secondaryBG);
+  }
+  .darkLight:hover .light{
+    background-color: var(--accentCol);
+  }
+  
+  /********* OWN COLOURS *********/
+  .pickerModal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .miniColPicker{
+    height:47px;
+    width:50px;
+  }
+  .modalOpener{
+    display: flex;
+    flex-direction: row;
+  }
+  .button, .colorDiv{
+    width: 150px;
+    height: 400px;
+  }
