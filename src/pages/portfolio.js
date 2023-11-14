@@ -50,7 +50,7 @@ const Portfolio = (props) => {
             >
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
                 <div className="portfolioPageHex">
-                    {/* <Hexagons />    */}
+                    {/* <Hexagons /> */}
                     {displayDecider()}
                 </div>
                 

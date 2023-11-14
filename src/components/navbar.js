@@ -2,24 +2,19 @@ import './style.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import ColourPicker from './colourBar/colourPicker';
-import PickerList from './colourBar/colourList'
+import PickerList from './colourBar/colourList';
 import MiniLogo from './miniLogo';
 
 const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
     function onClickHandler(){
-        setShowOptions(false)
+        setShowOptions(false);
         const r = document.getElementById("logoStill");
         r.style.setProperty('animation', 'none');
         r.style.setProperty('opacity', '1');
     }
     function onHomeHandler(){
-        setShowOptions(false)
-        // const r = document.getElementById("logoStill");
-        // r.style.setProperty('opacity', '0');
-        // r.style.setProperty('animation', 'logoFadeIn 2s');
-        // r.style.setProperty('animation-delay', '28s');
-        // r.style.setProperty('animation-fill-mode', 'forwards');
+        setShowOptions(false);
     }
     
     return(
