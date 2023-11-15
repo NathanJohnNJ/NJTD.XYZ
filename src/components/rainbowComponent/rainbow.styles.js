@@ -14,7 +14,6 @@ export const RainbowBox = styled.div`
   syntax: "<angle>";
 }
   width: fit-content;
-  height: fit-content;
   display: flex;
   justify-self: center;
   align-self: center;
@@ -40,7 +39,6 @@ export const RainbowBox = styled.div`
 `
 
 export const Article = styled.div`
-  border-radius: 1rem;
   color: var(--mainBG);
   font-size: 3.5vw;
   font-weight: 700;
