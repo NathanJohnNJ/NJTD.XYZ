@@ -2,7 +2,7 @@ import './colours.css';
 import { useState } from 'react';
 
 const ColourPicker = () => {
-    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#C8C9DD', '#042AC1', '#092271']);
+    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
     const [darkMode, setDarkMode] = useState(false);
 
     function setColour(col, hex){
@@ -26,7 +26,7 @@ const ColourPicker = () => {
         }
     }
     function blueClickHandle() {
-        colourSetter(['#F7FFFF', '#E2EBF1', '#C8C9DD', '#042AC1', '#092271'])
+        colourSetter(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271'])
     }
     function redClickHandle() {
         colourSetter(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);

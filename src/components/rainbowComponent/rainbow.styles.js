@@ -13,12 +13,13 @@ export const RainbowBox = styled.div`
   initial-value: 0deg;
   syntax: "<angle>";
 }
-  width: 50vw;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-self: center;
   align-self: center;
   border-radius: 20px;
-  animation:  ${rainbowAnimation} 2.5s infinite linear paused;
+  animation:  ${rainbowAnimation} 2.5s infinite linear running;
   background:
     linear-gradient(
         to bottom,
@@ -31,16 +32,21 @@ export const RainbowBox = styled.div`
         oklch(1 0.37 0) 0 0
       )
       border-box; 
-  border: 6px solid transparent;
+  border: 8px solid transparent;
 
   &:hover {
-    animation-play-state: running;
+    animation-play-state: paused;
   }
 `
 
 export const Article = styled.div`
   border-radius: 1rem;
-  color: white;
-  padding: 1rem;
+  color: var(--mainBG);
+  font-size: 3.5vw;
+  font-weight: 700;
+  text-align:center;
+  padding: 5px;
   width: fit-content;
+  border-radius: 12px;
+  background-color: var(--titleCol);
 `

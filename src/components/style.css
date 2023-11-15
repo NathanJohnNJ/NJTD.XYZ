@@ -13,7 +13,7 @@ font-variation-settings:  'SHRP' 100; */
 :root{
   --mainBG: #F7FFFF;
   --secondaryBG: #E2EBF1;
-  --infoCol: #C8C9DD;
+  --infoCol: #878896;
   --accentCol: #042AC1;
   --titleCol: #092271;
   --borderCol: #000000;
@@ -208,13 +208,11 @@ body{
     width: 100%;
     max-width: 1200px;
     color: var(--infoCol);
-    position:fixed;
-    bottom: 0;
-    z-index: 99;
     justify-content: flex-end;
+    justify-self: flex-end;
     align-items: center;
     height: 100px;
-    margin-top: 100vh;
+    /* margin-top: 100vh; */
     background-color: var(--secondaryBG);
 }
 .footer{

@@ -13,7 +13,7 @@ font-variation-settings:  'SHRP' 100; */
 :root{
   --mainBG: #F7FFFF;
   --secondaryBG: #E2EBF1;
-  --infoCol: #C8C9DD;
+  --infoCol: #878896;
   --accentCol: #042AC1;
   --titleCol: #092271;
   --borderCol: #000000;
@@ -80,7 +80,7 @@ body{
   }
   .col3{
     /* infoCol */
-    background-color: #C8C9DD;
+    background-color: #878896;
     height: 10px;
     width: 50px;
   }
@@ -128,7 +128,7 @@ body{
   .greenSet .col5{
     background-color: #19671D;
   }
-  
+
   .greenSet:hover .col1{
     background-color: #19671D;
   }
@@ -144,7 +144,6 @@ body{
   .greenSet:hover .col5{
     background-color: #F3FEEA;
   }
-  
   
   .redSet .col1{
     background-color: #FFF0EF;
