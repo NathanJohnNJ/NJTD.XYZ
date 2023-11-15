@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const ColourPickerList = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#C8C9DD', '#042AC1', '#092271']);
+    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
     const [darkMode, setDarkMode] = useState(false);
 
     function openModal(){
@@ -27,18 +27,18 @@ const ColourPickerList = () => {
         r.style.setProperty(col, hex);
         }
     function blueClickHandle() {
-        setColours(['#F7FFFF', '#E2EBF1', '#C8C9DD', '#042AC1', '#092271']);
+        setColours(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
         if(darkMode===false){
             setColour("--mainBG",'#F7FFFF')
             setColour("--secondaryBG", '#E2EBF1')
-            setColour("--infoCol", '#C8C9DD')
+            setColour("--infoCol", '#878896')
             setColour("--accentCol", '#042AC1')
             setColour("--titleCol", '#092271')
             setColour("--borderCol", "#000000")
         } else{
             setColour("--mainBG",'#092271')
             setColour("--secondaryBG", '#042AC1')
-            setColour("--infoCol", '#C8C9DD')
+            setColour("--infoCol", '#878896')
             setColour("--accentCol", '#E2EBF1')
             setColour("--titleCol", '#F7FFFF')
             setColour("--borderCol", "#FFFFFF")
