@@ -1,22 +1,15 @@
 import './style.css';
 import { motion } from 'framer-motion';
 import meImg from '../images/me.jpg';
-// import logo from '../images/NJTDesign.gif';
-// import stillLogo from '../images/NJTDesign.png';
+import NJTDesign from '../components/about/njtdesign.js'
 import Nathan from '../components/about/nathan.js';
 import MoreInfo from '../components/about/more.js';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const Nj = (props) => {
-  // const [imageSrc, setImageSrc] = useState(logo)
   useEffect(() => {
       props.setPage("notHome");
-  });
-
-  // function timeOut(){
-  //     setImageSrc(stillLogo)
-  // }
-  // setTimeout(() => {timeOut()}, 18000)
+  }, [props]);
 
     return (
         <div className="aboutPage">
@@ -29,29 +22,32 @@ const Nj = (props) => {
             >
               <h1 className="njTitle">ABOUT NJ</h1>
               <div className="aboutMe">
-                <div className="aboutTop">
-                  <div className="aboutTopLeft">
-                    Hi! I'm 
-                    <Nathan />
-                  </div>
-                  <div className="aboutTopMiddle">
-                      And I hate to be put in a box.
-                  </div>
+                <div className="imagesDiv">
                   <div className="firstImgDiv">
                     <img src={meImg} alt="NJ" className="meImg"></img>
                   </div>
-                  <div className="aboutTopRight">
-                    {/* <div className="secondImgDiv">
-                      <img src={imageSrc} alt="Alternative logo" className="njtdLogo"></img>
-                    </div> */}
-                    <p>
-                      But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?
-                    </p>
-                    <p className="thanks">
-                      Thanks!
-                    </p>
+                  <div className="aboutTop">
+                    <div className="aboutTopLeft">
+                      Hi! I'm 
+                      <Nathan />
+                    </div>
+                    <div className="aboutTopMiddle">
+                      And I hate to be put in a box.
+                    </div>
+                    <div className="aboutTopRight">
+                      <p>
+                        But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?
+                      </p>
+                      <p className="thanks">
+                        Thanks!
+                      </p>
+                    </div>
+                  </div>
+                  <div className="secondImgDiv">
+                    <NJTDesign />
                   </div>
                 </div>
+
                 <div className="aboutBottom">
                   <MoreInfo />
                 </div>

@@ -6,7 +6,7 @@ const Rainbow = (props) => {
     return(
         <div className="rainbow">
             <RainbowBox>
-                <Article  width="300px" height="200px" bG="#e8e4e4">
+                <Article>
                     {props.text}
                 </Article>
             </RainbowBox>
