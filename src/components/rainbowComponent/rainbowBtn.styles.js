@@ -7,7 +7,7 @@ import styled, { keyframes } from 'styled-components'
   }
 `
 
-export const RainbowBox = styled.div`
+export const RainbowBtn = styled.div`
 @property --bg-angle {
   inherits: false;
   initial-value: 0deg;
@@ -32,14 +32,13 @@ export const RainbowBox = styled.div`
       )
       border-box; 
   border: 8px solid transparent;
-  margin-left: 5vw;
 
   &:hover {
     animation-play-state: paused;
   }
 `
 
-export const Article = styled.div`
+export const Button = styled.button`
   color: var(--mainBG);
   font-size: 3.5vw;
   font-weight: 700;
@@ -47,5 +46,7 @@ export const Article = styled.div`
   padding: 5px;
   width: fit-content;
   border-radius: 12px;
+  border: none;
   background-color: var(--titleCol);
+  white-space: nowrap;
 `

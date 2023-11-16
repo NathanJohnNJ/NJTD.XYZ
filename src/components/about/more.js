@@ -1,14 +1,19 @@
 import './about.css';
+import { useState } from 'react';
+import RainbowButton from '../rainbowComponent/rainbowBtn'
 
 const MoreInfo = () => {
+    const [btnText, setBtnText] = useState("Intrigued?")
 
     function hoverHandler(){
-        const btn = document.getElementById('moreBtn');
-        btn.innerText = "Click me to find out more!"
+        // const btn = document.getElementById('moreBtn');
+        // btn.innerText = "Click me to find out more!"
+        setBtnText("Click me to find out more!");
     }
     function mouseOutHandler(){
-        const btn = document.getElementById('moreBtn');
-        btn.innerText = "Intrigued?"
+        // const btn = document.getElementById('moreBtn');
+        // btn.innerText = "Intrigued?"
+        setBtnText("Intrigued?")
     }
 
     function onClickHandler(){
@@ -20,7 +25,8 @@ const MoreInfo = () => {
 
     return(
         <div>
-            <button className="moreBtn" id="moreBtn" onMouseOver={hoverHandler} onMouseOut={mouseOutHandler}  onClick={onClickHandler}>Intrigued?</button>
+            {/* <button className="moreBtn" id="moreBtn" onMouseOver={hoverHandler} onMouseOut={mouseOutHandler}  onClick={onClickHandler}>Intrigued?</button> */}
+            <RainbowButton id="moreBtn" onClick={onClickHandler} onMouseOver={hoverHandler} onMouseOut={mouseOutHandler} text={btnText} />
             <div id="moreInfo"></div>
         </div>
     )
