@@ -9,7 +9,7 @@ const MiniLogo = (props) => {
         const r = document.getElementById("logoStill");
         r.style.setProperty('opacity', '0');
         r.style.setProperty('animation', 'logoFadeIn 4s');
-        r.style.setProperty('animation-delay', '12s');
+        r.style.setProperty('animation-delay', '13s');
         r.style.setProperty('animation-fill-mode', 'forwards');
     }
     function notHomeHandler(){

@@ -1,0 +1,31 @@
+.modal{
+   margin-top:200px;
+   color: var(--infoCol);
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: -35px;
+  }
+  .listTitle{
+    font-family: 'League Spartan', sans-serif;
+    text-align: left;
+    margin-bottom: -15px;
+    font-size:2vw;
+  }
+ .listItem:hover{
+    scale: 1;
+    color: var(--accentCol)
+ }
+ .dblList{
+   display: flex;
+   flex-direction: row;
+ }
+ .listItem{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
+    scale:0.85;
+    color: var(--infoCol);
+ }

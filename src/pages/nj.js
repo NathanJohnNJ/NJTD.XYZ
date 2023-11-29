@@ -14,13 +14,14 @@ const Nj = (props) => {
     return (
         <div className="aboutPage">
           <motion.div
-            className="aboutContainer text-center  bg-black"
+            className="container text-center  bg-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 3 }}
             >
-              <h1 className="njTitle">ABOUT NJ</h1>
+              <div className="aboutContent">
+              <h1 className="title">ABOUT NJ</h1>
               <div className="aboutMe">
                 <div className="imagesDiv">
                   <div className="firstImgDiv">
@@ -51,6 +52,7 @@ const Nj = (props) => {
                 <div className="aboutBottom">
                   <MoreInfo />
                 </div>
+              </div>
               </div>
             </motion.div>
         </div>

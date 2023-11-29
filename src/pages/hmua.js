@@ -38,7 +38,7 @@ const HMUA = (props) => {
             >
             <div className=" hmuacontent">  
                 <div className="hmuaText">
-                    <h1 className="hmuaTitle">Hair & Makeup Artistry</h1>
+                    <h1 className="title">Hair & Makeup Artistry</h1>
                     <p className="hmuaText">I toyed with the idea of including my hair and makeup portfolio on this website whilst I'm trying to enter into the coding/developer world before realising:</p>
                     <p className="hmuaText">This work reflects a large portion of my professional life that has led me to where I am today and that I am immensely proud of. All of this imagery showcases my creative ability which is definitely something I intend to transfer across to all my future endeavours...</p>
                     <p className="hmuaText">...and at the end of the day, it's bloody good stuff, and definitely worth a mention and a browse.</p>

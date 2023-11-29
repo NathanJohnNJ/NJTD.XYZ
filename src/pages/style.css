@@ -24,6 +24,21 @@ font-variation-settings:  'SHRP' 100; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index:0;
+    height:100vh;
+}
+.newIntroDiv{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
+    font-size: 6vw;
+    text-shadow: 3px 1px 4px var(--accentCol);
+    position:absolute;
+    top:10%;
 }
 .afterIntro{
     opacity: 0;
@@ -38,18 +53,40 @@ font-variation-settings:  'SHRP' 100; */
     margin-top: -65vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top:100vh;
+    z-index: 9999;
+}
+.links{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    justify-self: center;
     align-items: center;
-    align-self: center;
+}
+.navLinks{
+    text-decoration: none;
+    color: var(--accentCol);
+    
+}
+.navLinks:hover{
+    color: var(--titleCol);
+    scale: 1.1;
+}
+.recent{
+    white-space: nowrap;
 }
 /***********PORTFOLIO PAGE **********/
 .portfolioTitle{
     font-size: 4.5vw;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
     margin-bottom: 10%;
     position: absolute;
+    text-shadow: 3px 1px 4px var(--accentCol);
     right:0;
     left:0;
     top: 18%;
@@ -61,7 +98,7 @@ font-variation-settings:  'SHRP' 100; */
     justify-content: center;
     align-items: center;
     background-color: var(--mainBG);
-    height: 100%;
+    height: 100vh;
 }
   /********* ABOUT ME *********/
   .aboutPage{
@@ -70,19 +107,26 @@ font-variation-settings:  'SHRP' 100; */
     justify-content: center;
     align-items: center;
     position:relative;
+    height:100vh;
   }
-.aboutContainer{
-    position:relative;
-}
-.njTitle{
+  .aboutContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.title{
     font-size: 4.5vw;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
-    margin-top: 20vh;
+    margin-top: 20vh;  
+    text-shadow: 3px 1px 4px var(--accentCol);
 }
+
 .aboutMe{
     font-family: 'Poppins', sans-serif;
     font-weight:400;
@@ -99,16 +143,18 @@ font-variation-settings:  'SHRP' 100; */
     display: flex;
     flex-direction: column;
     width:80%;
+    z-index:0;
     position:relative;
 }
 .aboutTopLeft{
     align-self: flex-start;
-    
+    z-index:0;
 }
 
 .aboutTopMiddle{
     display:flex;
     align-self: center;
+    z-index:0;
 }
 .aboutTopRight{
     width: 50vw;
@@ -122,12 +168,14 @@ font-variation-settings:  'SHRP' 100; */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    z-index:0;
 }
 .firstImgDiv{
     display:flex;
     flex-direction: column;
     position:relative;
     margin-top:-60px;
+    z-index:0;
 }
 .meImg{
     max-width:180px;
@@ -136,6 +184,7 @@ font-variation-settings:  'SHRP' 100; */
 .secondImgDiv{
     display: flex;
     margin-top:30px;
+    z-index:0;
 }
 
   /*************** CONTACT ****************/
@@ -158,6 +207,7 @@ font-variation-settings:  'SHRP' 100; */
     position: absolute;
     right:0;
     left:0;
+    text-shadow: 3px 1px 4px var(--accentCol);
     top: 18%;
 }
 .please{
@@ -238,14 +288,7 @@ font-variation-settings:  'SHRP' 100; */
     background-color: var(--mainBG);
     font-family: 'Raleway', sans-serif;
   }
-  .hmuaTitle{
-    font-size: 4.5vw;
-    font-family: 'Geologica', sans-serif;
-    font-variation-settings: 'wght' 550;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--titleCol);
-  }
+ 
   .hmuaContent, .hmuaImages{
     display: flex;
     flex-direction: column;
@@ -270,7 +313,90 @@ font-variation-settings:  'SHRP' 100; */
 .vogue{
     margin-bottom: 3vh;                                                                                                                                     
 }
- 
+
+  /*************** CV ****************/
+ .cv{
+    color: black;
+    margin-top: 175px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:90vw;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 2px 6px 2px rgb(75, 74, 74);
+    position: relative;
+    z-index: -0.5;
+    margin-bottom: -300px;
+ }
+ .cv h1{
+    margin-top: -60px;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    margin-bottom: -15px;
+    font-size:6.5vw;
+    letter-spacing: -4px;
+    
+ }
+ #line2{
+    font-weight:100;
+    color: #b5b5b5;
+    letter-spacing: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: center;
+}
+.line{
+    background-color: var(--titleCol);
+    width: 85vw;
+    height: 1px;
+    margin-top: 15px;
+}
+ .cvContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+ }
+ .leftCV, .rightCV{
+    display:flex;
+    flex-direction: column;
+    margin-left: 4vw;
+  }
+  .rightCV{
+    justify-content: flex-end;
+    align-items: flex-start
+  }
+.list{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: -35px;
+  }
+  .listTitle{
+    font-family: 'League Spartan', sans-serif;
+    text-align: left;
+    margin-bottom: -15px;
+    font-size:2vw;
+  }
+ .listItem:hover{
+    scale: 1;
+    color: var(--accentCol)
+ }
+ .dblList{
+    display:inline
+ }
+ .listItem{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
+    scale:0.85;
+    color: var(--infoCol);
+ }
+ .cvContactBanner{
+    width: 70%;
+ }
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

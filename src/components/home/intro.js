@@ -1,5 +1,5 @@
-import './style.css';
-import logo from '../images/logo.gif';
+import './home.css';
+import logo from '../../images/logo.gif';
 
 const Intro = () => {
     const num = Math.random()
