@@ -1,14 +1,13 @@
-- Make a page for /portfolio with a portfolio picker on
+- Check all sizing
+- Home page visit counter to stop animation running when returning to home page
+- Redo Home page links and add link to cv
+- Add recently updated projects from github api
 - Check all text on website 
 - Reorganise components and pages and update links
 - Check API visuals
-- Finish about page
-- Update contact page
-- Finish sorting existing sizes to update them to be adaptable
-- Add Media Queries
 
 PORTFOLIO PROJECTS TO FINISH
-- Finish cats website - ALMOST
+- Finish cats website - BASKET
 - Link Cookies front with mysql back on rpi 4b - Trying different hosting options
 
 

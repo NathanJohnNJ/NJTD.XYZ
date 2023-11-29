@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Contact from './pages/contact';  
 import Home from './pages/home';
 import HMUA from './pages/hmua';
+import CV from './pages/cv';
 import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
@@ -18,9 +19,9 @@ function App() {
         <NavBar page={page}/>
 
         <AnimatePresence mode="wait">
-        <div className="mainContent">
+       
           <Outlet />
-        </div>
+        
         </AnimatePresence>
           
       <Routes> 
@@ -30,7 +31,8 @@ function App() {
         <Route key="hmua" path="portfolio/hmua" element={<HMUA setPage={setPage}/>} />
         <Route key="developer" path="portfolio/developer" element={<Portfolio setPage={setPage}/>} />
         <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
-        <Route key="portfolio" path="codes" element={<Portfolio setPage={setPage}/>} />
+        <Route key="codes" path="codes" element={<Portfolio setPage={setPage}/>} />
+        <Route key="cv" path="cv" element={<CV setPage={setPage}/>} />
       </Routes>
       <Footer />
     </div>
