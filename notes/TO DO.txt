@@ -1,3 +1,8 @@
+CV - IMPORTANT
+- Fix modals so extra info is displayed when a section is clicked.
+- Add all previous experience not mentioned on new CV.
+
+- Smoother transition in the Nathan box
 - Check all sizing
 - Home page visit counter to stop animation running when returning to home page
 - Redo Home page links and add link to cv
@@ -12,6 +17,4 @@ PORTFOLIO PROJECTS TO FINISH
 
 
 STRETCH GOALS
-- add buttons to hmua page
 - Add custom colour schemes to colourPicker and reconsider light/dark icon
-- Matrix style logo

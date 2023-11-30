@@ -48,14 +48,14 @@ font-variation-settings:  'SHRP' 100; */
     font-size: 1.5vw;
     font-weight: 400;
     width: 60vw;
-    color: var(--infoCol);
+    color: var(--infoCol); 
     animation-fill-mode: forwards;
     margin-top: -65vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: absolute;
-    top:100vh;
+    top:110vh;
     z-index: 9999;
 }
 .links{
@@ -335,9 +335,8 @@ font-variation-settings:  'SHRP' 100; */
     font-family: 'League Spartan', sans-serif;
     text-align: center;
     margin-bottom: -15px;
-    font-size:6.5vw;
+    font-size:6.5vmin;
     letter-spacing: -4px;
-    
  }
  #line2{
     font-weight:100;
@@ -390,7 +389,7 @@ font-variation-settings:  'SHRP' 100; */
  }
  .listItem{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.5vmin;
     scale:0.85;
     color: var(--infoCol);
  }
@@ -401,3 +400,20 @@ font-variation-settings:  'SHRP' 100; */
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+@media screen and (max-width: 600px){
+
+  }
+  @media screen and (max-width: 480px){
+    .cv{
+        margin-top: 100px;
+        height: 60vh;
+        
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 768px){
+    
+  }
+  @media screen and (min-width: 769px){
+    
+  }

@@ -55,6 +55,7 @@ body{
     flex-direction:column;
     align-items: center;
     background-color: var(--secondaryBG);
+    margin-top:60px;
   }
   .pickerList{
     margin:20px;
@@ -271,26 +272,6 @@ body{
   .darkLight:hover .light{
     background-color: var(--accentCol);
   }
-  
-  /********* OWN COLOURS *********/
-  .pickerModal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .miniColPicker{
-    height:47px;
-    width:50px;
-  }
-  .modalOpener{
-    display: flex;
-    flex-direction: row;
-  }
-  .button, .colorDiv{
-    width: 150px;
-    height: 400px;
-  }
 
   @media screen and (max-width: 750px){
     .col1, .col2, .col3, .col4, .col5, .darkLight{
@@ -302,5 +283,19 @@ body{
     }
     .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker, .listBtn, .darkLight, .dark, .light{
       height: 4vw;
+      width:4vw;
     }
   }
+  
+@media screen and (max-width: 480px){
+  .colourPicker{ display: none; }
+  .cPList{ display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; justify-self:center; }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .colourPicker{ display: flex; }
+  .cPList{ display:none; }
+}
+@media screen and (min-width: 769px){
+  .colourPicker{ display: flex; }
+  .cPList{ display:none; }
+}

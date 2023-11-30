@@ -9,9 +9,13 @@ const ColourPickerList = () => {
 
     function openModal(){
         setModalIsOpen(true)
+        const picker = document.getElementById('listBtn')
+        picker.style.setProperty('opacity', '0')
     }
     function closeModal(){
         setModalIsOpen(false)
+        const picker = document.getElementById('listBtn')
+        picker.style.setProperty('opacity', '1')
     }
     function mouseOver(){
         const img = document.getElementById('listBtn')
@@ -43,7 +47,7 @@ const ColourPickerList = () => {
             setColour("--titleCol", '#F7FFFF')
             setColour("--borderCol", "#FFFFFF")
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     function redClickHandle() {
         setColours(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);
@@ -62,7 +66,7 @@ const ColourPickerList = () => {
             setColour("--titleCol", '#FFF0EF')
             setColour("--borderCol", "#FFFFFF")
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     function greenClickHandle() {
         setColours(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D']);
@@ -81,7 +85,7 @@ const ColourPickerList = () => {
             setColour("--titleCol", '#F3FEEA')
             setColour("--borderCol", "#FFFFFF")
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     function orangeClickHandle() {
         setColours(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816']);
@@ -100,7 +104,7 @@ const ColourPickerList = () => {
             setColour("--titleCol", '#FFEFD1')
             setColour("--borderCol", "#FFFFFF")
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     function greyScaleClickHandle() {
         setColours(['#F2F2F2', '#929292', '#616161', '#313131', '#000000']);
@@ -119,7 +123,7 @@ const ColourPickerList = () => {
             setColour("--titleCol", '#F2F2F2')
             setColour("--borderCol", "#FFFFFF")
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     function darkLightClickHandle() {
         if(darkMode===false){
@@ -139,7 +143,7 @@ const ColourPickerList = () => {
             setColour("--borderCol", "#000000")
             setDarkMode(false)
         }
-        setModalIsOpen(false)
+        closeModal()
     }
     
     return(
