@@ -3,46 +3,14 @@ import AniOrWelcome from '../components/home/animateOrWelcome';
 import './style.css';
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Octokit } from '@octokit/core';
+// import { Octokit } from '@octokit/core';
 import HomeDiv from '../components/home/homeDiv';
 
 const Home = (props) => {
     useEffect(() => {
         props.setPage("home");
-        console.log(githubRepos())
+        // console.log(githubRepos())
     });
-    async function githubRepos(){
-const octokit = new Octokit({
-    auth: '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'
-  })
-  
-  const response = await octokit.request('GET /users/NathanJohnNJ/repos', {
-    username: 'NathanJohnNJ',
-    sort: 'pushed',
-    per_page: 3,
-    headers: {
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-  })
-  const data = response.data
-  data.map((x, i) => {
-    const year = x.pushed_at.slice(0, 4)
-    const month = x.pushed_at.slice(5, 7)
-    const day = x.pushed_at.slice(8, 10)
-    const date = `${day}/${month}/${year}`
-    const url = `https://github.com/${x.full_name}`
-    const log = console.log("URL: ", url, "Repo: ", x.name, " Pushed at: ", date)
-    return(log)
-    // return(
-    //     <div className="updatedRepo">
-    //         <p>Repo: {x.name}</p>
-    //         <p>Last Updated: {date}</p>
-    //         <p>URL: <a href={url} className="repoLink">{url}</a></p>
-    //         <p>Description: {x.description}</p> 
-    //     </div>
-    // )
-  })
-    }
 
     return (
         <div className="home">
