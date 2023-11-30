@@ -89,6 +89,7 @@ body{
     font-weight: 900;
     font-size: 6vw;
     display:flex;
+   
 }
 
 @media screen and (max-width: 600px){
