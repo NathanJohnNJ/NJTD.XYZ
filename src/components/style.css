@@ -24,7 +24,7 @@ body{
 
 /********* NAVBAR *********/
 .NavbarMain{
-  
+  max-height:140px;
   width:100%;
   max-width:1200px;
   position: fixed;
@@ -35,6 +35,7 @@ body{
   flex-direction: column;
   height: 18vmin;
   min-height:60px;
+  max-height:140px;
   background-color: var(--secondaryBG);
   width: 100%;
   position: relative;

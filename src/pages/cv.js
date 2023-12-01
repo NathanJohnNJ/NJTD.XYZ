@@ -1,8 +1,8 @@
 import './style.css';
 import { useEffect } from 'react';
+import CVContact from '../components/cv/cvContact'
 // import { NavLink } from 'react-router-dom';
 // import Education from '../components/cv/education';
-import CVImg from '../images/cvContact.png'
 // import { useState } from 'react';
 
 const CV = (props) => {
@@ -69,7 +69,8 @@ Using Collaborative Technologies
                 </div>
                 
             </div>
-            <img src={CVImg} alt="Methods of contact." className="cvContactBanner"></img>
+            {/* <img src={CVImg} alt="Methods of contact." className="cvContactBanner"></img> */}
+            <CVContact />
         </div>
     )
 };
