@@ -379,6 +379,7 @@ font-variation-settings:  'SHRP' 100; */
     text-align: left;
     margin-bottom: -15px;
     font-size:2vw;
+    color:var(--titleCol);
   }
  .listItem:hover{
     scale: 1;

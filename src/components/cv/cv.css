@@ -1,31 +1,80 @@
-.modal{
-   margin-top:200px;
-   color: var(--infoCol);
-}
-
-.list{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: -35px;
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+    --mainBG: #F7FFFF;
+    --secondaryBG: #E2EBF1;
+    --infoCol: #878896;
+    --accentCol: #042AC1;
+    --titleCol: #092271;
   }
-  .listTitle{
+  
+  .cvContactListTitle{
     font-family: 'League Spartan', sans-serif;
     text-align: left;
-    margin-bottom: -15px;
     font-size:2vw;
+    font-weight:700;
+    color:var(--titleCol);
   }
- .listItem:hover{
-    scale: 1;
-    color: var(--accentCol)
+ .cvContact{
+   align-self: flex-end;
+   margin-right: 4vw;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5px;
+   grid-auto-rows: minmax(30px, auto);
  }
- .dblList{
-   display: flex;
-   flex-direction: row;
+ .cvContactTitle {
+   grid-column: 1;
+   grid-row: 1;
+   display:flex;
+ }.address {
+   grid-column: 1/4;
+   grid-row: 2;
+   display:flex;
  }
- .listItem{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
-    scale:0.85;
-    color: var(--infoCol);
+ .phone {
+   grid-column: 1 / 4;
+   grid-row: 3;
+   display:flex;
  }
+
+ .email {
+   grid-column: 1/4;
+   grid-row: 4;
+   display:flex;
+ }
+ .web {
+   grid-column: 1/4;
+   grid-row: 5;
+   display:flex;
+ }
+ .git {
+   grid-column: 1/4;
+   grid-row: 6;
+   display:flex;
+ }
+ .linked {
+   grid-column: 1/4;
+   grid-row: 7;
+   display:flex;
+ }
+ .contactImg{
+   width: 20px;
+   height: 20px;
+   margin-right:15px;
+ }
+ .contactListItem{
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.5vw;
+   scale:0.85;
+   color: var(--infoCol);
+}
+.contactListItem:hover{
+   scale: 1;
+   color: var(--accentCol)
+}
