@@ -9,7 +9,7 @@ const [timer, setTimer] = useState(0);
         const introDiv = document.getElementById('introDiv')
         introDiv.innerHTML=`<div><h1 className="welcome">Welcome!</h1></div>`
     } else{
-        console.log(timer)
+        // console.log(timer)
         setTimeout(() => {setTimer(timer+1)}, 1000)
     }
 }

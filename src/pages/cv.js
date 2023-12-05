@@ -1,7 +1,7 @@
 import './style.css';
 import { useEffect } from 'react';
 import CVContact from '../components/cv/cvContact'
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import Education from '../components/cv/education';
 // import { useState } from 'react';
 
@@ -42,6 +42,13 @@ Using Collaborative Technologies
         <div className="cv">
             <h1>NATHAN JOHN</h1>
             <h1 id="line2">H   Y   N   E   S</h1>
+            <div className="clickForPort">
+                Click here to jump
+                <br></br>
+                straight to my
+                <br></br>
+                <NavLink to="/portfolio/developer" className="clickForPortLink">Portfolio</NavLink>
+            </div>
             <div className="line"></div>
             <div className="cvContent">
                 <div className="leftCV">

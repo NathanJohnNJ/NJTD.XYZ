@@ -12,6 +12,8 @@
   --accentCol: #042AC1;
   --titleCol: #092271;
   --borderCol: #000000;
+  --njtdLogoGif: url('./images/njtdesign/blue.gif');
+  --njtdLogoPng: url('./images/njtdesign/blue.png');
 }
 body{
     background-color: var(--mainBG);

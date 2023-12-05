@@ -16,6 +16,8 @@ font-variation-settings:  'SHRP' 100; */
     --infoCol: #878896;
     --accentCol: #042AC1;
     --titleCol: #092271;
+    --njtdLogoGif: url('../images/njtdesign/blue.gif');
+    --njtdLogoPng: url('../images/njtdesign/blue.png');
   }
 /***********HOMEPAGE **********/
 .home{
@@ -329,6 +331,7 @@ font-variation-settings:  'SHRP' 100; */
     position: relative;
     z-index: -0.5;
     margin-bottom: -300px;
+    padding-top:15px;
  }
  .cv h1{
     margin-top: -60px;
@@ -345,6 +348,23 @@ font-variation-settings:  'SHRP' 100; */
     margin-top: 5px;
     margin-left: 10px;
     text-align: center;
+}
+.clickForPort{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vmin;
+    font-weight: 650;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.clickForPortLink{
+    text-decoration: none;
+    color: var(--titleCol)
+}
+.clickForPortLink:hover{
+    font-weight:750;
+    font-size: 2.2vmin;
+    color: var(--accentCol)
 }
 .line{
     background-color: var(--titleCol);

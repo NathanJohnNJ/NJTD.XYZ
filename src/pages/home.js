@@ -1,15 +1,13 @@
 import Intro from '../components/home/intro';
 import AniOrWelcome from '../components/home/animateOrWelcome';
+import GitHubRepos from '../components/home/github';
 import './style.css';
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-// import { Octokit } from '@octokit/core';
-import HomeDiv from '../components/home/homeDiv';
 
 const Home = (props) => {
     useEffect(() => {
         props.setPage("home");
-        // console.log(githubRepos())
     });
 
     return (
@@ -23,13 +21,7 @@ const Home = (props) => {
                 <p>My intention with this web app, is for you to enjoy my portfolio, and its platform, as much as I have enjoyed putting it together. Due to the ever-changing nature of this app and of the industry as a whole, I'm always open to a suggestion or a nod in the right direction! Head over to my <NavLink className="navLinks"  to="/contact">contact</NavLink> page to find out how to get in touch.</p>
                 <p className="recent">My most recent <NavLink className="navLinks" to="/cv">CV</NavLink> and <NavLink className="navLinks"  to="/portfolio/developer">portfolio</NavLink> will always be available at their respective pages.</p>
                 <p>You can also checkout what I've been upto on <a href="https://github.com/NathanJohnNJ" className="github">GitHub</a> at any time.</p>
-
-
-                <div className="links">
-                    <NavLink className="navLink" to="/nj"><HomeDiv text="ABOUT" /></NavLink>
-                    <NavLink className="navLink" to="/contact"><HomeDiv text="CONTACT" /></NavLink>
-                    <NavLink className="navLink" to="/portfolio/developer"><HomeDiv text="PORTFOLIO" /></NavLink>
-                </div>
+                <GitHubRepos />
             </div>
         </div>
     )

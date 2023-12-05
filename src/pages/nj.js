@@ -44,9 +44,9 @@ const Nj = (props) => {
                       </p>
                     </div>
                   </div>
-                  <div className="secondImgDiv">
+                  {/* <div className="secondImgDiv"> */}
                     <NJTDesign />
-                  </div>
+                  {/* </div> */}
                 </div>
 
                 <div className="aboutBottom">
