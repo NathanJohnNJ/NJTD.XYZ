@@ -6,7 +6,7 @@ import Contact from './pages/contact';
 import Home from './pages/home';
 import HMUA from './pages/hmua';
 import CV from './pages/cv';
-import Nj from './pages/newNJ';
+import Nj from './pages/nj';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
