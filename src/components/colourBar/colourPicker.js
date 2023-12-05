@@ -2,7 +2,19 @@ import './colours.css';
 import { useState } from 'react';
 
 const ColourPicker = () => {
-    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
+
+    const blueGif = './images/njtdesign/blue.gif';
+    const bluePng = './images/njtdesign/blue.png';
+    const greenGif = '/./images/njtdesign/green.gif';
+    const greenPng = './images/njtdesign/green.png';
+    const orangeGif = './images/njtdesign/orange.gif';
+    const orangePng = './images/njtdesign/orange.png';
+    const greyGif = './images/njtdesign/grey.gif';
+    const greyPng = './images/njtdesign/grey.png';
+    const redGif = './images/njtdesign/red.gif';
+    const redPng = './images/njtdesign/red.png';
+
+    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271', blueGif, bluePng]);
     const [darkMode, setDarkMode] = useState(false);
 
     function setColour(col, hex){
@@ -11,8 +23,8 @@ const ColourPicker = () => {
         }
     function colourSetter(cols){
         setColours(cols)
-        const variables = ["--mainBG", "--secondaryBG", "--infoCol", "--accentCol", "--titleCol"];
-        const darkVars = ["--titleCol", "--accentCol", "--infoCol", "--secondaryBG", "--mainBG" ]
+        const variables = ["--mainBG", "--secondaryBG", "--infoCol", "--accentCol", "--titleCol", "--njtdLogoGif", "--njtdLogoPng"];
+        const darkVars = ["--titleCol", "--accentCol", "--infoCol", "--secondaryBG", "--mainBG", "--njtdLogoGif", "--njtdLogoPng"]
         if(darkMode===false){
             for (let i = 0; i < cols.length; i++){
                 setColour(`${variables[i]}`, `${cols[i]}`)
@@ -26,19 +38,19 @@ const ColourPicker = () => {
         }
     }
     function blueClickHandle() {
-        colourSetter(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271'])
+        colourSetter(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271', blueGif, bluePng])
     }
     function redClickHandle() {
-        colourSetter(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);
+        colourSetter(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C', redGif, redPng]);
     }
     function greenClickHandle() {
-        colourSetter(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D']);
+        colourSetter(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D', greenGif, greenPng]);
     }
     function orangeClickHandle() {
-       colourSetter(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816'])
+       colourSetter(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816', orangeGif, orangePng])
     }
     function greyScaleClickHandle() {
-        colourSetter(['#F2F2F2', '#929292', '#616161', '#313131', '#000000']);
+        colourSetter(['#F2F2F2', '#929292', '#616161', '#313131', '#000000', greyGif, greyPng]);
     }
     function darkLightClickHandle() {
         if(darkMode===false){
