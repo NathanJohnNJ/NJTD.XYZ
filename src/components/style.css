@@ -228,7 +228,7 @@ body{
     justify-self: flex-end;
     align-items: center;
     height: 100px;
-    margin-top: 45vh;
+    margin-top: 70vh;
     background-color: var(--secondaryBG);
 }
 .footer{
