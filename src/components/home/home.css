@@ -107,27 +107,32 @@ body{
 .updatedRepo{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* align-items: flex-start; */
+  width: 50vw;
 }
 .updatedRepo p{
   margin-bottom: -10px;
 }
-.updatedRepo iframe{
+/* .updatedRepo iframe{
   margin-bottom: -10px;
   margin-top: 15px;
   width:20vw;
   height: auto;
   margin-left: 5vw;
   margin-right:5vw;
-}
+} */
 .mainReposDiv{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.6vmin;
   color: var(--infoCol);
   width: 80vw;
   align-self: center;
+}
+.details{
+  text-align: left;
 }
 .repoTitle{
   font-family: 'League Spartan', sans-serif;

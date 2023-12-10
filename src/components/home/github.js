@@ -6,7 +6,7 @@ const GitHubRepos = () => {
   const [repos, setRepos] = useState([])
   const fetchData = async () => {
     try {
-    const url = 'https://api.github.com/users/NathanJohnNJ/repos?per_page=3&sort=pushed';
+    const url = 'https://api.github.com/users/NathanJohnNJ/repos?per_page=5&sort=pushed';
     const response = await fetch(url, {
         headers:{"Accept" : "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28"
@@ -17,6 +17,7 @@ const GitHubRepos = () => {
         }
     const data = await response.json()
     const repoData = data.map((x, i) => {
+      console.log(x)
       return {
         //  year: x.pushed_at.slice(0, 4),
         //  month: x.pushed_at.slice(5, 7),
@@ -40,21 +41,22 @@ fetchData()  // eslint-disable-next-line
 }, []);
 return (
   <div className="outerRepoDiv">
-  <h1>Recently Updated GitHub Repositories</h1>
-<div className="mainReposDiv">
-  
-    {repos.map((repo, i) => {
-    return(
-      <div key={i} className="updatedRepo">
-          <p className="repoTitle">{repo.name}</p>
-          <iframe src={(repo.homepage)?repo.homepage:repo.html_url} title={repo.name}></iframe>
-          <p><b>Last Updated:</b> {repo.date}</p>
-          <p><a href={repo.url} className="repoLink">{repo.url}</a></p>
-          <p><b>Description:</b> {repo.description}</p>
-      </div>)
-  })}
-</div>
-</div>
+    <h1>Recently Updated GitHub Repositories</h1>
+    <div className="mainReposDiv">
+      {repos.map((repo, i) => {
+      return(
+        <div key={i} className="updatedRepo">
+            <p className="repoTitle">{repo.name}</p>
+            {/* <iframe src={repo.url} aria-label={repo.name} title={repo.name}></iframe> */}
+            <div className="details">
+            <p><b>Last Updated:</b> {repo.date}</p>
+            <p><a href={repo.url} className="repoLink">{repo.url}</a></p>
+            <p><b>Description:</b> {repo.description}</p>
+            </div>
+        </div>)
+      })}
+    </div>
+  </div>
 );
 }
 

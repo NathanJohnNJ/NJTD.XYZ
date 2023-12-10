@@ -355,7 +355,7 @@ font-variation-settings:  'SHRP' 100; */
     font-weight: 650;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 30px;
 }
 .clickForPortLink{
     text-decoration: none;
