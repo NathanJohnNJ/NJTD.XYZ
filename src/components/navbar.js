@@ -28,7 +28,7 @@ const NavBar = (props) => {
                     </div>
                     <MiniLogo page={props.page}/>
                     <div className="navRight">
-                        <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CONTACT</NavLink>
+                        {/* <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CONTACT</NavLink> */}
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} onClick={onClickHandler}>PORTFOLIO</NavLink>
                     </div>
                 </div>

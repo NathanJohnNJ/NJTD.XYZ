@@ -1,9 +1,10 @@
-import './home.css';
-import logo from '../../images/logo.gif';
+import './style.css';
+import logo from '../images/logo.gif';
 
 const Intro = () => {
     const num = Math.random()
     const gif = `${logo}?a=${num}`
+    
 
     return(
         <div className="intro">

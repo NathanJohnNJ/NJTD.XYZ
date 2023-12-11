@@ -1,5 +1,5 @@
-import Intro from '../components/home/intro';
-import AniOrWelcome from '../components/home/animateOrWelcome';
+// import Intro from '../components/intro';
+// import AniOrWelcome from '../components/home/animateOrWelcome';
 import GitHubRepos from '../components/home/github';
 import './style.css';
 import { useEffect } from 'react';
@@ -13,8 +13,9 @@ const Home = (props) => {
     return (
         <div className="home">
             <div className="newIntroDiv" id="introDiv">
-                <Intro />
-                <AniOrWelcome />
+                {/* <Intro /> */}
+                {/* <AniOrWelcome /> */}
+                <h1 className="welcome">Welcome!</h1>
             </div>
             <div className="afterIntro">
                 <p>I want this website to be a celebration of my wide variety of work: past, present, and future. As such I will revisit different elements usually a couple times a week, so if something isn't displaying or responding as you would expect. Please check back in a couple of days to see if its fixed!</p>

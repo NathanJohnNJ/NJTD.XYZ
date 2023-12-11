@@ -1,4 +1,3 @@
-// import { Octokit } from '@octokit/core';
 import { useEffect, useState } from 'react';
 import './home.css';
 
@@ -17,7 +16,7 @@ const GitHubRepos = () => {
         }
     const data = await response.json()
     const repoData = data.map((x, i) => {
-      console.log(x)
+      // console.log(x)
       return {
         //  year: x.pushed_at.slice(0, 4),
         //  month: x.pushed_at.slice(5, 7),
@@ -44,13 +43,15 @@ return (
     <h1>Recently Updated GitHub Repositories</h1>
     <div className="mainReposDiv">
       {repos.map((repo, i) => {
+        const ID = `git${i}`
+        const divID = `div${ID}`
       return(
-        <div key={i} className="updatedRepo">
+        <div key={i} className="updatedRepo" id={divID}>
             <p className="repoTitle">{repo.name}</p>
             {/* <iframe src={repo.url} aria-label={repo.name} title={repo.name}></iframe> */}
-            <div className="details">
+            <div className="details" id={ID}>
             <p><b>Last Updated:</b> {repo.date}</p>
-            <p><a href={repo.url} className="repoLink">{repo.url}</a></p>
+            <p><b>URL:</b><a href={repo.url} className="repoLink"> {repo.url}</a></p>
             <p><b>Description:</b> {repo.description}</p>
             </div>
         </div>)
