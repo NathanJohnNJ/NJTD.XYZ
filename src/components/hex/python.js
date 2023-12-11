@@ -36,7 +36,7 @@ const Python = () => {
     return (
         <div className="hexWrapper">
             <div className="child" id="python" onMouseOver= {pythonRevealer}>PYTHON</div>
-            <div className="child" id="alien" onMouseOver={alienRevealer} onClick={() => openInNewTab()}></div>
+            <div className="child" id="alien" onMouseOver={alienRevealer} onClick={() => openInNewTab("https://alien.njtd.xyz")}></div>
         </div>
     )
 }

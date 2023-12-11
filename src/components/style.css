@@ -23,7 +23,6 @@ font-variation-settings:  'SHRP' 100; */
 body{
     background-color: var(--mainBG);
 }
-
 /********* NAVBAR *********/
 .NavbarMain{
   max-height:140px;
@@ -78,7 +77,6 @@ body{
 .page:hover, .current:hover{
   color: var(--accentCol);    
 }
-
 /********* SMALL LOGO IN NAVBAR *********/
 .miniLogoDiv{
   position:absolute;
@@ -103,24 +101,13 @@ body{
   display:flex;
 }
 
-/********* PORTFOLIO *********/
-.portfolioOptions{
-  width: fit-content;
-  margin-left: 68vw;
-  background-color: var(--secondaryBG);
-  margin-top:-10px;
-}
-
-
 /********* INTRO *********/
 .intro{
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   z-index:9999;
-  
 }
 .logoAnimation{
   display: flex;
@@ -172,14 +159,13 @@ body{
     font-size: 5.5vw;
     margin-top: -5vh;
 }
-.welcome{
-    animation: fadein 4s;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 900;
-    font-size: 6vw;
-    display:flex;
+/********* PORTFOLIO *********/
+.portfolioOptions{
+  width: fit-content;
+  margin-left: 68vw;
+  background-color: var(--secondaryBG);
+  margin-top:-10px;
 }
-
 /******** RAINBOW *********/
 .rainbow{
   display: flex;
@@ -228,7 +214,7 @@ body{
     justify-self: flex-end;
     align-items: center;
     height: 100px;
-    margin-top: 70vh;
+    margin-top: 30vh;
     background-color: var(--secondaryBG);
 }
 .footer{
