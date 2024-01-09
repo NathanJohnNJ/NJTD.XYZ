@@ -1,0 +1,140 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+  --mainBG: #F7FFFF;
+  --secondaryBG: #E2EBF1;
+  --infoCol: #878896;
+  --accentCol: #042AC1;
+  --titleCol: #092271;
+  --borderCol: #000000;
+}
+body{
+    background-color: var(--mainBG);
+}
+
+/********* Main Portfolio Component *********/
+.gridContainer{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 3fr 1fr 3fr 1fr 3fr 1fr 3fr 1fr 3fr 1fr 3fr;
+    gap: 4px;
+    width:660px;
+    height:550px;
+    margin-top: 250px;
+}
+.small{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-variation-settings: 'CRSV' 1;
+    font-variation-settings: 'SHRP' 100; 
+    background-image: linear-gradient(135deg, #FF0000 20%, #ff009d 35%, #0033ff 45%, #00fbff 50%, #1aff00 70%, #ffe100 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 6px;
+    color: var(--mainBG);
+    font-size:5vmin;
+}
+.large{
+    display: none;
+    background-image: linear-gradient(45deg, var(--titleCol) 0%, var(--accentCol) 50%, var(--secondaryBG) 100%);
+    border-radius: 25px;
+    border: none;
+    color: var(--mainBG);
+    width: 210px;
+    height: 40px;
+}
+.large:hover{
+    background-image: linear-gradient(45deg, var(--secondaryBG) 0%, var(--infoCol) 50%, var(--borderCol) 100%);
+    
+}
+.firstCol{
+    grid-column-start: 1;
+    grid-column-end: 2;  
+}
+.secondCol{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 300px;
+}
+.thirdCol{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.firstRow{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.secondRow, .fourthRow, .sixthRow, .eigthRow, .tenthRow{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.thirdRow{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.fifthRow{
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.seventhRow{
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.ninthRow{
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+/*********  Portfolio Element *********/
+.modalBody{
+    width: 80vw;
+    height: 60vh;
+    margin-top: 25vh;
+    margin-left: 10vw;
+    background-color: var(--secondaryBG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalTitle{
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    font-variation-settings: 'CRSV' 1;
+    font-variation-settings: 'SHRP' 100; 
+    background-image: linear-gradient(135deg, #FF0000 20%, #ff009d 35%, #0033ff 45%, #00fbff 50%, #1aff00 70%, #ffe100 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    color: var(--infoCol);
+    font-size:40px;
+    display:flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+.preview{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.modalUrl, .modalURLLink{
+    text-decoration: none;
+    color: var(--accentCol);
+    display:flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.modalURLLink:hover{
+    color: var(--titleCol)
+}

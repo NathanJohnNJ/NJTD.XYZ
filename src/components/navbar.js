@@ -43,8 +43,8 @@ const NavBar = (props) => {
                     <></>
                     }
                 </div>
-                <PickerList />
-                <ColourPicker />
+                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} />
+                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol}/>
             </div>
         </div>
     )

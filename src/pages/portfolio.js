@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './style.css'
 import Hexagons from '../components/hex/full';
 import SmallPort from '../components/hex/smallScreens/smallPort';
+import New from '../components/portfolio';
 
 
 const Portfolio = (props) => {
@@ -51,7 +52,8 @@ const Portfolio = (props) => {
                 <h1 className="portfolioTitle">PORTFOLIO</h1>
                 <div className="portfolioPageHex">
                     {/* <Hexagons /> */}
-                    {displayDecider()}
+                    {/* {displayDecider()} */}
+                    <New />
                 </div>
                 
             </motion.div>

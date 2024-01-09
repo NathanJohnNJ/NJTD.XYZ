@@ -11,8 +11,6 @@
     --infoCol: #878896;
     --accentCol: #042AC1;
     --titleCol: #092271;
-    --njtdLogoGif: '../../images/njtdesign/blue.gif';
-    --njtdLogoPng: '../../images/njtdesign/blue.png';
   }
 
   /*********  NATHAN COMPONENT CSS *********/
@@ -21,12 +19,9 @@
     font-family: 'Poppins', sans-serif;
     background: none;
     width: fit-content;
-    /* height:6vh; */
     padding:5px;
     font-size: 1.5vw;
     font-weight: 400;
-    /* align-self: center;
-    justify-self: center; */
     animation: box 20s, fontGrow 10s;
     animation-fill-mode: forwards, forwards;
     animation-delay: 2s, 2s;
@@ -62,13 +57,14 @@
     font-family: 'Poppins', sans-serif;
     font-weight:400;
     font-size: 1.5vw;
+    margin: 20px;
 }
 
 .moreBtn{
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     text-justify: center;
     font-size: 3.5vw;
@@ -79,38 +75,6 @@
     border: none;
 }
 
-/********* NJTDESIGN LOGO  *********/
-.njtdLogo{
-    max-width:300px;
-    max-height:300px;
-    margin-top: 18vh;
-}
-.designLogoGif{
-    background-image: var(--njtdLogoGif);
-    background-size:contain;
-    background-repeat: no-repeat;
-    width:5vw;
-    height:5vw;
-    max-width:300px;
-    max-height:300px;
-    min-width:100px;
-    min-height:100px;
-    width:50vw;
-    height:50vw;
-    /* margin-top: 18vh; */
-}
-.designLogoPng{
-    background-image: var(--njtdLogoPng);
-    background-size:contain;
-    background-repeat: no-repeat;
-    max-width:300px;
-    max-height:300px;
-    min-width:100px;
-    min-height:100px;
-    width:50vw;
-    height:50vw;
-    /* margin-top: 18vh; */
-}
 
 /********* KEYFRAMES  *********/
 @keyframes fontGrow {

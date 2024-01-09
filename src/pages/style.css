@@ -11,8 +11,6 @@
     --infoCol: #878896;
     --accentCol: #042AC1;
     --titleCol: #092271;
-    --njtdLogoGif: url('../images/njtdesign/blue.gif');
-    --njtdLogoPng: url('../images/njtdesign/blue.png');
   }
 /***********HOMEPAGE **********/
 .home{
@@ -66,6 +64,81 @@
 .recent{
     white-space: nowrap;
 }
+/********* ABOUT PAGE *********/
+.aboutPage{
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    font-size: 2.5vh;
+    background-color: var(--mainBG);
+    color: var(--infoCol);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.aboutContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    width:600px;
+    height:750px;
+    margin-left: -30vw;
+    margin-bottom: 95px;   
+}
+.title{
+    font-size: 4.5vw;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
+    margin-top: 85vh;  
+    text-shadow: 3px 1px 4px var(--accentCol);
+}
+.first{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;  
+    max-width:180px;
+    height:auto;
+}
+.second{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.third{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;  
+}
+.fourth{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;  
+}
+.sixth{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;  
+}
+.aboutBottom{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6; 
+}
+
 /***********PORTFOLIO PAGE **********/
 .portfolioTitle{
     font-size: 4.5vw;
@@ -89,187 +162,6 @@
     align-items: center;
     background-color: var(--mainBG);
     height: 100vh;
-}
-  /********* ABOUT ME *********/
-  .aboutPage{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    height:100vh;
-  }
-  .aboutContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-.title{
-    font-size: 4.5vw;
-    font-family: 'Geologica', sans-serif;
-    font-variation-settings: 'wght' 550;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--titleCol);
-    margin-top: 20vh;  
-    text-shadow: 3px 1px 4px var(--accentCol);
-}
-
-.aboutMe{
-    font-family: 'Poppins', sans-serif;
-    font-weight:400;
-    font-size: 2.5vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--mainBG);
-    position:relative;
-    color: var(--infoCol)
-}
-.aboutTop{
-    display: flex;
-    flex-direction: column;
-    width:80%;
-    z-index:0;
-    position:relative;
-}
-.aboutTopLeft{
-    align-self: flex-start;
-    z-index:0;
-}
-
-.aboutTopMiddle{
-    display:flex;
-    align-self: center;
-    z-index:0;
-}
-.aboutTopRight{
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    position: relative;
-}
-
-.imagesDiv{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index:0;
-}
-.firstImgDiv{
-    display:flex;
-    flex-direction: column;
-    position:relative;
-    margin-top:-60px;
-    z-index:0;
-}
-.meImg{
-    max-width:180px;
-    height:auto;
-}
-.secondImgDiv{
-    display: flex;
-    margin-top:30px;
-    z-index:0;
-}
-
-  /*************** CONTACT ****************/
-  .contactPage{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--mainBG);
-    font-family: 'Raleway', sans-serif;
-  }
-.contactTitle{
-    font-family: 'Geologica', sans-serif;
-    font-variation-settings: 'wght' 550;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--titleCol);
-    font-size: 4.5vw;
-    position: absolute;
-    right:0;
-    left:0;
-    text-shadow: 3px 1px 4px var(--accentCol);
-    top: 18%;
-}
-.please{
-    display: flex;
-    margin-top: -50px;
-    margin-bottom: 50px;
-}
-.contactForm{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.contactField{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-style: double; 
-    border-width: 10px;
-    border-radius: 20%;
-    border-color: var(--titleCol);
-    background-color: var(--secondaryBG);
-    width: 35vw;
-    height: 35vh;
-}   
-.contactLegend{
-    font-size: 1.7vw;
-    font-family: 'Geologica', sans-serif;
-    font-weight: 450;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--infoCol);
-    background-color:var(--titleCol);
-    border-radius: 40%;
-    padding:8px;
-    margin: 5px;
-}
-
-.contactName, .contactText{
-    font-family: 'Poppins', sans-serif;
-    font-weight:300;
-    font-size: 2vh;
-    color:var(--infoCol);
-    display: flex;
-    font-size: 1.2vw;
-    background-color: var(--mainBG);
-    width: 98%;
-}
-.contactName{
-   margin-bottom:5px;
-}
-.contactText{
-    border: none;
-    padding-bottom: 18vh;
-}
-.contactSubmit{
-    background-color: var(--accentCol);
-    color:var(--secondaryBG);
-    border-radius: 45%;
-    border: none;
-    box-shadow: 2px 2px 2px 2px var(--titleCol);
-    font-weight:800;
-    font-size: 2.5vh;
-    margin: 5px;
-    width: 10vw;
-}
-.contactSubmit:hover{
-    background-color: var(--secondaryBG);
-    color:var(--accentCol);
-    border: none;
-    box-shadow: 2px 2px 2px 2px inset var(--titleCol);
 }
 
   /*************** HMUA ****************/
