@@ -8,6 +8,12 @@ const Portfolio = () => {
         image: './images/calc.png',
         id: 'calculator'
     }
+    const njtd = {
+        name: '<div>NJTD.xyz</div>',
+        url: 'https://www.njtd.xyz',
+        image: './images/njtd.png',
+        id: 'calculator'
+    }
     const cookies = {
         name: "<div>The<br>Cookie<br>Club</div>",
         url: 'https://cookieclub.njtd.xyz',
@@ -92,7 +98,7 @@ const Portfolio = () => {
     return(
         <div className="gridContainer">
             <PortfolioElement id="calculator" className="firstCol firstRow large" type={calculator} />
-            <div/>
+            <PortfolioElement id="njtd" className="secondCol firstRow large" type={njtd} />
             <PortfolioElement id="cookies" className="thirdCol firstRow large" type={cookies} />
             <div className="small firstCol secondRow" onMouseOver={() => {hoverHandler([cookies, cats, calculator])}}>ReactJS</div>
             <div />
