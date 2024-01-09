@@ -48,12 +48,15 @@ body{
     border-radius: 25px;
     border: none;
     color: var(--mainBG);
-    width: 210px;
-    height: 40px;
+    width: fit-content;
+    padding: 15px;
+    height: fit-content;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
 }
 .large:hover{
-    background-image: linear-gradient(45deg, var(--secondaryBG) 0%, var(--infoCol) 50%, var(--borderCol) 100%);
-    
+    background-image: linear-gradient(45deg, #ff000080, #ff009d80, #00fbff80    );
 }
 .firstCol{
     grid-column-start: 1;
@@ -96,7 +99,7 @@ body{
 /*********  Portfolio Element *********/
 .modalBody{
     width: 80vw;
-    height: 60vh;
+    height: 70vh;
     margin-top: 25vh;
     margin-left: 10vw;
     background-color: var(--secondaryBG);
@@ -119,7 +122,10 @@ body{
     font-size:40px;
     display:flex;
     justify-content: center;
-    margin-top: -25px;
+    align-content: center;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 5px;
 }
 .preview{
     display: flex;
