@@ -23,7 +23,10 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  max-width: 1200px;
+  height: 100vh;
+  min-width:80vw;
+  max-width: 1200px;  
+  margin-left: auto;
+  margin-right: auto;
 }
 

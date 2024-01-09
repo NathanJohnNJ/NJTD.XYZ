@@ -3,11 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
-/* font-family: 'Geologica', sans-serif;
-font-weight: 750;
-font-variation-settings: 'wght' 750;
-font-variation-settings: 'CRSV' 0.5;
-font-variation-settings:  'SHRP' 100; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /********* COLOUR VARIABLES *********/
 :root{
@@ -32,6 +27,7 @@ body{
 .Navbar{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 18vmin;
   min-height:60px;
   max-height:140px;
@@ -49,8 +45,8 @@ body{
 }
 .navLeft, .navRight{
   display: flex;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  padding-left: 3vw;
+  margin-right: 7vw;
   z-index: 999;
 }
 .page{
@@ -63,7 +59,7 @@ body{
   color: var(--infoCol)
 }
 .current{
-  margin-left: 25px;
+  padding-left: 20px;
   margin-right: 25px;
   margin-top: 8px;  
   font-size: 3vw;
@@ -205,15 +201,17 @@ body{
 .footerDiv{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    color: var(--infoCol);
     justify-content: flex-end;
     justify-self: flex-end;
+    align-self:last baseline;
     align-items: center;
-    height: 100px;
-    margin-top: 30vh;
+    width: 100%;
+    max-width: 1200px;
+    height: 80px                                                                                                                              ;
+    color: var(--infoCol);
     background-color: var(--secondaryBG);
+    margin-top: 30vh;
+    margin-bottom: -60vh;
 }
 .footer{
     display: flex;
@@ -221,6 +219,7 @@ body{
     justify-content: center;
     justify-self: flex-end;
     align-items: center;
+    margin-top: 30vh;
 }
 .footerImgDiv{
     margin: 20px;
@@ -231,7 +230,7 @@ body{
     margin-bottom: -20px;
 }
 .footerText{
-    font-size: 1.5vw;
+    font-size: 1.5vmin;
     font-family: 'Raleway', sans-serif;
     font-weight:700;
     line-height: 2px;

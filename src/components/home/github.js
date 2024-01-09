@@ -16,11 +16,7 @@ const GitHubRepos = () => {
         }
     const data = await response.json()
     const repoData = data.map((x, i) => {
-      // console.log(x)
       return {
-        //  year: x.pushed_at.slice(0, 4),
-        //  month: x.pushed_at.slice(5, 7),
-        //  day: x.pushed_at.slice(8, 10),
         date: `${x.pushed_at.slice(8, 10)}/${x.pushed_at.slice(5, 7)}/${x.pushed_at.slice(0, 4)}`,
         url:  `https://github.com/${x.full_name}`,
         name: x.name,
