@@ -2,7 +2,7 @@ import './colours.css';
 import Modal from 'react-modal';
 import { useState } from 'react';
 
-const ColourPickerList = () => {
+const ColourPickerList = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
     const [darkMode, setDarkMode] = useState(false);
@@ -32,6 +32,7 @@ const ColourPickerList = () => {
         }
     function blueClickHandle() {
         setColours(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
+        props.setThemeCol('blue');
         if(darkMode===false){
             setColour("--mainBG",'#F7FFFF')
             setColour("--secondaryBG", '#E2EBF1')
@@ -50,6 +51,7 @@ const ColourPickerList = () => {
         closeModal()
     }
     function redClickHandle() {
+        props.setThemeCol('red');
         setColours(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);
         if(darkMode===false){
             setColour("--mainBG",'#FFF0EF')
@@ -69,6 +71,7 @@ const ColourPickerList = () => {
         closeModal()
     }
     function greenClickHandle() {
+        props.setThemeCol('green');
         setColours(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D']);
         if(darkMode===false){
             setColour("--mainBG",'#F3FEEA')
@@ -88,6 +91,7 @@ const ColourPickerList = () => {
         closeModal()
     }
     function orangeClickHandle() {
+        props.setThemeCol('orange');
         setColours(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816']);
         if(darkMode===false){
             setColour("--mainBG",'#FFEFD1')
@@ -107,6 +111,7 @@ const ColourPickerList = () => {
         closeModal()
     }
     function greyScaleClickHandle() {
+        props.setThemeCol('grey');
         setColours(['#F2F2F2', '#929292', '#616161', '#313131', '#000000']);
         if(darkMode===false){
             setColour("--mainBG",'#F2F2F2')
