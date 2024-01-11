@@ -6,43 +6,54 @@ const Portfolio = () => {
         name: '<div>React<br>Calculator</div>',
         url: 'https://calc.njtd.xyz',
         image: './images/calc.png',
-        id: 'calculator'
+        id: 'calculator',
+        details: ["Built using ReactJS", "Styled with CSS", "Code Nation project"],
+        libraries: ["MathJS"]
     }
     const njtd = {
         name: '<div>NJTD.xyz</div>',
         url: 'https://www.njtd.xyz',
         image: './images/njtd.png',
-        id: 'calculator'
+        id: 'njtd',
+        details: ["Built using ReactJS", "Styled with CSS and Styled Components", "Showcases my portfolio", "Showcases my recently updated GitHub repositories"],
+        libraries: ["Styled-Components", "Universal-Cookie", "Framer-Motion", "React-GIF-Player", "React-Modal", "Octokit", "React-Router-DOM"]
     }
     const cookies = {
         name: "<div>The<br>Cookie<br>Club</div>",
         url: 'https://cookieclub.njtd.xyz',
         image: './images/cookies.png',
-        id: 'cookies'
+        id: 'cookies',
+        details: ["Full stack website that allows sign up, login, and addition features upon logging in", "Front end built using ReactJS", "Back end built with NodeJS using an express server", "Styled with CSS", "Group project set by Code Nation"],
+        libraries: ["@emotion/react", "@emotion/styled", "@mui/material", "bcrypt", "concurrently", "cors", "dotenv", "fs", "express", "jsonwebtoken", "mariadb", "mysql2", "nodemon", "sequelize", "sass", "React-Modal", "React-Router-DOM"]
     }
     const drumkit = {
         name: '<div>Interactive<br>Drumkit</div>',
         url: 'https://drum.njtd.xyz',
         image: './images/drumPreview.png',
-        id: 'drumkit'
+        id: 'drumkit',
+        details: ["Built using HTML", "Styled with CSS", "Code Nation project"]
     }
     const cats = {
         name: '<div>Cats<br>4 Lyf</div>',
         url: 'https://cats.njtd.xyz',
         image: './images/cats.png',
-        id: 'cats'
+        id: 'cats',
+        details: ["Website which pulls data from a public API and displays the data in various ways", "Built using ReactJS", "Styled with CSS", "Group project set by Code Nation", "WIP: Basket feature"],
+        libraries: ["React-Modal", "React-Router-DOM"]
     }
     const keycode = {
         name: '<div>Keycode<br>Generator</div>',
         url: 'https://keycode.njtd.xyz',
         image: './images/keycode.png',
-        id: 'keycode'
+        id: 'keycode',
+        details: ["Built using HTML and JavaScript", "Styled with CSS", "Code Nation project", "Features changing colour scheme for accessibility"]
     }
     const dice = {
         name: '<div>Dice<br>Game</div>',
         url: 'https://dice.njtd.xyz',
         image: './images/dice.png',
-        id: 'dice'
+        id: 'dice',
+        details: ["Built using HTML and JavaScript", "Styled with CSS", "Code Nation project"]
     }
     const clone = {
         name: '<div>Website<br>Clone</div>',
@@ -93,6 +104,7 @@ const Portfolio = () => {
             r.innerHTML = project.name
             r.style.setProperty('display', 'block')
             setTimeout(()=> {r.style.setProperty('display', 'none')}, 6000)
+            return r
         })
     }
     return(

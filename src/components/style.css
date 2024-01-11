@@ -79,15 +79,13 @@ body{
   justify-content: center;
   align-items: center;
   top:0;
-  margin-top: -10px;
-  height:100px;
-  /* width:100vw; */
+  height:75px;
 }
 .logoStill{
-  width: 8vw;
-  height: 8vw;
-  min-height:48px;
-  min-width:48px;
+  width: 7vw;
+  height: 7vw;
+  min-height:38px;
+  min-width:38px;
   align-self: center;
   opacity:1;
 }
@@ -199,44 +197,41 @@ body{
   
 /********* FOOTER *********/
 .footerDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    justify-self: flex-end;
-    align-self:last baseline;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    height: 80px                                                                                                                              ;
-    color: var(--infoCol);
-    background-color: var(--secondaryBG);
-    margin-top: 30vh;
-    margin-bottom: -60vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  color: var(--infoCol);
+  justify-content: flex-end;
+  justify-self: flex-end;
+  align-items: center;
+  height: 100px;
+  margin-top: 30vh;
+  background-color: var(--secondaryBG);
 }
 .footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-self: flex-end;
-    align-items: center;
-    margin-top: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-self: flex-end;
+  align-items: center;
 }
 .footerImgDiv{
-    margin: 20px;
+  margin: 20px;
 }
 .footerLogo{
-    width:80px;
-    height: 80px;
-    margin-bottom: -20px;
+  width:80px;
+  height: 80px;
+  margin-bottom: -20px;
 }
 .footerText{
-    font-size: 1.5vmin;
-    font-family: 'Raleway', sans-serif;
-    font-weight:700;
-    line-height: 2px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: var(--infoCol);
+  font-size: 1.5vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  line-height: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--infoCol);
 }
 .github{
     text-decoration: none;
