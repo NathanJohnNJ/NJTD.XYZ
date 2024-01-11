@@ -1,17 +1,16 @@
-import logo from './images/green/greenLogo.png'
-import gif from './images/green/greenNJTDesign.gif'
-import { useState } from 'react';
-import { LogoImg } from './logo.styles'
+import logo from './images/green/greenLogo.png';
+import gif from './images/green/greenNJTDesign.gif';
+import { LogoImg } from './logo.styles';
+import GifPlayer from 'react-gif-player';
 
 const GreenLogo = () =>{
-    const [src, setSrc] = useState(gif);
-    setTimeout(() => {setSrc(logo)}, 20000)
-
         return(
             <div>
-                <LogoImg src={src} alt="Not Just The Design" title="Alternative brand logo."/>
+                <LogoImg>
+                    <GifPlayer gif={gif} still={logo} autoplay={true} width="300px" alt="Not Just The Design" title="Click Me!" />
+                </LogoImg>
             </div>
         )
-}
+};
 
 export default GreenLogo;

@@ -31,12 +31,14 @@ const About = (props) => {
                     And I hate to be put in a box.
                   </div>
                   <div className="fourth">
-                    <p>
-                      But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?
-                    </p>
-                    <p className="thanks">
-                      Thanks!
-                    </p>
+                    <div className="try">
+                      <p>
+                        But try as I might, if you're reading this, you're probably going to be categorising me in some way. So if you insist on putting me in a box, can you at least make it pink, and fun, and unexpectedly delightful?
+                      </p>
+                      <p className="thanks">
+                        Thanks!
+                      </p>
+                    </div>
                   </div>
                   <div className="sixth">
                     <Logo color={props.themeCol}/>

@@ -16,7 +16,7 @@
 body{
     background-color: var(--mainBG);
 }
-.outerRepoDiv{
+/* .outerRepoDiv{
   display:flex;
   flex-direction:column;
   justify-content: center;
@@ -85,38 +85,69 @@ body{
 }
 #divgit1, #divgit3{
   margin-right: 25vw;
-}
+} */
 
-@media screen and (max-width: 600px){
-  .footerText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
-  .footerLogo{ width: 65px; height: 65px; }
+.outerRepoDiv{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
 }
-@media screen and (max-width: 480px){
-  .logoImg{ width: 500px; height:500px; margin-top:0; }
-  .introAnimation{ margin-top:0; }
-  .brought{ margin-top:5vh; }
-  .njcodes{ margin-top:0; }
-  .introText{ animation: none; }
-  .page{ margin-left:10px; margin-top:16.5px; font-size: 3.3vw; }
-  .current{ margin:10px; margin-top: 15px; font-size: 4vw; }
-  .navLeft, .navRight{ margin-left:-40px; margin-right: -10px;}
-  .colourPicker{ display: none; }
-  .cPList{ display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; justify-self:center; }
+.outerRepoDiv h1{
+  color: var(--titleCol);
+  font-family: 'Geologica', sans-serif;
+  font-weight: 650;
+  font-variation-settings:  'SHRP' 100; 
+  text-shadow: 2px 1px 3px var(--accentCol);
 }
-@media screen and (min-width: 481px) and (max-width: 768px){
-  .logoImg{ width: 500px; height:500px; margin-top:0; }
-  .introAnimation{ margin-top:-20vh; }
-  .brought{ margin-top:-3.5vh; }
-  .njcodes{ margin-top:-1.5vh; }
-  .introText{ animation: none; }
-  .colourPicker{ display: flex; }
-  .cPList{ display:none; }
+.updatedRepo{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 0px 20px 20px 20px;
+  background-color: var(--secondaryBG);
+  border-radius: 10px;
+  box-shadow: 3px 1px 4px var(--infoCol);
 }
-@media screen and (min-width: 769px){
-  .logoImg{ width: 1000px; height:1000px; margin-top:-20vh; }
-  .introAnimation{ margin-top:-40vh; }
-  .brought{ margin-top:-6.5vh; }
-  .njcodes{ margin-top:-5vh; }
-  .colourPicker{ display: flex; }
-  .cPList{ display:none; }
+.updatedRepo p{
+  margin-bottom: -10px;
+}
+.mainReposDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6vmin;
+  color: var(--infoCol);
+  width: 80vw;
+  align-self: center;
+}
+.details{
+  text-align: left;
+}
+.repoTitle{
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 750;
+  font-size: 3vmin;
+  color: var(--titleCol);
+}
+.repoLink{
+  text-decoration: none;
+  color: var(--titleCol);
+  font-weight:550;
+}
+.repoLink:hover{
+  color: var(--accentCol);
+  font-weight:650;
+}
+#git0, #git2, #git4{
+  text-align: right;
+}
+#divgit0, #divgit2, #divgit4{
+  margin-left: 25vw;
+}
+#divgit1, #divgit3{
+  margin-right: 25vw;
 }
