@@ -1,5 +1,8 @@
 import BlueLogo from './blue';
 import GreenLogo from './green';
+import OrangeLogo from './orange';
+import RedLogo from './red';
+import GreyLogo from './grey';
 
 const Logo = (props) => {
     if(props.color === 'blue'){
@@ -11,19 +14,19 @@ const Logo = (props) => {
     } else if (props.color === "red"){
         return (
             <div>
-                <BlueLogo />
+                <RedLogo />
             </div>
         )
     } else if (props.color === "grey"){
         return (
             <div>
-                <BlueLogo />
+                <GreyLogo />
             </div>
         )
     } else if (props.color === "orange"){
         return (
             <div>
-                <BlueLogo />
+                <OrangeLogo />
             </div>
         )
     } else if (props.color === "green"){

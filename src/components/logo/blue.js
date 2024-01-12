@@ -1,7 +1,7 @@
-import logo from './images/blue/blue.png'
-import gif from './images/blue/blueNJTDesign.gif'
-import { LogoImg } from './logo.styles'
-import GifPlayer from 'react-gif-player'
+import logo from './images/blue/blueLogo.png';
+import gif from './images/blue/blueNJTDesign.gif';
+import { LogoImg } from './logo.styles';
+import GifPlayer from 'react-gif-player';
 
 const BlueLogo = () =>{
         return(
@@ -11,6 +11,6 @@ const BlueLogo = () =>{
                 </LogoImg>
             </div>
         )
-}
+};
 
 export default BlueLogo;
