@@ -1,0 +1,19 @@
+.aniLogo{
+    position: absolute;
+    max-width: 300px;
+    max-height: 300px;
+}
+.mainDiv{
+    display:flex;
+    flex-direction: column;
+    height: 600%;
+    position: relative;
+}
+.imgDiv{
+    width: 100vw;
+    height: 350px;
+}
+.gapDiv{
+    height:50px;
+    width: 100vw;
+}

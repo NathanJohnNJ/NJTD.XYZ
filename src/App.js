@@ -7,13 +7,15 @@ import Home from './pages/home';
 import HMUA from './pages/hmua';
 import CV from './pages/cv';
 import Nj from './pages/about';
+import Terms from './pages/terms';
+import Privacy from './pages/privacy';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
 import Intro from './components/intro';
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState("");
   const [themeCol, setThemeCol] = useState("blue");
   const cookie = new Cookies();
   useEffect(() => {
@@ -41,6 +43,8 @@ function App() {
         <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
         <Route key="codes" path="codes" element={<Portfolio setPage={setPage}/>} />
         <Route key="cv" path="cv" element={<CV setPage={setPage}/>} />
+        <Route key="terms" path="terms" element={<Terms setPage={setPage}/>} />
+        <Route key="privacy" path="privacy" element={<Privacy setPage={setPage}/>} />
       </Routes>
       <Footer />
     </div>
