@@ -19,6 +19,7 @@ import sport2 from '../components/hmuaPortfolio/sport2.jpg';
 import water from '../components/hmuaPortfolio/water1.jpg';
 import water2 from '../components/hmuaPortfolio/water2.jpg';
 import water3 from '../components/hmuaPortfolio/water3.jpg';
+import AnimatedLogo from '../components/logo/animatedLogo'
 
 
 const HMUA = (props) => {
@@ -26,8 +27,12 @@ const HMUA = (props) => {
         props.setPage("notHome");
     });
     
-
-    return (
+    return(
+        <div>
+            <AnimatedLogo />
+        </div>
+    )
+    /* return (
         <div className="hmuaPage">
             <motion.div
             className="container text-center  bg-black"
@@ -69,7 +74,7 @@ const HMUA = (props) => {
             </div>
             </motion.div>
         </div>
-    )
+   )*/
 };
 
 export default HMUA;

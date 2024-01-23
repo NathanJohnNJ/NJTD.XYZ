@@ -1,15 +1,17 @@
 import './style.css';
 import { motion } from 'framer-motion';
-import meImg from '../images/me.jpg';
+// import meImg from '../images/me.jpg';
 import Logo from '../components/logo/logo.js'
 import Nathan from '../components/about/nathan.js';
 import MoreInfo from '../components/about/more.js';
 import { useEffect } from 'react';
+import MyImg from '../components/about/myImg.js';
 
 const About = (props) => {
   useEffect(() => {
       props.setPage("notHome");
   }, [props]);
+
 
     return (
         <div className="aboutPage">
@@ -22,8 +24,13 @@ const About = (props) => {
             >
               <h1 className="title">ABOUT NJ</h1>
               <div className="aboutContent">
+                <div className="first">
+                  <MyImg />
+                </div>
+                {/* <MyImage style={{ opacity:scrollYProgress/1 }}>
                   <img src={meImg} alt="NJ" className="first" title="Hi! It's me, I'm the solution, it's me."></img>
-                  <div className="second">
+                </MyImage> */}
+                <div className="second">
                     Hi! I'm 
                     <Nathan />
                   </div>

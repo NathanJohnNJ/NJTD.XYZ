@@ -89,6 +89,9 @@ body{
   align-self: center;
   opacity:1;
 }
+.logoStill:hover{
+  scale: 1.05
+}
 .miniLogoLink{
   display:flex;
 }
