@@ -1,0 +1,172 @@
+/********* FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/********* COLOUR VARIABLES *********/
+:root{
+  --mainBG: #F7FFFF;
+  --secondaryBG: #E2EBF1;
+  --infoCol: #878896;
+  --accentCol: #042AC1;
+  --titleCol: #092271;
+  --borderCol: #000000;
+}
+body{
+    background-color: var(--mainBG);
+}
+/********* NAVBAR *********/
+.navbar{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  background-color: var(--secondaryBG);
+}
+.navGap{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.navHome{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.navAbout{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.navLogo{
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+.navCV{
+  grid-column-start: 8;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.navPortfolio{
+  grid-column-start: 10;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.navColours{
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 8;
+}
+.navOptions{
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.navOptions2{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+}
+.navDeveloper{
+    grid-column-start: 1;
+    grid-column-end: 2; 
+}
+.navHMUA{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.page{
+  font-size: 2.3vmax;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--infoCol)
+}
+.current{
+  font-size: 3vmax;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--accentCol);
+}
+.page:hover, .current:hover{
+  color: var(--accentCol);    
+}
+  
+/********* FOOTER *********/
+.footerDiv{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  color: var(--infoCol);
+  justify-content: flex-end;
+  justify-self: flex-end;
+  align-items: center;
+  height: 100px;
+  margin-top: 30vh;
+  background-color: var(--secondaryBG);
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-self: flex-end;
+  align-items: center;
+}
+.footerImgDiv{
+  margin: 20px;
+}
+.footerLogo{
+  width:80px;
+  height: 80px;
+  margin-bottom: -20px;
+}
+.footerText{
+  font-size: 1.5vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  line-height: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--infoCol);
+}
+.github{
+    text-decoration: none;
+    color: var(--infoCol);
+}
+.github:hover{
+    text-decoration: none;  
+    color: var(--accentCol);
+}
+
+@media screen and (max-width: 600px){
+  .footerText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
+  .footerLogo{ width: 65px; height: 65px; }
+}
+@media screen and (max-width: 480px){
+  .page{ margin-left:15px; margin-top:16.5px; font-size: 3.3vw; }
+  .current{ margin:10px; margin-top: 15px; font-size: 4vw; }
+  .navLeft{ margin-left:-30px; margin-right: -10px;}
+  .navRight{ margin-left:40px; margin-right: -30px;}
+  .colourPicker{ display: none; }
+  .cPList{ display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; justify-self:center; }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .colourPicker{ display: flex; }
+  .cPList{ display:none; }
+}
+@media screen and (min-width: 769px){
+  .colourPicker{ display: flex; }
+  .cPList{ display:none; }
+}

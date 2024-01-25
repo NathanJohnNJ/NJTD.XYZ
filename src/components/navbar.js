@@ -1,4 +1,4 @@
-import './style.css';
+import './footAndNav.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import ColourPicker from './colourBar/colourPicker';
@@ -18,31 +18,39 @@ const NavBar = (props) => {
     }
     
     return(
-        <div className="NavbarMain">
-            <div className="Navbar">
-                <div className="firstNav">
-                    <div className="navLeft">
-                        <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} onClick={onHomeHandler}>HOME</NavLink>
-                        <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
-                        <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CV</NavLink>
-                    </div>
-                    <MiniLogo page={props.page}/>
-                    <div className="navRight">
-                        {/* <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/contact" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CONTACT</NavLink> */}
-                        <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} onClick={onClickHandler}>PORTFOLIO</NavLink>
-                    </div>
-                </div>
-                <div className="options">
-                    {showOptions
-                    ?
-                    <div className="portfolioOptions">
+        <div className="navbar">
+            <div className="navGap"></div>
+            <div className="navHome">
+                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} onClick={onHomeHandler}>HOME</NavLink>
+            </div>
+            <div className="navAbout">
+                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
+            </div>
+            <div className="navLogo">
+            <MiniLogo page={props.page}/>
+            </div>
+            <div className="navCV">
+                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CV</NavLink>
+            </div>
+            <div className="navPortfolio">
+                <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} onClick={onClickHandler}>PORTFOLIO</NavLink>
+            </div>
+            <div className="navOptions">
+                {showOptions
+                ?
+                <div className="navOptions2">
+                    <div className="navDeveloper">
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/developer" onClick={onClickHandler}>DEVELOPER</NavLink>
+                    </div>
+                    <div className="navHMUA">
                         <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/hmua" onClick={onClickHandler}>HMUA</NavLink>
                     </div>
-                    :
-                    <></>
-                    }
                 </div>
+                :
+                <></>
+                }
+            </div>
+            <div className="navColours">
                 <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} />
                 <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol}/>
             </div>
