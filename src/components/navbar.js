@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import ColourPicker from './colourBar/colourPicker';
 import PickerList from './colourBar/colourList';
-import MiniLogo from './miniLogo';
+import logoStill from '../images/logo.png';
 
 const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
@@ -27,7 +27,8 @@ const NavBar = (props) => {
                 <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/nj" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
             </div>
             <div className="navLogo">
-            <MiniLogo page={props.page}/>
+                <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoStill} alt="Logo" className="navbarLogo"></img></NavLink>
+            {/* <MiniLogo page={props.page}/> */}
             </div>
             <div className="navCV">
                 <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CV</NavLink>

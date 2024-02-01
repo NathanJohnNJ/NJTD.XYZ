@@ -24,29 +24,36 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <NavBar page={page} themeCol={themeCol} setThemeCol={setThemeCol}/>
+      <div className="appNavBar">
+        <NavBar page={page} themeCol={themeCol} setThemeCol={setThemeCol}/>
+      </div>
       <AnimatePresence mode="wait">
         {(cookie.get('njtdCookie'))
         ?
-        <Outlet />
+        // <div className="appOutlet">
+          <Outlet />
+        // </div>
         :
-        <Intro />
+        <div className="appIntro">
+          <Intro />
+        </div>
         }
       </AnimatePresence>
-          
-      <Routes> 
-        <Route key="home" index element={<Home setPage={setPage} cookie={cookie}/>} />
-        <Route key="nj" path="nj" element={<Nj setPage={setPage} themeCol={themeCol} />} />
-        {/* <Route key="contact" path="contact" element={<Contact setPage={setPage}/>} /> */}
-        <Route key="hmua" path="portfolio/hmua" element={<HMUA setPage={setPage}/>} />
-        <Route key="developer" path="portfolio/developer" element={<Portfolio setPage={setPage}/>} />
-        <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
-        <Route key="codes" path="codes" element={<Portfolio setPage={setPage}/>} />
-        <Route key="cv" path="cv" element={<CV setPage={setPage}/>} />
-        <Route key="terms" path="terms" element={<Terms setPage={setPage}/>} />
-        <Route key="privacy" path="privacy" element={<Privacy setPage={setPage}/>} />
-      </Routes>
-      <Footer />
+      <div className="appOutlet">      
+        <Routes> 
+          <Route key="home" index element={<Home setPage={setPage} cookie={cookie}/>} />
+          <Route key="nj" path="nj" element={<Nj setPage={setPage} themeCol={themeCol} />} />
+          <Route key="hmua" path="portfolio/hmua" element={<HMUA setPage={setPage}/>} />
+          <Route key="developer" path="portfolio/developer" element={<Portfolio setPage={setPage}/>} />
+          <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
+          <Route key="codes" path="codes" element={<Portfolio setPage={setPage}/>} />
+          <Route key="cv" path="cv" element={<CV setPage={setPage}/>} />
+          <Route key="terms" path="terms" element={<Terms setPage={setPage}/>} />
+          <Route key="privacy" path="privacy" element={<Privacy setPage={setPage}/>} />
+        </Routes>
+      </div>
+
+        <Footer />
     </div>
   );
 }

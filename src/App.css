@@ -13,20 +13,23 @@
   --titleCol: #092271;
   --borderCol: #000000;
 }
-body{
-    background-color: var(--mainBG);
-    max-width:1200px;
-}
 
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  /* min-width:80vw; */
-  max-width: 1200px;  
-  /* margin-left: auto;
-  margin-right: auto; */
+  max-width: 1200px;
 }
-
+.appNavBar{
+  background-color: var(--secondaryBG);
+  display:flex;
+  width: 100%;
+}
+.appOutlet{
+  background-color: var(--mainBG);
+  display:flex;
+}
+.appIntro{
+  background-color: var(--mainBG);
+  display:flex;
+}
