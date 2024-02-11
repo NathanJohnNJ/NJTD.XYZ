@@ -1,47 +1,79 @@
-import { motion, useScroll } from 'framer-motion';
-import './logo.css';
-import layer1 from './images/elements/1.png';
-import layer2 from './images/elements/2.png';
-import layer3 from './images/elements/3.png';
-import layer4 from './images/elements/4.png';
-import layer5 from './images/elements/5.png';
+import '../style.css';
+import firstLayer from './images/layers/1.png';
+// import secondLayer from './images/layers/2.png';
+// import thirdLayer from './images/layers/3.png';
+// import fourthLayer from './images/layers/4.png';
+// import fifthLayer from './images/layers/5.png';
+import { useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
+// import { LogoImage } from '../about/about.styles';
 
 const AnimatedLogo = () => {
-    const { scrollYProgress } = useScroll();
-    let x = scrollYProgress*100
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+    const mainControls = useAnimation();
+    const slideControls = useAnimation();
 
-    
+    useEffect(() => {
+        if (isInView) {
+        mainControls.start("visible");
+        slideControls.start("visible");
+        }
+    }, [isInView]);
+
     return(
-        <div classname="mainDiv">
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
-            <div className="imgDiv">
-            <motion.img src={layer1} alt="Logo base layer" className="aniLogo layer1" style={{opacity:scrollYProgress, translateX:scrollYProgress, bottom:x, scale:scrollYProgress}} />
-            </div>
-            <div className="gapDiv"></div>
-            <div className="imgDiv">
-            <motion.img src={layer2} alt="Logo second layer" className="aniLogo layer2" style={{opacity:scrollYProgress, translateX:scrollYProgress, bottom:x, scale:scrollYProgress}} />
-            </div>
-            <div className="gapDiv"></div>
-            <div className="imgDiv">
-            <motion.img src={layer3} alt="Logo third layer" className="aniLogo layer3" style={{opacity:scrollYProgress, translateX:scrollYProgress, bottom:x, scale:scrollYProgress}} />
-            </div>
-            <div className="gapDiv"></div>
-            <div className="imgDiv">
-            <motion.img src={layer4} alt="Logo fourth layer" className="aniLogo layer4" style={{opacity:scrollYProgress, transform:{translateX:scrollYProgress}, bottom:x, scale:scrollYProgress}} />
-            </div>
-            <div className="gapDiv"></div>
-            <div className="imgDiv">
-            <motion.img src={layer5} alt="Logo fifth layer" className="aniLogo layer5" style={{opacity:scrollYProgress, translateX:scrollYProgress, bottom:x, scale:scrollYProgress}} />
-            </div>
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
-            <div className="gapDiv"></div>
+        <div ref={ref} style={{ position: 'relative', width: "fitContent", overflow: 'hidden'}}>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={slideControls}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                >
+                    <img className="layer" src={firstLayer} alt="Logo layer 1"></img>
+                </motion.div>
+                <motion.div
+                variants={{
+                    hidden: { left: 0 },
+                    visible: { left: "100%" },
+                }}
+                initial="hidden"
+                animate={slideControls}
+                transition={{ duration: 0.5, ease: "easeIn" }}
+                style={{
+                    position: "absolute",
+                    top:4,
+                    bottom:4,
+                    left:0,
+                    right:0,
+                    backgroundColor:"green",
+                    zIndex:20
+                }}
+                >
+                </motion.div>
         </div>
     )
+    // return(
+    //     <div classNAme="scrollLogoDiv">
+    //         <LogoImage style={{ opacity:fourthY }}>
+    //             <img className="layer" src={firstLayer} alt="Logo layer 1"></img>
+    //         </LogoImage>
+    //         <LogoImage style={{ opacity:thirdY }}>
+    //             <img className="layer" src={secondLayer} alt="Logo layer 2"></img>
+    //         </LogoImage>
+    //         <LogoImage style={{ opacity:secondY }}>
+    //             <img className="layer" src={thirdLayer} alt="Logo layer 3"></img>
+    //         </LogoImage>
+    //         <LogoImage style={{ opacity:firstY }}>
+    //             <img className="layer" src={fourthLayer} alt="Logo layer 4"></img>
+    //         </LogoImage>
+    //         <LogoImage style={{ opacity:scrollYProgress}}>
+    //             <img className="layer" src={fifthLayer} alt="Logo layer 5"></img>
+    //         </LogoImage>
+    //     </div>
+    // )
 };
 
 export default AnimatedLogo;
