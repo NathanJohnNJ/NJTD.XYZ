@@ -9,4 +9,12 @@ export const MyImage = styled(motion.div)`
   justify-content: center;
   align-items: center;
   `
-
+export const LogoImage = styled(motion.div)`
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  /* left: 50%;
+  top:50%; */
+  transform: translateX(-50%);
+  /* transform: translateY(-50%); */
+`

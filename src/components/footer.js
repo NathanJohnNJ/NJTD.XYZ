@@ -17,10 +17,10 @@ const Footer = () => {
                 <p>See you again soon!</p>
             </div>
             <div className="footPrivacy">
-                <NavLink to="/privacy" className="footPrivacyLink">PRIVACY</NavLink>
+                <NavLink to="/privacy" className="github">PRIVACY</NavLink>
             </div>
             <div className="footTerms">
-                <NavLink to="/terms" className="footTermsLink">TERMS</NavLink>
+                <NavLink to="/terms" className="github">TERMS</NavLink>
             </div>
         </footer>
     )

@@ -20,8 +20,8 @@
     align-items: center;
     justify-content: center;
     z-index:0;
-    height:100vh;
-    margin-top: 40vh;
+    height:100%;
+    width: 100%;
 }
 .welcome{
     display:flex;
@@ -75,93 +75,94 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100vh;
-}
-.aboutContent{
+    width: 100%;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 150px );
     gap: 2px;
-    width:900px;
-    height:750px;
-    /* margin-bottom: 95px;    */
+    
 }
 .title{
-    font-size: 4.5vw;
+    font-size: 4.5vmax;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
-    margin-top: 15vh;  
     text-shadow: 3px 1px 4px var(--accentCol);
-}
-.first{
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 6;
     grid-row-start: 1;
-    grid-row-end: 3;  
+    grid-row-end: 2; 
+}
+/* Image */
+.first{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
     max-width:180px;
     height:auto;
 }
+/* Hi I'm Nathan */
 .second{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+/* Hate to be... */
 .third{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;  
-}
-.fourth{
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+/* Try as I */
+.fourth{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;  
+    opacity: 0;
+    animation: fadeIn 4s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+/* Thanks */
+.fifth{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6; 
+    opacity: 0;
+    animation: fadeGrow 8s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+/* NJTD */
+.sixth{
+    grid-column-start: 6;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 5;  
 }
-.sixth{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;  
-}
-.aboutBottom{
+/* More info */
+.seventh{
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 5;
-    grid-row-end: 6; 
-    /* margin-left: 8vw; */
-    margin-bottom: 40px;
-}
-.try{
-    opacity: 0;
-    animation: fadeIn 2s;
-    animation-delay: 6s;
+    grid-row-end: 7;
+    animation: fadeIn 4s;
+    animation-delay: 9s;
     animation-fill-mode: forwards;
-
 }
 
 /***********PORTFOLIO PAGE **********/
-.portfolioTitle{
-    font-size: 4.5vw;
-    font-family: 'Geologica', sans-serif;
-    font-variation-settings: 'wght' 550;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--titleCol);
-    margin-bottom: 10%;
-    position: absolute;
-    text-shadow: 3px 1px 4px var(--accentCol);
-    right:0;
-    left:0;
-    top: 18%;
-}
 .portfolioPage{
     display: flex;
     flex-direction: column;
@@ -169,8 +170,27 @@
     justify-content: center;
     align-items: center;
     background-color: var(--mainBG);
-    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 200px);
 }
+.portfolioTitle{
+    font-size: 4.5vmax;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
+    text-shadow: 3px 1px 4px var(--accentCol);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.portfolioPagePort{
+    grid-column:1/4;
+    grid-row: 4/-1
+}
+
 
   /*************** HMUA ****************/
   .hmuaPage{
@@ -381,7 +401,11 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
+@keyframes fadeGrow {
+    0% {opacity:0; font-size: 1.5vw; font-weight:400}
+    50% {opacity:1}
+    100% {opacity:1; font-size: 3.5vw; font-weight:700}
+}
 @media screen and (max-width: 600px){
 
   }
@@ -398,3 +422,4 @@
   @media screen and (min-width: 769px){
     
   }
+

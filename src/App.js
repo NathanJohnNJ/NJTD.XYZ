@@ -27,7 +27,7 @@ function App() {
       <div className="appNavBar">
         <NavBar page={page} themeCol={themeCol} setThemeCol={setThemeCol}/>
       </div>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {(cookie.get('njtdCookie'))
         ?
         // <div className="appOutlet">
@@ -38,7 +38,7 @@ function App() {
           <Intro />
         </div>
         }
-      </AnimatePresence>
+      </AnimatePresence> */}
       <div className="appOutlet">      
         <Routes> 
           <Route key="home" index element={<Home setPage={setPage} cookie={cookie}/>} />

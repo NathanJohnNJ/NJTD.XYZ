@@ -11,20 +11,24 @@
   --titleCol: #092271;
   --circlesAni: circles 10s linear -4s infinite;
 }
-
+.mainDiv{
+  margin-top: 20vh;
+}
 .hexWrapper {
     width: 100%;
-    display: grid;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1.35vw;
+    margin-top: 20vh;
   }
   .child {
+    margin-top: 15%;
+    margin-bottom: -15%;
     width: 9%;
     aspect-ratio: 1.15;
     object-fit: cover;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50% ,75% 100%, 25% 100%, 0 50%);
-    top: calc(var(--_y));
+    top: var(--_y);
     left: var(--_x);
     background-color: var(--infoCol);
     color: var(--mainBG);

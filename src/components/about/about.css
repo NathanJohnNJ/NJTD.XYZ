@@ -49,7 +49,7 @@
 
 /*********  MORE COMPONENT CSS  *********/
 .moreInfo{
-    width: 75vw;
+    width: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,6 @@
     font-weight:400;
     font-size: 1.5vw;
     margin: 20px;
-    margin-bottom: 40px;
 }
 
 .moreBtn{
