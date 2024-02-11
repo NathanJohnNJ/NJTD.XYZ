@@ -30,6 +30,7 @@ const GitHubRepos = () => {
       console.log(err)
     }
 }
+
 // eslint-disable-next-line
 useEffect(() => { // eslint-disable-next-line
 fetchData()  // eslint-disable-next-line

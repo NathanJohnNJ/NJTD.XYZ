@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
 import './style.css';
-import { useEffect } from 'react';
 import feroce from '../components/hmuaPortfolio/feroce.jpg';
 import print1 from '../components/hmuaPortfolio/print1.png';
 import print2 from '../components/hmuaPortfolio/print2.png';
@@ -19,28 +17,11 @@ import sport2 from '../components/hmuaPortfolio/sport2.jpg';
 import water from '../components/hmuaPortfolio/water1.jpg';
 import water2 from '../components/hmuaPortfolio/water2.jpg';
 import water3 from '../components/hmuaPortfolio/water3.jpg';
-import AnimatedLogo from '../components/logo/animatedLogo'
 
-
-const HMUA = (props) => {
-    useEffect(() => {
-        props.setPage("notHome");
-    });
+const HMUA = () => {
     
-    return(
-        <div>
-            <AnimatedLogo />
-        </div>
-    )
-    /* return (
+    return (
         <div className="hmuaPage">
-            <motion.div
-            className="container text-center  bg-black"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 3 }}
-            >
             <div className=" hmuacontent">  
                 <div className="hmuaText">
                     <h1 className="title">Hair & Makeup Artistry</h1>
@@ -72,9 +53,8 @@ const HMUA = (props) => {
                     </div>
                 </div>
             </div>
-            </motion.div>
         </div>
-   )*/
+   )
 };
 
 export default HMUA;

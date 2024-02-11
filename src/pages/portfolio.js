@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import './style.css'
 import Hexagons from '../components/hex/full';
@@ -6,10 +5,7 @@ import SmallPort from '../components/hex/smallScreens/smallPort';
 import New from '../components/portfolio';
 
 
-const Portfolio = (props) => {
-  useEffect(() => {
-      props.setPage("notHome");
-  });
+const Portfolio = () => {
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
     
     function getCurrentDimension(){

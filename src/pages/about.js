@@ -2,17 +2,40 @@ import './style.css';
 import Logo from '../components/logo/logo.js'
 import Nathan from '../components/about/nathan.js';
 import MoreInfo from '../components/about/more.js';
-import { useEffect } from 'react';
 import MyImg from '../components/about/myImg.js';
+import { useEffect } from 'react';
 
 const About = (props) => {
-  useEffect(() => {
-      props.setPage("notHome");
-  }, [props]);
+
+  useEffect(()=> {
+    const N = document.getElementById("nathan")
+    N.addEventListener("mouseover", () => {
+      N.innerText="Nathan"
+    })
+    N.addEventListener("mouseout", () => {
+      setTimeout(()=> {
+        N.innerText="N"
+      },3000)
+    })
+    const J = document.getElementById("john")
+    J.addEventListener("mouseover", () => {
+      J.innerText="John"
+    })
+    J.addEventListener("mouseout", () => {
+      setTimeout(()=> {
+        J.innerText="J"
+      },3000)
+    })
+    
+  },[])
 
     return (
         <div className="aboutPage">
-          <h1 className="title">ABOUT NJ</h1>
+          {/* <h1 className="title">ABOUT <span id="nathan">N</span><span id="athan" style={{'opacity': '0', 'transform': 'translateY(200px)'}}>athan</span><span id="john" >J</span><span id="ohn" style={{'opacity': '0'}}>ohn</span></h1> */}
+          <div className="aboutTitle">
+          <h1 id="title">ABOUT</h1>
+          <h1><span id="nathan">N</span><span id="john">J</span></h1>
+          </div>
           <div className="first">
             <MyImg />
           </div>
@@ -21,7 +44,7 @@ const About = (props) => {
               <Nathan />
           </div>
           <div className="third">
-            And I hate to be put in a box.
+            And I hate being put in a box.
           </div>
           <div className="fourth">
             <p>
