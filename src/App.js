@@ -12,7 +12,7 @@ import Privacy from './pages/privacy';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import Intro from './components/intro';
+import Intro from './components/home/intro';
 
 function App() {
   const [page, setPage] = useState("");

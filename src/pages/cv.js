@@ -1,5 +1,4 @@
 import './style.css';
-import { useEffect } from 'react';
 import CVContact from '../components/cv/cvContact'
 import { NavLink } from 'react-router-dom';
 // import Education from '../components/cv/education';
@@ -9,9 +8,6 @@ const CV = (props) => {
 
     // const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    useEffect(() => {
-        props.setPage("notHome");
-    });
     const transSkills = ["Complaints handling", "Critical thinking", "Interpersonal skills", `Mentoring: <ul><li>Peer to peer</li><li>Leadership</li></ul>`, "Ownership-based & resolution-based service", "Problem solving", "Team management", "Time management", "Training/Tutoring"]
     
     const workEx = [
@@ -65,7 +61,6 @@ Using Collaborative Technologies
                         </ul>
                     </div>
                 </div>
-
                 <div className="rightCV">
                     <div className="workEx">
                         <h2 className="listTitle">Previous Work Experience</h2>
@@ -74,9 +69,7 @@ Using Collaborative Technologies
                         </ul>
                     </div>
                 </div>
-                
             </div>
-            {/* <img src={CVImg} alt="Methods of contact." className="cvContactBanner"></img> */}
             <CVContact />
         </div>
     )

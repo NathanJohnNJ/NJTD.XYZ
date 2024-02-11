@@ -1,10 +1,6 @@
 import './style.css';
-import { useEffect } from 'react';
 
-const Privacy = (props) => {
-    useEffect(() => {
-        props.setPage("notHome");
-    });
+const Privacy = () => {
 
     return (
         <div className="privacy">

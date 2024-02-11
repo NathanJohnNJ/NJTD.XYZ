@@ -15,37 +15,47 @@
 /***********HOMEPAGE **********/
 .home{
     background-color: var(--mainBG);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index:0;
-    height:100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(18, 150px);
     width: 100%;
 }
 .welcome{
-    display:flex;
-    flex-direction: column;
+    grid-row: 1;
+    grid-column: 1/6;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
-    color: var(--titleCol);
-    font-size: 6vw;
-    text-shadow: 3px 1px 4px var(--accentCol);
-    margin-bottom: -10px;
+    color: var(--accentCol);
+    font-size: 4vw;
+    text-shadow: 4px 2px 4px var(--titleCol);
+    text-align:center;
+    margin-top: -50px;
 }
-.afterIntro{
+.intention{
+    grid-row: 12/14;
+    grid-column: 1/6;
     opacity: 0;
     animation: fadeIn 2s;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
-    width: 60vw;
     color: var(--infoCol); 
     animation-fill-mode: forwards;
-    display: flex;
-    flex-direction: column;
+    text-align:center;
+}
+.recent{
+    grid-row: 14/15;
+    grid-column: 1/6;
+    opacity: 0;
+    animation: fadeIn 2s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--infoCol); 
+    animation-fill-mode: forwards;
+    text-align:center;
 }
 .links{
     display: flex;
@@ -63,6 +73,10 @@
 }
 .recent{
     white-space: nowrap;
+}
+.githubDiv{
+    grid-row:15/21;
+    grid-column:1/6;
 }
 /********* ABOUT PAGE *********/
 .aboutPage{
@@ -95,6 +109,22 @@
     grid-row-start: 1;
     grid-row-end: 2; 
 }
+.aboutTitle{
+    font-size: 4vmax;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--titleCol);
+    text-shadow: 3px 1px 4px var(--accentCol);
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    line-height:1px;
+    text-align:center;
+}
+
 /* Image */
 .first{
     grid-column-start: 2;
@@ -406,8 +436,19 @@
     50% {opacity:1}
     100% {opacity:1; font-size: 3.5vw; font-weight:700}
 }
-@media screen and (max-width: 600px){
 
+@media screen and (max-width: 1000px){
+    .home{
+        grid-template-rows: repeat(12, 150px);
+    }
+    .intention{
+        grid-row: 5/6;
+    }
+    .recent{
+        grid-row: 6/8;}
+    .githubDiv{
+        grid-row:8/9;
+    }
   }
   @media screen and (max-width: 480px){
     .cv{
