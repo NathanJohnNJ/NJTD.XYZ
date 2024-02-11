@@ -1,6 +1,7 @@
 import GitHubRepos from '../components/home/github';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import AnimatedLogo from '../components/logo/animatedLogo'
 
 const Home = () => {
 
@@ -8,6 +9,9 @@ const Home = () => {
         <div className="home">
             <div className="welcome">
                 <h1>Welcome!</h1>
+            </div>
+            <div className="fixed">
+                <AnimatedLogo />
             </div>
             <div className="intention">
                 <p>I want this website to be a celebration of my wide variety of work: past, present, and future. As such I will revisit different elements usually a couple times a week, so if something isn't displaying or responding as you would expect. Please check back in a couple of days to see if its fixed!</p>

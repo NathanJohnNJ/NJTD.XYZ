@@ -17,7 +17,7 @@
     background-color: var(--mainBG);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(10, 150px);
+    grid-template-rows: repeat(18, 150px);
     width: 100%;
 }
 .welcome{
@@ -34,7 +34,7 @@
     margin-top: -50px;
 }
 .intention{
-    grid-row: 2/4;
+    grid-row: 12/14;
     grid-column: 1/6;
     opacity: 0;
     animation: fadeIn 2s;
@@ -46,7 +46,7 @@
     text-align:center;
 }
 .recent{
-    grid-row: 4/5;
+    grid-row: 14/15;
     grid-column: 1/6;
     opacity: 0;
     animation: fadeIn 2s;
@@ -75,7 +75,7 @@
     white-space: nowrap;
 }
 .githubDiv{
-    grid-row:5/11;
+    grid-row:15/21;
     grid-column:1/6;
 }
 /********* ABOUT PAGE *********/
@@ -124,6 +124,7 @@
     line-height:1px;
     text-align:center;
 }
+
 /* Image */
 .first{
     grid-column-start: 2;
@@ -438,12 +439,15 @@
 
 @media screen and (max-width: 1000px){
     .home{
-        grid-template-rows: repeat(9, 150px);
+        grid-template-rows: repeat(12, 150px);
+    }
+    .intention{
+        grid-row: 5/6;
     }
     .recent{
-        grid-row: 3/5;}
+        grid-row: 6/8;}
     .githubDiv{
-        grid-row:4/8;
+        grid-row:8/9;
     }
   }
   @media screen and (max-width: 480px){
