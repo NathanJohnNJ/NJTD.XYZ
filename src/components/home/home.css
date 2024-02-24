@@ -1,96 +1,6 @@
-/********* FONTS *********/
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/********* COLOUR VARIABLES *********/
-:root{
-  --mainBG: #F7FFFF;
-  --secondaryBG: #E2EBF1;
-  --infoCol: #878896;
-  --accentCol: #042AC1;
-  --titleCol: #092271;
-  --borderCol: #000000;
-}
-body{
-    background-color: var(--mainBG);
-}
-/* .outerRepoDiv{
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  text-align:center;
-  margin-bottom: 35vh;
-  width:90vw;
-  background-color: var(--mainBG);
-  margin-left: auto;
-  margin-right: auto;
-}
-.outerRepoDiv h1{
-  color: var(--titleCol);
-  font-family: 'Geologica', sans-serif;
-  font-weight: 650;
-  font-variation-settings:  'SHRP' 100;
-  text-shadow: 2px 1px 3px var(--accentCol);
-}
-.updatedRepo{
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin-bottom: 10px;
-  padding: 0px 20px 20px 20px;
-  background-color: var(--secondaryBG);
-  border-radius: 10px;
-  box-shadow: 3px 1px 4px var(--infoCol);
-}
-.updatedRepo p{
-  margin-bottom: -10px;
-}
-.mainReposDiv{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.6vmin;
-  color: var(--infoCol);
-  width: 95vw; 
-}
-.details{
-  text-align: left;
-}
-.repoTitle{
-  font-family: 'League Spartan', sans-serif;
-  font-weight: 750;
-  font-size: 3vmin;
-  color: var(--titleCol);
-  margin-top: 5px;
-}
-.repoLink{
-  text-decoration: none;
-  color: var(--titleCol);
-  font-weight:550;
-}
-.repoLink:hover{
-  color: var(--accentCol);
-  font-weight:650;
-}
-#git0, #git2, #git4{
-  text-align: right;
-}
-#divgit0, #divgit2, #divgit4{
-  margin-left: 25vw;
-}
-#divgit1, #divgit3{
-  margin-right: 25vw;
-} */
-
 .outerRepoDiv{
-  display:grid;
+  display:flex;
   width:100%;
-  height: 100%;
   flex-direction:column;
   justify-content: center;
   align-items: center;
@@ -99,21 +9,23 @@ body{
 .outerRepoDiv h1{
   color: var(--titleCol);
   font-family: 'Geologica', sans-serif;
+  font-size: 5vmin;
   font-weight: 650;
   font-variation-settings:  'SHRP' 100; 
   text-shadow: 2px 1px 3px var(--accentCol);
 }
-.updatedRepo{
+.individualRepo{
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 38vw;
+  height: auto;
   margin-bottom: 10px;
   padding: 0px 20px 20px 20px;
   background-color: var(--secondaryBG);
   border-radius: 10px;
   box-shadow: 3px 1px 4px var(--infoCol);
 }
-.updatedRepo p{
+.individualRepo p{
   margin-bottom: -10px;
 }
 .mainReposDiv{
@@ -131,9 +43,20 @@ body{
 }
 .repoTitle{
   font-family: 'League Spartan', sans-serif;
+  margin-top: 10px;
   font-weight: 750;
-  font-size: 3vmin;
-  color: var(--titleCol);
+  font-size: 4vmin;
+  width: 60%;
+  height: fit-content;
+  overflow:visible;
+  background-image: linear-gradient(75deg, red, magenta, blue, aqua, greenyellow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.5vmin;
+  -webkit-text-fill-color: var(--mainBG);
+  margin-left: auto;
+  margin-right:auto;
 }
 .repoLink{
   text-decoration: none;

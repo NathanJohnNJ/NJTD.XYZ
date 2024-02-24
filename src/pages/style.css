@@ -1,28 +1,13 @@
-/********* FONTS *********/
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/********* COLOUR VARIABLES *********/
-:root{
-    --mainBG: #F7FFFF;
-    --secondaryBG: #E2EBF1;
-    --infoCol: #878896;
-    --accentCol: #042AC1;
-    --titleCol: #092271;
-  }
 /***********HOMEPAGE **********/
 .home{
     background-color: var(--mainBG);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(18, 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 .welcome{
-    grid-row: 1;
-    grid-column: 1/6;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
@@ -31,32 +16,57 @@
     font-size: 4vw;
     text-shadow: 4px 2px 4px var(--titleCol);
     text-align:center;
-    margin-top: -50px;
+    /* margin-top: -50px; */
+    width:100%;
+}
+.textSection{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7vw;
+    font-weight: 400;
+    color: var(--infoCol);
+    width:85%;
+    text-align: center;
+}
+.fixed{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25vh;
 }
 .intention{
-    grid-row: 12/14;
-    grid-column: 1/6;
     opacity: 0;
-    animation: fadeIn 2s;
+    margin-bottom: 10vh;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
     color: var(--infoCol); 
     animation-fill-mode: forwards;
     text-align:center;
+    width: 80%
+}
+.firstIntention{
+    animation: fadeIn 2s forwards;
+}
+.secondIntention{
+    animation: fadeIn 2s forwards;
+    animation-delay: 4s;
 }
 .recent{
-    grid-row: 14/15;
-    grid-column: 1/6;
     opacity: 0;
-    animation: fadeIn 2s;
+    animation: fadeIn 2s forwards;
+    animation-delay: 6s;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
     color: var(--infoCol); 
     animation-fill-mode: forwards;
     text-align:center;
+    height: 50vh;
+    white-space: nowrap;
 }
+
 .links{
     display: flex;
     flex-direction: row;
@@ -71,12 +81,8 @@
     color: var(--titleCol);
     scale: 1.1;
 }
-.recent{
-    white-space: nowrap;
-}
 .githubDiv{
-    grid-row:15/21;
-    grid-column:1/6;
+    margin-top: 2000px;     
 }
 /********* ABOUT PAGE *********/
 .aboutPage{
@@ -194,16 +200,16 @@
 
 /***********PORTFOLIO PAGE **********/
 .portfolioPage{
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    justify-content: center;
-    align-items: center;
     background-color: var(--mainBG);
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 200px);
+    height:100%;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, var(--rows)); */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .portfolioTitle{
     font-size: 4.5vmax;
@@ -213,20 +219,37 @@
     font-variation-settings:  'SHRP' 100;
     color: var(--titleCol);
     text-shadow: 3px 1px 4px var(--accentCol);
-    grid-column: 2/3;
-    grid-row: 1/2;
+    /* grid-column: 1/5;
+    grid-row: 1/2; */
+    text-align:center;
 }
-.portfolioPagePort{
-    grid-column:1/4;
-    grid-row: 4/-1
+.portfolioOptions{
+    /* grid-column:1/5;
+    grid-row: 2/7; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.portCardsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+.jsDiv{
+    display:flex;
+    flex-direction: row;
+    width: 100% 
+}
   /*************** HMUA ****************/
   .hmuaPage{
-    height: 100vh;
+    height: fit-content;
     background-color: var(--mainBG);
     font-family: 'Raleway', sans-serif;
+    text-align: center;
   }
  
   .hmuaContent, .hmuaImages{
@@ -241,7 +264,7 @@
     white-space: nowrap;
     padding-left: 0.2vw;
     padding-right: 0.2vw;
-    width:95vw;
+    width:85vw;
     border: 0.6vw solid var(--infoCol);
 }
 .slide{
@@ -438,17 +461,7 @@
 }
 
 @media screen and (max-width: 1000px){
-    .home{
-        grid-template-rows: repeat(12, 150px);
-    }
-    .intention{
-        grid-row: 5/6;
-    }
-    .recent{
-        grid-row: 6/8;}
-    .githubDiv{
-        grid-row:8/9;
-    }
+  
   }
   @media screen and (max-width: 480px){
     .cv{
