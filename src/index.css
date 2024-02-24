@@ -4,6 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'NJTD';
+  src: url(./fonts/NJTDVF.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /********* COLOUR VARIABLES *********/
 :root{
   --mainBG: #F7FFFF;

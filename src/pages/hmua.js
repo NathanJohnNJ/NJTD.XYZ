@@ -22,14 +22,8 @@ const HMUA = () => {
     
     return (
         <div className="hmuaPage">
-            <div className=" hmuacontent">  
-                <div className="hmuaText">
-                    <h1 className="title">Hair & Makeup Artistry</h1>
-                    <p className="hmuaText">I toyed with the idea of including my hair and makeup portfolio on this website whilst I'm trying to enter into the coding/developer world before realising:</p>
-                    <p className="hmuaText">This work reflects a large portion of my professional life that has led me to where I am today and that I am immensely proud of. All of this imagery showcases my creative ability which is definitely something I intend to transfer across to all my future endeavours...</p>
-                    <p className="hmuaText">...and at the end of the day, it's bloody good stuff, and definitely worth a mention and a browse.</p>
-                    <p className="smallSelection">This is just a small selection of my portfolio. To see my full portfolio, please visit my <a className="instagram" href="https://instagram.com/nathanjohnnj" target="_blank" rel="noreferrer">Instagram</a>.</p>
-                </div>
+            <div className=" hmuacontent"> 
+            <h1 className="title">Hair & Makeup Artistry</h1> 
                 <div className="hmuaImages">
                     <div className="scroll-container">
                         <img id="slides" className="slide" src={feroce} alt="Feroce online magazine feature"/>
@@ -52,6 +46,12 @@ const HMUA = () => {
                         <img id="slides" className="slide" src={boys} alt="Photoshoot"/>
                     </div>
                 </div>
+                <div className="hmuaText">
+                    <p className="hmuaText">I toyed with the idea of including my hair and makeup portfolio on this website whilst I'm trying to enter into the coding/developer world before realising:</p>
+                    <p className="hmuaText">This work reflects a large portion of my professional life that has led me to where I am today and that I am immensely proud of. All of this imagery showcases my creative ability which is definitely something I intend to transfer across to all my future endeavours...</p>
+                    <p className="hmuaText">...and at the end of the day, it's bloody good stuff, and definitely worth a mention and a browse.</p>
+                    <p className="smallSelection">This is just a small selection of my portfolio. To see my full portfolio, please visit my <a className="instagram" href="https://instagram.com/nathanjohnnj" target="_blank" rel="noreferrer">Instagram</a>.</p>
+                </div>  
             </div>
         </div>
    )

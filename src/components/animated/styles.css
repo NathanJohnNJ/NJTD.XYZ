@@ -1,0 +1,68 @@
+  h1,
+  h2,
+  h3 {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 100px 0 40px;
+  }
+  
+  h2 {
+    font-weight: 400;
+    margin: 50px 0 10px;
+  }
+  
+  p {
+    margin: 0 0 30px 0;
+    font-size: 18px;
+  }
+  
+  .progress {
+    position: sticky;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+  }
+  .progress svg {
+    transform: translateX(-100px) rotate(-90deg);
+    
+  }
+  
+  circle {
+    stroke-dashoffset: 0;
+    stroke-width: 5%;
+    fill: none;
+  }
+  
+  .bg {
+    stroke: var(--accentCol);
+    opacity: 0.2;
+  }
+  
+  .progress .indicator {
+    stroke: var(--accentCol);
+
+  }
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #div {
+    width: 200px;
+    min-height: 600px;
+    border: 2px dotted var(--accentCol);
+    position: relative;
+  }
