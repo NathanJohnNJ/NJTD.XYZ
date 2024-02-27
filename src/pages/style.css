@@ -33,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 25vh;
+    /* padding-bottom: 25vh; */
 }
 .intention{
     opacity: 0;
@@ -82,7 +82,8 @@
     scale: 1.1;
 }
 .githubDiv{
-    margin-top: 2000px;     
+    margin-top: 200px;
+    margin-bottom: 50px;   
 }
 /********* ABOUT PAGE *********/
 .aboutPage{

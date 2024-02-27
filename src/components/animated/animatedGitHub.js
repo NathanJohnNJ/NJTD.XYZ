@@ -1,14 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import '../home/home.css';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const GitHubRepos = () => {
   const [repos, setRepos] = useState([])
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll();
   let side = 100;
-  let transformedY = useTransform(scrollYProgress, [0,1], [-1,1])
-
 
   const fetchData = async () => {
     try {

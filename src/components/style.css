@@ -209,14 +209,4 @@
   .cPList{ display:none; }
 }
 
-  /*********** SCROLL LOGO  ************/
  
-  .scrollLogoDiv{
-    display: grid;
-    place-items: center;
-    position: relative;
-  }
-  .layer{
-    width: 400px;   
-    height:400px;
-}
