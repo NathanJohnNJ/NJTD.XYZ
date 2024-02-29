@@ -11,6 +11,7 @@ import Privacy from './pages/privacy';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 // import Intro from './components/home/intro';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
       <div className="appFooter">
         <Footer />
       </div>
+      <SpeedInsights />
     </div>
   );
 }
