@@ -4,8 +4,6 @@ import { useState } from 'react';
 
 const ColourPickerList = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
-    const [darkMode, setDarkMode] = useState(false);
 
     function openModal(){
         setModalIsOpen(true)
@@ -31,9 +29,9 @@ const ColourPickerList = (props) => {
         r.style.setProperty(col, hex);
         }
     function blueClickHandle() {
-        setColours(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
+        props.setColours(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
         props.setThemeCol('blue');
-        if(darkMode===false){
+        if(props.darkMode===false){
             setColour("--mainBG",'#F7FFFF')
             setColour("--secondaryBG", '#E2EBF1')
             setColour("--infoCol", '#878896')
@@ -52,8 +50,8 @@ const ColourPickerList = (props) => {
     }
     function redClickHandle() {
         props.setThemeCol('red');
-        setColours(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);
-        if(darkMode===false){
+        props.setColours(['#FFF0EF', '#FFDDD5', '#C3806E', '#AB260C', '#8A130C']);
+        if(props.darkMode===false){
             setColour("--mainBG",'#FFF0EF')
             setColour("--secondaryBG", '#FFDDD5')
             setColour("--infoCol", '#C3806E')
@@ -72,8 +70,8 @@ const ColourPickerList = (props) => {
     }
     function greenClickHandle() {
         props.setThemeCol('green');
-        setColours(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D']);
-        if(darkMode===false){
+        props.setColours(['#F3FEEA', '#CAE1C7', '#8EB68A', '#2E8831', '#19671D']);
+        if(props.darkMode===false){
             setColour("--mainBG",'#F3FEEA')
             setColour("--secondaryBG", '#CAE1C7')
             setColour("--infoCol", '#8EB68A')
@@ -92,8 +90,8 @@ const ColourPickerList = (props) => {
     }
     function orangeClickHandle() {
         props.setThemeCol('orange');
-        setColours(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816']);
-        if(darkMode===false){
+        props.setColours(['#FFEFD1', '#EFD3AC', '#D5A677', '#DB7B1D', '#DB5816']);
+        if(props.darkMode===false){
             setColour("--mainBG",'#FFEFD1')
             setColour("--secondaryBG", '#EFD3AC')
             setColour("--infoCol", '#D5A677')
@@ -112,8 +110,8 @@ const ColourPickerList = (props) => {
     }
     function greyScaleClickHandle() {
         props.setThemeCol('grey');
-        setColours(['#F2F2F2', '#929292', '#616161', '#313131', '#000000']);
-        if(darkMode===false){
+        props.setColours(['#F2F2F2', '#929292', '#616161', '#313131', '#000000']);
+        if(props.darkMode===false){
             setColour("--mainBG",'#F2F2F2')
             setColour("--secondaryBG", '#929292')
             setColour("--infoCol", '#616161')
@@ -131,22 +129,22 @@ const ColourPickerList = (props) => {
         closeModal()
     }
     function darkLightClickHandle() {
-        if(darkMode===false){
-            setColour("--mainBG",`${colours[4]}`)
-            setColour("--secondaryBG", `${colours[3]}`)
-            setColour("--infoCol", `${colours[2]}`)
-            setColour("--accentCol", `${colours[1]}`)
-            setColour("--titleCol", `${colours[0]}`)
+        if(props.darkMode===false){
+            setColour("--mainBG",`${props.colours[4]}`)
+            setColour("--secondaryBG", `${props.colours[3]}`)
+            setColour("--infoCol", `${props.colours[2]}`)
+            setColour("--accentCol", `${props.colours[1]}`)
+            setColour("--titleCol", `${props.colours[0]}`)
             setColour("--borderCol", "#FFFFFF")
-            setDarkMode(true)
+            props.setDarkMode(true)
         }else{
-            setColour("--mainBG",`${colours[0]}`)
-            setColour("--secondaryBG", `${colours[1]}`)
-            setColour("--infoCol", `${colours[2]}`)
-            setColour("--accentCol", `${colours[3]}`)
-            setColour("--titleCol", `${colours[4]}`)
+            setColour("--mainBG",`${props.colours[0]}`)
+            setColour("--secondaryBG", `${props.colours[1]}`)
+            setColour("--infoCol", `${props.colours[2]}`)
+            setColour("--accentCol", `${props.colours[3]}`)
+            setColour("--titleCol", `${props.colours[4]}`)
             setColour("--borderCol", "#000000")
-            setDarkMode(false)
+            props.setDarkMode(false)
         }
         closeModal()
     }

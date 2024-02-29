@@ -52,8 +52,8 @@ const NavBar = (props) => {
                 }
             </div>
             <div className="navColours">
-                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} />
-                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol}/>
+                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
+                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
             </div>
         </div>
     )

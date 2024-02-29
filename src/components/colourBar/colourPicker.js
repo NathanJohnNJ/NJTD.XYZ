@@ -1,20 +1,16 @@
 import './colours.css';
-import { useState } from 'react';
 
 const ColourPicker = (props) => {
-
-    const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
-    const [darkMode, setDarkMode] = useState(false);
 
     function setColour(col, hex){
         const r = document.querySelector(':root');
         r.style.setProperty(col, hex);
         }
     function colourSetter(cols){
-        setColours(cols)
+        props.setColours(cols)
         const variables = ["--mainBG", "--secondaryBG", "--infoCol", "--accentCol", "--titleCol"];
         const darkVars = ["--titleCol", "--accentCol", "--infoCol", "--secondaryBG", "--mainBG"]
-        if(darkMode===false){
+        if(props.darkMode===false){
             for (let i = 0; i < cols.length; i++){
                 setColour(`${variables[i]}`, `${cols[i]}`)
             }
@@ -47,20 +43,20 @@ const ColourPicker = (props) => {
         props.setThemeCol('grey');
     }
     function darkLightClickHandle() {
-        if(darkMode===false){
-            setColour("--mainBG",`${colours[4]}`)
-            setColour("--secondaryBG", `${colours[3]}`)
-            setColour("--accentCol", `${colours[1]}`)
-            setColour("--titleCol", `${colours[0]}`)
+        if(props.darkMode===false){
+            setColour("--mainBG",`${props.colours[4]}`)
+            setColour("--secondaryBG", `${props.colours[3]}`)
+            setColour("--accentCol", `${props.colours[1]}`)
+            setColour("--titleCol", `${props.colours[0]}`)
             setColour("--borderCol", "#FFFFFF")
-            setDarkMode(true)
+            props.setDarkMode(true)
         }else{
-            setColour("--mainBG",`${colours[0]}`)
-            setColour("--secondaryBG", `${colours[1]}`)
-            setColour("--accentCol", `${colours[3]}`)
-            setColour("--titleCol", `${colours[4]}`)
+            setColour("--mainBG",`${props.colours[0]}`)
+            setColour("--secondaryBG", `${props.colours[1]}`)
+            setColour("--accentCol", `${props.colours[3]}`)
+            setColour("--titleCol", `${props.colours[4]}`)
             setColour("--borderCol", "#000000")
-            setDarkMode(false)
+            props.setDarkMode(false)
         }
     }
 

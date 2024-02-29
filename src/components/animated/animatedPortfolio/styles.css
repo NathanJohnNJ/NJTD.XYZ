@@ -122,9 +122,12 @@
   padding: 1vh 1vw 1vh 1vw
 }
 .cardsUnitTitle{
-  font-family: 'NJTD';
+  font-family: 'Geologica', sans-serif;
+  font-variation-settings: 'wght' 550;
+  font-variation-settings: 'CRSV' 0.5;
+  font-variation-settings:  'SHRP' 100;
   color: var(--accentCol);
   font-size: 6vmin;
   text-shadow: 4px 2px 4px var(--titleCol);
   text-align:center;
-}
+}  

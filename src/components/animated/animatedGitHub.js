@@ -1,14 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
-import '../home/home.css';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import './github.css';
+import { motion } from 'framer-motion';
 
 const GitHubRepos = () => {
   const [repos, setRepos] = useState([])
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll();
   let side = 100;
-  let transformedY = useTransform(scrollYProgress, [0,1], [-1,1])
-
 
   const fetchData = async () => {
     try {
@@ -51,7 +48,7 @@ return (
   }}
   initial="hidden"
   whileInView="visible"
-  transition={{ duration: 0.5, delay: 1, ease: "easeIn"}}
+  transition={{ duration: 0.5, ease: "easeIn"}}
   >
     <h1 style={{position: 'sticky'}}>Recently Updated GitHub Repositories</h1>
     <div ref={ref} className="mainReposDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>
@@ -67,7 +64,7 @@ return (
           }}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "200px" }}
+          viewport={{  margin: "200px" }}
           transition={{ duration: 1.5, delay: 1, ease: "easeIn"}}
           >
             <p className="repoTitle">{repo.name}</p>
