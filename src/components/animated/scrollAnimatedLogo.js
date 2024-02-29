@@ -20,6 +20,7 @@ const ScrollAnimatedLogo = () => {
         if (isInView) {
         mainControls.start("visible");
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isInView]);
 
     return(
@@ -77,6 +78,7 @@ const ScrollAnimatedLogo = () => {
             >
                 <img className="layer" src={firstLayer} alt="Logo layer 1" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* FIRST LAYER END */}
 
             {/* SECOND LAYER BELOW */}
             <motion.li
@@ -100,6 +102,7 @@ const ScrollAnimatedLogo = () => {
             >
                     <img className="layer" src={secondLayer} alt="Logo layer 2" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* SECOND LAYER END */}
 
             {/* THIRD LAYER BELOW */}
             <motion.li
@@ -123,6 +126,7 @@ const ScrollAnimatedLogo = () => {
             >
                 <img className="layer" src={thirdLayer} alt="Logo layer 3" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* THIRD LAYER END */}
 
             {/* FOURTH LAYER BELOW */}
             <motion.li
@@ -146,6 +150,10 @@ const ScrollAnimatedLogo = () => {
             >
                     <img className="layer" src={fourthLayer} alt="Logo layer 4" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* FOURTH LAYER END */}
+
+            {/* FIFTH LAYER BELOW */}
+
             <motion.li
             variants={{
                 hidden: { y: "100%", opacity: 0 },
@@ -167,6 +175,9 @@ const ScrollAnimatedLogo = () => {
             >
                 <img className="layer" src={fifthLayer} alt="Logo layer 5" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* FIFTH LAYER END */}
+
+            {/* SIXTH LAYER BELOW */}
             <motion.li
             variants={{
                 hidden: { opacity: 0 },
@@ -188,6 +199,9 @@ const ScrollAnimatedLogo = () => {
             >
                 <img className="layer" src={firstLayer} alt="Logo layer 1" style={{ width: "32vw", height: "32vw"}}></img>
             </motion.li>
+            {/* SIXTH LAYER END */}
+
+            {/* SEVENTH LAYER BELOW */}
             <motion.li
             variants={{
                 hidden: { opacity: 0 },
@@ -213,5 +227,6 @@ const ScrollAnimatedLogo = () => {
         </motion.div>
     )
 };
+
 
 export default ScrollAnimatedLogo;

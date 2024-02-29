@@ -39,12 +39,12 @@
     opacity: 0;
     margin-bottom: 10vh;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: 400;
     color: var(--infoCol); 
     animation-fill-mode: forwards;
     text-align:center;
-    width: 80%
+    width: 70%
 }
 .firstIntention{
     animation: fadeIn 2s forwards;
@@ -58,7 +58,7 @@
     animation: fadeIn 2s forwards;
     animation-delay: 6s;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: 400;
     color: var(--infoCol); 
     animation-fill-mode: forwards;

@@ -2,7 +2,7 @@
 import GitHubRepos from '../components/animated/animatedGitHub'
 import './style.css';
 import { NavLink } from 'react-router-dom';
-import ScrollAnimatedLogo from '../components/animated/scrollAnimatedLogo';
+import ScrollAnimatedLogo from '../components/animated/scrollLogo/scrollAnimatedLogo';
 
 const Home = () => {
     return (

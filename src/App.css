@@ -17,6 +17,7 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  margin-top: 200px;
 }
 /* .appIntro{
   background-color: var(--mainBG);
@@ -25,4 +26,19 @@
 .appLogo{
   position:fixed;
   z-index: 9999;
+}
+
+@media screen and (max-width: 1100px){
+  .appOutlet{ margin-top: 120px }
+  .appNavBar{ max-height: 200px}
+}
+
+@media screen and (max-width: 720px){
+  .appOutlet{ margin-top: 100px }
+  .appNavBar{ max-height: 150px}
+}
+
+@media screen and (max-width: 450px){
+  .appOutlet{ margin-top: 80px }
+  .appNavBar{ max-height: 100px}
 }

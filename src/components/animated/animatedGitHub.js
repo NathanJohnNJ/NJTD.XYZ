@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import '../home/home.css';
+import './github.css';
 import { motion } from 'framer-motion';
 
 const GitHubRepos = () => {
@@ -48,7 +48,7 @@ return (
   }}
   initial="hidden"
   whileInView="visible"
-  transition={{ duration: 0.5, delay: 1, ease: "easeIn"}}
+  transition={{ duration: 0.5, ease: "easeIn"}}
   >
     <h1 style={{position: 'sticky'}}>Recently Updated GitHub Repositories</h1>
     <div ref={ref} className="mainReposDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>
@@ -64,7 +64,7 @@ return (
           }}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "200px" }}
+          viewport={{  margin: "200px" }}
           transition={{ duration: 1.5, delay: 1, ease: "easeIn"}}
           >
             <p className="repoTitle">{repo.name}</p>
