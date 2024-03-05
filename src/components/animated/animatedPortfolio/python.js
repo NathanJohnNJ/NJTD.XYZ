@@ -1,6 +1,5 @@
 import alienImg from './images/alien.JPG';
-import './styles.css';
-import Cards from './cards'
+import Cards from './portRight'
 
 const Python = () => {
     const alien = {

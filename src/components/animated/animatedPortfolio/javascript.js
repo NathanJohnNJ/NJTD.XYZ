@@ -1,9 +1,8 @@
-import './styles.css';
 import drumImg from './images/drumPreview.png';
 import keycodeImg from './images/keycode.png';
 import diceImg from './images/dice.png';
 import matrixImg from './images/matrix.png';
-import Cards from './cards';
+import Cards from './portLeft';
 
 const Javascript = () => {
     const drumkit = {
@@ -35,19 +34,12 @@ const Javascript = () => {
         git: "https://github.com/NathanJohnNJ/keycode"
       }
 
-    const cardList = [drumkit, keycode]
-    const cardList2 = [dice, matrix]
+    const cardList = [drumkit, keycode, dice, matrix]
      
-
     return (
-    <div className="mainJS">
       <div className="jsDiv">
         <Cards cards={cardList} title="JavaScript" />
         </div>
-        <div className="jsDiv">
-        <Cards cards={cardList2} />
-        </div>
-    </div>
     )
 }
 

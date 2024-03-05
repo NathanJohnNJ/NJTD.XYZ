@@ -1,5 +1,5 @@
 import { RainbowBtn, Button } from './rainbowBtn.styles';
-import '../style.css';
+import './style.css';
 
 const RainbowButton = (props) => {
 
