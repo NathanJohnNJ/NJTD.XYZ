@@ -1,10 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState} from 'react';
 import './github.css';
 import { motion } from 'framer-motion';
 
 const GitHubRepos = () => {
   const [repos, setRepos] = useState([])
-  const ref = useRef(null);
   let side = 100;
 
   const fetchData = async () => {
@@ -51,7 +50,7 @@ return (
   transition={{ duration: 0.5, ease: "easeIn"}}
   >
     <h1 style={{position: 'sticky'}}>Recently Updated GitHub Repositories</h1>
-    <div ref={ref} className="mainReposDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>
+    <div className="mainReposDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>
       {repos.map((repo, i) => {
         const ID = `git${i}`
         const divID = `div${ID}`
@@ -64,8 +63,8 @@ return (
           }}
           initial="hidden"
           whileInView="visible"
-          viewport={{  margin: "200px" }}
-          transition={{ duration: 1.5, delay: 1, ease: "easeIn"}}
+          viewport={{  margin: "-200px" }}
+          transition={{ duration: 2, ease: "easeIn", type: "spring", bounce: 0.4}}
           >
             <p className="repoTitle">{repo.name}</p>
             <div className="details" id={ID}>

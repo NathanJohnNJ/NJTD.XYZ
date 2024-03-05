@@ -9,16 +9,17 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const ScrollAnimatedLogo = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll();
-    const scaledY = useTransform(scrollYProgress, [0.5, 0.8], [0, 1]);
-    const rotateFromY = useTransform(scrollYProgress, [0, 0.8], ["0deg", "360deg"]);
-    const reverseRotate = useTransform(scrollYProgress, [0, 0.8], ["360deg", "0deg"]);
-    const fade1 = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
-    const fade2 = useTransform(scrollYProgress, [0.4, 0.8], [0, 1]);
-    const fade3 = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+    const scaledY = useTransform(scrollYProgress, [0.4, 0.7], [0, 1]);
+    const scaledY2 = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+    const rotateFromY = useTransform(scrollYProgress, [0.4, 0.7], ["0deg", "360deg"]);
+    const reverseRotate = useTransform(scrollYProgress, [0, 0.6], ["360deg", "0deg"]);
+    const fade1 = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
+    const fade2 = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
+    const fade3 = useTransform(scrollYProgress, [0.48, 0.7], [0, 1]);
     const fade4 = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
-    const fadeInOut = useTransform(scrollYProgress, [0.1, 0.5, 0.875, 1], [0, 1, 1, 0]);
-    const leftEntrance = useTransform(scrollYProgress, [0.2, 0.8], ["-100%", "0%"]);
-    const rightEntrance = useTransform(scrollYProgress, [0.4, 0.8], ["100%", "0%"]);
+    const fadeInOut = useTransform(scrollYProgress, [0.1, 0.5, 0.8, 1], [0, 1, 1, 0.2]);
+    const leftEntrance = useTransform(scrollYProgress, [0.15, 0.4], ["-100%", "0%"]);
+    const rightEntrance = useTransform(scrollYProgress, [0.3, 0.6], ["100%", "0%"]);
     const first = {
         image:firstLayer,
         opacity: scrollYProgress
@@ -43,7 +44,7 @@ const ScrollAnimatedLogo = () => {
     const fifth = {
         image:fifthLayer,
         opacity: fade4,
-        scale: scaledY,
+        scale: scaledY2,
     }
     const layers = [first, second, third, fourth, fifth]
 

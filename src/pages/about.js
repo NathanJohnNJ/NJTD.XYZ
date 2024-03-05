@@ -15,7 +15,7 @@ const About = (props) => {
     N.addEventListener("mouseout", () => {
       setTimeout(()=> {
         N.innerText="N"
-      },3000)
+      },2000)
     })
     const J = document.getElementById("john")
     J.addEventListener("mouseover", () => {
@@ -24,7 +24,7 @@ const About = (props) => {
     J.addEventListener("mouseout", () => {
       setTimeout(()=> {
         J.innerText="J"
-      },3000)
+      },2000)
     })
     
   },[])

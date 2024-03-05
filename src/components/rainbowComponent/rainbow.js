@@ -1,5 +1,5 @@
 import { RainbowBox, Article } from './rainbow.styles';
-import '../style.css';
+import './style.css';
 
 const Rainbow = (props) => {
 
