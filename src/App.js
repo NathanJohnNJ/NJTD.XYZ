@@ -15,10 +15,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 // import Intro from './components/home/intro';
 
 function App() {
-  const [page, setPage] = useState("");
   const [themeCol, setThemeCol] = useState("blue");
   const [colours, setColours] = useState(['#F7FFFF', '#E2EBF1', '#878896', '#042AC1', '#092271']);
-    const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const cookie = new Cookies();
   useEffect(() => {
     cookie.set('njtdCookie', 'NJTD', { path: '/'}, { maxAge: '600'})
@@ -27,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <div className="appNavBar">
-        <NavBar page={page} themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode}/>
+        <NavBar themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode}/>
       </div>
       {/* 
         {(cookie.get('njtdCookie'))
@@ -42,15 +41,15 @@ function App() {
         } */}
       <div className="appOutlet">      
         <Routes> 
-          <Route key="home" index element={<Home setPage={setPage} cookie={cookie}/>} />
-          <Route key="about" path="about" element={<About setPage={setPage} themeCol={themeCol} />} />
-          <Route key="hmua" path="portfolio/hmua" element={<HMUA setPage={setPage}/>} />
-          <Route key="developer" path="portfolio/developer" element={<Portfolio setPage={setPage}/>} />
-          <Route key="portfolio" path="portfolio" element={<Portfolio setPage={setPage} />} />
-          <Route key="codes" path="codes" element={<Portfolio setPage={setPage}/>} />
-          <Route key="cv" path="cv" element={<CV setPage={setPage}/>} />
-          <Route key="terms" path="terms" element={<Terms setPage={setPage}/>} />
-          <Route key="privacy" path="privacy" element={<Privacy setPage={setPage}/>} />
+          <Route key="home" index element={<Home darkMode={darkMode} cookie={cookie}/>} />
+          <Route key="about" path="about" element={<About   themeCol={themeCol} />} />
+          <Route key="hmua" path="portfolio/hmua" element={<HMUA  />} />
+          <Route key="developer" path="portfolio/developer" element={<Portfolio  />} />
+          <Route key="portfolio" path="portfolio" element={<Portfolio   />} />
+          <Route key="codes" path="codes" element={<Portfolio  />} />
+          <Route key="cv" path="cv" element={<CV themeCol={themeCol} />} />
+          <Route key="terms" path="terms" element={<Terms  />} />
+          <Route key="privacy" path="privacy" element={<Privacy  />} />
         </Routes>
       </div>
 

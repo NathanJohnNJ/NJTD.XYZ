@@ -1,12 +1,14 @@
-import firstLayer from './layers/1.png';
-import secondLayer from './layers/2.png';
+import black1 from './layers/1.png';
+import black2 from './layers/2.png';
+import white1 from './layers/1white.png';
+import white2 from './layers/2white.png';
 import thirdLayer from './layers/3.png';
 import fourthLayer from './layers/4.png';
 import fifthLayer from './layers/5.png';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const ScrollAnimatedLogo = () => {
+const ScrollAnimatedLogo = (props) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll();
     const scaledY = useTransform(scrollYProgress, [0.4, 0.7], [0, 1]);
@@ -20,13 +22,28 @@ const ScrollAnimatedLogo = () => {
     const fadeInOut = useTransform(scrollYProgress, [0.1, 0.5, 0.8, 1], [0, 1, 1, 0.2]);
     const leftEntrance = useTransform(scrollYProgress, [0.15, 0.4], ["-100%", "0%"]);
     const rightEntrance = useTransform(scrollYProgress, [0.3, 0.6], ["100%", "0%"]);
-    const first = {
-        image:firstLayer,
-        opacity: scrollYProgress
+    function layerOneDL(){
+        if (props.darkMode === false){
+            return black1
+        } else {
+            return white1
+        }
     }
+    function layerTwoDL(){
+        if (props.darkMode === false){
+            return black2
+        } else {
+            return white2
+        }
+    }
+
+    const first = {
+        image:layerOneDL(),
+        opacity: scrollYProgress
+   }
     const second = {
-        image:secondLayer,
-        opacity: fade1,
+        image:layerTwoDL(),
+        opacity:fade1,
         x: leftEntrance
     }
     const third = {
@@ -46,7 +63,7 @@ const ScrollAnimatedLogo = () => {
         opacity: fade4,
         scale: scaledY2,
     }
-    const layers = [first, second, third, fourth, fifth]
+    let layers = [first, second, third, fourth, fifth]
 
     
 
