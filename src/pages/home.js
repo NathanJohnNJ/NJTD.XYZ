@@ -4,7 +4,7 @@ import './style.css';
 import { NavLink } from 'react-router-dom';
 import ScrollAnimatedLogo from '../components/animated/scrollLogo/scrollAnimatedLogo';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="home">
             <div className="welcome">
@@ -21,7 +21,7 @@ const Home = () => {
                 <p>You can also checkout what I've been upto on <a href="https://github.com/NathanJohnNJ" className="navLinks">GitHub</a> at any time.</p>
             </div>
             <div className="fixed">
-                <ScrollAnimatedLogo />
+                <ScrollAnimatedLogo darkMode={props.darkMode}/>
             </div>
             
             <div className="githubDiv">

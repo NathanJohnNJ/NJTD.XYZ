@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ColourPicker from './colourBar/colourPicker';
 import PickerList from './colourBar/colourList';
 import logoStill from '../images/logo.png';
+import logoStill2 from '../images/whiteLogo.png';
 
 const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
@@ -16,7 +17,13 @@ const NavBar = (props) => {
     function onHomeHandler(){
         setShowOptions(false);
     }
-    
+    function logoDecider(){
+        if (props.darkMode === false){
+            return logoStill
+        } else {
+            return logoStill2
+        }
+    }
     return(
         <div className="navbar">
             <div className="navFirst">
@@ -28,7 +35,7 @@ const NavBar = (props) => {
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
                 </div>
                 <div className="navLogo">
-                    <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoStill} alt="Logo" className="navbarLogo"></img></NavLink>
+                    <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoDecider()} alt="Logo" className="navbarLogo"></img></NavLink>
                 {/* <MiniLogo page={props.page}/> */}
                 </div>
                 <div className="navCV">
