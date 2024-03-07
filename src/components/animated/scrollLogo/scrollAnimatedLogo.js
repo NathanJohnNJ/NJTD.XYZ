@@ -6,22 +6,26 @@ import thirdLayer from './layers/3.png';
 import fourthLayer from './layers/4.png';
 import fifthLayer from './layers/5.png';
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const ScrollAnimatedLogo = (props) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll();
+    const newScroll = useSpring(scrollYProgress, {
+        stiffness: 95,
+        damping: 30
+      })
     const scaledY = useTransform(scrollYProgress, [0.4, 0.7], [0, 1]);
     const scaledY2 = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
-    const rotateFromY = useTransform(scrollYProgress, [0.4, 0.7], ["0deg", "360deg"]);
-    const reverseRotate = useTransform(scrollYProgress, [0, 0.6], ["360deg", "0deg"]);
+    const rotateFromY = useTransform(newScroll, [0.4, 0.7], ["0deg", "360deg"]);
+    const reverseRotate = useTransform(newScroll, [0, 0.6], ["360deg", "0deg"]);
     const fade1 = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
     const fade2 = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
     const fade3 = useTransform(scrollYProgress, [0.48, 0.7], [0, 1]);
     const fade4 = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
     const fadeInOut = useTransform(scrollYProgress, [0.1, 0.5, 0.8, 1], [0, 1, 1, 0.2]);
-    const leftEntrance = useTransform(scrollYProgress, [0.15, 0.4], ["-100%", "0%"]);
-    const rightEntrance = useTransform(scrollYProgress, [0.3, 0.6], ["100%", "0%"]);
+    const leftEntrance = useTransform(newScroll, [0.15, 0.4], ["-100%", "0%"]);
+    const rightEntrance = useTransform(newScroll, [0.3, 0.6], ["100%", "0%"]);
     function layerOneDL(){
         if (props.darkMode === false){
             return black1
@@ -39,29 +43,29 @@ const ScrollAnimatedLogo = (props) => {
 
     const first = {
         image:layerOneDL(),
-        opacity: scrollYProgress
+        opacity: useSpring(scrollYProgress)
    }
     const second = {
         image:layerTwoDL(),
-        opacity:fade1,
+        opacity:useSpring(fade1),
         x: leftEntrance
     }
     const third = {
         image:thirdLayer,
-        opacity: fade2,
+        opacity: useSpring(fade2),
         x: rightEntrance,
         rotate: reverseRotate
     }
     const fourth = {
         image:fourthLayer,
-        opacity: fade3,
+        opacity: useSpring(fade3),
         rotate: rotateFromY,
-        scale: scaledY
+        scale: useSpring(scaledY)
     }
     const fifth = {
         image:fifthLayer,
-        opacity: fade4,
-        scale: scaledY2,
+        opacity:useSpring(fade4),   
+        scale: useSpring(scaledY2),
     }
     let layers = [first, second, third, fourth, fifth]
 
