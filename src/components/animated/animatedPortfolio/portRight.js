@@ -21,8 +21,7 @@ return (
   whileInView="visible"
   transition={{ duration: 0.5, ease: "easeIn"}}
   >
-    <div className="divWithTitle">
-      
+    <div className="divWithTitle">  
     <div className="newMainDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>
       {props.cards.map((card, i) => {
       return(
@@ -80,10 +79,12 @@ return (
             </motion.div>)
       })}
     </div>
-    {(props.title)?addTitle(props.title, props.side):console.log("no title")}
+    <div className="titleContainer">
+      {(props.title)?addTitle(props.title):console.log("no title")}
+      </div>
     </div>
   </motion.div>
-);
+); 
 }
 
 export default PortRight;
