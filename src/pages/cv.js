@@ -8,8 +8,8 @@ const CV = (props) => {
 
     return (
         <div className="cvPage">
-            <div className="title">
-                <h1>CV</h1>
+            <div className="titleDiv">
+                <h1 className="title">Interactive CV</h1>
             </div>
             <div className="horizontalDiv">
             <div className="arrowDiv">

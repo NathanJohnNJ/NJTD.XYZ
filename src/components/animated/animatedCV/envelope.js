@@ -41,11 +41,11 @@ const EnvelopedCV = () => {
         )
     }
     function Front(){
-        const zPosAnim = useTransform(scrollYProgress, [0, 0.95], [3, 2]);
+        const zPosAnim = useTransform(scrollYProgress, [0, 0.85, 0.95], [3, 3, 2]);
         const bgColour = useTransform(scrollYProgress, [0, 0.6], ["rgb(153, 127, 98)", "#7d6a55"]);
         const frontStyles = {
             width: "100%",
-            height: "100%",
+            height: "105%",
             clipPath: 'polygon(50% 25%, 100% 10%, 100% 100%, 0 100%, 0 10%)',
             position: "absolute",
             top: 0,
@@ -110,8 +110,8 @@ const EnvelopedCV = () => {
         )
     }
     function Letter(){
-        const zPosAnim = useTransform(scrollYProgress, [0, 0.7], [2, 3]);
-        const letterHeight = useTransform(scrollYProgress, [0, 0.6], ["100%", "200%"]);
+        const zPosAnim = useTransform(scrollYProgress, [0, 0.8], [2, 3]);
+        const letterHeight = useTransform(scrollYProgress, [0, 0.5, 0.9, 1], ["100%", "150%", "200%", "250%"]);
         const letterScale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1.2]);
         const topAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], ["40px", "-390px", "20px"]);
         const shadowAnim = useTransform(scrollYProgress, [0, 1], ["0px 0px 0px 0px rgb(75, 74, 74)", "2px 2px 8px 4px rgb(75, 74, 74)"]);
@@ -125,7 +125,8 @@ const EnvelopedCV = () => {
             right:0,
             left:0,
             width: "auto",
-            height: "100%"
+            // height: "100%"
+            height: letterHeight
         }
         return(
             <motion.div

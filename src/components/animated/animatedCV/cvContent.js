@@ -3,12 +3,9 @@ import CVContact from './cvContact'
 // import Education from '../components/cv/education';
 // import { useState } from 'react';
 // import { Modal } from 'react-modal';
+import Skills from './skills'
 
 const CV = (props) => {
-
-    // const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const transSkills = ["Complaints handling", "Critical thinking", "Interpersonal skills", `Mentoring: <ul><li>Peer to peer</li><li>Leadership</li></ul>`, "Ownership-based & resolution-based service", "Problem solving", "Team management", "Time management", "Training/Tutoring"]
     
     const workEx = [
         `<strong>May 2022 – Present</strong> - Freelance Software Developer/Full-Stack Developer, NJTD`, `<strong>December 2021 – March 2023</strong> – Restart Scheme, Ingeus`, `<strong>April 2017 - December 2021 </strong>- Various Contact Centre roles across the north of England: <ul><li>Team Manager</li><li>Supervisor</li><li>Floor Walker</li><li>Complaints Handler</li><li>Customer Care Advisor</li><li>Telesales/Aftersales</li></ul>`, `<strong>December 2009 – April 2017 </strong>– Nathan John HMUA – Self employed – Setting my own targets, analysing my own KPIs, keeping track of my own stock`
@@ -42,12 +39,7 @@ Using Collaborative Technologies
             <div className="lineSec"></div>
             <div className="cvContent">
                 <div className="leftCV">
-                    <div className="transSkills">
-                        <h2 className="skillsTitle">Transferrable Skills</h2>
-                        <ul className="list">
-                            {addHover(transSkills)}
-                        </ul>
-                    </div>
+                    <Skills />
                     <div className="education">
                         <h2 className="eduTitle">Relevant Education</h2>
                         <ul className="list">

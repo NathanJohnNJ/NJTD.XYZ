@@ -2,17 +2,20 @@ import './hex.css';
 import calculator from '../images/calc.png';
 import cats from '../images/cats.png';
 import cookies from '../images/cookies.png';
+import dice from '../images/dice2.png';
 import { useState } from 'react';
 
 const ReactJS = () => {
     const [showCalculator, setShowCalculator] = useState(false);
     const [showCookies, setShowCookies] = useState(false);
     const [showCats, setShowCats] = useState(false);
+    const [showDice, setShowDice] = useState(false);
 
     const reactRevealer = () =>{
         const r = document.getElementById('cookies');
-        const s = document.getElementById('calculator');                                                                                                                                                                                                                                                                                                    
+        const s = document.getElementById('calculator');            
         const t = document.getElementById('cats');
+        const u = document.getElementById('diceRemix');
         r.style.setProperty('background-color', 'var(--titleCol)');
         r.style.setProperty('font-weight', 'bolder');
         r.style.setProperty('color', 'var(--secondaryBG)');
@@ -40,9 +43,19 @@ const ReactJS = () => {
         t.style.setProperty('animation-direction', 'reverse'); 
         t.innerHTML = 'Cats4Lyf';
         t.classList.add('element');
+        u.style.setProperty('background-color', 'var(--titleCol)');
+        u.style.setProperty('font-weight', 'bolder');
+        u.style.setProperty('color', 'var(--secondaryBG)');
+        u.style.setProperty('top', '53%');
+        u.style.setProperty('left', '16.16%');
+        u.style.setProperty('animation', 'var(--circlesAni)')
+        u.style.setProperty('animation-delay', '-8s'); 
+        u.innerHTML = 'Dice<br>Remix';
+        u.classList.add('element');
         setShowCalculator(true)
         setShowCookies(true)
         setShowCats(true)
+        setShowDice(true)
     }
 
 
@@ -77,6 +90,18 @@ const ReactJS = () => {
             r.style.setProperty('background-size', 'contain');
             r.style.setProperty('animation-play-state', 'paused');
             r.style.setProperty('color', 'var(--titleCol)')
+        }
+        else{
+            r.innerHTML = ''
+        }
+    }
+    const diceRevealer = () =>{
+        const r = document.getElementById('diceID');
+        if(showCats){
+            r.style.setProperty('background-image', `url(${dice})`)
+            r.style.setProperty('background-size', 'contain');
+            r.style.setProperty('animation-play-state', 'paused');
+            r.style.setProperty('color', 'var(--titleCol)');
         }
         else{
             r.innerHTML = ''
