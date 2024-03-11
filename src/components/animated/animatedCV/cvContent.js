@@ -3,7 +3,8 @@ import CVContact from './cvContact'
 // import Education from '../components/cv/education';
 // import { useState } from 'react';
 // import { Modal } from 'react-modal';
-import Skills from './skills'
+import Skills from './skills';
+import Education from './education';
 
 const CV = (props) => {
     
@@ -40,12 +41,13 @@ Using Collaborative Technologies
             <div className="cvContent">
                 <div className="leftCV">
                     <Skills />
-                    <div className="education">
+                    {/* <div className="education">
                         <h2 className="eduTitle">Relevant Education</h2>
                         <ul className="list">
                             {addHover(education)}
                         </ul>
-                    </div>
+                    </div> */}
+                    <Education />
                 </div>
                 <div className="rightCV">
                     <div className="workEx">
