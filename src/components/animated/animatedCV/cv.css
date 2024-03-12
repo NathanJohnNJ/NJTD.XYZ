@@ -100,6 +100,17 @@
     border-bottom: 1.6px solid var(--infoCol);
     border-right: 1.6px solid var(--infoCol);
   }
+  .workTitle{
+    font-family: 'League Spartan', sans-serif;
+    text-align: left;
+    margin-bottom: -10px;
+    width: fit-content;
+    font-size:2vw;
+    color:var(--titleCol);
+    padding: 6px 0px 0px 6px;
+    border-top: 1.6px solid var(--infoCol);
+    border-left: 1.6px solid var(--infoCol);
+  }
 .listItem:hover{
   scale: 1;
   color: var(--accentCol)

@@ -9,7 +9,7 @@ const Education = () => {
     const [modalProvider, setModalProvider] = useState("")
     const [modalContent, setModalContent] = useState('');
 
-    const masters = `
+    const masters = `<div>
     <div className="dblList">
     <ul className="list">
         <li>HTML/CSS</li>
@@ -45,7 +45,7 @@ const Education = () => {
         </li>
         <li>Full-Stack</li>
     </ul>
-
+</div>
 `
 const userSkills = `<div>Upon completion of this introductory course, I received the following certification:<ul><li>Improving Productivity Using IT</li><li>Website Software</li><li>Using Collaborative Technologies</li></ul><br>The main languages covered on this course were:<ul><li>HTML</li><li>CSS</li><li>Python</li></ul></div>`
 
