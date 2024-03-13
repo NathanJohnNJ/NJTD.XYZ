@@ -19,14 +19,13 @@ const ScrollAnimatedLogo = (props) => {
     const scaledY2 = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
     const rotateFromY = useTransform(newScroll, [0.4, 0.7], ["0deg", "360deg"]);
     const reverseRotate = useTransform(newScroll, [0, 0.6], ["360deg", "0deg"]);
-    const fade = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-    const fade1 = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
-    const fade2 = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
+    const fade1 = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+    const fade2 = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
     const fade3 = useTransform(scrollYProgress, [0.48, 0.7], [0, 1]);
     const fade4 = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
-    const fadeInOut = useTransform(scrollYProgress, [0.1, 0.5, 0.8, 1], [0, 1, 1, 0.2]);
-    const leftEntrance = useTransform(newScroll, [0.15, 0.4], ["-100%", "0%"]);
-    const rightEntrance = useTransform(newScroll, [0.3, 0.6], ["100%", "0%"]);
+    const fadeInOut = useTransform(scrollYProgress, [0, 0.3, 0.8, 1], [0, 1, 1, 0.2]);
+    const leftEntrance = useTransform(newScroll, [0, 0.3], ["-100%", "0%"]);
+    const rightEntrance = useTransform(newScroll, [0.2, 0.6], ["100%", "0%"]);
     function layerOneDL(){
         if (props.darkMode === false){
             return black1
@@ -44,7 +43,7 @@ const ScrollAnimatedLogo = (props) => {
 
     const first = {
         image:layerOneDL(),
-        opacity: useSpring(fade)
+        opacity: 1
    }
     const second = {
         image:layerTwoDL(),
