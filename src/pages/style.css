@@ -33,16 +33,16 @@
     font-weight: 400;
     color: var(--infoCol);
     text-align:center;
-    width: 50%;
+    width: 35%;
     /* display: flex;
     flex-direction: column; */
 }
-.leftIntention{
+/* .leftIntention{
     transform: translateX(-30%);
 }
 .rightIntention{
     transform: translateX(30%);
-}
+} */
 .navLinks{
     text-decoration: none;
     color: var(--accentCol);
@@ -352,11 +352,7 @@
   
   }
   @media screen and (max-width: 480px){
-    .cv{
-        margin-top: 100px;
-        height: 60vh;
-        
-    }
+    .portfolioPage{ width: 100vw; overflow-x: hidden}
   }
   @media screen and (min-width: 481px) and (max-width: 768px){
     

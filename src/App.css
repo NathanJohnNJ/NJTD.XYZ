@@ -39,3 +39,10 @@
 @media screen and (max-width: 450px){
   .appNavBar{ max-height: 100px}
 } */
+
+@media screen and (max-width: 480px){
+  .appOutlet{
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}

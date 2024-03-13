@@ -1,4 +1,4 @@
-/********* HOMEPAGE GITHUB REPOS *********/
+/********* PORTFOLIO CARDS *********/
 .newAniPortDiv{
     display:flex;
     flex-direction: column;
@@ -34,7 +34,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
   }
   .cardsUnitTitle{
     font-family: 'Geologica', sans-serif;
@@ -186,9 +185,49 @@
     align-items: center;
     justify-content: center;
   }
-  
-  /* @media screen and (max-width: 970px){
+/*   
+  @media screen and (max-width: 970px){
     .newIndividualDiv{
       width: fit-content;
     }
   } */
+  /* 
+@media screen and (max-width: 1100px){
+  .appNavBar{ max-height: 200px}
+}
+
+@media screen and (max-width: 720px){
+  .appNavBar{ max-height: 150px}
+}*/
+
+@media screen and (max-width: 450px){
+  .newMainDiv{
+    flex-direction: row;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+  .divWithTitle{
+    overflow-x: scroll;
+  }
+  .newIndividualDiv{
+    width: 250px;
+  }
+  .card-container{
+    height: fit-content;
+    width: 250px;
+  }
+  .splash{
+    width: 290px;
+  }
+  .card{
+    width: 205px;
+    height: 360px;
+    overflow-y: scroll;
+  }
+  .newAniPortDiv{
+    width: 100vw;
+  }
+  .titleContainer{
+    height:fit-content;
+  }
+} 

@@ -113,7 +113,8 @@
   }
 .listItem:hover{
   scale: 1;
-  color: var(--accentCol)
+  color: var(--accentCol);
+  cursor:pointer;
 }
 .dblList{
   display:inline
@@ -127,6 +128,7 @@
 .listItem:hover{
   font-size:1.15vw;
   font-weight: 400px;
+  cursor:pointer;
 }
 .cvContactBanner{
   width: 70%;
@@ -146,7 +148,8 @@
 }
 .moreInfoBtn:hover{
   scale: 1.5;
-  color: var(--accentCol)
+  color: var(--accentCol);
+  cursor: pointer;
 }
 
 /*************** CONTACT ****************/
@@ -217,7 +220,20 @@
 }
 .contactListItem:hover{
  scale: 1;
- color: var(--accentCol)
+ color: var(--accentCol);
+ cursor: pointer;
+}
+.mapModal{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+  margin-left: 20vw;
+  width: 60vw;
+}
+.map{
+  border: none;
 }
 
 /*************** SKILLS & EDUCATION ****************/

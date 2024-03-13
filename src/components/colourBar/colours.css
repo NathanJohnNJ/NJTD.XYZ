@@ -271,6 +271,7 @@
 @media screen and (max-width: 480px){
   .colourPicker{ display: none; }
   .cPList{ display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; justify-self:center; }
+  .listModal{ margin-top: 110px}
 }
 @media screen and (min-width: 481px) and (max-width: 768px){
   .colourPicker{ display: flex; }
