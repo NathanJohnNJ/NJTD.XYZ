@@ -3,8 +3,7 @@ import './colours.css';
 const ColourPicker = (props) => {
 
     function setColour(col, hex){
-        const r = document.querySelector(':root');
-        r.style.setProperty(col, hex);
+        document.documentElement.style.setProperty(col, hex);
         }
     function colourSetter(cols){
         props.setColours(cols)
@@ -19,7 +18,7 @@ const ColourPicker = (props) => {
             for (let i = 0; i < cols.length; i++){
                 setColour(`${darkVars[i]}`, `${cols[i]}`)
             }
-            setColour("--borderCol", "#000000")
+            setColour("--borderCol", "#FFFFFF")
         }
     }
     function blueClickHandle() {

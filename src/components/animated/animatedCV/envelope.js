@@ -84,7 +84,6 @@ const EnvelopedCV = () => {
         )
     }
     function Envelope(){
-        const envScale = useTransform(scrollYProgress, [0, 0.6, 0.8], [1, 1, 0]);
         const zPosAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], [1, 4, 1]);
         const envStyles = {
             width: "100%",
