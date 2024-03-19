@@ -73,7 +73,9 @@ const ScrollAnimatedLogo = (props) => {
         <motion.div ref={ref} style={{ position: 'relative', display: "flex", flexDirection: "column", justifyContent: "center", alignItems:"center", width: "fitContent", height: "300vh", overflowX: "hidden", overflowY: "scroll", opacity: fadeInOut }}>
             {layers.map((layer, i) => {
         return(
-            <motion.div style={{
+            <motion.div 
+            key={i}
+            style={{
                 position: "fixed",
                 top:"225px",
                 height: "32vw",

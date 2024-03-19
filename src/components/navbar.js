@@ -8,15 +8,7 @@ import logoStill2 from '../images/whiteLogo.png';
 
 const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
-    function onClickHandler(){
-        setShowOptions(false);
-        const r = document.getElementById("logoStill");
-        r.style.setProperty('animation', 'none');
-        r.style.setProperty('opacity', '1');
-    }
-    function onHomeHandler(){
-        setShowOptions(false);
-    }
+
     function logoDecider(){
         if (props.darkMode === false){
             return logoStill
@@ -29,30 +21,30 @@ const NavBar = (props) => {
             <div className="navFirst">
                 <div className="navGap"></div>
                 <div className="navHome">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} onClick={onHomeHandler}>HOME</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} >HOME</NavLink>
                 </div>
                 <div className="navAbout">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>ABOUT</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} >ABOUT</NavLink>
                 </div>
                 <div className="navLogo">
                     <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoDecider()} alt="Logo" className="navbarLogo"></img></NavLink>
                 {/* <MiniLogo page={props.page}/> */}
                 </div>
                 <div className="navCV">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} onClick={onClickHandler}>CV</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} >CV</NavLink>
                 </div>
                 <div className="navPortfolio">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} onClick={onClickHandler}>PORTFOLIO</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} >PORTFOLIO</NavLink>
                 </div>
                 <div className="navOptions">
                     {showOptions
                     ?
                     <div className="navOptions2">
                         <div className="navDeveloper">
-                            <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/developer" onClick={onClickHandler}>DEVELOPER</NavLink>
+                            <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/developer" >DEVELOPER</NavLink>
                         </div>
                         <div className="navHMUA">
-                            <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/hmua" onClick={onClickHandler}>HMUA</NavLink>
+                            <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio/hmua" >HMUA</NavLink>
                         </div>
                     </div>
                     :

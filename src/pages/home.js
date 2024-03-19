@@ -1,4 +1,3 @@
-
 import GitHubRepos from '../components/animated/animatedGitHub'
 import './style.css';
 import { NavLink } from 'react-router-dom';
