@@ -1,10 +1,10 @@
 import './style.css';
 
 const Terms = () => {
-    
+    window.scrollTo(0,0)
     return (
         <div className="terms">
-            <h1 className="title">Website Usage Terms & Conditions</h1>
+            <h1 className="termTitle">Website Usage Terms & Conditions</h1>
             <p>Welcome to my website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with my privacy policy govern NJTD’s relationship with you in relation to this website.</p>
             <p> If you disagree with any part of these terms and conditions, please do not use my website.</p>
             <p>The term ‘NJTD’ or 'me' refers to the owner of the website whose registered office is in Warrington, WA5, UK.</p>

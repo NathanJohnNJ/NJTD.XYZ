@@ -18,7 +18,7 @@
     top: var(--_y);
     left: var(--_x);
     background-color: var(--infoCol);
-    color: var(--mainBG);
+    color: var(--whiteCol);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@
 }
 .child:hover{
   font-weight: bolder;
-  background-color: var(--accentCol);
+  background-color: var(--contrastCol);
   color: var(--infoCol);
   animation-play-state:paused;
   z-index:9999;
@@ -44,8 +44,8 @@
 }
 #unit:hover{
   font-weight: bolder;
-  background-color: var(--titleCol);
-  color: var(--accentCol);
+  background-color: var(--focalCol);
+  color: var(--contrastCol);
 }
  /* 1 */
   .mainDiv > .child:nth-child(1){--_x:9%; --_y:30.5%}   /* PYTHON */

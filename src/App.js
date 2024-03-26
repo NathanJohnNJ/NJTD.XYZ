@@ -17,11 +17,16 @@ function App() {
   const [themeCol, setThemeCol] = useState("");
   const [colours, setColours] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
+  const [colors, setColors] = useState({hex: "#042AC1", rgb: {r: 4, g: 42, b: 139}, hsl: {h: 228, s: '98%', l: '39%'}})
+  const [red, setRed] = useState(4);
+  const [green, setGreen] = useState(42);
+  const [blue, setBlue] = useState(139);
+  const [borderCol, setBorderCol] = useState("#000000")
 
   return (
     <div className="App">
       <div className="appNavBar">
-        <NavBar themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode}/>
+        <NavBar themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode} colors={colors} setColors={setColors} red={red} blue={blue} green={green} setBlue={setBlue} setRed={setRed} setGreen={setGreen} borderCol={borderCol} setBorderCol={setBorderCol}/>
       </div>
       <div className="appOutlet">      
         <Routes> 

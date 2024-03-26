@@ -54,8 +54,8 @@
     text-justify: center;
     font-size: 3.5vw;
     font-weight:500;
-    color: var(--secondaryBG);
-    background-color: var(--titleCol);
+    color: var(--lightCol);
+    background-color: var(--focalCol);
     border-radius: 20px;
     border: none;
 }

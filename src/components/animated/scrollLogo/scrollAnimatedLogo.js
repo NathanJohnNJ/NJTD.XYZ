@@ -5,11 +5,9 @@ import white2 from './layers/2white.png';
 import thirdLayer from './layers/3.png';
 import fourthLayer from './layers/4.png';
 import fifthLayer from './layers/5.png';
-import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const ScrollAnimatedLogo = (props) => {
-    const ref = useRef(null);
     const { scrollYProgress } = useScroll();
     const newScroll = useSpring(scrollYProgress, {
         bounce: 0.25,
@@ -68,9 +66,8 @@ const ScrollAnimatedLogo = (props) => {
         scale: useSpring(scaledY2),
     }
     let layers = [first, second, third, fourth, fifth]
-
     return(
-        <motion.div ref={ref} style={{ position: 'relative', display: "flex", flexDirection: "column", justifyContent: "center", alignItems:"center", width: "fitContent", height: "300vh", overflowX: "hidden", overflowY: "scroll", opacity: fadeInOut }}>
+        <motion.div style={{ position: 'relative', display: "flex", flexDirection: "column", justifyContent: "center", alignItems:"center", width: "fitContent", height: "300vh", overflowX: "hidden", overflowY: "scroll", opacity: fadeInOut }}>
             {layers.map((layer, i) => {
         return(
             <motion.div 

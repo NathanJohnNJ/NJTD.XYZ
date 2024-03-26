@@ -33,7 +33,6 @@ const GitHubRepos = () => {
       console.log(err)
     }
 }
-
 // eslint-disable-next-line
 useEffect(() => { // eslint-disable-next-line
 fetchData()  // eslint-disable-next-line
@@ -46,8 +45,8 @@ return (
     visible: { opacity: 1 },
   }}
   initial="hidden"
-  whileInView="visible"
-  transition={{ duration: 0.5, ease: "easeIn"}}
+                          whileInView="visible"
+                          transition={{ duration: 0.5, ease: "easeIn"}}
   >
     <h1 style={{position: 'sticky'}}>Recently Updated GitHub Repositories</h1>
     <div className="mainReposDiv" style={{ position: 'relative', display: 'flex', width: "fitContent"}}>

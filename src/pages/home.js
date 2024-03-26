@@ -5,6 +5,7 @@ import ScrollAnimatedLogo from '../components/animated/scrollLogo/scrollAnimated
 import { motion } from 'framer-motion';
 
 const Home = (props) => {
+    window.scrollTo(0,0)
     
     return (
         <div className="home">

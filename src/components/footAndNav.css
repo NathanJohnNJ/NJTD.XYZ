@@ -2,32 +2,37 @@
 .navbar{
   width: 100%;
   max-width: 1200px;
+  height: 200px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--lightCol);
 }
 
 .navFirst{
   position:fixed;
   top:0;
+  /* left:0; */
   width: 100%;
   padding-top:2vh;
   z-index: 999999;
   max-width: 1200px;
-  height: 105px; 
+  height: 115px; 
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(3, 35px);
-  background-color: var(--secondaryBG);
+  background-color: var(--lightCol);
 }
 .navColours{
   display: flex;
   align-items:safe;
   justify-content: space-evenly;
-  margin-top: 105px;
+  margin-top: 115px;
   width: 100%;
   max-width: 1200px;
+  background-color: var(--lightCol);
 }
 .navGap{
     grid-column: 1/12;
@@ -46,8 +51,8 @@
   grid-row: 1/4;
 }
 .navbarLogo{
-  width: 10vmax;
-  height: 10vmax;
+  width: 8vmax;
+  height: 8vmax;
 }
 .navbarLogo:hover{
   scale: 1.1
@@ -76,21 +81,22 @@
     grid-column: 3/4;
 }
 .page{
-  font-size: 3vmin;
+  font-size: 2.5em;
   font-family: 'League Spartan', sans-serif;
   font-weight: 800;
   text-decoration: none;
   color: var(--infoCol)
 }
 .current{
-  font-size: 4vmin;
+  font-size: 3em;
   font-family: 'League Spartan', sans-serif;
   font-weight: 800;
   text-decoration: none;
-  color: var(--accentCol);
+  color: var(--contrastCol);
 }
-.page:hover, .current:hover{
-  color: var(--accentCol);    
+.page:hover{
+  color: var(--contrastCol);  
+  font-size: 3em;  
 }
   
 /********* FOOTER *********/
@@ -102,7 +108,7 @@
   align-items: center;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  background-color: var(--secondaryBG);
+  background-color: var(--lightCol);
   color: var(--infoCol);
 }
 .footerImgDiv{
@@ -127,7 +133,7 @@
 }
 .github{
     text-decoration: none;
-    color: var(--titleCol);
+    color: var(--darkCol);
     font-size: 1.9vmin;
     font-family: 'Raleway', sans-serif;
     font-weight:600;
@@ -135,7 +141,7 @@
 }
 .github:hover{
     text-decoration: none;  
-    color: var(--accentCol);
+    color: var(--contrastCol);
 }
 .footPrivacy{
   grid-column: 3/4;
@@ -165,3 +171,8 @@
   .navbar{width: 100vw}
   .navFirst{width: 100vw}
 }
+/* @media screen and (min-width: 1200px){
+  .navFirst{
+    left: 50%; transform: translateX(-50%)
+  }
+} */

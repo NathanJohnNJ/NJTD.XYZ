@@ -10,7 +10,7 @@
     background-color: var(--infoCol);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    color: var(--accentCol);
+    color: var(--contrastCol);
 }
 .btnText{
     margin-top: -12px;
@@ -19,7 +19,7 @@
     animation: counterSpin 2.5s infinite linear;
 }
 .pMBtn:hover{
-    background-color: var(--accentCol);
+    background-color: var(--contrastCol);
     color: var(--infoCol);
     font-weight: 900;
     animation: spin 2.5s infinite linear;
@@ -64,7 +64,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondaryBG);
+    background-color: var(--lightCol);
 }
 
 

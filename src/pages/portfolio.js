@@ -6,6 +6,7 @@ import JS from '../components/animated/animatedPortfolio/javascript';
 import ReactJS from '../components/animated/animatedPortfolio/reactjs';
 
 const Portfolio = () => {
+    window.scrollTo(0,0)
 
     return (
         <div className="portfolioPage">

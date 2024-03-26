@@ -11,12 +11,24 @@
   font-style: normal;
 }
 /********* COLOUR VARIABLES *********/
+/* :root{
+  --whiteCol: hsl(228, 98%, 98%);
+  --lightCol: rgb(6.472, 67.956, 224.902);
+  --focalCol: rgb(4, 42, 139);
+  --darkCol: rgb(2.472187886279357, 25.95797280593325, 85.90852904820765);
+  --blackCol: hsl(228, 98%, 8%);
+  --contrastCol: rgb(251, 213, 116);
+  --infoCol: #3c3c4c;
+  --borderCol: #000000;
+} */
 :root{
-  --mainBG: #F7FFFF;
-  --secondaryBG: #E2EBF1;
-  --infoCol: #878896;
-  --accentCol: #042AC1;
-  --titleCol: #092271;
+  --whiteCol: hsl(228, 99%, 99%);
+  --lightCol: #EEEEEE;
+  --focalCol: #4D4D4D;
+  --darkCol: #323232;
+  --blackCol: hsl(228, 99%, 5%);
+  --contrastCol: rgb(2.472187886279357, 25.95797280593325, 85.90852904820765);
+  --infoCol: #3c3c3c;
   --borderCol: #000000;
 }
 
@@ -24,27 +36,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width:100vw;
   max-width: 1200px;
-  background-color: var(--secondaryBG);
+  background-color: var(--infoCol);
 }
 .appNavBar{
-  background-color: var(--secondaryBG);
+  background-color: var(--lightCol);
   display:flex;
   width: 100%;
 }
 .appOutlet{
-  background-color: var(--mainBG);
+  background-color: var(--whiteCol);
   display:flex;
+  position: relative;
+  top: 0;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1200px;
 }
-/* .appIntro{
-  background-color: var(--mainBG);
-  display:flex;
-} */
 .appLogo{
   position:fixed;
   z-index: 9999;
