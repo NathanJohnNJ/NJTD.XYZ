@@ -19,6 +19,7 @@ import water2 from '../components/hmuaPortfolio/water2.jpg';
 import water3 from '../components/hmuaPortfolio/water3.jpg';
 
 const HMUA = () => {
+    window.scrollTo(0,0)
     
     return (
         <div className="hmuaPage">

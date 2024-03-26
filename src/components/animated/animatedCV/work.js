@@ -12,8 +12,6 @@ const Work = () => {
     const blank = ``
     const contact = `<div><ul><li>Team Manager</li><li>Supervisor</li><li>Floor Walker</li><li>Complaints Handler</li><li>Customer Care Advisor</li><li>Telesales/Aftersales</li></ul></div>`
     const hmua = `<div><ul><li>Setting my own targets</li><li>Analysing my own KPIs</li><li>Keeping track of my own stock</li><li>Managing my own column</li><li>Managing my own marketing</li></ul></div>`
-
-
     const njtd = { date: "May 2022 – Present", role: "Freelance Software Developer/Full-Stack Developer", company: "NJTD", html: blank}
     const restart = { date: "December 2021 – March 2023", role: "", company: "Restart Scheme, Ingeus", html: blank}
     const callCentre = { date: "April 2017 - December 2021 ", role: "Various Contact Centre roles across the north of England", company: "Various Employers", html: contact}

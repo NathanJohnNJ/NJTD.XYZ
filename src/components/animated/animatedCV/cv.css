@@ -8,38 +8,40 @@
 .envContainer{
   position: sticky;
   top: 350px;
-  width: 100%;
+  width: 100%; 
   height: 40vh
 }
 
 /*************** MAIN CV ****************/
 .mainCV{
-  color: black;
+  color: var(--blackCol);
   display:flex;
   flex-direction:column;
   align-items: center;
   justify-content: center;
   width: 100%;
   background-color: white;
-  position: relative;
+  /* position: relative; */
+  overflow-y: scroll;
 }
 .mainCV h1{
   font-family: 'League Spartan', sans-serif;
   text-align: center;
+  margin-top: 1vh;
   margin-bottom: -14px;
   font-size:5.8vmin;
   letter-spacing: -2px;
 }
 #line2{
-  font-weight:100;
-  color: #b5b5b5;
+  font-weight:300;
+  color: var(--infoCol);
   letter-spacing: 10px;
   margin-top: 5px;
   margin-left: 10px;
   text-align: center;
 }
 .line{
-  background-color: var(--titleCol);
+  background-color: var(--focalCol);
   width: 98%;
   height: 1px;
   margin-top: 15px;
@@ -49,19 +51,19 @@
     width: 95%;
     height: 2px;
     margin-top: 5px;
-    margin-bottom: 2.5vh;
   }
 .cvContent{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 .leftCV{
   display:flex;
   flex-direction: column;
-  margin-left: 20%;
+  margin-right: 2%;
   width: 40%;
 }
 .rightCV{
@@ -69,21 +71,22 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-right:20%;
+  margin-left:2%;
   width: 40%;
+  margin-top: -5%;
 }
 .list{
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: -30px;
+  margin-left: -15px;
 }
 .listTitle{
   font-family: 'League Spartan', sans-serif;
   text-align: left;
   margin-bottom: -15px;
   font-size:1.7vmin;
-  color:var(--titleCol);
+  color:var(--focalCol);
   padding: 3px;
   border-bottom: 1.6px solid var(--infoCol);
   border-left: 1.6px solid var(--infoCol);
@@ -95,7 +98,7 @@
     margin-bottom: -10px;
     width: fit-content;
     font-size:2vw;
-    color:var(--titleCol);
+    color:var(--focalCol);
     padding: 3px;
     border-bottom: 1.6px solid var(--infoCol);
     border-right: 1.6px solid var(--infoCol);
@@ -106,14 +109,14 @@
     margin-bottom: -10px;
     width: fit-content;
     font-size:2vw;
-    color:var(--titleCol);
+    color:var(--focalCol);
     padding: 6px 0px 0px 6px;
     border-top: 1.6px solid var(--infoCol);
     border-left: 1.6px solid var(--infoCol);
   }
 .listItem:hover{
-  scale: 1;
-  color: var(--accentCol);
+  scale: 1.2;
+  color: var(--lightCol);
   cursor:pointer;
 }
 .dblList{
@@ -137,20 +140,23 @@
   margin-left: 20%;
   margin-top: 5%;
 }
-.moreInfoBtn{
+.moreInfoTitle{
   font-family: 'League Spartan', sans-serif;
     width: fit-content;
-    font-size:2.5vmin;
-    color:var(--titleCol);
-    padding: 6px;
+    margin-bottom: -10px;
+    font-size:2vw;
+    color:var(--focalCol);
+    padding: 6px 0px 0px 6px;
     border-top: 1.6px solid var(--infoCol);
     border-left: 1.6px solid var(--infoCol);
 }
-.moreInfoBtn:hover{
-  scale: 1.5;
-  color: var(--accentCol);
-  cursor: pointer;
+.moreInfoSection{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: -60px;
 }
+
 
 /*************** CONTACT ****************/
 .cvContactListTitle{
@@ -158,7 +164,7 @@
   text-align: left;
   font-size:2vw;
   font-weight:700;
-  color:var(--titleCol);
+  color:var(--focalCol);
   padding: 6px 6px 0px 0px;
   border-top: 1.6px solid var(--infoCol);
   border-right: 1.6px solid var(--infoCol);
@@ -212,7 +218,7 @@
  font-family: 'Poppins', sans-serif;
  font-size: 1.1vw;
  scale:0.85;
- color: var(--infoCol);
+ color: var(--blackCol);
  grid-column: 3/4;
  text-align: left;
  text-justify: center;
@@ -220,7 +226,7 @@
 }
 .contactListItem:hover{
  scale: 1;
- color: var(--accentCol);
+ color: var(--focalCol);
  cursor: pointer;
 }
 .mapModal{
@@ -240,7 +246,7 @@
 .cvModal{
   width: 60vw;
   height: 60vh;
-  margin-left: 15vw;
+  margin-left: 15.75vw;
   margin-top: 15vh;
   display: flex;
   flex-direction: column;
@@ -250,9 +256,10 @@
   font-family: 'Poppins', sans-serif;
   font-size: 2vmin;
   padding: 5%;
-  background-color: var(--mainBG);
+  background-color: var(--whiteCol);
   box-shadow: 2px 4px 4px 6px rgba(0, 0, 0, 0.5), -2px -4px 4px 6px rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
+  border-radius: 25px;
 }
 .mainModalDiv{
   margin-top: 1vh;
@@ -263,14 +270,14 @@
   clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
   width: 3vmin;
   height: 3vmin;
-  background-color: var(--accentCol);
+  background-color: var(--darkCol);
   display:flex;
   align-self: flex-end;
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.5), -1px -1px 4px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: -3vh;
 }
 .close:hover{
-  background-color: var(--titleCol);
+  background-color: var(--focalCol);
 }
 .mTitle{
   text-align: center;
@@ -281,6 +288,5 @@
 }
 .providerTitle{
   margin-top: -3vh;
-  /* margin-bottom: -3vh; */
   text-align: center;
 }

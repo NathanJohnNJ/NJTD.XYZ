@@ -35,7 +35,6 @@ const Skills = () => {
             <h2 className="skillsTitle">Transferrable Skills</h2>
             <ul className="list">
                 {newSkills.map((skill, i) => {
-                    console.log(skill.skill)
                     return (
                        <li key={i} className='listItem' onClick={() => openModal(skill)}>{skill.skill}</li>
                     )

@@ -75,7 +75,6 @@ const school = `<div>Whilst attending St. Gregory's RCHS I gained GCSE's in:<ul>
             <h2 className="eduTitle">Relevant Education</h2>
             <ul className="list">
                 {newEducation.map((course, i) => {
-                    console.log(course.course)
                     return (
                        <li key={i} className='listItem' onClick={() => openModal(course)}><strong>{course.date} - </strong>{course.course} - {course.provider}</li>
                     )

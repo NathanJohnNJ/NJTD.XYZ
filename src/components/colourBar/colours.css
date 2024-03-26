@@ -1,14 +1,15 @@
 /********* COLOUR PICKER *********/
 .colourPicker{
     display: flex;
+    width:100%;
+    max-width: 1200px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: safe;
-    margin-top: 1.5%;
+    margin: 20px;
     z-index: 9999;
-    margin-bottom: 5px;
     height: auto;
-    background-color: var(--secondaryBG);
+    background-color: var(--lightCol);
   }
   .cPList{
     display:none;
@@ -25,16 +26,39 @@
     border-color: var(--borderCol);
     border-width:3px;
     border-radius:5%;
-    width:35px;
-    height:35px;
-    margin-top: 5px;
+    width:56px;
+    height:56px;
   }
   .listModal{
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-color: var(--secondaryBG);
+    background-color: var(--darkCol);
     margin-top:60px;
+  }
+  .anyColModal{
+    /* position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightCol);
+    width: 100vw;
+    height: 100vh;
+  }
+  .closeCols{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--darkCol);
+    text-shadow: 2px 2px 4px var(--whiteCol), -2px -2px 4px var(--whiteCol), -2px 2px 4px var(--whiteCol), 2px -2px 4px var(--whiteCol);
+  }
+  .closeCols:hover{
+    color: var(--whiteCol);
+    text-shadow: 2px 2px 4px var(--darkCol), -2px -2px 4px var(--darkCol), -2px 2px 4px var(--darkCol), 2px -2px 4px var(--darkCol);
   }
   .pickerList{
     margin:20px;
@@ -43,192 +67,12 @@
   #colourPicker{
     z-index: 9999;
   }
-  .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker, .listBtn{
+  .miniColPicker, .listBtn, .darkLight{
     border-style:solid;
     border-color: var(--borderCol);
     border-width:3px;
     border-radius: 5%;
     margin-bottom:10px;
-    z-index: 9999;
-    margin-left: 5vw;
-    margin-right:5vw;
-  }
-  .col1{
-    /* mainBG */
-    background-color: #F7FFFF;                            
-    height: 10px;
-    width: 50px;
-  }
-  .col2{
-    /* secondaryBG */
-    background-color: #E2EBF1;
-    height: 10px;
-    width: 50px;
-  }
-  .col3{
-    /* infoCol */
-    background-color: #878896;
-    height: 10px;
-    width: 50px;
-  }
-  .col4{
-    /* accentCol */
-    background-color: #042AC1;
-    height: 10px;
-    width: 50px;
-  }
-  .col5{
-    /* titleCol */
-    background-color: #092271;
-    height: 10px;
-    width: 50px;
-  }
-  
-  .blueSet:hover .col1{
-    background-color: #092271;
-  }
-  .blueSet:hover .col2{
-    background-color: #042AC1;
-  }
-  .blueSet:hover .col3{
-    background-color: #CBC9DD;
-  }
-  .blueSet:hover .col4{
-    background-color: #E2EBF1;
-  }
-  .blueSet:hover .col5{
-    background-color: #F7FFFF;
-  }
-  
-  .greenSet .col1{
-    background-color: #F3FEEA;
-  }
-  .greenSet .col2{
-    background-color: #CAE1C7;
-  }
-  .greenSet .col3{
-    background-color: #8EB68A;
-  }
-  .greenSet .col4{
-    background-color: #2E8831;
-  }
-  .greenSet .col5{
-    background-color: #19671D;
-  }
-
-  .greenSet:hover .col1{
-    background-color: #19671D;
-  }
-  .greenSet:hover .col2{
-    background-color: #2E8831;
-  }
-  .greenSet:hover .col3{
-    background-color: #8EB68A;
-  }
-  .greenSet:hover .col4{
-    background-color: #CAE1C7;
-  }
-  .greenSet:hover .col5{
-    background-color: #F3FEEA;
-  }
-  
-  .redSet .col1{
-    background-color: #FFF0EF;
-  }
-  .redSet .col2{
-    background-color: #FFDDD5;
-  }
-  .redSet .col3{
-    background-color: #C3806E;
-  }
-  .redSet .col4{
-    background-color: #AB260C;
-  }
-  .redSet .col5{
-    background-color: #8A130C;
-  }
-  
-  
-  .redSet:hover .col1{
-    background-color: #8A130C;
-  }
-  .redSet:hover .col2{
-    background-color: #AB260C;
-  }
-  .redSet:hover .col3{
-    background-color: #C3806E;
-  }
-  .redSet:hover .col4{
-    background-color: #FFDDD5;
-  }
-  .redSet:hover .col5{
-    background-color: #FFF0EF;
-  }
-  
-  .orangeSet .col1{
-    background-color: #FFEFD1;
-  }
-  .orangeSet .col2{
-    background-color: #EFD3AC;
-  }
-  .orangeSet .col3{
-    background-color: #D5A677;
-  }
-  .orangeSet .col4{
-    background-color: #DB7B1D;
-  }
-  .orangeSet .col5{
-    background-color: #DB5816;
-  }
-  
-  
-  .orangeSet:hover .col1{
-    background-color: #DB5816;
-  }
-  .orangeSet:hover .col2{
-    background-color: #DB7B1D;
-  }
-  .orangeSet:hover .col3{
-    background-color: #D5A677;
-  }
-  .orangeSet:hover .col4{
-    background-color: #EFD3AC;
-  }
-  .orangeSet:hover .col5{
-    background-color: #FFEFD1;
-  }
-  
-  .greySet .col1{
-    background-color: #F2F2F2;
-  }
-  .greySet .col2{
-    background-color: #929292;
-  }
-  .greySet .col3{
-    background-color: #616161;
-  }
-  .greySet .col4{
-    background-color: #313131;
-  }
-  .greySet .col5{
-    background-color: #000000;
-  }
-  
-  
-  .greySet:hover .col1{
-    background-color: #000000;
-  }
-  .greySet:hover .col2{
-    background-color: #313131;
-  }
-  .greySet:hover .col3{ 
-    background-color: #616161;
-  }
-  .greySet:hover .col4{
-    background-color: #929292;
-  }
-  .greySet:hover .col5{
-    background-color: #F2F2F2;
   }
   
   .darkLight{
@@ -238,20 +82,20 @@
     width:50px;
   }
   .dark{
-    background-color: var(--titleCol);
+    background-color: var(--darkCol);
     width:25px;
     height: 50px;
   }
   .light{
-    background-color: var(--secondaryBG);
+    background-color: var(--lightCol);
     width:25px;
     height: 50px;
   }
   .darkLight:hover .dark{
-    background-color: var(--secondaryBG);
+    background-color: var(--lightCol);
   }
   .darkLight:hover .light{
-    background-color: var(--titleCol);
+    background-color: var(--darkCol);
   }
 
   @media screen and (max-width: 750px){

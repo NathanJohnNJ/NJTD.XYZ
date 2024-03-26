@@ -1,10 +1,11 @@
 import './style.css';
 
 const Privacy = () => {
+    window.scrollTo(0,0)
 
     return (
         <div className="privacy">
-            <h1 className="title">NJTD<br></br>Privacy Policy</h1>
+            <h1 className="privTitle">NJTD<br></br>Privacy Policy</h1>
             <div>
                 <h2 className="privacyHeading">Contact Details:</h2>
                 <ul className="privacyDetails">

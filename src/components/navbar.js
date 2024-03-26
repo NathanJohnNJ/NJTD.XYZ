@@ -28,7 +28,6 @@ const NavBar = (props) => {
                 </div>
                 <div className="navLogo">
                     <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoDecider()} alt="Logo" className="navbarLogo"></img></NavLink>
-                {/* <MiniLogo page={props.page}/> */}
                 </div>
                 <div className="navCV">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} >CV</NavLink>
@@ -53,8 +52,8 @@ const NavBar = (props) => {
                 </div>
             </div>
             <div className="navColours">
-                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
-                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
+                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} red={props.red} blue={props.blue} green={props.green} setBlue={props.setBlue} setRed={props.setRed} setGreen={props.setGreen} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
+                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} red={props.red} blue={props.blue} green={props.green} setBlue={props.setBlue} setRed={props.setRed} setGreen={props.setGreen} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
             </div>
         </div>
     )

@@ -3,12 +3,10 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import CVContent from './cvContent';
 
-
 const EnvelopedCV = () => {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({target: ref});
 
-    
     function Flap(){
         const zPosAnim = useTransform(scrollYProgress, [0, 0.1, 0.35], [4, 2, 1]);
         const bgColour = useTransform(scrollYProgress, [0, 0.05, 0.2], ["#a18565", "#3e352a",  "#7d6a55"]);
@@ -50,7 +48,6 @@ const EnvelopedCV = () => {
             position: "absolute",
             top: 0,
             left: 0,
-
             borderRadius: "10px",
         }
         return(
@@ -110,22 +107,22 @@ const EnvelopedCV = () => {
     }
     function Letter(){
         const zPosAnim = useTransform(scrollYProgress, [0, 0.8], [2, 3]);
-        const letterHeight = useTransform(scrollYProgress, [0, 0.5, 0.9, 1], ["100%", "150%", "200%", "250%"]);
-        const letterScale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1.2]);
-        const topAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], ["40px", "-390px", "20px"]);
+        const letterHeight = useTransform(scrollYProgress, [0, 0.5, 0.8], ["100%", "150%", "180%"]);
+        const letterScale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1]);
+        const topAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], ["40px", "-450px", "0px"]);
         const shadowAnim = useTransform(scrollYProgress, [0, 1], ["0px 0px 0px 0px rgb(75, 74, 74)", "2px 2px 8px 4px rgb(75, 74, 74)"]);
+        const marginTopLetter = useTransform(scrollYProgress, [0.4, 1], ["0px", "-200px"])
         const letterStyles = {
             backgroundColor: "white",
             overflowY: "scroll",
             overflowX: "hidden",
             padding: "1%",
-            // boxShadow: "2px 2px 6px 2px rgb(75, 74, 74)",
             position: "absolute",
             right:0,
             left:0,
             width: "auto",
-            // height: "100%"
-            height: letterHeight
+            height: letterHeight,
+            marginTop: marginTopLetter
         }
         return(
             <motion.div
@@ -148,7 +145,7 @@ const EnvelopedCV = () => {
                 <Envelope />
             </motion.div>
         </div>
-    )
+    ) 
 };
 
 export default EnvelopedCV;

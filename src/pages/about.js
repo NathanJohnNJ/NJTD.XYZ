@@ -1,11 +1,12 @@
 import './style.css';
-import Logo from '../components/logo/logo.js'
+// import Logo from '../components/logo/logo.js'
 import Nathan from '../components/about/nathan.js';
 import MoreInfo from '../components/about/more.js';
 import MyImg from '../components/about/myImg.js';
 import { useEffect } from 'react';
 
 const About = (props) => {
+  window.scrollTo(0,0)
 
   useEffect(()=> {
     const N = document.getElementById("nathan")
@@ -57,7 +58,7 @@ const About = (props) => {
             </p>
           </div>
           <div className="sixth">
-            <Logo color={props.themeCol}/>
+            {/* <Logo color={props.themeCol}/> */}
           </div>
           <div className="seventh">
             <MoreInfo />

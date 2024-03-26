@@ -3,11 +3,15 @@ import CVContact from './cvContact';
 import Skills from './skills';
 import Education from './education';
 import Work from './work';
+import MoreInfo from './moreInfo';
 
 const CV = () => {
 
     return (
-        <div className="mainCV">
+        <div className="mainCV"
+        style={{
+            overflowY: "scroll"
+        }}>
             <h1>NATHAN JOHN</h1>
             <h1 id="line2">H   Y   N   E   S</h1>
             <div className="line"></div>
@@ -20,7 +24,7 @@ const CV = () => {
                 <div className="rightCV">
                     <Work />
                     <div className="moreInfo">
-                        <h2 className="moreInfoBtn">MORE INFO</h2>
+                        <MoreInfo />
                     </div>
                 </div>
             </div>
