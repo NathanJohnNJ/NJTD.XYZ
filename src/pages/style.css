@@ -315,15 +315,105 @@
     box-shadow: 3px 1px 4px var(--blackCol) inset, -3px -1px 4px var(--blackCol) inset,1px -3px 4px var(--blackCol) inset, -1px 3px 4px var(--blackCol) inset;
 }
 .vogue{
-    margin-bottom: 8vh;                                                                                                                                     
+    margin-bottom: 8vh;        
 }
-
-  
-  /*************** TERMS & PRIVACY ****************/
- .terms{
-    height: 100vh;
+  /*************** PRIVACY ****************/
+ .privacy{
+    height: 100%;
+    color: var(--blackCol); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vh;
+ }
+ .privSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .privTitle{
+    font-size: 3vw;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--darkCol);
+    text-shadow: 3px 2px 4px var(--blackCol);
+    text-align:center;
+ }
+ .privacyHeading{
+    display:flex;
+    font-size: 1.2vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--focalCol); 
+    margin-bottom: -10px;
+ }
+ .leftRight{
+    display: flex;
+    margin-top: 5vh;
+ }
+ .privContact{
+    margin-right: 10vw;
+ }
+ .privacyContactHeading{
+    display:flex;
+    font-size: 2vmin;
+    text-align: left;
+    font-family: 'Geologica', sans-serif;
+    color: var(--focalCol); 
+    margin-bottom: -1vh;
+    align-self: flex-start;
+ }
+ .privacyContactDetails{
+    text-align: left;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1vmax;
+    font-weight: 400;
+    color: var(--blackCol); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+ }
+ .priv{
+    line-height:2px;
+    margin-bottom: -2px;
+    font-weight: 500;
+ }
+ .privacyLink{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vmax;
+    font-weight: 600;
+    color: var(--lightCol); 
+    display: inline-flex;
+    text-decoration: none;
+ }
+ .privacyLink:hover{
+    font-weight: 800;
+    color: var(--contrastCol);
+ }
+.privacyDate{
+    display:flex;
+    align-self: center;
+    font-size: 1vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--infoCol); 
+    justify-self: flex-end;
+    margin-left: 20vw;
+    margin-top: 5vh;
+ }
+
+
+  /*************** TERMS ****************/
+ .terms{
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2vmax;
     font-weight: 400;
     color: var(--blackCol); 
     display: flex;
@@ -332,75 +422,32 @@
     align-items: center;
     width: 80%;
  }
- .privacy{
-    height: 70vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 400;
-    color: var(--blackCol); 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+ .terms p{
+    margin-bottom: -0.5vh;
  }
- .privTitle, .termTitle{
-    font-size: 4.5vw;
+ .termTitle{
+    font-size: 3vmax;
     font-family: 'Geologica', sans-serif;
     font-variation-settings: 'wght' 550;
     font-variation-settings: 'CRSV' 0.5;
     font-variation-settings:  'SHRP' 100;
-    color: var(--blackCol);
-    text-shadow: 3px 1px 4px var(--darkCol);
+    color: var(--darkCol);
+    text-shadow: 3px 2px 4px var(--blackCol);
     text-align:center;
- }
- .privacyHeading{
-    display:flex;
-    font-size: 2vw;
-    text-align: center;
-    font-family: 'Geologica', sans-serif;
-    font-variation-settings: 'wght' 500;
-    font-variation-settings: 'CRSV' 0.5;
-    font-variation-settings:  'SHRP' 100;
-    color: var(--focalCol); 
-    text-shadow: 1px 1px 3px var(--darkCol);
-    margin-bottom: -10px;
- }
- .privacyDetails{
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 400;
-    color: var(--blackCol); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
- .privacyLink{
-    text-align: left;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--lightCol); 
-    display: inline-flex;
-    text-decoration: none;
- }
- .privacyLink:hover{
-    font-weight: 500;
-    color: var(--contrastCol);
- }
- .privacy ul, .privacy li{
-    list-style-position: inside;
-    text-align: left;
-    margin-bottom: 5px;
-    font-size:16px;
  }
  .terms li{
     list-style-position: inside;
     text-align: left;
     margin-bottom: 5px;
-    font-size:12px;
+    font-size: 1.1vmax;
  }
+ .termsHeading{
+    font-weight: 600;
+    margin-bottom: -1.5vh;
+ }
+
+
+  /*************** KEYFRAMES ****************/
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

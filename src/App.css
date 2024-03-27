@@ -40,7 +40,7 @@
   max-width: 1200px;
   background-color: var(--infoCol);
 }
-.appNavBar{
+.appNavBar, .appFooter{
   background-color: var(--lightCol);
   display:flex;
   width: 100%;

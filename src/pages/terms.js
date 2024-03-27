@@ -8,7 +8,7 @@ const Terms = () => {
             <p>Welcome to my website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with my privacy policy govern NJTD’s relationship with you in relation to this website.</p>
             <p> If you disagree with any part of these terms and conditions, please do not use my website.</p>
             <p>The term ‘NJTD’ or 'me' refers to the owner of the website whose registered office is in Warrington, WA5, UK.</p>
-            <p className="privacyHeading">The use of this website is subject to the following terms of use:</p>
+            <p className="termsHeading">The use of this website is subject to the following terms of use:</p>
                 <ul>
                     <li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
                     <li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by me for use by third parties:
