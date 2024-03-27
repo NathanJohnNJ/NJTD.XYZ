@@ -2,6 +2,7 @@ import './colours.css';
 import { useState, useEffect } from 'react';
 import ColorPicker from 'react-color-wheel-picker';
 import Modal from 'react-modal';
+import PickerCloud from '../animated/animatedColour/pickerCloud'
 
 const ColourPicker = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -139,6 +140,36 @@ const ColourPicker = (props) => {
             </div>
         )
     }
+    function defaultbox(){
+        const defaultCol = {hex: "#666666", rgb: {r: 102, g: 102, b: 102}, hsl: {h: 0, s: 0, l: 39.99}}
+        const cols = ["hsl(0, 0%, 98%)", "rgb(165.036, 165.036, 165.036)", "rgb(153, 153, 153)", "rgb(102, 102, 102)", "rgb(63.040791100123606, 63.040791100123606, 63.040791100123606)", "#3c3c3c", "hsl(0, 0%, 8%)" ]
+        const sliceHeight = 75/7
+        return (
+            <div style={{
+                width: "75px",
+                height: "75px",
+                borderColor: props.borderCol,
+                borderRadius: '5px',
+                borderWidth: '3px',
+                borderStyle: 'solid',
+                // display: "flex",
+                // flexDirection: "column"
+            }}
+            onClick = {changeHandler(defaultCol)}>
+                {cols.map((col, i) => {
+                    return(
+                        <div key={i}
+                        style={{
+                            width: "75px",
+                            height: `${sliceHeight}px`,
+                            backgroundColour: {col}
+                        }}></div>
+                    )
+                })}
+                
+            </div>
+        )
+    }
     function colourDown(R, G, B){
         let newR, newG, newB
         if(props.darkMode===true){
@@ -198,8 +229,9 @@ const ColourPicker = (props) => {
         }
 
     return(
-        <div>
+        <div className="anyColourDiv">
         <button id="listBtn" className="pickerBtn" onClick={openModal} onMouseOver={mouseOver} onMouseOut={mouseOut}></button>
+        {/* <button onClick={openModal} className="cloudBtn"><PickerCloud /></button> */}
             <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
@@ -260,7 +292,9 @@ const ColourPicker = (props) => {
                         {colourOpposite(props.red, props.green, props.blue)}
                         {colourBlack(props.colors)}
                     </div>
+                    
                 </div>
+                {/* {defaultbox()} */}
                 </div>
             </Modal>
         </div>

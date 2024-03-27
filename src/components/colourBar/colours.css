@@ -18,6 +18,13 @@
     display: hidden;
     flex-direction: column;
   }
+  .anyColourDiv, .customSet{
+    background:none;
+  }
+  .cloudBtn{
+    background: none;
+    border: none;
+  }
   .pickerBtn{
     display:flex;
     background-image: url('../images/miniPicker.png');
