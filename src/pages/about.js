@@ -1,5 +1,4 @@
 import './style.css';
-// import Logo from '../components/logo/logo.js'
 import Nathan from '../components/about/nathan.js';
 import MoreInfo from '../components/about/more.js';
 import MyImg from '../components/about/myImg.js';
@@ -7,6 +6,10 @@ import { useEffect } from 'react';
 
 const About = (props) => {
   window.scrollTo(0,0)
+  useEffect(() => {
+    props.setHome(false)
+    props.setFooterHeight("100px") // eslint-disable-next-line
+},[])
 
   useEffect(()=> {
     const N = document.getElementById("nathan")
@@ -27,13 +30,12 @@ const About = (props) => {
         J.innerText="J"
       },2000)
     })
-    
   },[])
-
-    return (
-        <div className="aboutPage">
-          {/* <h1 className="title">ABOUT <span id="nathan">N</span><span id="athan" style={{'opacity': '0', 'transform': 'translateY(200px)'}}>athan</span><span id="john" >J</span><span id="ohn" style={{'opacity': '0'}}>ohn</span></h1> */}
-          <div className="aboutTitle">
+  
+  return(
+       <div className="aboutPage">
+         <h1 className="title">ABOUT <span id="nathan">N</span><span id="athan" style={{'opacity': '0', 'transform': 'translateY(200px)'}}>athan</span><span id="john" >J</span><span id="ohn" style={{'opacity': '0'}}>ohn</span></h1>  
+           <div className="aboutTitle">
           <h1 id="title">ABOUT</h1>
           <h1><span id="nathan">N</span><span id="john">J</span></h1>
           </div>
@@ -58,13 +60,13 @@ const About = (props) => {
             </p>
           </div>
           <div className="sixth">
-            {/* <Logo color={props.themeCol}/> */}
-          </div>
+            {/* <Logo color={props.themeCol}/>  */}
+         </div>
           <div className="seventh">
             <MoreInfo />
-          </div>
         </div>
-      );
-    }
+       </div>
+    )
+};
 
 export default About;

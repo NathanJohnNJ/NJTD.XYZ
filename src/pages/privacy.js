@@ -1,8 +1,12 @@
 import './style.css';
+import { useEffect } from 'react';
 
-const Privacy = () => {
+const Privacy = (props) => {
     window.scrollTo(0,0)
-
+    useEffect(() => {
+        props.setHome(false)
+        props.setFooterHeight("100px") // eslint-disable-next-line
+    },[])
     return (
         <div className="privacy">
             <div className="privSection">
@@ -21,7 +25,7 @@ const Privacy = () => {
                             <p className="priv"><strong>E-Mail:</strong> <a href="mailto:nj@njtd.xyz" className="privacyLink">nj@njtd.xyz</a></p>
                         </div>
                     </div>
-                    <h2 className="privacyDate">Date updated: 23/01/24</h2>
+                    <h2 className="privacyDate">Date updated: 01/04/24</h2>
                 </div>
             </div>
         </div>

@@ -1,26 +1,23 @@
 /********* FONTS *********/
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,100;500,0.5,100;750,0.5,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
-  font-family: 'NJTD';
-  src: url(./fonts/NJTDVF.ttf) format('truetype');
+  font-family: 'NJTD-Regular';
+  src: url(./fonts/NJTD-Regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
+};
+@font-face {
+  font-family: 'NJTD-Bold';
+  src: url(./fonts/NJTD-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style:normal
 }
 /********* COLOUR VARIABLES *********/
-/* :root{
-  --whiteCol: hsl(228, 98%, 98%);
-  --lightCol: rgb(6.472, 67.956, 224.902);
-  --focalCol: rgb(4, 42, 139);
-  --darkCol: rgb(2.472187886279357, 25.95797280593325, 85.90852904820765);
-  --blackCol: hsl(228, 98%, 8%);
-  --contrastCol: rgb(251, 213, 116);
-  --infoCol: #3c3c4c;
-  --borderCol: #000000;
-} */
+
 :root{
   --whiteCol: hsl(228, 99%, 99%);
   --lightCol: #EEEEEE;
@@ -42,9 +39,17 @@
 }
 .appNavBar, .appFooter{
   background-color: var(--lightCol);
-  display:flex;
   width: 100%;
 }
+.appNavBar{
+  height: 0px;
+  margin-bottom: 120px;
+  /* position: fixed */
+}
+.noNav{
+  display:none;
+}
+
 .appOutlet{
   background-color: var(--whiteCol);
   display:flex;
