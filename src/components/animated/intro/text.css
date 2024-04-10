@@ -1,0 +1,23 @@
+
+body{
+    background-color: var(--blackCol);
+}
+.text{
+    width: fit-content;
+    font-family: 'League Spartan', sans-serif;
+    display:flex;
+    stroke-dashoffset: 1750; stroke-dasharray: 1750; 
+	font-size: 1.5vmax;
+    stroke-width: 0.15vmax;
+    fill: transparent;
+    background: transparent;
+}
+.text1{
+    animation-delay: 3s;
+}
+svg {
+    display: flex;
+	width: 100vw;
+    height: 100vh; 
+    background: transparent;
+}

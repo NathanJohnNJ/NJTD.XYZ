@@ -4,13 +4,17 @@ import Letter from '../components/animated/animatedCV/envelope';
 // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { NavLink } from 'react-router-dom';
 import {motion, useScroll, useTransform} from 'framer-motion';
-
+import { useEffect } from 'react';
 
 
 const CV = (props) => {
     const { scrollYProgress } = useScroll();
     const opacity = useTransform(scrollYProgress, [0.8, 0.9], [1, 0])
-    // window.scrollTo(0,0);
+    window.scrollTo(0,0);
+    useEffect(() => {
+        props.setHome(false) 
+        props.setFooterHeight("150px")// eslint-disable-next-line
+    },[])
     // gsap.registerPlugin(ScrollToPlugin);
 
     // function autoScroll() {

@@ -217,9 +217,6 @@ const ColourPicker = (props) => {
     }
     function changeHandler(color){
         props.setColors(color)
-        props.setRed(color.rgb.r)
-        props.setGreen(color.rgb.g) 
-        props.setBlue(color.rgb.b)
     }
 
     function setColour(col, hex){
@@ -278,9 +275,9 @@ const ColourPicker = (props) => {
                         justifyContent: 'center',
                         alignItems: 'center'
                         }}>
-                        {colourUp(props.red, props.green, props.blue)}
+                        {colourUp(props.colors.rgb.r, props.colors.rgb.g, props.colors.rgb.b)}
                         {actualColour(props.colors)}
-                        {colourDown(props.red, props.green, props.blue)}
+                        {colourDown(props.colors.rgb.r, props.colors.rgb.g, props.colors.rgb.b)}
                     </div>
                     <div style={{
                         display: "flex",
@@ -289,7 +286,7 @@ const ColourPicker = (props) => {
                         alignItems: 'center'
                         }}>
                         {colourWhite(props.colors)}
-                        {colourOpposite(props.red, props.green, props.blue)}
+                        {colourOpposite(props.colors.rgb.r, props.colors.rgb.g, props.colors.rgb.b)}
                         {colourBlack(props.colors)}
                     </div>
                     

@@ -1,0 +1,76 @@
+.divWithTriggers{
+    display:flex;
+    flex-direction: column;
+    max-width: 1200px;
+    background: none;
+    position:relative;
+}
+#trigger{
+    height: 1px;
+    max-width: 1200px;
+    opacity:0;
+}
+#endTrigger{
+    width: 100vw;
+    max-width: 1200px;
+    height: 0px;
+    opacity:0;
+}
+#gradient{
+    background: linear-gradient(var(--blackCol), var(--whiteCol) 40%) ;
+    width: 100vw;
+    max-width: 1200px;
+    height: 200vh;
+}
+.outerStarsDiv{
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+    width: 100vw;
+    max-width:1200px;           
+    height: 600vh;
+    margin-top: -1vh;
+}
+
+.svgSticky{
+    position: sticky;
+    top:0px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    max-width: 1200px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--blackCol);
+}
+.svgText{
+    font-family: 'NJTD-Regular';
+    font-size: 15vmax;
+    fill: var(--whiteCol);
+    position: sticky;
+    top: 300px;
+    overflow:visible;
+}
+.svgText:hover{
+    font-weight: 900;
+}
+.black{
+    fill: var(--blackCol);
+    height:100vh;
+    width: 100vw;
+    max-width: 1200px;
+    position: sticky;
+    top:0px;
+}
+.foreign{
+    width: 100vw;
+    max-width:1200px;
+    height: 100vh;
+    z-index: 99999;
+    position:relative
+}

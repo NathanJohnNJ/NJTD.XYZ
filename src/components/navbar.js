@@ -1,8 +1,8 @@
 import './footAndNav.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import ColourPicker from './colourBar/colourPicker';
-import PickerList from './colourBar/colourList';
+// import ColourPicker from './colourBar/colourPicker';
+// import PickerList from './colourBar/colourList';
 import logoStill from '../images/logo.png';
 import logoStill2 from '../images/whiteLogo.png';
 
@@ -17,8 +17,8 @@ const NavBar = (props) => {
         }
     }
     return(
-        <div className="navbar">
-            <div className="navFirst">
+        <div className="navbar"  id="navbar">
+            <div className="navFirst" id="navbar">
                 <div className="navGap"></div>
                 <div className="navHome">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} >HOME</NavLink>
@@ -50,10 +50,11 @@ const NavBar = (props) => {
                     <></>
                     }
                 </div>
+            <div className="customDivider">
+                <svg className="navSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="minXminY meet">
+                    <path d="M 0 50 q 100 -50 240 0 q 150 40 320 0 q 150 -30 280 0 q 260 50 360 0 l 0 -50 l -1200 0z" className="shape-fill" strokeWidth="4"/>
+                </svg>
             </div>
-            <div className="navColours">
-                <PickerList themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} red={props.red} blue={props.blue} green={props.green} setBlue={props.setBlue} setRed={props.setRed} setGreen={props.setGreen} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
-                <ColourPicker themeCol={props.themeCol} setThemeCol={props.setThemeCol} colours={props.colours} setColours={props.setColours} darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} red={props.red} blue={props.blue} green={props.green} setBlue={props.setBlue} setRed={props.setRed} setGreen={props.setGreen} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
             </div>
         </div>
     )

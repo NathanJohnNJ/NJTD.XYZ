@@ -1,0 +1,183 @@
+/**********MAIN SECTIONS (REUSEABLE)************/
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+  }
+  .spacer{
+    height: 60vh;
+    display:block;
+    position: relative;
+    overflow: hidden;
+    background: none;
+  }
+  .scrollContainer{
+    height: 600vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:safe;
+    overflow: visible;
+    position: relative;
+  }
+  /**********LOGO SECTION************/
+  .logoScrollContainer{
+    height:400vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:safe;
+    overflow: visible;
+    position: relative;
+  }
+  .logoWrapper{
+    overflow: hidden;
+    background-color: red;
+    position: absolute;
+    display: block;
+  }
+
+  /**********TEXT SECTION************/
+  .texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: 1;
+    height: auto;
+    width: 100%
+  }
+  .leftText{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 3vw;
+    text-align: left;
+    color: var(--darkCol);
+  }
+  .rightText{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 3vw;
+    color: var(--darkCol);
+  }
+  .textColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 31%;
+    position: relative;
+    overflow:hidden;
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    width:100%;
+    position:relative;
+    
+  }
+  #present{
+    text-align: center;
+    margin-left: -5vw;
+    color:var(--infoCol);
+  }
+  #future{
+    text-align: right;
+    color: var(--focalCol)
+  }
+  .heading{
+    margin-bottom: -1vh;
+    letter-spacing: 2px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 800;
+  }
+  .para{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+  }
+  .midSpacer{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width:35%;
+    display:block;
+    content: "";
+  }
+  .nonText{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 34%
+  }
+  .homeNavLink{
+    text-decoration: none;
+    color: var(--contrastCol)
+  }
+  .homeNavLink:hover{
+    text-decoration: none;
+    color: var(--darkCol)
+  }
+  #react{
+    margin-bottom: -1vh;
+    letter-spacing: 2px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 800;
+    text-align: left;
+    margin-top: -2.5vh;
+  }
+  #oneLine{
+    display:flex;
+  }
+  #first{
+    margin-bottom: -1vh;
+    margin-top: -1.6vh;
+    margin-left: 1vw;
+  }
+
+  /**********GIT SECTION************/
+  .gitContainer{
+    background: none;
+    margin-bottom: 5vh;
+  }
+
+
+  /**********NAVBAR SECTION************/
+  .homeNav{
+    opacity:0;
+  }
+  .navTransition{
+    animation: navTrans;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes navTrans{
+    from {opacity: 0}
+    to {opacity: 1}
+  } 

@@ -2,19 +2,18 @@
 .navbar{
   width: 100%;
   max-width: 1200px;
-  height: 200px;
+  height: 150px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--lightCol);
+  overflow-y:visible
 }
-
 .navFirst{
   position:fixed;
   top:0;
-  /* left:0; */
   width: 100%;
   padding-top:2vh;
   z-index: 999999;
@@ -22,17 +21,26 @@
   height: 115px; 
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(3, 35px);
+  grid-template-rows: repeat(3, 35px), 150px;
   background-color: var(--lightCol);
 }
-.navColours{
-  display: flex;
-  align-items:safe;
-  justify-content: space-evenly;
-  margin-top: 115px;
+.customDivider svg{
+  fill: var(--lightCol);
+  overflow: visible;
+}
+.navSVG{
+  position: absolute;
+  top: 120px;
+  left:0;
+  fill: blue;
+  z-index: 99999;
+}
+.navSVG, .footSVG{
   width: 100%;
-  max-width: 1200px;
-  background-color: var(--lightCol);
+}
+.shape-fill{
+  fill:var(--lightCol);
+  width:100%;
 }
 .navGap{
     grid-column: 1/12;
@@ -51,8 +59,11 @@
   grid-row: 1/4;
 }
 .navbarLogo{
-  width: 8vmax;
-  height: 8vmax;
+  width: 10vmax;
+  height: 10vmax;
+  max-width:116px;
+  max-height: 116px;
+  margin-top: -8px;
 }
 .navbarLogo:hover{
   scale: 1.1
@@ -73,6 +84,7 @@
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1;
+    margin-top: 4vh;
 }
 .navDeveloper{
     grid-column: 1/2;
@@ -103,17 +115,42 @@
 .footer{
   width: 100%;
   max-width: 1200px;
-  height: 120px;
-  display: grid;
+  position: relative;
+  bottom:0;
   align-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   background-color: var(--lightCol);
   color: var(--infoCol);
+  margin-top: 7vh;
 }
+.footDivider svg {
+  position: absolute;
+  display: block;
+  bottom:150px;
+  width: 100%;
+  overflow: visible;
+  fill: var(--lightCol);
+}
+.footDivider {
+  width:100%;
+}
+.mainFooter{
+  width: 100%;
+  max-width: 1200px;
+  height: 120px;
+  position: relative;
+  bottom:0;
+  align-items: center;
+  background-color: var(--lightCol);
+  color: var(--infoCol);
+  margin-top: 7vh;
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
 .footerImgDiv{
   grid-column: 2/3;
-  grid-row: 2/4;
+  grid-row: 1/3;
 }
 .footerLogo{
   width: 110px;

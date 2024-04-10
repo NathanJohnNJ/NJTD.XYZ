@@ -1,4 +1,5 @@
 import './App.css';
+import './pages/style.css'
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react'; 
 import Home from './pages/home';
@@ -10,39 +11,45 @@ import Privacy from './pages/privacy';
 import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
-
   const [themeCol, setThemeCol] = useState("");
   const [colours, setColours] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
-  const [colors, setColors] = useState({hex: "#042AC1", rgb: {r: 4, g: 42, b: 139}, hsl: {h: 228, s: '98%', l: '39%'}})
-  const [red, setRed] = useState(4);
-  const [green, setGreen] = useState(42);
-  const [blue, setBlue] = useState(139);
-  const [borderCol, setBorderCol] = useState("#000000")
+  const [colors, setColors] = useState({})
+  const [borderCol, setBorderCol] = useState("#000000");
+  const [home, setHome] = useState(true)
+  const [footerHeight, setFooterHeight] = useState("100px")
+
+  function checkForHome(){
+    if(!home){
+      return <div className="appNavBar" id="navbarDiv">
+      <NavBar themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode} colors={colors} setColors={setColors} borderCol={borderCol} setBorderCol={setBorderCol}/>
+    </div>
+    } else {
+      return <div className="noNav"/>
+    }
+  }
 
   return (
     <div className="App">
-      <div className="appNavBar">
-        <NavBar themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} darkMode={darkMode} setDarkMode={setDarkMode} colors={colors} setColors={setColors} red={red} blue={blue} green={green} setBlue={setBlue} setRed={setRed} setGreen={setGreen} borderCol={borderCol} setBorderCol={setBorderCol}/>
-      </div>
-      <div className="appOutlet">      
+      
+      {checkForHome()}
+      <div className="appOutlet">
         <Routes> 
-          <Route key="home" index element={<Home darkMode={darkMode} />} />
-          <Route key="about" path="about" element={<About darkMode={darkMode} themeCol={themeCol} />} />
-          <Route key="hmua" path="portfolio/hmua" element={<HMUA darkMode={darkMode} />} />
-          <Route key="developer" path="portfolio/developer" element={<Portfolio darkMode={darkMode} />} />
-          <Route key="portfolio" path="portfolio" element={<Portfolio darkMode={darkMode}  />} />
-          <Route key="codes" path="codes" element={<Portfolio darkMode={darkMode} />} />
-          <Route key="cv" path="cv" element={<CV darkMode={darkMode} />} />
-          <Route key="terms" path="terms" element={<Terms darkMode={darkMode} />} />
-          <Route key="privacy" path="privacy" element={<Privacy darkMode={darkMode} />} />
+          <Route key="home" index element={<Home darkMode={darkMode} setHome={setHome} themeCol={themeCol} setThemeCol={setThemeCol} colours={colours} setColours={setColours} setDarkMode={setDarkMode} colors={colors} setColors={setColors} borderCol={borderCol} setBorderCol={setBorderCol} setFooterHeight={setFooterHeight}/>} />
+          <Route key="about" path="about" element={<About setHome={setHome} setFooterHeight={setFooterHeight}/>} />
+          <Route key="hmua" path="portfolio/hmua" element={<HMUA setHome={setHome} setFooterHeight={setFooterHeight}/>} />
+          <Route key="developer" path="portfolio/developer" element={<Portfolio setHome={setHome} setFooterHeight={setFooterHeight}/>} />
+          <Route key="portfolio" path="portfolio" element={<Portfolio setHome={setHome} setFooterHeight={setFooterHeight} />} />
+          <Route key="cv" path="cv" element={<CV setHome={setHome} setFooterHeight={setFooterHeight} />} />
+          <Route key="terms" path="terms" element={<Terms setHome={setHome} setFooterHeight={setFooterHeight}/>} />
+          <Route key="privacy" path="privacy" element={<Privacy setHome={setHome} setFooterHeight={setFooterHeight}/>} />
         </Routes>
       </div>
       <div className="appFooter">
-        <Footer />
+        <Footer footerHeight={footerHeight}/>
       </div>
       <SpeedInsights />
     </div>

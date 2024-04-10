@@ -17,16 +17,19 @@ import sport2 from '../components/hmuaPortfolio/sport2.jpg';
 import water from '../components/hmuaPortfolio/water1.jpg';
 import water2 from '../components/hmuaPortfolio/water2.jpg';
 import water3 from '../components/hmuaPortfolio/water3.jpg';
-
-const HMUA = () => {
+import { useEffect } from 'react';
+const HMUA = (props) => {
     window.scrollTo(0,0)
-    
+    useEffect(() => {
+        props.setHome(false)
+        props.setFooterHeight("100px") // eslint-disable-next-line
+    },[])
     return (
         <div className="hmuaPage">
             <div className=" hmuacontent"> 
-            <h1 className="title">Hair & Makeup Artistry</h1> 
+            <h1 className="hmuaTitle">Hair & Makeup Artistry</h1> 
                 <div className="hmuaImages">
-                    <div className="scroll-container">
+                    <div className="hmuaScrollContainer">
                         <img id="slides" className="slide" src={feroce} alt="Feroce online magazine feature"/>
                         <img id="slides" className="slide" src={print1} alt="Magazine feature"/>
                         <img id="slides" className="slide" src={water3} alt="Photoshoot"/>
