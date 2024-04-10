@@ -37,19 +37,17 @@ const Home = (props) => {
             scrollTrigger:{
                 scrub:1,
                 pin: false,
-                trigger: "#text0",
+                trigger: "#text1",
                 start: "top bottom",
                 endTrigger: "#future",
                 end: "bottom top",
                 yoyo: true
             },
         });
-        tl.fromTo("#text0", {fontSize:"1.8em", opacity:0, x:-100}, {fontSize:"1.95em", opacity:1, x:0});
         tl.fromTo("#text1", {fontSize:"1.2em", opacity:0, x:-100}, {fontSize:"1.3em", opacity:1, x:0});
         tl.fromTo("#past", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
         tl.fromTo("#present", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
         tl.fromTo("#future", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
-        tl.to("#text0", {scale: 0, opacity:0});
         tl.to("#text1", {scale: 0, opacity:0});
         tl.to("#past", {scale: 0, opacity:0});
         tl.to("#present", {scale: 0, opacity:0});
@@ -77,7 +75,6 @@ const Home = (props) => {
                     <motion.div className="leftText">
                         <motion.div className="textColumn">
                             <motion.div className="text">
-                                <h1 id="text0" className="heading">Celebrate</h1>
                                 <p id="text1" className="para">I want this website to be a celebration of my wide variety of work: </p>
                             </motion.div>
                             <motion.div className="text">
@@ -94,101 +91,6 @@ const Home = (props) => {
                         <motion.div className="midSpacer"></motion.div>
                         <motion.div className="textColumn">
                             <Text />
-                            {/* <motion.div className="text"> 
-                                <motion.h1 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>Technologies</motion.h1>
-                            </motion.div>
-                            <motion.div className="text">
-                            <motion.p id="text2" className="para"
-                            variants={{
-                                hidden: { scale: 0, opacity: 0, fontSize:"1.2em" },
-                                visible: { scale: 1, opacity: 1, fontSize:"1.3em", x:0 },
-                              }}
-                              viewport={{margin: "100px"}}
-                              initial="hidden"
-                              whileInView="visible"
-                              transition={{ duration: 3, ease: "linear", type: "spring", bounce: 0.2}}>This web app is built using
-                              </motion.p> 
-                              <motion.h2 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>
-                                    ReactJS.
-                                    </motion.h2> 
-                                    <motion.p id="text2" className="para"
-                            variants={{
-                                hidden: { scale: 0, opacity: 0, fontSize:"1.2em" },
-                                visible: { scale: 1, opacity: 1, fontSize:"1.3em", x:0 },
-                              }}
-                              viewport={{margin: "100px"}}
-                              initial="hidden"
-                              whileInView="visible"
-                              transition={{ duration: 3, ease: "linear", type: "spring", bounce: 0.2}}>
-                                I first used the
-                                </motion.p> 
-                              <motion.h2 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>
-                                    'create-react-app'
-                                    </motion.h2> 
-                                    <motion.p id="text2" className="para"
-                            variants={{
-                                hidden: { scale: 0, opacity: 0, fontSize:"1.2em" },
-                                visible: { scale: 1, opacity: 1, fontSize:"1.3em", x:0 },
-                              }}
-                              viewport={{margin: "100px"}}
-                              initial="hidden"
-                              whileInView="visible"
-                              transition={{ duration: 3, ease: "linear", type: "spring", bounce: 0.2}}>
-                                 tool to create the basis for the app. To this I added a selection of libraries from NPM including
-                                 </motion.p> 
-                              <motion.h2 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>
-                                    GSAP,
-                                    </motion.h2> 
-                                    
-                              <motion.h2 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>
-                                    Framer-Motion,
-                                    </motion.h2>  
-                              <motion.h2 className="heading" id="updates"
-                                variants={{
-                                    hidden: { x: 100, fontSize:"1.8em", opacity:0},
-                                    visible: { x: 0, opacity: 1, fontSize:"1.9em" },
-                                }}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  transition={{ duration: 2, ease: "linear", type: "spring", bounce: 0.2}}>
-                                    and Styled-Components.
-                                    </motion.h2>
-                            </motion.div> */}
                         </motion.div> 
                     </motion.div>
                     <motion.div className="leftText">

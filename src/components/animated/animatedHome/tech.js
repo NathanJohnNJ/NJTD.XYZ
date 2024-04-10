@@ -11,14 +11,13 @@ const Tech = () => {
         scrollTrigger:{
             scrub:1,
             pin: false,
-            trigger: "#technologies",
+            trigger: "#text2",
             start: "top bottom",
             endTrigger: "#styled",
             end: "bottom 50%",
             yoyo: true
         },
     });
-    tl.fromTo("#technologies", {fontSize:"1.8em", opacity:0, x:100}, {fontSize:"1.95em", opacity:1, x:0});
     tl.fromTo("#text2", {fontSize:"1.2em", opacity:0, x:100}, {fontSize:"1.3em", opacity:1, x:0});
     tl.fromTo("#react", {fontSize:"1.6em", opacity:0, x:-100}, {fontSize:"1.7em", opacity:1, x:0});
     tl.fromTo("#first", {fontSize:"1.2em", opacity:0, x:100}, {fontSize:"1.3em", opacity:1, x:0});
@@ -27,7 +26,6 @@ const Tech = () => {
     tl.fromTo("#gsap", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
     tl.fromTo("#framer", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
     tl.fromTo("#styled", {fontSize:"1.6em", opacity:0}, {fontSize:"1.7em", opacity:1});
-    tl.to("#technologies", {scale: 0, opacity:0});
     tl.to("#text2", {scale: 0, opacity:0});
     tl.to("#react", {scale: 0, opacity:0});
     tl.to("#first", {scale: 0, opacity:0});
@@ -40,12 +38,6 @@ const Tech = () => {
 
     return(
         <>
-        <div className="text"> 
-            <h1 className="heading"  id="technologies">
-                Technologies
-            </h1>
-        </div>
-
         <div className="text">
             <p id="text2" className="para">
                     This web app is built using
