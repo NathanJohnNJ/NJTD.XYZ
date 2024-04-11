@@ -66,12 +66,12 @@
   }
   .repoLink{
     text-decoration: none;
-    color: var(--lightCol);
+    color: var(--darkCol);
     font-weight:450;
     white-space: nowrap;
   }
   .repoLink:hover{
-    color: var(--contrastCol);
+    color: var(--whiteCol);
     font-weight:550;
   }
   #git0, #git2, #git4{

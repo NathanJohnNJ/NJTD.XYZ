@@ -68,7 +68,7 @@ return (
             <p className="repoTitle">{repo.name}</p>
             <div className="details" id={ID}>
             <p><b>Last Updated:</b> {repo.date}</p>
-            <p><b>URL:</b><a href={repo.url} className="repoLink"> {repo.url}</a></p>
+            <p><b>URL:</b><a href={repo.url} target="_blank" rel="noreferrer" className="repoLink"> {repo.url}</a></p>
             <p><b>Description:</b> {repo.description}</p>
             </div>
             </motion.div>)

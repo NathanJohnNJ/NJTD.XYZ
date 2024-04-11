@@ -94,15 +94,74 @@
     height: 50px;
   }
   .light{
-    background-color: var(--lightCol);
+    background-color: var(--whiteCol);
     width:25px;
     height: 50px;
   }
   .darkLight:hover .dark{
-    background-color: var(--lightCol);
+    background-color: var(--whiteCol);
   }
   .darkLight:hover .light{
     background-color: var(--darkCol);
+  }
+  .defaultBox{
+    height: 50px;
+    width:50px;
+    display:flex;
+    flex-direction: column;
+    border-style:solid;
+    border-color: var(--borderCol);
+    border-width:3px;
+    border-radius: 5px;
+    margin-left: 2vmin;
+  }
+  .default1{
+    background-color: hsl(0, 0%, 98%);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default1{
+    background-color: hsl(0, 0%, 8%);
+  }
+  .default2{
+    background-color: rgb(165, 165, 165);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default2{
+    background-color: rgb(63, 63, 63);
+  }
+  .default3{
+    background-color: rgb(153, 153, 153);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default3{
+    background-color: rgb(102, 102, 102);
+  }
+  .default4{
+    background-color: rgb(102, 102, 102);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default4{
+    background-color: rgb(153, 153, 153);
+  }
+  .default5{
+    background-color: rgb(63, 63, 63);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default5{
+    background-color: rgb(165, 165, 165);
+  }
+  .default6{
+    background-color: hsl(0, 0%, 8%);
+    height: 50px;
+    width: calc(50/6)px;
+  }
+  .defaultBox:hover .default6{
+    background-color: hsl(0, 0%, 98%);
   }
 
   @media screen and (max-width: 750px){
@@ -113,7 +172,7 @@
     .dark, .light{
       width: 2vw;
     }
-    .blueSet, .greenSet, .redSet, .orangeSet, .greySet, .darkLight, .miniColPicker, .listBtn, .darkLight, .dark, .light{
+    .pickerBtn, .darkLight, .miniColPicker, .listBtn, .darkLight, .dark, .light{
       height: 4vw;
       width:4vw;
     }

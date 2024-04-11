@@ -113,60 +113,66 @@
   
 /********* FOOTER *********/
 .footer{
-  width: 100%;
-  max-width: 1200px;
-  position: relative;
-  bottom:0;
-  align-items: center;
-  background-color: var(--lightCol);
-  color: var(--infoCol);
-  margin-top: 7vh;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-end;
+    position: relative;
+    bottom:0;
+    margin-top: 20vh;
 }
-.footDivider svg {
+.footer svg {
   position: absolute;
-  display: block;
-  bottom:150px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -3vh;
+  margin-top: 7vh;
+  bottom:0;
   width: 100%;
+  max-width:1200px;
   overflow: visible;
   fill: var(--lightCol);
-}
-.footDivider {
-  width:100%;
 }
 .mainFooter{
   width: 100%;
   max-width: 1200px;
-  height: 120px;
-  position: relative;
-  bottom:0;
-  align-items: center;
-  background-color: var(--lightCol);
-  color: var(--infoCol);
-  margin-top: 7vh;
-  display:grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  display:flex;
+  flex-direction: row;
 }
 
 .footerImgDiv{
-  grid-column: 2/3;
-  grid-row: 1/3;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 30vh;
+  left: 20vw;
 }
 .footerLogo{
   width: 110px;
   height: 110px ;
 }
 .footerText{
-  grid-column: 3/6;
-  grid-row: 2/3;
-  margin-top: 20px;
+  position: absolute;
+  top: 30vh;
+  left: 60vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-right: 20px;
+  margin-bottom: 2vh;
   font-size: 1.8vmin;
   font-family: 'Raleway', sans-serif;
   font-weight:600;
-  line-height: 2px;
+  line-height: 1px;
+  width: 80%;
   white-space: nowrap;
   text-align:center;
+}
+.privAndTerms{
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
 }
 .github{
     text-decoration: none;
@@ -181,24 +187,20 @@
     color: var(--contrastCol);
 }
 .footPrivacy{
-  grid-column: 3/4;
-  grid-row: 3/4;
   text-align: center;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 .footTerms{
-  grid-column: 5/6;
-  grid-row: 3/4;
   text-align: center;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
   .footerText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
   .footerLogo{ width: 65px; height: 65px; }
-}
+} */
 @media screen and (max-width: 480px){
   .page{ margin-left:15px; margin-top:16.5px; font-size: 3.3vw; }
   .current{ margin:10px; margin-top: 15px; font-size: 4vw; }
@@ -208,8 +210,3 @@
   .navbar{width: 100vw}
   .navFirst{width: 100vw}
 }
-/* @media screen and (min-width: 1200px){
-  .navFirst{
-    left: 50%; transform: translateX(-50%)
-  }
-} */

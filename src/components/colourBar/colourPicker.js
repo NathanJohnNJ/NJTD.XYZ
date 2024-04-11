@@ -21,7 +21,7 @@ const ColourPicker = (props) => {
     return(
         <div className="colourPicker" id="colourPicker">
             <div className="customSet">
-                <CustomPicker darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} red={props.red} blue={props.blue} green={props.green} setBlue={props.setBlue} setRed={props.setRed} setGreen={props.setGreen} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
+                <CustomPicker darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} borderCol={props.borderCol} setBorderCol={props.setBorderCol} />
             </div>
             
             <div className="darkLight" onClick={darkLightClickHandle}>

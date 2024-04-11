@@ -8,9 +8,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavBar from '../components/navbar';
 import { NavLink } from 'react-router-dom';
-import Text from '../components/animated/animatedHome/tech'
+import Text from '../components/animated/animatedHome/tech';
 
 const Home = (props) => {
+    
+    function visitsFunc(){
+    if (props.visits === 0){
+        window.addEventListener('scroll', scrollListener )
+        props.setVisits(props.visits+1)
+    }else{
+        props.setVisits(props.visits+1)
+    }
+    }
 
     gsap.registerPlugin(ScrollTrigger)
     gsap.registerPlugin(useGSAP)
@@ -19,19 +28,19 @@ const Home = (props) => {
             const nav = document.getElementById("navbar")
             nav.classList.remove('homeNav')
             nav.classList.add('navTransition')
-            window.removeEventListener('scroll', scrollListener)
             setTimeout(()=>{nav.classList.remove('navTransition')}, 2500)
             window.removeEventListener('scroll', scrollListener)
         }
     }
 
     useGSAP(()=> {
+        visitsFunc()
         window.scrollTo(0,0);
         const nav = document.getElementById("navbar")
         nav.classList.add('homeNav')
         props.setHome(true)
         props.setFooterHeight("100px")
-        window.addEventListener('scroll', scrollListener )
+        
 
         const tl = gsap.timeline({
             scrollTrigger:{
