@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 // import ColourPicker from './colourBar/colourPicker';
 // import PickerList from './colourBar/colourList';
-import logoStill from '../images/logo.png';
+import logoStill from '../images/logo.svg';
 import logoStill2 from '../images/whiteLogo.png';
 
 const NavBar = (props) => {
