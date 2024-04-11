@@ -12,6 +12,7 @@ import Portfolio from './pages/portfolio';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react"
 import Float from './components/animated/floatingMenu/float'
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Footer footerHeight={footerHeight}/>
       </div>
       <SpeedInsights />
+      <Analytics />
     </div>
   );
 }
