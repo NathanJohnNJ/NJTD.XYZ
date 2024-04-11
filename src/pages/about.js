@@ -35,10 +35,7 @@ const About = (props) => {
   return(
        <div className="aboutPage">
          <h1 className="title">ABOUT <span id="nathan">N</span><span id="athan" style={{'opacity': '0', 'transform': 'translateY(200px)'}}>athan</span><span id="john" >J</span><span id="ohn" style={{'opacity': '0'}}>ohn</span></h1>  
-           <div className="aboutTitle">
-          <h1 id="title">ABOUT</h1>
-          <h1><span id="nathan">N</span><span id="john">J</span></h1>
-          </div>
+           
           <div className="first">
             <MyImg />
           </div>

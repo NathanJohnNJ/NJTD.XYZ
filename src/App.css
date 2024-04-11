@@ -37,7 +37,7 @@
   max-width: 1200px;
   background-color: var(--infoCol);
 }
-.appNavBar, .appFooter{
+.appNavBar{
   background-color: var(--lightCol);
   width: 100%;
 }
@@ -49,7 +49,10 @@
 .noNav{
   display:none;
 }
-
+.appFooter{
+  background: var(--whiteCol);
+  width: 100%;
+}
 .appOutlet{
   background-color: var(--whiteCol);
   display:flex;

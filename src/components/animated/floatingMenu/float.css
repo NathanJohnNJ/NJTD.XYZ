@@ -1,0 +1,78 @@
+.floatingDiv svg{
+    opacity: 0.5;
+    position:fixed;
+    top: 25%;
+    left: 0;
+    height: 500px;
+    width:250px;
+    fill: var(--focalCol);
+    z-index: 999999;
+    color: white;
+    animation: slideLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    stroke: var(--focalCol);
+    stroke-width:3
+}
+.floatingDiv svg:hover{
+    animation: slideRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.floatingDiv{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+}
+
+.foreignDiv{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    align-self: center;
+    position:absolute;
+    left: 85%;
+    top: 55%;
+}
+
+.darkLight{
+    margin-top: 5vh;
+}
+.gitHub{
+    margin-top: 5vh;
+    width:56px;
+    height:56px;
+    background: url('./images/gitHub.svg');
+}
+
+.linkedIn{
+    margin-top: 5vh;
+    width:56px;
+    height:56px;
+    background: url('./images/linkedIn.svg');
+}
+.linkedIn:hover{
+    background: url('./images/linkedInDark.svg');
+}
+.gitHub:hover{
+    background: url('./images/gitHubDark.svg');
+}
+@keyframes slideRight{
+    from {transform: translateX(-175px)}
+    to {transform: translateX(-50px)}
+}
+
+@keyframes slideLeft{
+    from {transform: translateX(-50px)}
+    to {transform: translateX(-175px)}
+}
+
+@media screen and (max-width: 750px){
+    .linkedIn, .gitHub, .pickerBtn{
+      height: 4vw;
+      width:4vw;
+    }
+  }
