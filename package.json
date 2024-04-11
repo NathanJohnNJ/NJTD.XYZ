@@ -5,6 +5,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.0",
     "@octokit/core": "^5.0.2",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.5",
