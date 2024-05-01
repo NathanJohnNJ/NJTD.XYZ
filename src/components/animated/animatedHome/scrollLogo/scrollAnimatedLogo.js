@@ -1,7 +1,13 @@
-import black1 from './layers/1.png';
-import black2 from './layers/2.png';
-import white1 from './layers/1white.png';
-import white2 from './layers/2white.png';
+import black1 from '../../../logo/blackLogo/rings.svg';
+import black2 from '../../../logo/blackLogo/circle.svg';
+import black3 from '../../../logo/blackLogo/camo.svg';
+import black4 from '../../../logo/blackLogo/me.svg';
+import black5 from '../../../logo/blackLogo/njtd.svg';
+import white1 from '../../../logo/whiteLogo/rings.svg';
+import white2 from '../../../logo/whiteLogo/circle.svg';
+import white3 from '../../../logo/whiteLogo/camo.svg';
+import white4 from '../../../logo/whiteLogo/me.svg';
+import white5 from '../../../logo/whiteLogo/njtd.svg';
 import thirdLayer from './layers/3.png';
 import fourthLayer from './layers/4.png';
 import fifthLayer from './layers/5.png';
@@ -32,45 +38,52 @@ const { scrollYProgress } = useScroll();
 
     const fadeInOut = useTransform(scrollYProgress, [0, 0.5, 0.8, 1], [0, 1, 1, 0.2]);
     
+    const black = {
+        "one": black1,
+        "two": black2,
+        "three": black3,
+        "four": black4,
+        "five": black5
+    }
+    const white = {
+        "one": white1,
+        "two": white2,
+        "three": white3,
+        "four": white4,
+        "five": white5
+    }
     
-    function layerOneDL(){
+    function darkDecider(){
         if (props.darkMode === false){
-            return black1
+            return black
         } else {
-            return white1
+            return white
         }
     }
-    function layerTwoDL(){
-        if (props.darkMode === false){
-            return black2
-        } else {
-            return white2
-        }
-    }
-
+    const layer = darkDecider()
     const first = {
-        image:layerOneDL(),
+        image:layer.one,
         opacity: fade
    }
     const second = {
-        image:layerTwoDL(),
+        image:layer.two,
         opacity:useSpring(fade1),
         x: leftEntrance
     }
     const third = {
-        image:thirdLayer,
+        image:layer.three,
         opacity: useSpring(fade2),
         x: rightEntrance,
         rotate: reverseRotate
     }
     const fourth = {
-        image:fourthLayer,
+        image:layer.four,
         opacity: useSpring(fade3),
         rotate: rotateFromY,
         scale: useSpring(scaledY)
     }
     const fifth = {
-        image:fifthLayer,
+        image:layer.five,
         opacity:useSpring(fade4),   
         scale: useSpring(scaledY2),
     }

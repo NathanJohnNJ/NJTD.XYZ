@@ -35,7 +35,7 @@
   align-items: center;
   width:100vw;
   max-width: 1200px;
-  background-color: var(--infoCol);
+  background-color: var(--whiteCol);
 }
 .appNavBar{
   background-color: var(--lightCol);
@@ -44,13 +44,12 @@
 .appNavBar{
   height: 0px;
   margin-bottom: 120px;
-  /* position: fixed */
 }
 .noNav{
   display:none;
 }
 .appFooter{
-  background: var(--whiteCol);
+  /* background: var(--lightCol); */
   width: 100%;
 }
 .appOutlet{

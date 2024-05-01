@@ -1,0 +1,76 @@
+ /*************** CV ****************/
+ .cvPage{
+    height:300vh;
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position:relative;
+    background-color: var(--whiteCol);
+   }
+   .titleDiv{
+    position: absolute;
+    top:0;
+    left:19vw;
+   }
+   .cvTitle{
+    font-size: 6vw;
+    font-family: 'Geologica', sans-serif;
+    font-variation-settings: 'wght' 550;
+    font-variation-settings: 'CRSV' 0.5;
+    font-variation-settings:  'SHRP' 100;
+    color: var(--focalCol);
+    text-shadow: 3px 1px 4px var(--darkCol);
+    text-align:center;
+}
+  .verticalDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   .horizontalDiv{
+    position:absolute;
+    top:0;
+   }
+   .letterDiv{
+    margin-top: -50vh;
+   }
+
+.horizontalDiv{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 300vh;
+  }
+.letterDiv{
+    /* position: fixed; */
+}
+.cvBottom{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    font-size: 2.5vh;
+    background-color: var(--whiteCol);
+    color: var(--infoCol);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1px;
+}
+.bottomLink{
+    text-decoration: none;
+    color: var(--lightCol);
+    font-family: 'Raleway', sans-serif;
+    font-weight:600;
+}
+.bottomLink:hover{
+    text-decoration: none;  
+    color: var(--contrastCol);
+}

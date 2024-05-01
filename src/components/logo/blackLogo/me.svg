@@ -1,0 +1,159 @@
+<svg id="parent" height="1024" width="1024" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="hatGrad">
+            <stop offset="0%" stop-color="#000000" />
+            <stop offset="25%" stop-color="#3c3c3c" />
+            <stop offset="50%" stop-color="#6f6f6f" />
+            <stop offset="55%" stop-color="#6f6f6f" />
+            <stop offset="75%" stop-color="#3c3c3c" />
+            <stop offset="100%" stop-color="#000000" />
+        </linearGradient>
+        <linearGradient id="bodyGrad">
+            <stop offset="1%" stop-color="#1f1f1f" />
+            <stop offset="75%" stop-color="#3c3c3c" />
+        </linearGradient>
+        <linearGradient id="macGrad" gradientTransform="rotate(90)">
+            <stop offset="10%" stop-color="#cfcfcf" />
+            <stop offset="95%" stop-color="#7e7e82" />
+        </linearGradient>
+        <linearGradient id="faceGrad" gradientTransform="rotate(90)">
+            <stop offset="10%" stop-color="#a9825a" />
+            <stop offset="30%" stop-color="#c5845c" />
+            <stop offset="80%" stop-color="#e5ac79" />
+            <stop offset="85%" stop-color="#ffd9ae" />
+        </linearGradient>
+        <linearGradient id="earGrad" gradientTransform="rotate(90)">
+            <stop offset="10%" stop-color="#ffd9ae" />
+            <stop offset="55%" stop-color="#e5ac79" />
+        </linearGradient>
+        <linearGradient id="shadowGrad" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#a68642" />
+            <stop offset="90%" stop-color="#7d5524" />
+        </linearGradient>
+        <linearGradient id="eyeGrad" gradientTransform="rotate(90)">
+            <stop offset="50%" stop-color="#000000" />
+            <stop offset="75%" stop-color="#ffffff" />
+        </linearGradient>
+        <linearGradient id="browGrad" gradientTransform="rotate(15)">
+            <stop offset="50%" stop-color="#4d3120" />
+            <stop offset="75%" stop-color="#5c3b2a" />
+        </linearGradient>
+        <linearGradient id="glassesGrad" gradientTransform="rotate(90)">
+            <stop stop-color="#101010" />
+            <stop offset="33%" stop-color="#4a4d4d" />
+        </linearGradient>
+        <linearGradient id="piercingGrad" gradientTransform="rotate(90)">
+            <stop stop-color="#0000ff" />
+            <stop offset="33%" stop-color="#020d2f" />
+        </linearGradient>
+    </defs>
+    <g id="face" height="1024" width="1024" viewbox="0 0 1024 1024"  >
+        <g id="ears">
+            <g id="leftEar">
+                <path id="leftOne" d="M414,310 c-25,-16 -20,25 0,50" style="fill: url('#faceGrad'); stroke: url(#faceGrad); stroke-width: 3;" gradientUnits="userSpaceOnUse"/>
+                <path id="leftTwo" d="M414,310 c-25,-16 -20,25 0,50" style="fill: none; stroke: url(#earGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse"/> 
+                <circle id="leftThree" cx="405" cy="344" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+                <circle id="leftFour" cx="411" cy="353" r="6" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />
+                <circle id="leftFive" cx="411" cy="336" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+                <circle id="leftSix" cx="400" cy="315" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+            </g>
+            <g id="rightEar">
+                <path id="rightOne" transform="scale(-1, 1)" transform-origin="center" d="M414,310 c-25,-16 -20,25 0,50" style="fill: url('#faceGrad'); stroke: url(#faceGrad); stroke-width: 3;" gradientUnits="userSpaceOnUse"/>
+                <path id="rightTwo" transform="scale(-1, 1)" transform-origin="center" d="M414,310 c-25,-16 -20,25 0,50" style="fill: none; stroke: url(#earGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse"/>  
+                <circle id="rightThree" transform="scale(-1, 1)" transform-origin="center" cx="403" cy="342" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" /> 
+                <circle id="rightFour" transform="scale(-1, 1)" transform-origin="center" cx="407" cy="348" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+                <circle id="rightFive" transform="scale(-1, 1)" transform-origin="center" cx="411" cy="353" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+                <circle id="rightSix" transform="scale(-1, 1)" transform-origin="center" cx="411" cy="336" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+                <circle id="rightSeven" transform="scale(-1, 1)" transform-origin="center" cx="411" cy="329" r="3" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />
+            </g>
+        </g>
+        <path id="mainFace" d="M414,300 c-5,-105 199,-105 194,0 q4,10 -2,80 c-8,5 -186,5 -190,0 q-4,-70 -2,-80z" style="fill: url('#faceGrad'); stroke: url(#shadowGrad); stroke-width: 3;" gradientUnits="userSpaceOnUse"/>
+        <g id="eyes" >
+            <g id="left" transform="translate(-0.5,-2)">
+                <path id="leftEyeOne" d="M439.5,338 q20,-25 50,-2 q-25,30 -48, 1" style="fill: #ffffff; stroke:#ffffff;stroke-width:1;opacity:0.35" gradientUnits="userSpaceOnUse"/>
+                <path id="leftEyeTwo" d="M442,338 q20,-25 50,-2 q-30,20 -50, 2" style="fill: #efefef; stroke: url(#eyeGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/> 
+                <circle id="leftEyeThree" cx="467" cy="336" r="8.5" style="fill: black; stroke: #0e2089; stroke-width: 4.5;"/>
+                <circle id="leftEyeFour" cx="465" cy="330" r="3.5" style="fill: white; stroke-width: 0;"/>
+                <path id="leftLash" d="M440,337 q0,1 -4,-2 l10,-2 q0,1 -4,-2 l10,-2 q0,1 -4,-2 l10,-2 q20,-8 38,15 q -30,-28 -55, -1z " style="fill: #black; stroke:black; stroke-width: 1; opacity:0.95"  gradientUnits="userSpaceOnUse"/>
+            </g>
+            <g id="right" transform="translate(0.5,-2)">
+                <path id="rightEyeOne" transform="scale(-1, 1)" transform-origin="center" d="M439.5,338 q20,-25 50,-2 q-25,30 -48, 1 " style="fill: #ffffff; stroke:#ffffff;stroke-width:1;opacity:0.35" gradientUnits="userSpaceOnUse" />
+                <path id="rightEyetwo" transform="scale(-1, 1)" transform-origin="center" d="M442,338 q20,-25 50,-2 q-30,20 -50, 2" style="fill: #efefef; stroke: url(#eyeGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>   
+                <circle id="rightEyeThree" transform="scale(-1, 1)" transform-origin="center" cx="467" cy="336" r="8.5" style="fill: black; stroke: #0e2089; stroke-width:4.5;"/>
+                <circle id="rightEyeFour" cx="553" cy="330" r="3.5" style="fill: white; stroke-width: 0;"/>
+                <path id="rightLash" transform="scale(-1 1)" transform-origin="center" d="M440,337 q0,1 -4,-2 l10,-2 q0,1 -4,-2 l10,-2 q0,1 -4,-2 l10,-2 q20,-8 38,15 q -30,-28 -55, -1z" style="fill: #black; stroke:black; stroke-width: 1; opacity:0.95" gradientUnits="userSpaceOnUse"/>
+            </g>
+            <g id="brows" transform="translate(0,0.75)" >
+                <path id="leftBrow" d="M428,317 q3,-12 12,-19 q2,-2 43,6 q8,2 10,2" style="fill: url(#browGrad); stroke:url(#browGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse" />
+                <path id="rightBrow" transform="scale(-1, 1)" transform-origin="center"  d="M428,317 q3,-12 12,-19 q2,-2 43,6 q8,2 10,2" style="fill: url(#browGrad); stroke:url(#browGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse" />
+            </g>
+            <path id="noseShadow" d="M493,355 
+            c19,-16 0,-35 19,-38 
+            c19,3 0,22 19,38" style="fill:none; stroke-width:7.5; stroke:#5c3b2a; opacity:0.25; stroke-linecap:round" />
+            <path id="glasses" transform="translate(0,-1)" d="M420,310 q34,-5 77,4 
+            c0,-2 30,-2 30,0 
+            q42,-9 77,-4 
+            l4,-1 l-1,6 l-4,1 
+            q2,35 -14,42 q-40,4 -51,-4 q-14,-20 -12,-30 
+            c-5,-12 -23,-12 -28,0 q2,10 -12,30 q-11,8 -51,4 q-12,-7 -14,-42 l-4,-1 l-1,-6 l4,1
+            M420,315 q34,-10 80,4 l-10,35 q-75,20 -65,39 
+            M604,315 q-46,-10 -80,4 l10,35 q75,20 65,39" fill-rule="evenodd" style="fill: url(#glassesGrad); stroke:url(#glassesGrad); stroke-width: 9.25;" 
+            gradientUnits="userSpaceOnUse" />
+        </g>
+        <g id="noseDetail">
+            <path id="nosePiercing" d="M494,359 q 0,-13 8,-7" style="fill:none; stroke-width:2; stroke:#2c205d; stroke-linecap:round" />
+            <path id="nose" d="M500,350 c-15,20 38,20 24,0" style="fill:none; stroke-width: 5; stroke:#222222; opacity:0.15; stroke-linecap:round" />
+            <circle id="noseHighlight1" cx="512.25" cy="332" r="5" style="fill:white; stroke-width: 5; stroke:white; opacity:0.15;" />
+            <circle id="noseHighlight2" cx="512.25" cy="340.5" r="4" style="fill:white; stroke-width: 5; stroke:white; opacity:0.25;" />
+            <circle id="noseHighlight3" cx="512.25" cy="342.5" r="7" style="fill:white; stroke-width: 5; stroke:white; opacity:0.25;" />
+            <circle id="noseHighlight4" cx="512.25" cy="352.5" r="5" style="fill:white; stroke-width: 5; stroke:white; opacity:0.15;" />
+            <circle id="noseHighlight5" cx="512.25" cy="334" r="3.5" style="fill:white; stroke-width: 5; stroke:white; opacity:0.2;" />
+            <circle id="noseHighlight6" cx="512.25" cy="334" r="2" style="fill:white; stroke-width: 5; stroke:white; opacity:0.15;" />
+            <circle id="noseHighlight7" cx="512.25" cy="338" r="5" style="fill:white; stroke-width: 5; stroke:white; opacity:0.15;" />
+        </g>
+    </g>
+
+    <g id="hat" height="1024" width="1024" viewbox="0 0 1024 1024" dx="512px">
+        <path id="mainHat" d="M414,264 c-10,-105 206,-105 196,0 l-2,38 c-8,-35 -186,-35 -194,0z" style="fill: url('#hatGrad'); stroke: url(#hatGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+        <path id="peak" d="M410,300 c-29,-40 229,-40 202,0 l-4,5 c2,-27 -198,-27 -192,0z" style="fill: #050505; stroke: #000000; stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+    </g>
+    <g id="shoulders" height="1024" width="1024" viewbox="0 0 1024 1024">
+        <path id="leftShoulder" d="M340,515 q0,-50 40,-60 l0,60" style="fill: url('#bodyGrad'); stroke: url(#bodyGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+        <path id="rightShoulder" transform="scale(-1, 1)" transform-origin="center" d="M340,515 q0,-50 40,-60 l0,60" style="fill: url('#bodyGrad'); stroke: url(#bodyGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+    </g>
+    <g id="mac" height="1024" width="1024" viewbox="0 0 1024 1024">
+        <path id="macPath" d="M387.5,515 c-15,0 -15,0 -15,-10 
+        l-15,-140 
+        c0,-5 -5,-5 15,-10 
+        l275,0 
+        c15,0 15,0 15,10 
+        l-15,140 
+        c0,10 0,10 -15,10z" style="fill: url('#macGrad'); stroke: url(#macGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+        <g id="raspberry">
+            <g id="raspLeaves">
+                <path id="leftLeaf" d="M510,430 q-20,5 -25,-15 q35,0 30,15" style="fill:#efefef; stroke-width: 1; stroke:#efefef" gradientUnits="userSpaceOnUse" />
+                <path id="rightLeaf" transform="scale(-1, 1)" transform-origin="center" d="M510,430 q-20,5 -25,-15 q35,0 30,15" style="fill:#efefef; stroke-width: 1; stroke:#efefef" gradientUnits="userSpaceOnUse" />
+            </g>
+            <g id="raspMain">
+                <circle id="raspberry1" transform="scale(-1, 1)" transform-origin="center"  cx="497.5" cy="440" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry2"  cx="497.5" cy="440" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry3"  cx="510" cy="437.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry4"  cx="522.5" cy="440" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry5"  transform="scale(-1, 1)" transform-origin="center" cx="522.5" cy="440" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry6"  transform="scale(-1, 1)" transform-origin="center" cx="495" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry7"  cx="495" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry8"  cx="502.5" cy="445" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry9"  cx="517.5" cy="445" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry10"  cx="525" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry11"  transform="scale(-1, 1)" transform-origin="center" cx="525" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry12"  transform="scale(-1, 1)" transform-origin="center" cx="500" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry13"  cx="500" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry14"  cx="510" cy="460" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle id="raspberry15"  cx="520" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry16" transform="scale(-1, 1)" ctransform-origin="center" cx="520" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry17" transform="scale(-1, 1)" transform-origin="center" cx="510" cy="467.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+                <circle  id="raspberry18" cx="510" cy="467.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+            </g>
+        </g>
+    </g>
+</svg>

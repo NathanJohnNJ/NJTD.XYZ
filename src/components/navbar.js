@@ -1,19 +1,18 @@
 import './footAndNav.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-// import ColourPicker from './colourBar/colourPicker';
-// import PickerList from './colourBar/colourList';
-import logoStill from '../images/logo.svg';
-import logoStill2 from '../images/whiteLogo.png';
+import BlackLogo from '../components/logo/blackLogo/logo';
+import WhiteLogo from '../components/logo/whiteLogo/logo';
+
 
 const NavBar = (props) => {
     const [showOptions, setShowOptions] = useState(false);
 
-    function logoDecider(){
+    const Logo = () => {
         if (props.darkMode === false){
-            return logoStill
+            return <BlackLogo size="100px" />
         } else {
-            return logoStill2
+            return <WhiteLogo size="100px" />
         }
     }
     return(
@@ -23,11 +22,15 @@ const NavBar = (props) => {
                 <div className="navHome">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} >HOME</NavLink>
                 </div>
-                <div className="navAbout">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} >ABOUT</NavLink>
-                </div>
+                {/* <div className="navAbout">
+                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} >ABOUT</NavLink>
+                </div> */}
                 <div className="navLogo">
-                    <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}><img src={logoDecider()} alt="Logo" className="navbarLogo"></img></NavLink>
+                    <div className="navbarLogo">
+                        <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}>
+                            <Logo />
+                        </NavLink> 
+                    </div>
                 </div>
                 <div className="navCV">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} >CV</NavLink>

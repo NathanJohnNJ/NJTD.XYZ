@@ -14,7 +14,7 @@
     display:block;
     position: relative;
     overflow: hidden;
-    background: none;
+    background-color: var(--blackCol);
   }
   .scrollContainer{
     height: 600vh;
@@ -25,6 +25,7 @@
     justify-content:safe;
     overflow: visible;
     position: relative;
+    background-color: var(--blackCol);
   }
   /**********LOGO SECTION************/
   .logoScrollContainer{

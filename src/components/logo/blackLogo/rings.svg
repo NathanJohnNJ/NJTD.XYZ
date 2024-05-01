@@ -1,0 +1,5 @@
+<svg id="parent" height="1024" width="1024" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <circle r="435" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:14px"/>
+    <circle r="418" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:2px"/>
+    <circle r="410" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:2px"/>
+</svg>

@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavBar from '../components/navbar';
 import { NavLink } from 'react-router-dom';
-import Text from '../components/animated/animatedHome/tech';
+import Tech from '../components/animated/animatedHome/tech';
 
 const Home = (props) => {
     
@@ -40,8 +40,6 @@ const Home = (props) => {
         nav.classList.add('homeNav')
         props.setHome(true)
         props.setFooterHeight("100px")
-        
-
         const tl = gsap.timeline({
             scrollTrigger:{
                 scrub:1,
@@ -99,7 +97,7 @@ const Home = (props) => {
                         <motion.div className="nonText"></motion.div>
                         <motion.div className="midSpacer"></motion.div>
                         <motion.div className="textColumn">
-                            <Text />
+                            <Tech />
                         </motion.div> 
                     </motion.div>
                     <motion.div className="leftText">

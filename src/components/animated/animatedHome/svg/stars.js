@@ -20,7 +20,7 @@ const Stars = () => {
         let randomValues = {}
         const colourDecider = Math.round(Math.random(10));
         // const colours = ["#FFFFFF", "var(--whiteCol)", "var(--lightCol)", "#FFFF00", "#f9ffce", "#0000FF", "#dbedff", "#FF0000", "#fff0f0", "var(--mainCol)"];
-        const colours = [ 'yellow', '#b80491', '#2c0547', '#cf6c02']
+        const colours = [ 'yellow', '#b80491', '#2c0547', '#cf6c02', "var(--focalCol)", 'blue']
         if(decider===0){
             randomValues = {
                 cx: Math.random()*width,
@@ -45,7 +45,7 @@ const Stars = () => {
     function defineStars(x){
         let arr = [];
         for(let i=0; i<x; i++){
-            const star = randomValues()
+            const star = randomValues(0)
             arr.push(star)
         }
     return arr
@@ -59,10 +59,19 @@ const Stars = () => {
         }
     return arr
     }
+    function definePointyStars(){
+        let arr = [];
+        for(let i=0; i<10; i++){
+            const star = randomValues(1)
+            arr.push(star)
+        }
+        return arr
+    }
 
     async function drawingStars(){
         const movingStars = defineStars(300)
         const staticStars = defineStaticStars()
+        const pointyStars = definePointyStars()
         const svgns = "http://www.w3.org/2000/svg"
         const group = document.getElementById("mainStarSVG")
         movingStars.map((newStar, i) => {
@@ -71,8 +80,7 @@ const Stars = () => {
             star.setAttributeNS(null, 'cy', newStar.cy)
             star.setAttributeNS(null, 'r', newStar.r)
             star.setAttributeNS(null, 'fill', newStar.fill)
-            star.setAttributeNS(null, 'boxShadow', newStar.boxShadow)
-            star.setAttributeNS(null, 'stroke', newStar.stroke)
+            star.setAttributeNS(null, 'stroke', newStar.fill)
             star.setAttributeNS(null, 'strokeWidth', 3)
             star.setAttributeNS(null, 'scale', 1.2)
             star.setAttributeNS(null, 'opacity', 0.6)
@@ -95,12 +103,24 @@ const Stars = () => {
             star.setAttributeNS(null, 'cy', newStar.cy)
             star.setAttributeNS(null, 'r', newStar.r)
             star.setAttributeNS(null, 'fill', newStar.fill)
-            star.setAttributeNS(null, 'boxShadow', '2px 3px 6px rgba(255, 255, 255, 0.5), -3px -2px 6px rgba(255, 255, 255, 0.75)')
+            star.setAttributeNS(null, 'boxShadow', '2px 3px 6px rgba(255, 255, 255, 0.9), -3px -2px 6px rgba(255, 255, 255, 0.95)')
             star.setAttributeNS(null, 'stroke', 'rgba(255, 255, 255, 0.75)')
             star.setAttributeNS(null, 'strokeWidth', 2)
             star.setAttributeNS(null, 'scale', 0.75)
             star.setAttributeNS(null, 'opacity', 0.9)
             star.classList.add("static")
+            group.appendChild(star)
+            return group
+        })
+        pointyStars.map((newStar, i) => {
+            const star = document.createElementNS(svgns, 'path')
+            star.setAttributeNS(null, 'd', `m ${newStar.cx} ${newStar.cy} c3 0 3 0 3 -8 c 0 8 0 8 3 8 c -3 0 -3 0 -3 8 c 0 -8 0 -8 -3 -8`)
+            star.setAttributeNS(null, 'fill', newStar.fill)
+            star.setAttributeNS(null, 'stroke', newStar.stroke)
+            star.setAttributeNS(null, 'strokeWidth', 2.5)
+            star.setAttributeNS(null, 'boxShadow', newStar.boxShadow)
+            star.setAttributeNS(null, 'opacity', 0.85)
+            star.classList.add("pointy")
             group.appendChild(star)
             return group
         })

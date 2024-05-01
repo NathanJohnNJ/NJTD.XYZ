@@ -18,6 +18,7 @@
     animation: slideRight;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    opacity:0.75;
 }
 .floatingDiv{
     display: flex;

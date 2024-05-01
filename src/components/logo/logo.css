@@ -1,19 +1,18 @@
-.aniLogo{
-    position: absolute;
-    max-width: 300px;
-    max-height: 300px;
-}
-.mainDiv{
-    display:flex;
-    flex-direction: column;
-    height: 600%;
+
+.logoContainer{
+    width: 100px;
+    height: 100px;
     position: relative;
 }
-.imgDiv{
-    width: 100vw;
-    height: 350px;
+.logoSVG{
+    /* width: 100px;
+    height: 100px; */
+    position: absolute;
+    z-index: 999999;
+    top:0;
+    left:0;
 }
-.gapDiv{
-    height:50px;
-    width: 100vw;
-}
+/* #memoji{
+    height:100px;
+    width: 100px;
+} */
