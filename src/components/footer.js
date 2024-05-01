@@ -1,17 +1,27 @@
 import './footAndNav.css';
-import logo from '../images/logo.png';
 import { NavLink } from 'react-router-dom';
-
+import BlackLogo from '../components/logo/blackLogo/logo';
+import WhiteLogo from '../components/logo/whiteLogo/logo';
 
 const Footer = (props) => {
 
+    const Logo = () => {
+        if (props.darkMode === false){
+            return <BlackLogo size="120px" />
+        } else {
+            return <WhiteLogo size="120px" />
+        }
+    }
+
     return(
-        <footer className="footer">
-            <svg className="footSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 410" preserveAspectRatio="minXminY meet" width="1200px" height="410px">
-                <path d="M 0 200 q 100 -50 240 0 q 150 50 320 0 q 150 -30 280 0 q 260 50 360 0 l 0 200 l -1200 0z" className="shape-fill" strokeWidth="4" />
+        <footer className="footer" id="footer">
+            <svg className="footSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 410" preserveAspectRatio="minXminY meet" width="1200px" height="300px">
+                <path d="M 0 200  q 100 -50 240 0 q 150 50 320 0 q 150 -30 280 0 q 260 50 360 0 l 0 300 l -1200 0z" className="shape-fill" strokeWidth="4" />
                 <foreignObject className="mainFooter">
                     <div className="footerImgDiv">
-                        <img src={logo} alt="Logo" className="footerLogo"></img>
+                        <NavLink to="/">
+                            <Logo />
+                        </NavLink> 
                     </div>
                     <div className="footerText">
                         <p>If you like what you see, check out the rest of my portfolio at <a href="https://www.njtd.xyz/portfolio/developer" className="github">www.njtd.xyz</a></p>

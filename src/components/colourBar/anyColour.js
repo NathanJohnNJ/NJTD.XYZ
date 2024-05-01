@@ -37,6 +37,9 @@ const ColourPicker = (props) => {
         // eslint-disable-next-line 
     }, [])
 
+    function defaultClicker(){
+        changeHandler({hex: "#666666", rgb: {r: 102, g: 102, b: 102}, hsl: {h: 0, s: 0, l: 39.99}})
+    }
     function actualColour(colour){
         const R = colour.rgb.r
         const G = colour.rgb.g
@@ -139,36 +142,7 @@ const ColourPicker = (props) => {
             </div>
         )
     }
-    // function defaultbox(){
-    //     const defaultCol = {hex: "#666666", rgb: {r: 102, g: 102, b: 102}, hsl: {h: 0, s: 0, l: 39.99}}
-    //     const cols = ["hsl(0, 0%, 98%)", "rgb(165.036, 165.036, 165.036)", "rgb(153, 153, 153)", "rgb(102, 102, 102)", "rgb(63.040791100123606, 63.040791100123606, 63.040791100123606)", "#3c3c3c", "hsl(0, 0%, 8%)" ]
-    //     const sliceHeight = 75/7
-    //     return (
-    //         <div style={{
-    //             width: "75px",
-    //             height: "75px",
-    //             borderColor: props.borderCol,
-    //             borderRadius: '5px',
-    //             borderWidth: '3px',
-    //             borderStyle: 'solid',
-    //             // display: "flex",
-    //             // flexDirection: "column"
-    //         }}
-    //         onClick = {changeHandler(defaultCol)}>
-    //             {cols.map((col, i) => {
-    //                 return(
-    //                     <div key={i}
-    //                     style={{
-    //                         width: "75px",
-    //                         height: `${sliceHeight}px`,
-    //                         backgroundColour: {col}
-    //                     }}></div>
-    //                 )
-    //             })}
-                
-    //         </div>
-    //     )
-    // }
+    
     function colourDown(R, G, B){
         let newR, newG, newB
         if(props.darkMode===true){
@@ -195,14 +169,48 @@ const ColourPicker = (props) => {
             </div>
         )
     }
+    // function colourOpposite(R, G, B){
+    //     const newR = 255-R;
+    //     const newG = 255-G;
+    //     const newB = 255-B;
+    //     setColour("--contrastCol", `rgb(${newR}, ${newG}, ${newB})`)
+    //     return(
+    //         <div style={{
+    //             backgroundColor: `rgb(${newR}, ${newG}, ${newB})`,
+    //             width: "50px",
+    //             height: "50px",
+    //             borderColor: props.borderCol,
+    //             borderRadius: '5px',
+    //             borderWidth: '3px',
+    //             borderStyle: 'solid',
+    //             margin: '2vmin'
+    //         }}>
+    //         </div>
+    //     )
+    // }
     function colourOpposite(R, G, B){
-        const newR = 255-R;
-        const newG = 255-G;
-        const newB = 255-B;
+        let newR, newG, newB
+        if(R > B && R > G){
+             newR = 250
+             newB = Math.round(Math.random()*150)
+             newG = Math.round(Math.random()*150)
+        } else if(B > R && B > G){
+             newB = 250
+             newR = Math.round(Math.random()*150)
+             newG = Math.round(Math.random()*150)
+        } else if(G > R && G > B){
+             newG = 250
+             newB = Math.round(Math.random()*150)
+             newR = Math.round(Math.random()*150)
+        } else {
+             newR = 255-R;
+             newG = 255-G;
+             newB = 255-B;
+        }
         setColour("--contrastCol", `rgb(${newR}, ${newG}, ${newB})`)
         return(
             <div style={{
-                backgroundColor: `rgb(${newR}, ${newG}, ${newB})`,
+                backgroundColor: `rgb(${newR},${newG},${newB})`,
                 width: "50px",
                 height: "50px",
                 borderColor: props.borderCol,
@@ -210,8 +218,8 @@ const ColourPicker = (props) => {
                 borderWidth: '3px',
                 borderStyle: 'solid',
                 margin: '2vmin'
-            }}>
-            </div>
+                }}>
+                </div>
         )
     }
     function changeHandler(color){
@@ -289,7 +297,7 @@ const ColourPicker = (props) => {
                     
                 </div>
                 <div className="defaultDiv">
-                    <div className="defaultBox" title="Default colours">
+                    <div className="defaultBox" title="Default colours" onClick={defaultClicker}>
                         <div className="default1"></div>
                         <div className="default2"></div>
                         <div className="default3"></div>

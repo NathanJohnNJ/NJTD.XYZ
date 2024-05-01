@@ -121,16 +121,14 @@
     bottom:0;
     margin-top: 20vh;
 }
-.footer svg {
+.footSVG {
   position: absolute;
   display: flex;
   flex-direction: column;
   margin-bottom: -3vh;
-  margin-top: 7vh;
   bottom:0;
   width: 100%;
   max-width:1200px;
-  overflow: visible;
   fill: var(--lightCol);
 }
 .mainFooter{
@@ -138,19 +136,16 @@
   max-width: 1200px;
   display:flex;
   flex-direction: row;
+  position: relative;
 }
 
 .footerImgDiv{
-  width: 110px;
-  height: 110px;
   position: absolute;
-  top: 30vh;
-  left: 20vw;
-}
-.footerLogo{
-  width: 110px;
-  height: 110px ;
-}
+  top: 35vh;
+  left: 25vw;
+  height: 100px;
+  width:100px;
+} 
 .footerText{
   position: absolute;
   top: 30vh;
@@ -161,6 +156,7 @@
   justify-content: center;
   margin-right: 20px;
   margin-bottom: 2vh;
+  margin-top: 2vh;
   font-size: 1.8vmin;
   font-family: 'Raleway', sans-serif;
   font-weight:600;

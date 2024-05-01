@@ -1,12 +1,14 @@
 import './cv.css';
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import CVContent from './cvContent';
 
 const EnvelopedCV = () => {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({target: ref});
-
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[])
     function Flap(){
         const zPosAnim = useTransform(scrollYProgress, [0, 0.1, 0.35], [4, 2, 1]);
         const bgColour = useTransform(scrollYProgress, [0, 0.05, 0.2], ["#a18565", "#3e352a",  "#7d6a55"]);
@@ -107,9 +109,9 @@ const EnvelopedCV = () => {
     }
     function Letter(){
         const zPosAnim = useTransform(scrollYProgress, [0, 0.8], [2, 3]);
-        const letterHeight = useTransform(scrollYProgress, [0, 0.5, 0.8], ["100%", "150%", "180%"]);
+        const letterHeight = useTransform(scrollYProgress, [0, 0.5, 0.8], ["100%", "150%", "250%"]);
         const letterScale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1]);
-        const topAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], ["40px", "-450px", "0px"]);
+        const topAnim = useTransform(scrollYProgress, [0, 0.4, 0.8], ["120px", "-450px", "0px"]);
         const shadowAnim = useTransform(scrollYProgress, [0, 1], ["0px 0px 0px 0px rgb(75, 74, 74)", "2px 2px 8px 4px rgb(75, 74, 74)"]);
         const marginTopLetter = useTransform(scrollYProgress, [0.4, 1], ["0px", "-200px"])
         const letterStyles = {

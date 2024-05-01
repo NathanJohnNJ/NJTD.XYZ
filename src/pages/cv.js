@@ -1,4 +1,4 @@
-import './style.css';
+import './styles/cv.css';
 import Letter from '../components/animated/animatedCV/envelope';
 // import { gsap } from "gsap";
 // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -13,7 +13,8 @@ const CV = (props) => {
     window.scrollTo(0,0);
     useEffect(() => {
         props.setHome(false) 
-        props.setFooterHeight("150px")// eslint-disable-next-line
+        const footer = document.getElementById("footer")
+        footer.style.marginTop = "40vh"// eslint-disable-next-line
     },[])
     // gsap.registerPlugin(ScrollToPlugin);
 

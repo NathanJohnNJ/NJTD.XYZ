@@ -21,7 +21,7 @@ function App() {
   const [borderCol, setBorderCol] = useState("#000000");
   const [home, setHome] = useState(true);
   const [visits, setVisits] = useState(0);
-  const [footerHeight, setFooterHeight] = useState("100px");
+  const [footerHeight, setFooterHeight] = useState("400px");
 
   function checkForHome(){
     if(!home){
@@ -51,7 +51,7 @@ function App() {
         </Routes>
       </div>
       <div className="appFooter">
-        <Footer footerHeight={footerHeight}/>
+        <Footer footerHeight={footerHeight} darkMode={darkMode}/>
       </div>
       <SpeedInsights />
       <Analytics />

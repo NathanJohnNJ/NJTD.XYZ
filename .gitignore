@@ -26,3 +26,4 @@ src/back-end/.env
 src/.env
 notes/
 src/pages/hmuaPortfolio
+test/
