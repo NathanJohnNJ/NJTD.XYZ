@@ -2,7 +2,7 @@ import Logo from '../../components/logo/blackLogo/logo.svg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import './landing.css';
+import '../../pages/styles/landing.css';
 import { NavLink } from 'react-router-dom';
 import { StyleSheet } from 'react-native-web';
 
