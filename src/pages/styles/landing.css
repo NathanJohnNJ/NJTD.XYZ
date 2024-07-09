@@ -1,0 +1,165 @@
+:root{
+    --bgGrad: linear-gradient(135deg, var(--lightCol) 20%, var(--whiteCol) 67.5%, var(--lightCol) 90%);
+    --bgHoverGrad: linear-gradient(135deg, var(--darkCol) 20%, var(--lightCol) 67.5%, var(--darkCol) 90%);
+    
+}
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  @property --bg-reverse-angle {
+    inherits: false;
+    initial-value: 360deg;
+    syntax: "<angle>";
+  }
+
+.movingGradient{ 
+    border-radius: 18px;
+    text-decoration: none;
+    font-family: 'Geologica';
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    animation: rainbowAnimation 2.5s infinite linear running;
+    background:
+    linear-gradient(
+        45deg,
+        var(--lightCol),
+        var(--whiteCol),
+        var(--lightCol)
+      )
+      padding-box,
+    conic-gradient(
+        from var(--bg-angle) in oklch longer hue,
+        oklch(1 0.37 0) 0 0
+      )
+      border-box; 
+    border: 6.5px solid transparent;
+    color: transparent;
+    box-shadow: -5px 3px 6px var(--darkCol), 4px -1px 4px var(--darkCol);
+    &:hover {
+        border: 3.5px solid transparent;
+        font-weight: 650;
+        box-shadow:inset;
+    }
+}
+
+.movingGradientText{ 
+    border-radius: 18px;
+    text-decoration: none;
+    font-family: 'Geologica';
+    font-weight: 700;
+    font-size: 1.5em;
+    animation: rainbowReverseAnimation 2.5s infinite linear running;
+    background:
+    conic-gradient(
+        from var(--bg-reverse-angle) in oklch longer hue,
+        oklch(1 0.37 0 / 0.5) 0 0
+      )
+      border-box;
+    color: transparent;
+    background-clip: text;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+.ctaBtn{
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: var(--focalCol);
+    border-width:1.5px;
+    background: var(--bgGrad);
+    box-shadow: -2px 1.5px 10px 2px black;
+    padding: 2px 8px;
+    position: sticky;
+    top: 400px;
+}
+.btnText{
+    /* color: var(--focalCol); */
+    font-family: 'Geologica';
+    font-variation-settings: 'SHRP' 100;
+    font-weight: 650;
+    font-size: 1.75vmax;
+    text-shadow: -1.5px 1px 2px black
+}
+.btnText:hover{
+    /* color: transparent; */
+    /* background: var(--bgHoverGrad);
+    background-clip: text; */
+    font-family: 'Geologica';
+    font-variation-settings: 'SHRP' 100;
+    font-weight: 650;
+    font-size: 1.75vmax;
+    text-shadow: none;
+}
+.ctaBtn:hover{
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: linear-gradient(135deg, var(--lightCol) 20%, var(--whiteCol) 67.5%, var(--lightCol) 90%);
+    border-width:1px;
+    /* color: linear-gradient(135deg, var(--lightCol) 20%, var(--whiteCol) 67.5%, var(--lightCol) 90%); */
+    background: var(--focalCol);
+    box-shadow: inset -1.2px 0.3px 8px 1px black;
+}
+.gradientText{
+    color: transparent;
+    background: linear-gradient(135deg, var(--lightCol) 20%, var(--blackCol) 67.5%, var(--focalCol) 90%);
+    background-clip: text;
+}
+
+#picture6{
+    position: sticky;
+    top: 250px;
+}
+#picture7{
+    position: sticky;
+    top: 300px;
+    left:40px;
+}
+#picture8{
+    position: sticky;
+    top:350px;
+    left:70px;
+}
+#subAbout{
+    position:sticky;
+    top: 850px
+}
+@media screen and (max-width: 800px){
+    .firstLandingImg{
+      width: 400px;
+      top: 120px;
+    }
+    .left{
+        margin-left: 30px;
+        width: 100vw;
+        white-space: +30px;
+        white-space-collapse: preserve-breaks;
+    }
+    .headlineText{
+        top: 240px;
+    }
+    .subHeadingText{
+        top: 350px
+    }
+    .subHeadingSecond{
+        top: 450px
+    }
+  }
+  
+  @keyframes rainbowAnimation{
+    to {
+        --bg-angle:360deg;
+    }
+  }
+
+  @keyframes rainbowReverseAnimation{
+    to {
+        --bg-reverse-angle:0deg;
+    }
+  }

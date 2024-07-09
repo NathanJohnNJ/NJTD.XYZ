@@ -59,7 +59,7 @@
     height: auto;
     width: 100%
   }
-  .leftText{
+  .leftText{  
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -100,7 +100,6 @@
     height: auto;
     width:100%;
     position:relative;
-    
   }
   #present{
     text-align: center;
