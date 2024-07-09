@@ -12,7 +12,6 @@ const CV = (props) => {
     const opacity = useTransform(scrollYProgress, [0.8, 0.9], [1, 0])
     window.scrollTo(0,0);
     useEffect(() => {
-        props.setHome(false) 
         const footer = document.getElementById("footer")
         footer.style.marginTop = "40vh"// eslint-disable-next-line
     },[])

@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 const Portfolio = (props) => {
     window.scrollTo(0,0)
     useEffect(() => {
-        props.setHome(false)
         props.setFooterHeight("100px") // eslint-disable-next-line
     },[])
     return (

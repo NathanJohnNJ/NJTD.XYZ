@@ -112,64 +112,40 @@
 }
   
 /********* FOOTER *********/
-.footer{
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content: flex-end;
-    position: relative;
-    bottom:0;
-    margin-top: 20vh;
-}
 .footSVG {
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  margin-bottom: -3vh;
-  bottom:0;
+  position:relative;
   width: 100%;
   max-width:1200px;
   fill: var(--lightCol);
 }
-.mainFooter{
-  width: 100%;
-  max-width: 1200px;
-  display:flex;
-  flex-direction: row;
-  position: relative;
+.footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-
-.footerImgDiv{
-  position: absolute;
-  top: 35vh;
-  left: 25vw;
-  height: 100px;
-  width:100px;
+.footerImg{
+  height: 120px;
 } 
 .footerText{
-  position: absolute;
-  top: 30vh;
-  left: 60vw;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
-  margin-bottom: 2vh;
   margin-top: 2vh;
   font-size: 1.8vmin;
   font-family: 'Raleway', sans-serif;
   font-weight:600;
-  line-height: 1px;
+  line-height: 0.5px;
   width: 80%;
   white-space: nowrap;
   text-align:center;
 }
-.privAndTerms{
-  display: flex;
-  justify-content: space-between;
-  width: 40vw;
+.footerP{
+  margin-bottom: 10px;
 }
+
 .github{
     text-decoration: none;
     color: var(--darkCol);
@@ -180,23 +156,41 @@
 }
 .github:hover{
     text-decoration: none;  
-    color: var(--contrastCol);
+    color: var(--lightCol);
+}
+.privAndTerms{
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  margin-top: 25px;
 }
 .footPrivacy{
   text-align: center;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  text-decoration: none;
+    color: var(--darkCol);
+    font-size: 1.9vmin;
+    font-family: 'Raleway', sans-serif;
+    font-weight:600;
+    line-height: 2px;
+}
+.footPrivacy:hover{
+  text-decoration: none;  
+  color: var(--lightCol);
 }
 .footTerms{
   text-align: center;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  text-decoration: none;
+  color: var(--darkCol);
+  font-size: 1.9vmin;
+  font-family: 'Raleway', sans-serif;
+  font-weight:600;
+  line-height: 2px;
+}
+.footTerms:hover{
+  text-decoration: none;  
+  color: var(--lightCol);
 }
 
-/* @media screen and (max-width: 600px){
-  .footerText{ font-size: 10px; line-height: 4px; white-space: nowrap; }
-  .footerLogo{ width: 65px; height: 65px; }
-} */
 @media screen and (max-width: 480px){
   .page{ margin-left:15px; margin-top:16.5px; font-size: 3.3vw; }
   .current{ margin:10px; margin-top: 15px; font-size: 4vw; }

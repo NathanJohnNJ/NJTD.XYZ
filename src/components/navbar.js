@@ -1,6 +1,6 @@
 import './footAndNav.css';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import BlackLogo from '../components/logo/blackLogo/logo';
 import WhiteLogo from '../components/logo/whiteLogo/logo';
 
@@ -15,6 +15,22 @@ const NavBar = (props) => {
             return <WhiteLogo size="100px" />
         }
     }
+    function useWindowSize() {
+        const [size, setSize] = useState([0, 0]);
+        useLayoutEffect(() => {
+          function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+          }
+          window.addEventListener('resize', updateSize);
+          updateSize();
+          return () => window.removeEventListener('resize', updateSize);
+        }, []);
+        return size;
+      }
+
+    const [width, height] = useWindowSize();
+    const viewbox = `0 0 ${width} 20`;
+    const myPath = `M0,0 l${width},0 l0,20 c-${width/16},60 -${width/8},-40 -${width/4},0 s-${width/8},-30 -${width/4},5s-${width/8},-40 -${width/4},0s-${width/8},-60 -${width/4},10z`;
     return(
         <div className="navbar"  id="navbar">
             <div className="navFirst" id="navbar">
@@ -54,8 +70,8 @@ const NavBar = (props) => {
                     }
                 </div>
             <div className="customDivider">
-                <svg className="navSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="minXminY meet">
-                    <path d="M 0 50 q 100 -50 240 0 q 150 40 320 0 q 150 -30 280 0 q 260 50 360 0 l 0 -50 l -1200 0z" className="shape-fill" strokeWidth="4"/>
+                <svg className="navSVG" xmlns="http://www.w3.org/2000/svg" viewBox={viewbox} preserveAspectRatio="minXminY meet">
+                    <path d={myPath} className="shape-fill" strokeWidth="4"/>
                 </svg>
             </div>
             </div>
