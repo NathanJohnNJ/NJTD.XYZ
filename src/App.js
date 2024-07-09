@@ -3,7 +3,7 @@ import './pages/style.css'
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react'; 
 // import Home from './pages/home';; 
-import Home from './test/landing/landing';
+import Home from './pages/landing';
 import HMUA from './pages/hmua';
 import CV from './pages/cv';
 // import About from './pages/about';
