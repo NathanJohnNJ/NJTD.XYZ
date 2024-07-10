@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
         height: 'fit-content'
     },
     spacer: {
-        border: 'solid 12px black',
         height: '100px',
         width: '100%',
         display:'block',
