@@ -24,7 +24,7 @@ const LandingTwo = () => {
             },
         });
         tl.timeScale(0.5)
-        tl.fromTo("#headline2", {fontSize:"1.2em", opacity:0.25, x:-300}, {fontSize:"2.7em", opacity:1, x:0});
+        tl.fromTo("#headline2", {fontSize:"1.2em", opacity:0, x:-300}, {fontSize:"2.7em", opacity:1, x:0});
         tl.fromTo("#subHeading2", {fontSize:"1em", opacity:0, x:-300}, {fontSize:"1.4em", opacity:1, x:0}, ">+=50%");
         tl.fromTo("#button2", {scale:0, opacity:0, y:100}, {scale:1, opacity:1, y:0}, ">+=50%");
         tl.fromTo("#button3", {scale:0, opacity:0, y:250}, {scale:1, opacity:1, y:0}, ">+=0.5");
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        maxWidth: '1200px',
+        // maxWidth: '1200px',
         height: '150vh',
         overflow: 'visible'
     },

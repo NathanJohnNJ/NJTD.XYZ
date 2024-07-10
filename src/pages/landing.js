@@ -14,24 +14,19 @@ const LandingPage = (props) => {
 
 return(
     <div style={styles.landingPage}>
-        <div style={styles.landingContainer}>
-            {/* <div style={styles.spacer} id="start"></div> */}
-            <LandingOne />
-            <div style={styles.spacer}></div>
-            <div style={styles.seperator}>
-                <LandingTwo />
-            </div>
-            <div style={styles.spacer}></div>
-            <div style={styles.seperator}>
-                <LandingThree />
-            </div>
-            <div style={styles.spacer}></div>
-            <div style={styles.spacer}></div>
-            <div style={styles.spacer}></div>
-            <div style={styles.spacer}></div>
-            <div style={styles.spacer}></div>
+        <LandingOne />
+        <div style={styles.spacer}></div>
+        <div style={styles.seperator}>
+            <LandingTwo />
+        </div>
+        <div style={styles.spacer}></div>
+        <div style={styles.seperator}>
+            <LandingThree />
+        </div>
+        <div style={styles.spacer}></div>
+        <div style={styles.seperator}>
             <GitHub />
-        </div>        
+        </div>
     </div>
     )
 }; 
@@ -42,31 +37,21 @@ const styles = StyleSheet.create({
     landingPage: {
         display:'flex',
         flexDirection: 'column',
-        // justifyContent: 'space-evenly',
         alignItems: 'center',
         overflow: 'visible',
         position: 'relative',
         width: '100%',
         height: 'fit-content'
     },
-    landingContainer: {
-        height: '800vh',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        overflow: 'clip',
-        position: 'relative'
-    },
     spacer: {
-        height: '100vh',
+        border: 'solid 12px black',
+        height: '100px',
         width: '100%',
         display:'block',
-        overflow: 'visible'
+        overflow: 'visible',
+        marginTop:'100px',
+        marginBottom: '100px',
     },
     seperator: {
-        height: '200vh',
-        marginTop: '20vh',
     }
 })
