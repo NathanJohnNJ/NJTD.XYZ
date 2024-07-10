@@ -14,15 +14,16 @@ const LandingTwo = () => {
     useGSAP(()=> {
         const tl = gsap.timeline({
             scrollTrigger:{
-                scrub:1,
-                pin: false,
+                scrub:2,
+                pin: "#secondPin",
+                anticipatePin: true,
                 trigger: "#secondStart",
-                start: "bottom top",
-                endTrigger: "#secondEnd",
-                end: "bottom top",
-                yoyo: true
+                start: "top top",
+                end: "+=" + window.innerHeight*2,
+                yoyo: true,
             },
         });
+        tl.timeScale(0.5)
         tl.fromTo("#headline2", {fontSize:"1.2em", opacity:0.25, x:-300}, {fontSize:"2.7em", opacity:1, x:0});
         tl.fromTo("#subHeading2", {fontSize:"1em", opacity:0, x:-300}, {fontSize:"1.4em", opacity:1, x:0}, ">+=50%");
         tl.fromTo("#button2", {scale:0, opacity:0, y:100}, {scale:1, opacity:1, y:0}, ">+=50%");
@@ -30,13 +31,13 @@ const LandingTwo = () => {
         tl.fromTo("#button4", {scale:0, opacity:0, y:400}, {scale:1, opacity:1, y:0}, ">+=0.5");
         tl.to("#headline2", {scale: 0, opacity:0, x:-300}, ">+=50%");
         tl.to("#subHeading2", {scale: 0, opacity:0, x:-300}, ">+=50%");
-        tl.to("#button2", {scale: 0, opacity:0, y:-500}, ">+=0.5");
-        tl.to("#button3", {scale: 0, opacity:0, y:-500}, "+=0.5");
-        tl.to("#button4", {scale: 0, opacity:0, y:-500}, "+=0.5");
+        // tl.to("#button2", {scale: 0, opacity:0, y:-500}, ">+=0.5");
+        // tl.to("#button3", {scale: 0, opacity:0, y:-500}, "+=0.5");
+        // tl.to("#button4", {scale: 0, opacity:0, y:-500}, "+=0.5");
     }, [])
 
     return(
-        <div style={styles.stickyColumn}>
+        <div style={styles.stickyColumn} id="secondPin">
             <div className="spacer" id="secondStart"></div>
             <div style={styles.top}>
                 <div style={styles.text}>
@@ -59,7 +60,6 @@ const LandingTwo = () => {
                     <img style={styles.imgBtn}  src={X} alt="X link" />
                 </a>
             </div>
-            <div id="secondEnd"></div>
         </div>
     )
 }; 
@@ -67,24 +67,23 @@ const LandingTwo = () => {
 export default LandingTwo;
 
 const styles = StyleSheet.create({
-    
     stickyColumn:{
-        position: 'sticky',
-        top:'180px',
+        position: 'relative',
         display:'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
         maxWidth: '1200px',
-        height: '100vh',
-        overflow: 'hidden'
+        height: '150vh',
+        overflow: 'visible'
     },
     text: {
         position: 'relative',
         overflow: 'visible',
         marginLeft:'10vw',
         marginRight:'-3vw',
+        marginTop: '35vh'
     },
     headlineText: {
         fontFamily: 'Geologica',
@@ -92,9 +91,8 @@ const styles = StyleSheet.create({
         fontWeight: 900,
         color: 'var(--darkCol)',
         position: 'sticky',
-        top: '250px',
+        top: '200px',
         whiteSpace: 'nowrap',
-        marginBottom: '75px'
     },
     secondHeadlineText: {
         fontFamily: 'Geologica',
@@ -102,12 +100,12 @@ const styles = StyleSheet.create({
         fontWeight: 200,
         color: 'var(--infoCol)',
         position: 'sticky',
-        top: '390px',
+        top: '260px',
     },
     top:{
         position: 'relative',
         width:'90%',
-        // height: '200vh'
+        height: '450px'
     },
     bottom:{
         width: '90%',

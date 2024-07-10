@@ -18,9 +18,17 @@ return(
             {/* <div style={styles.spacer} id="start"></div> */}
             <LandingOne />
             <div style={styles.spacer}></div>
-            <LandingTwo />
+            <div style={styles.seperator}>
+                <LandingTwo />
+            </div>
             <div style={styles.spacer}></div>
-            <LandingThree />
+            <div style={styles.seperator}>
+                <LandingThree />
+            </div>
+            <div style={styles.spacer}></div>
+            <div style={styles.spacer}></div>
+            <div style={styles.spacer}></div>
+            <div style={styles.spacer}></div>
             <div style={styles.spacer}></div>
             <GitHub />
         </div>        
@@ -34,7 +42,7 @@ const styles = StyleSheet.create({
     landingPage: {
         display:'flex',
         flexDirection: 'column',
-        justifyContent: 'space-evenly',
+        // justifyContent: 'space-evenly',
         alignItems: 'center',
         overflow: 'visible',
         position: 'relative',
@@ -47,14 +55,18 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent:'safe',
+        justifyContent: 'space-evenly',
         overflow: 'clip',
         position: 'relative'
     },
     spacer: {
-        height: '50vh',
+        height: '100vh',
         width: '100%',
         display:'block',
-        overflow: 'hidden'
+        overflow: 'visible'
+    },
+    seperator: {
+        height: '200vh',
+        marginTop: '20vh',
     }
 })

@@ -13,19 +13,21 @@ const LandingOne = () => {
     useGSAP(()=> {
         const tl = gsap.timeline({
             scrollTrigger:{
-                scrub:1,
-                pin: false,
+                scrub:2,
+                pin: "#toPin",
+                anticipatePin: true,
                 trigger: "#start",
-                start: "top 50%",
-                endTrigger: "#endDiv",
-                end: "bottom top",
+                start: "top top",
+                end: "+=" + window.innerHeight*2,
                 yoyo: true
             },
         });
+        tl.timeScale(0.6)
         tl.fromTo("#headline", {fontSize:"1em", opacity:0.25, x:-300}, {fontSize:"3em", opacity:1, x:0}, "<+=10");
         tl.fromTo("#picture1", {x:300, scale:0}, {x:0, scale: 1.1}, "-=0.2");
         tl.fromTo("#subHeading", {fontSize:"0.5em", opacity:0, x:-300}, {fontSize:"1.4em", opacity:1, x:0}, ">+=10%");
         tl.fromTo("#subHeadingSecond", {fontSize:"1em", opacity:0, x:-300}, {fontSize:"1.25em", opacity:1, x:0}, ">+=10%");
+        tl.timeScale(0.4)
         tl.fromTo("#scale", {fontSize:"1em", opacity:0}, {fontSize:"1.5em", opacity:1}, ">+=10%");
         tl.fromTo("#reach", {fontSize:"1em", opacity:0}, {fontSize:"1.5em", opacity:1}, ">+=10%");
         tl.to("#scale", {fontSize:"1em"}, "<+=10%");
@@ -36,7 +38,8 @@ const LandingOne = () => {
         tl.to("#goals", {fontSize:"1em"}, "<+=10%");
         tl.fromTo("#ctaTitle", {fontSize:"1em", opacity:0}, {fontSize:"1.4em", opacity:1}, ">+=20%");
         tl.fromTo("#button", {scale:0, opacity:0}, {scale:1, opacity:1}, ">+=5%");
-        
+        tl.to("#ctaTitle", {fontSize: '1.2em'});
+        tl.timeScale(0.1)
         tl.to("#headline", {scale: 0, opacity:0, x:-300}, ">+=100%");
         tl.to("#subHeading", {scale: 0, opacity:0, x:-300}, ">+=10%");
         tl.to("#subHeadingSecond", {scale: 0, opacity:0, x:-300}, "-=0.2");
@@ -50,9 +53,9 @@ const LandingOne = () => {
     }, []);
 
     return(
-        <div style={styles.stickyRow}>
-            <div style={styles.left}>
-                <div style={styles.text} id="start">
+        <div style={styles.stickyRow} id="toPin">
+            <div style={styles.left} id="start">
+                <div style={styles.text}>
                     <h1 style={styles.headlineText}  id="headline">
                         Nathan John
                     </h1>
@@ -76,7 +79,7 @@ const LandingOne = () => {
                     </h3>
                     <div style={styles.ctaDiv}>
                         <h4 style={styles.ctaHeading} id="ctaTitle">
-                            Find what's on offer:
+                            Find out what's on offer...
                         </h4>
                         <NavLink className="movingGradient" id="button" to="/portfolio" >
                             <span className="movingGradientText">
@@ -89,7 +92,6 @@ const LandingOne = () => {
             <div style={styles.right}>
                 <img style={styles.firstLandingImg} src={Logo} alt="NJTD Logo" id="picture1" />
             </div>
-            <div id="endDiv"></div>
         </div>      
     )
 }; 
@@ -98,14 +100,13 @@ export default LandingOne;
 
 const styles = StyleSheet.create({
     stickyRow: {
-        position: 'sticky',
-        top:'50px',
+        position: 'relative',
         display:'flex',
         flexDirection: 'row',
         width: '100%',   
         maxWidth: '1200px',
-        height: '80vh',
-        overflow: 'visible'
+        height: '150vh',
+        overflow: 'visible',
     },
     left: {
         textAlign: 'left',
@@ -121,7 +122,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         overflow: 'visible',
         marginLeft:'10vw',
-        marginRight:'-3vw'
+        marginRight:'-3vw',
+        height: '100vh'
     },
     headlineText: {
         fontFamily: 'Geologica',
@@ -131,14 +133,6 @@ const styles = StyleSheet.create({
         position: 'sticky',
         top: '200px',
         whiteSpace: 'nowrap'
-    },
-    ctaDiv: {
-        justifyContent: 'center',
-        overflow:'visible',
-        textAlign: 'left',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
     },
     firstLandingImg: {
         width: '400px',
@@ -152,7 +146,8 @@ const styles = StyleSheet.create({
         fontWeight: 700,
         color: 'var(--blackCol)',
         position: 'sticky',
-        top: '255px'
+        top: '255px',
+        whiteSpace: 'nowrap'
     },
     subHeadingSecond:{
         fontFamily: 'Geologica',
@@ -160,7 +155,7 @@ const styles = StyleSheet.create({
         fontWeight: 200,
         color: 'var(--infoCol)',
         position: 'sticky',
-        top: '325px'
+        top: '290px'
     },
     right: {
         display: 'flex',
@@ -169,9 +164,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: '2vw',
         marginRight: '4vw',
-        position: 'sticky',
-        overflow:'visible',
-        top:0                         
+        position: 'relative',
+        overflow:'visible',                      
+    },
+    ctaDiv: {
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     ctaHeading: {
         fontFamily: 'Geologica',
@@ -180,7 +180,8 @@ const styles = StyleSheet.create({
         fontWeight: 500,
         color: 'var(--infoCol)',
         position: 'sticky',
-        top: '400px'
+        top: '390px',
+        textAlign: 'center'
     }
 })
 

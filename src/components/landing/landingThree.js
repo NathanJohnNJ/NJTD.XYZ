@@ -1,7 +1,6 @@
-import Git from '../../images/git.png';
-import LinkedIn from '../../images/linkedIn.png';
 import Me from '../../images/me.jpg';
-import X from '../../images/x.png';
+import Logo from '../logo/blackLogo/logo.svg';
+import designLogo from '../../images/grey.png'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -16,69 +15,100 @@ const LandingThree = () => {
     useGSAP(()=> {
         const tl = gsap.timeline({
             scrollTrigger:{
-                scrub:1,
-                pin: false,
+                scrub:2,
+                pin: "#thirdPin",
+                anticipatePin: true,
                 trigger: "#thirdStart",
-                start: "top bottom",
-                endTrigger: "#thirdEnd",
-                end: "bottom top",
+                start: "top top",
+                end: "+=" + window.innerHeight*2,
                 yoyo: true
             },
-        }); 
-	tl.fromTo("#about", {fontSize:"1em", opacity:0.25, x:-300}, {fontSize:"3em", opacity:1, x:0}); tl.fromTo("#picture5", {x:300, scale:0, opacity:0}, {x:0, scale: 1, opacity:1}, "-=0.2"); tl.fromTo("#subAbout", {fontSize:"0.5em", opacity:0, x:-200}, {fontSize:"1.4em", opacity:1, x:0}, ">+=10%"); 
-        tl.fromTo("#picture6", {scale:0, opacity:0, x:0}, {scale: 0.5, opacity:1, x:-100}, ">+=0.2"); 
-	tl.fromTo("#gitBtn", {scale:0, opacity:0, x:0}, {scale: 0.5, opacity:1, x:-100}, "<=");
-        tl.fromTo("#picture7", {scale:0, opacity:0, x:0}, {scale: 0.5, opacity:1, x:-60}, "-=0.2"); 
-	tl.fromTo("#xBtn", {scale:0, opacity:0, x:0}, {scale: 0.5, opacity:1, x:-60}, "<="); 
-        tl.fromTo("#picture8", {scale:0, opacity:0, x:0}, {scale:0.5, opacity:1, x:-20}, "-=0.2"); 
-        tl.fromTo("#linBtn", {scale:0, opacity:0, x:0}, {scale:0.5, opacity:1, x:-20}, "<="); 
-	tl.fromTo("#ctaAboutTitle", {fontSize:"1em", opacity:0}, {fontSize:"1.4em", opacity:1},"+=0.2"); 
-	tl.fromTo("#aboutBtn", {scale:0, opacity:0}, {scale:1, opacity:1}, "-=0.1"); 
-	tl.to("#about", {scale: 0, opacity:0, x:-300}, ">+=100%"); 
+        });
+    tl.timeScale(0.4)
+	tl.fromTo("#about", {fontSize:"0em", x:-300}, {fontSize:"3em", x:0}); 
+    tl.fromTo("#picture5", {x:300, scale:0, opacity:0}, {x:0, scale: 1.2, opacity:1}, "-=0.2"); 
+    tl.fromTo("#subAbout", {fontSize:"0em", opacity:0, x:-200}, {fontSize:"1.4em", opacity:1, x:0}, ">+=10%"); 
+    tl.fromTo("#picture6", {scale:0, opacity:0, x:0}, {scale: 1, opacity:1, x:-100}, ">+=0.2"); 
+    tl.fromTo("#picture7", {scale:0, opacity:0, x:0}, {scale: 1, opacity:1, x:-60}, "-=0.2"); 
+	tl.fromTo("#ctaTitle", {fontSize:"1em", opacity:0}, {fontSize:"1.4em", opacity:1},"+=0.2"); 
+	tl.fromTo("#meBtn", {scale:0, opacity:0}, {scale:1, opacity:1}, "-=0.1"); 
+	tl.fromTo("#workBtn", {scale:0, opacity:0}, {scale:1, opacity:1}, "-=0.1"); 
+	tl.fromTo("#cvBtn", {scale:0, opacity:0}, {scale:1, opacity:1}, "-=0.1"); 
+	
+    const element = document.getElementById('goon')
+    const amount = element.childElementCount
+    const arr = Array.from(element.children)
+    arr.map((item, i) => {
+        if(i === 0){
+            tl.fromTo(`#${item.id}`, {fontSize:"0em", opacity:0}, {fontSize:"1.5em", opacity:1}, ">+=10%");
+        } else if (i === amount-1){
+            tl.fromTo(`#${item.id}`, {fontSize:"0em", opacity:0}, {fontSize:"1.5em", opacity:1}, ">+=10%");
+            tl.to(`#${arr[i-1].id}`, {fontSize:"1em"}, "<+=10%");
+            tl.to(`#${item.id}`, {fontSize:"1em"}, "<+=10%");
+        } else {
+            tl.fromTo(`#${item.id}`, {fontSize:"0em", opacity:0}, {fontSize:"1.5em", opacity:1}, ">+=10%");
+            tl.to(`#${arr[i-1].id}`, {fontSize:"1em"}, "<+=10%");
+        }
+    })
+    tl.to("#about", {scale: 0, opacity:0, x:-300}, ">+=100%"); 
 	tl.to("#subAbout", {scale: 0, opacity:0, x:-300}, "-=0.2");
 	tl.to("#ctaTitle", {scale: 0, opacity:0}, ">+=10%"); 
-	tl.to("#aboutBtn", {scale: 0, opacity:0}, "-=20%"); 
-        tl.to("#picture8", {scale:0, opacity:0}, "<+=10%"); 
-        tl.to("#picture7", {scale:0, opacity:0}, "<+=10%"); 
-        tl.to("#picture6", {scale:0, opacity:0}, "<+=10%"); 
-        tl.to("#picture5", {scale:0, opacity:0, x:300}, ">+=10%");
+	tl.to("#meBtn", {scale: 0, opacity:0}, "-=20%");  
+    tl.to("#workBtn", {scale: 0, opacity:0}, "-=20%");  
+    tl.to("#cvBtn", {scale: 0, opacity:0}, "-=20%");  
+    tl.to("#picture7", {scale:0, opacity:0}, "<+=10%"); 
+    tl.to("#picture6", {scale:0, opacity:0}, "<+=10%"); 
+    tl.to("#picture5", {scale:0, opacity:0, x:300}, "<+=10%");
+    tl.to("#goon", {opacity:0, fontSize: '0em'})
     }, []);
 
-
     return(
-        <div style={styles.stickyRow}>
+        <div style={styles.stickyRow} id="thirdPin">
             <div className="spacer" id="thirdStart"></div>
             <div style={styles.left}>
-                <div style={styles.text}>
-                    <h1 style={styles.headlineText} id="about">
-                        About Me
-                    </h1>
-                        <h2 style={styles.subHeadingText} id="subAbout">
-                            Always looking for the next challenge in life, and ways to expand my knowledge and advance my career.
-                        </h2>
-                    <div style={styles.ctaDiv}>
-                        <h4 style={styles.ctaHeading} id="ctaAboutTitle">
-                            Find Out More About:
-                        </h4>
-                        <NavLink className="movingGradient" id="aboutBtn" to="/portfolio" >
+                <h1 style={styles.headlineText} id="about">
+                    About Me
+                </h1>
+                <h2 style={styles.text} id="subAbout">
+                    Always looking for the next challenge in life, and ways to expand my knowledge and advance my career.
+                </h2>
+                <div style={styles.ctaDiv}>
+                    <h4 style={styles.ctaTitle} id="ctaTitle">
+                        Find Out More About:
+                    </h4>
+                    <div style={styles.linksDiv}>
+                        <NavLink className="movingGradient" id="meBtn" to="/about" >
                             <span className="movingGradientText">Me!</span>
                         </NavLink>
+                        <NavLink className="movingGradient" id="workBtn" to="/portfolio/developer" >
+                            <span className="movingGradientText">My Work</span>
+                        </NavLink>
+                        <NavLink className="movingGradient" id="cvBtn" to="/cv" >
+                            <span className="movingGradientText">My CV</span>
+                        </NavLink>
                     </div>
+                
+                <h4 style={styles.treat} id="goon">
+                    <span style={styles.letter} id="go1">G</span>
+                    <span style={styles.letter} id="go2">o </span>
+                    <span style={styles.space} id="space"> </span>
+                    <span style={styles.letter} id="go3">o</span>
+                    <span style={styles.letter} id="go4">n</span>
+                    <span style={styles.letter} id="dot1">.</span>
+                    <span style={styles.letter} id="dot2">.</span>
+                    <span style={styles.letter} id="dot3">.</span>
+                    <span style={styles.space} id="space"> </span>
+                    <span style={styles.letter} id="treat">Treat </span>
+                    <span style={styles.space} id="space"> </span>
+                    <span style={styles.letter} id="yourself">Yourself!</span>
+                </h4>
                 </div>
             </div>
-            <div style={styles.right} id="aboutImages">
-                <img style={styles.meImg} src={Me} alt="NJTD Logo" id="picture5" />        
-                <a style={styles.imgBtn} id="gitBtn" href="https://www.github.com/nathanjohnnj" target="_blank" rel="noreferrer">
-                    <img style={styles.smallSocial} src={Git} alt="GitHub link" id="picture6" />
-                </a>
-                <a style={styles.imgBtn} id="xBtn" href="https://www.x.com/codesnj" target="_blank" rel="noreferrer">
-                    <img style={styles.smallSocial} src={X} alt="X link" id="picture7" />
-                </a>
-                <a style={styles.imgBtn} id="linBtn" href="https://www.linkedin.com/in/nathanjohnnj" target="_blank" rel="noreferrer">
-                    <img style={styles.smallSocial} src={LinkedIn} alt="LinkedIn link" id="picture8" />
-                </a>
+            <div style={styles.right}>
+                <img style={styles.meImg} src={Me} alt="NJTD Logo" id="picture5" />
+                <img style={styles.smallLogo} src={Logo} alt="NJTD Logo" id="picture6" />
+                <img style={styles.designLogo} src={designLogo} alt="NJTD Alternative Logo" id="picture7" />
             </div>
-            <div style={styles.spacer} id="thirdEnd"></div>
         </div>
     )
 }; 
@@ -87,34 +117,18 @@ export default LandingThree;
 
 const styles = StyleSheet.create({
     stickyRow: {
-        position: 'sticky',
-        top:'50px',
+        position: 'relative',
         display:'flex',
-        flexDirection: 'row',
-        width: '100%',   
+        width: '100%',
         maxWidth: '1200px',
-        height: '80vh',
-        overflow: 'visible'
-    },
-    right: {
-        display: 'flex',
-        width: '50%',
-        flexDirection: 'column',
-        alignItems: 'center',
-        margin: '2vw',
-        marginRight: '4vw',
-        position: 'sticky',
-        overflow:'visible',
-        top:0                         
+        height: '150vh',
+        overflow: 'visible',
     },
     left: {
         textAlign: 'left',
-        display: 'flex',
-        width: '60%',
-        flexDirection: 'column',
-        margin: '5vw',
-        marginLeft:'-1vw',
-        position: 'relative'
+        position: 'relative',
+        marginRight: '2vw',
+        width: '60vw',
     },
     headlineText: {
         fontFamily: 'Geologica',
@@ -122,59 +136,95 @@ const styles = StyleSheet.create({
         fontWeight: 900,
         color: 'var(--darkCol)',
         position: 'sticky',
-        top: '300px',
-        marginLeft: '75px',
-        marginBottom: '60px',
-        whiteSpace: 'nowrap'
+        top: '200px',
+        left: '50px',
+        marginLeft: '20px',
+        whiteSpace: 'nowrap',
+        overflow: 'visible'
     },
-    subHeadingText:{
+    text:{
         fontFamily: 'Geologica',
         fontVariationSettings: "'SHRP' 100",
         fontWeight: 200,
         color: 'var(--infoCol)',
         position: 'sticky',
-        top: '450px',
-        marginLeft: '75px',
+        top: '255px',
+        left: '50px',
+        marginLeft: '20px',
+        width: '50vw'
     },
     ctaDiv: {
-        justifyContent: 'center',
         overflow:'visible',
-        textAlign: 'left',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         position: 'relative',
-        marginTop: '50px'
+        height: '80vh',
+        marginTop: '150px'
     },
-    ctaHeading: {
+    ctaTitle: {
         fontFamily: 'Geologica',
         fontVariationSettings: "'SHRP' 100",
         fontSize: '2vmax',
-        fontWeight: 500,
+        fontWeight: 650,
         color: 'var(--infoCol)',
         position: 'sticky',
-        top: '900px',
-        marginLeft: '75px',
+        top: '200px',
+        marginLeft: '15px',
     },
-    imgBtn: {
-        width:'200px',
-        height: '200px',
-        borderRadius: '20px'
+    linksDiv: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        overflow:'visible',
     },
-    socialBtn: {
-        width:'200px',
-        height: '200px',
-        borderRadius: '20px'
+    treat: {
+        fontFamily: 'Geologica',
+        fontVariationSettings: "'SHRP' 100",
+        display: 'flex',
+        position: 'relative'
+    },
+    letter: {
+        position: 'sticky',
+        top: '50px',
+        fontFamily: 'Geologica',
+        fontVariationSettings: "'SHRP' 100",
+    },
+    space: {
+        width:'1vw'
+    },
+    right: {
+        display: 'flex',
+        width: '40%',
+        flexDirection: 'column',
+        alignItems: 'center',
+        position: 'relative',
+        overflow:'visible',             
     },
     meImg:{
         width: '25vw',
         position: 'sticky',
-        top: '200px',
-        borderRadius: '18px'
+        top: '250px',
+        borderRadius: '20px'
     },
-    smallSocial: {
-        width: '15vw',
-        borderRadius:'18px'
-    }
+    smallLogo: {
+        width: '15.5vw',
+        borderRadius:'20px',
+        position: 'sticky',
+        top: '400px'
+    },
+    designLogo: {
+        width: '15.5vw',
+        borderRadius:'20px',
+        position: 'sticky',
+        top: '490px',
+        marginLeft: '75px'
+    },
+    spacer: {
+        height: '50vh',
+        width: '100%',
+        display:'block',
+        overflow: 'visible',
+        position: 'static'
+    },
 })
 
