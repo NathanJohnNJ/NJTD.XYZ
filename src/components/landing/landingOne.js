@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection: 'row',
         width: '100%',   
-        maxWidth: '1200px',
+        // maxWidth: '1200px',
         height: '150vh',
         overflow: 'visible',
     },

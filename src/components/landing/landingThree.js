@@ -105,7 +105,7 @@ const LandingThree = () => {
                 </div>
             </div>
             <div style={styles.right}>
-                <img style={styles.meImg} src={Me} alt="NJTD Logo" id="picture5" />
+                <img style={styles.meImg} src={Me} alt="Nathan John" id="picture5" />
                 <img style={styles.smallLogo} src={Logo} alt="NJTD Logo" id="picture6" />
                 <img style={styles.designLogo} src={designLogo} alt="NJTD Alternative Logo" id="picture7" />
             </div>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         display:'flex',
         width: '100%',
-        maxWidth: '1200px',
+        // maxWidth: '1200px',
         height: '150vh',
         overflow: 'visible',
     },
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
         overflow:'visible',             
     },
     meImg:{
-        width: '25vw',
+        width: '15vw',
         position: 'sticky',
         top: '250px',
         borderRadius: '20px'
