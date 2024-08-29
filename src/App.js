@@ -2,8 +2,9 @@ import './App.css';
 import './pages/style.css'
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react'; 
-// import Home from './pages/home';; 
+// import Home from './pages/home';
 import Home from './pages/landing';
+// import Home from './pages/test';
 import HMUA from './pages/hmua';
 import CV from './pages/cv';
 // import About from './pages/about';
