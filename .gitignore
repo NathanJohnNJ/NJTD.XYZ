@@ -22,3 +22,5 @@ npm-debug.log*
 src/.env
 test/
 pushToGit.sh
+src/pages/test.*
+.vscode
