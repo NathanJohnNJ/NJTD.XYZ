@@ -39,7 +39,7 @@ fetchData()  // eslint-disable-next-line
 }, []);
 
 return (
-  <motion.div className="outerRepoDiv"
+  <motion.div className="outerRepoDiv" id="mainGit"
   variants={{
     hidden: { opacity: 0 },
     visible: { opacity: 1 },

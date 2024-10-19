@@ -1,0 +1,46 @@
+import './footAndNav.css';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import BlackLogo from '../components/logo/blackLogo/logo';
+import WhiteLogo from '../components/logo/whiteLogo/logo';
+
+
+const NavBar = (props) => {
+  const [showOptions, setShowOptions] = useState(false);
+  const Logo = () => {
+    if (props.darkMode === false){
+      return <BlackLogo  />
+    } else {
+      return <WhiteLogo />
+    }
+  }
+
+  return(
+    <div className="flex relative p-[30px] w-screen max-w-[1200px] h-[160px] z-50" id="navbar">
+        <NavLink className={({isActive}) => isActive ? "text-[4em] flex w-full z-50 font-spart font-extrabold mt-8 ml-24": "text-[3em] flex w-full z-50 font-spart font-extrabold hover:text-[4em]" }  to="/" onMouseOver={() => {setShowOptions(false)}} >HOME</NavLink>
+        <NavLink to="/" onMouseOver={() => {setShowOptions(false)}} className="flex absolute left-[50%]">
+          <Logo />
+        </NavLink> 
+
+        <div className="flex flex-col items center justify-start">
+        <NavLink className={({isActive}) => isActive ? "text-[4em]  w-full z-50 font-spart font-extrabold": "text-[3em] flex w-full z-50 font-spart font-extrabold page" }  to="/portfolio"  onMouseOver={() => {setShowOptions(true)}} >PORTFOLIO</NavLink>
+        {showOptions
+        ?
+        <div className="flex flex-row">
+          <div className="navDeveloper">
+            <NavLink className={({isActive}) => isActive ? "text-[4em] flex w-full z-50 font-spart font-extrabold": "text-[3em] flex w-full z-50 font-spart font-extrabold"}  to="/portfolio/developer" >DEVELOPER</NavLink>
+          </div>
+          <div className="gap"/>
+          <div className="navHMUA">
+            <NavLink className={({isActive}) => isActive ? "p-4 text-[4em] flex w-full z-50 font-spart font-extrabold": "p-4 text-[3em] flex w-full z-50 font-spart font-extrabold"} to="/portfolio/hmua" >HMUA</NavLink>
+          </div>
+        </div>
+        :
+        <></>
+        }
+      </div>
+    </div>
+  )
+}
+
+export default NavBar;

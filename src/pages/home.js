@@ -11,27 +11,8 @@ import { NavLink } from 'react-router-dom';
 import Tech from '../components/animated/animatedHome/tech';
 
 const Home = (props) => {
-    
-    function visitsFunc(){
-    if (props.visits === 0){
-        window.addEventListener('scroll', scrollListener )
-        props.setVisits(props.visits+1)
-    }else{
-        props.setVisits(props.visits+1)
-    }
-    }
-
     gsap.registerPlugin(ScrollTrigger)
     gsap.registerPlugin(useGSAP)
-    function scrollListener(){         
-        if(window.scrollY > 5400){
-            const nav = document.getElementById("navbar")
-            nav.classList.remove('homeNav')
-            nav.classList.add('navTransition')
-            setTimeout(()=>{nav.classList.remove('navTransition')}, 2500)
-            window.removeEventListener('scroll', scrollListener)
-        }
-    }
 
     useGSAP(()=> {
         visitsFunc()
