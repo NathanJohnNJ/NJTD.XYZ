@@ -13,13 +13,13 @@ const LandingOne = () => {
     useGSAP(()=> {
         const tl = gsap.timeline({
             scrollTrigger:{
-                scrub:2,
+                scrub:1,
                 pin: "#toPin",
                 anticipatePin: true,
                 trigger: "#start",
                 start: "top top",
                 end: "+=" + window.innerHeight*2,
-                yoyo: true
+                yoyo: false
             },
         });
         tl.timeScale(0.6)
@@ -38,8 +38,7 @@ const LandingOne = () => {
         tl.to("#goals", {fontSize:"1em"}, "<+=10%");
         tl.fromTo("#ctaTitle", {fontSize:"1em", opacity:0}, {fontSize:"1.4em", opacity:1}, ">+=20%");
         tl.fromTo("#button", {scale:0, opacity:0}, {scale:1, opacity:1}, ">+=5%");
-        tl.to("#ctaTitle", {fontSize: '1.2em'});
-        tl.timeScale(0.1)
+        tl.to("#ctaTitle", {fontSize: '1.2em'});  
         tl.to("#headline", {scale: 0, opacity:0, x:-300}, ">+=100%");
         tl.to("#subHeading", {scale: 0, opacity:0, x:-300}, ">+=10%");
         tl.to("#subHeadingSecond", {scale: 0, opacity:0, x:-300}, "-=0.2");
@@ -49,7 +48,7 @@ const LandingOne = () => {
         tl.to("#goals", {scale:0, opacity:0}, ">+=10%");
         tl.to("#ctaTitle", {scale: 0, opacity:0}, ">+=10%");
         tl.to("#button", {scale: 0, opacity:0}, "-=20%");
-        tl.to("#picture1", {scale:0, opacity:0, x:300}, ">+=10%");
+        tl.to("#picture1", {scale:0, opacity:0});
     }, []);
 
     return(
@@ -63,18 +62,18 @@ const LandingOne = () => {
                         Full Stack Developer / Web Developer
                     </h2>
                     <h3 style={styles.subHeadingSecond} id="subHeadingSecond">
-                        Offering complete solutions for businesses, and individuals, no matter the 
+                        Offering complete solutions for businesses, and individuals, no matter the {" "}
                         <span className="gradientText" id="scale">
-                            scale,
+                            scale,{" "}
                         </span>
                         <span className="gradientText" id="reach">
-                            reach,
+                            reach,{" "}
                         </span>
                         <span className="gradientText" id="exp">
                             experience
                         </span>
                         <span className="gradientText" id="goals">
-                            or goals.
+                            {" "}or goals.
                         </span>
                     </h3>
                     <div style={styles.ctaDiv}>

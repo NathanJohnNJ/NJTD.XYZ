@@ -1,103 +1,50 @@
 /********* NAVBAR *********/
-.navbar{
-  width: 100%;
+/* .navbar{
+  width: 100vw;
   max-width: 1200px;
   height: 150px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--lightCol);
-  overflow-y:visible
-}
-.navFirst{
-  position:fixed;
-  top:0;
-  width: 100%;
-  padding-top:2vh;
-  z-index: 999999;
-  max-width: 1200px;
-  height: 115px; 
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(3, 35px), 150px;
-  background-color: var(--lightCol);
-}
-.customDivider svg{
-  fill: var(--lightCol);
-  overflow: visible;
-}
-.navSVG{
-  position: absolute;
-  top: 120px;
-  left:0;
-  fill: blue;
-  z-index: 99999;
-}
-.navSVG, .footSVG{
-  width: 100%;
-}
-.shape-fill{
-  fill:var(--lightCol);
-  width:100%;
 }
 .navGap{
-    grid-column: 1/12;
-    grid-row: 1/2;
+  grid-column: 1/15;
+  grid-row: 1/2;
 }
 .navHome{
-  grid-column: 2/3;
+  grid-column: 3/5;
   grid-row: 2/4;
-}
-.navAbout{
-  grid-column: 4/5;
-  grid-row: 2/4;
+  z-index:999;
+  overflow: visible;
 }
 .navLogo{
-  grid-column: 6/7;
+  grid-column: 7/10;
   grid-row: 1/4;
 }
-.navbarLogo{
-  width: 10vmax;
-  height: 10vmax;
-  max-width:116px;
-  max-height: 116px;
-  margin-top: -8px;
-}
-.navbarLogo:hover{
-  scale: 1.1
+.navLogo:hover{
+  scale: 1.2
 }
 .navCV{
   grid-column: 8/9;
   grid-row: 2/4;
 }
 .navPortfolio{
-  grid-column: 10/11;
+  grid-column: 12/15;
   grid-row: 2/4;
+  z-index:999;
 }
 .navOptions{
-    grid-column: 9/12;
-    grid-row: 3/4;
-}
-.navOptions2{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1;
-    margin-top: 4vh;
-}
-.navDeveloper{
-    grid-column: 1/2;
-}
-.navHMUA{
-    grid-column: 3/4;
+  overflow: visible;
+    grid-column: 11/16;
+    grid-row: 3/5;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
 }
 .page{
   font-size: 2.5em;
   font-family: 'League Spartan', sans-serif;
   font-weight: 800;
   text-decoration: none;
-  color: var(--infoCol)
+  color: var(--infoCol);
+  overflow: visible;
 }
 .current{
   font-size: 3em;
@@ -105,11 +52,29 @@
   font-weight: 800;
   text-decoration: none;
   color: var(--contrastCol);
+  overflow: visible;
 }
 .page:hover{
   color: var(--contrastCol);  
-  font-size: 3em;  
+  font-size: 3em;
+  overflow: visible;
+  z-index:9999;
 }
+.navDeveloper:hover{
+  size: 3em;
+  overflow: visible;
+  z-index:9999;
+}
+.navPortfolio:hover{
+  size: 3em;
+  overflow: visible;
+  z-index:9999;
+}
+.navHome:hover{
+  size: 3em;
+  overflow: visible;
+  z-index:9999;
+} */
   
 /********* FOOTER *********/
 .footSVG {
@@ -190,7 +155,7 @@
   text-decoration: none;  
   color: var(--lightCol);
 }
-
+/* 
 @media screen and (max-width: 480px){
   .page{ margin-left:15px; margin-top:16.5px; font-size: 3.3vw; }
   .current{ margin:10px; margin-top: 15px; font-size: 4vw; }
@@ -199,4 +164,4 @@
   .navColours{ height:50px}
   .navbar{width: 100vw}
   .navFirst{width: 100vw}
-}
+} */

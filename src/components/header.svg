@@ -1,0 +1,53 @@
+<svg id="parent" height="175" width="1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" >
+      <stop offset="0%" stopColor="rgba(68,68,68,0.01)"  />
+      <stop offset="15%" stopColor="grey" stopOpacity="0.1" />
+      <stop offset="35%" stopColor="blue" stopOpacity="0.5" />
+      <stop offset="50%" stopColor="darkGrey" />
+      <stop offset="65%" stopColor="blue" stopOpacity="0.5"/>
+      <stop offset="85%" stopColor="grey" stopOpacity="0.1" />
+      <stop offset="100%" stopColor="rgba(238,238,238,0.01)"  />
+    </linearGradient>
+    <linearGradient id="grad2" >
+      <stop offset="0%" stopColor="#ddd"  />
+      <stop offset="50%" stopColor="#fff" />
+      <stop offset="100%" stopColor="#333" />
+    </linearGradient>
+    <linearGradient id="rainbow" x1="0%" x2="100%" y1="50%" y2="0%">
+      <stop offset="0%" stopColor="blue">
+        <animate attributeName="stop-color" dur="25000ms" values="blue;magenta;red;yellow;lightgreen;aqua;lightgreen;yellow;red;magenta;blue" repeatCount="indefinite" />
+      </stop>
+      <stop offset="20%" stopColor="magenta">
+        <animate attributeName="stop-color" dur="25000ms" values="magenta;red;yellow;lightgreen;aqua;blue;aqua;lightgreen;yellow;red;magenta" repeatCount="indefinite" />
+      </stop>
+      <stop offset="40%" stopColor="red">
+        <animate attributeName="stop-color" dur="25000ms" values="red;yellow;lightgreen;aqua;blue;magenta;blue;aqua;lightgreen;yellow;red" repeatCount="indefinite" />
+      </stop>
+      <stop offset="60%" stopColor="orange">
+        <animate attributeName="stop-color" dur="25000ms" values="yellow;lightgreen;aqua;blue;magenta;red;magenta;blue;aqua;lightgreen;yellow" repeatCount="indefinite" />
+      </stop>
+      <stop offset="80%" stopColor="yellow">
+        <animate attributeName="stop-color" dur="25000ms" values="lightgreen;aqua;blue;magenta;red;yellow;red;magenta;blue;aqua;lightgreen" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stopColor="greenyellow">
+        <animate attributeName="stop-color" dur="25000ms" values="aqua;blue;magenta;red;yellow;lightgreen;yellow;red;magenta;blue;aqua" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  <g class="w-full flex flex-col">
+    <path x="0" y="0" fill="white" d="M0,0 l1200,0 l0,150 c-75,60 -150,-40 -300,0 s-150,-30 -300,5s-150,-40 -300,0s-150,-60 -300,10z" stroke="none" width="100%" height="300"/>
+    <text id="svgText" x="200" y="130" width="1200" height="150" dy="-20, 25,-15, 7.5" dx="100,-22,-2,-5" stroke="url(#rainbow)" fill="url(#rainbow)" stroke-width="5" font-size="120" font-weight="700" class="font-mono font-extrabold">
+      NJTD
+      <animate attributeName="stroke-dasharray" dur="25000ms" values="0% 100%;100% 0%;0% 100%" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" dur="25000ms" values="0%;10%;100%" repeatCount="indefinite" />
+      
+    </text>
+  
+  <foreignObject className="w-full">
+    <div className="w-full">
+      <!-- <NavBar darkMode={props.darkMode} setDarkMode={props.setDarkMode} colors={props.colors} setColors={props.setColors} borderCol={props.borderCol} setBorderCol={props.setBorderCol}/> -->
+    </div>
+  </foreignObject>
+  </g> 
+</svg>

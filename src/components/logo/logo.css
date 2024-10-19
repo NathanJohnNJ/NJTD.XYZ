@@ -1,7 +1,7 @@
 
 .logoContainer{
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    max-width: 135px;
     position: relative;
 }
 .logoSVG{

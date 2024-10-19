@@ -17,12 +17,8 @@ import sport2 from '../components/hmuaPortfolio/sport2.jpg';
 import water from '../components/hmuaPortfolio/water1.jpg';
 import water2 from '../components/hmuaPortfolio/water2.jpg';
 import water3 from '../components/hmuaPortfolio/water3.jpg';
-import { useEffect } from 'react';
 const HMUA = (props) => {
     window.scrollTo(0,0)
-    useEffect(() => {
-        props.setFooterHeight("100px") // eslint-disable-next-line
-    },[])
     return (
         <div className="hmuaPage">
             <div className=" hmuacontent"> 

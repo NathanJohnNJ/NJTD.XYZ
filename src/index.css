@@ -1,3 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    --whiteCol: hsl(228deg 99% 99%);
+    --lightCol: #EEEEEE;
+    --focalCol: #4D4D4D;
+    --darkCol: #323232;
+    --blackCol: hsl(228, 99%, 5%);
+    --contrastCol: rgb(2.472187886279357, 25.95797280593325, 85.90852904820765);
+    --infoCol: #3c3c3c;
+    --borderCol: #000000;
+  }
+}
 html{
   background-color: var(--infoCol);
 }

@@ -1,11 +1,7 @@
 import './style.css';
-import { useEffect } from 'react';
 
 const Terms = (props) => {
     window.scrollTo(0,0)
-    useEffect(() => {
-        props.setFooterHeight("100px") // eslint-disable-next-line
-    },[])
     return (
         <div className="terms">
             <h1 className="termTitle">Website Usage Terms & Conditions</h1>

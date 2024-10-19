@@ -37,13 +37,11 @@
   max-width: 1200px;
   background-color: var(--whiteCol);
 }
-.appNavBar{
+#navBar{
+  width:100vw;
+  max-width: 1200px;
+  height: 160px;
   background-color: var(--lightCol);
-  width: 100%;
-}
-.appNavBar{
-  height: 0px;
-  margin-bottom: 120px;
 }
 .noNav{
   display:none;

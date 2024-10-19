@@ -30,7 +30,7 @@ const NavBar = (props) => {
 
     const [width, height] = useWindowSize();
     const viewbox = `0 0 ${width} 20`;
-    const myPath = `M0,0 l${width},0 l0,20 c-${width/16},60 -${width/8},-40 -${width/4},0 s-${width/8},-30 -${width/4},5s-${width/8},-40 -${width/4},0s-${width/8},-60 -${width/4},10z`;
+    const myPath = `M0,-10 l${width},0 l0,30 c-${width/16},60 -${width/8},-40 -${width/4},0 s-${width/8},-30 -${width/4},5s-${width/8},-40 -${width/4},0s-${width/8},-60 -${width/4},10z`;
     return(
         <div className="navbar"  id="navbar">
             <div className="navFirst" id="navbar">
@@ -38,18 +38,12 @@ const NavBar = (props) => {
                 <div className="navHome">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/" onMouseOver={() => {setShowOptions(false)}} >HOME</NavLink>
                 </div>
-                {/* <div className="navAbout">
-                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/about" onMouseOver={() => {setShowOptions(false)}} >ABOUT</NavLink>
-                </div> */}
                 <div className="navLogo">
                     <div className="navbarLogo">
                         <NavLink to="/" onMouseOver={() => {setShowOptions(false)}}>
                             <Logo />
                         </NavLink> 
                     </div>
-                </div>
-                <div className="navCV">
-                    <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/cv" onMouseOver={() => {setShowOptions(false)}} >CV</NavLink>
                 </div>
                 <div className="navPortfolio">
                     <NavLink className={({isActive}) => isActive ? "current": "page" }  to="/portfolio" onMouseOver={() => {setShowOptions(true)}} >PORTFOLIO</NavLink>

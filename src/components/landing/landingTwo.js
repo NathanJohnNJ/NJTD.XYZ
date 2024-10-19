@@ -1,11 +1,14 @@
 import Git from '../../images/git.png';
-import LinkedIn from '../../images/linkedIn.png';
+// import LinkedIn from '../../images/linkedIn.png';
 import X from '../../images/x.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import '../../pages/styles/landing.css';
 import { StyleSheet } from 'react-native-web';
+import GitHub from '../animated/animatedHome/social/github';
+import LinkedIn from '../animated/animatedHome/social/linkedIn';
+import Twitter from '../animated/animatedHome/social/twitter';
 
 const LandingTwo = () => {
     gsap.registerPlugin(ScrollTrigger)
@@ -51,13 +54,16 @@ const LandingTwo = () => {
             </div>
             <div style={styles.bottom}>
                 <a id="button2" href="https://www.github.com/NathanJohnNJ" target="_blank" rel="noreferrer">
-                    <img style={styles.imgBtn}  src={Git} alt="GitHub link" />
+                    {/* <img style={styles.imgBtn}  src={Git} alt="GitHub link" /> */}
+                    <GitHub />
                 </a>
                 <a id="button3" href="https://www.linkedin.com/in/NathanJohnNJ" target="_blank" rel="noreferrer">
-                    <img style={styles.imgBtn}  src={LinkedIn} alt="LinkedIn link" />
+                    {/* <img style={styles.imgBtn}  src={LinkedIn} alt="LinkedIn link" /> */}
+                    <LinkedIn />
                 </a>
                 <a id="button4" href="https://www.x.com/codesnj" target="_blank" rel="noreferrer">
-                    <img style={styles.imgBtn}  src={X} alt="X link" />
+                    {/* <img style={styles.imgBtn}  src={X} alt="X link" /> */}
+                    <Twitter />
                 </a>
             </div>
         </div>
